@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SC Component Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1>SC Component Tracker</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search components..." autocomplete="off">
+                <div id="searchResults" class="search-results hidden"></div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Ships Section -->
+            <section class="section ships-section">
+                <div class="section-header">
+                    <h2>My Ships</h2>
+                    <button id="addShipBtn" class="btn btn-primary">+ Add Ship</button>
+                </div>
+                <div id="shipsList" class="ships-list">
+                    <!-- Ships will be rendered here -->
+                </div>
+            </section>
+
+            <!-- Storage Section -->
+            <section class="section storage-section">
+                <div class="section-header">
+                    <h2>Stored Components</h2>
+                    <button id="addStorageBtn" class="btn btn-primary">+ Add Component</button>
+                </div>
+                <div id="storageList" class="storage-list">
+                    <!-- Storage items will be rendered here, grouped by type -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Ship Modal -->
+    <div id="shipModal" class="modal hidden">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h3 id="shipModalTitle">Add Ship</h3>
+                <button class="modal-close" data-modal="shipModal">&times;</button>
+            </div>
+            <form id="shipForm">
+                <input type="hidden" id="shipId">
+
+                <div class="form-row">
+                    <div class="form-group form-group-grow">
+                        <label for="shipName">Ship</label>
+                        <select id="shipName" required>
+                            <option value="">Select a ship...</option>
+                            <!-- Populated by JS -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="shipNickname">Nickname (optional)</label>
+                        <input type="text" id="shipNickname" placeholder="e.g., My Hauler">
+                    </div>
+                </div>
+
+                <div id="shipSlotsInfo" class="ship-slots-info hidden">
+                    <!-- Shows ship's available slots after selection -->
+                </div>
+
+                <div class="form-section">
+                    <h4>Weapons</h4>
+                    <p class="form-hint" id="weaponsHint">Select a ship to see available hardpoints</p>
+                    <div id="weaponSlots" class="component-slots">
+                        <!-- Weapon dropdowns added by JS based on ship -->
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4>Shield Generators</h4>
+                    <p class="form-hint" id="shieldsHint">Select a ship to see available slots</p>
+                    <div id="shieldSlots" class="component-slots">
+                        <!-- Shield dropdowns added by JS -->
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4>Power Plants</h4>
+                    <p class="form-hint" id="powerPlantsHint">Select a ship to see available slots</p>
+                    <div id="powerPlantSlots" class="component-slots">
+                        <!-- Power plant dropdowns added by JS -->
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4>Coolers</h4>
+                    <p class="form-hint" id="coolersHint">Select a ship to see available slots</p>
+                    <div id="coolerSlots" class="component-slots">
+                        <!-- Cooler dropdowns added by JS -->
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4>Quantum Drive</h4>
+                    <p class="form-hint" id="quantumDriveHint">Select a ship to see available slot</p>
+                    <div id="quantumDriveSlots" class="component-slots">
+                        <!-- QD dropdown added by JS -->
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" data-modal="shipModal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Ship</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Storage Modal -->
+    <div id="storageModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="storageModalTitle">Add Component to Storage</h3>
+                <button class="modal-close" data-modal="storageModal">&times;</button>
+            </div>
+            <form id="storageForm">
+                <input type="hidden" id="storageIndex">
+                <div class="form-group">
+                    <label for="storageType">Component Type</label>
+                    <select id="storageType" required>
+                        <option value="">Select type...</option>
+                        <option value="weapons">Weapon</option>
+                        <option value="shields">Shield Generator</option>
+                        <option value="powerPlants">Power Plant</option>
+                        <option value="coolers">Cooler</option>
+                        <option value="quantumDrives">Quantum Drive</option>
+                    </select>
+                </div>
+                <div class="form-group hidden" id="storageSizeGroup">
+                    <label for="storageSize">Size</label>
+                    <select id="storageSize">
+                        <option value="">Select size...</option>
+                        <!-- Populated based on type -->
+                    </select>
+                </div>
+                <div class="form-group" id="storageComponentGroup">
+                    <label for="storageComponent">Component</label>
+                    <select id="storageComponent">
+                        <option value="">Select a component...</option>
+                        <!-- Populated based on type/size selection -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="storageQuantity">Quantity</label>
+                    <input type="number" id="storageQuantity" required min="1" value="1">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" data-modal="storageModal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Component</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal hidden">
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h3>Confirm Delete</h3>
+                <button class="modal-close" data-modal="deleteModal">&times;</button>
+            </div>
+            <p id="deleteMessage">Are you sure you want to delete this item?</p>
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" data-modal="deleteModal">Cancel</button>
+                <button type="button" id="confirmDeleteBtn" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

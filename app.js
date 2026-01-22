@@ -1,0 +1,920 @@
+// SC Component Tracker - Application Logic
+
+// ============ Data Layer ============
+
+const STORAGE_KEY = 'sc-component-tracker-data';
+
+const defaultData = {
+    ships: [],
+    storage: []
+};
+
+function loadData() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+        try {
+            return JSON.parse(saved);
+        } catch (e) {
+            console.error('Error loading data:', e);
+            return { ...defaultData };
+        }
+    }
+    return { ...defaultData };
+}
+
+function saveData(data) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+function generateId() {
+    return 'ship-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+}
+
+let appData = loadData();
+let currentShipSpec = null; // Holds the selected ship's specification
+
+// ============ Ship CRUD ============
+
+function addShip(ship) {
+    ship.id = generateId();
+    appData.ships.push(ship);
+    saveData(appData);
+    renderShips();
+}
+
+function updateShip(id, updatedShip) {
+    const index = appData.ships.findIndex(s => s.id === id);
+    if (index !== -1) {
+        appData.ships[index] = { ...updatedShip, id };
+        saveData(appData);
+        renderShips();
+    }
+}
+
+function deleteShip(id) {
+    appData.ships = appData.ships.filter(s => s.id !== id);
+    saveData(appData);
+    renderShips();
+}
+
+function getShipById(id) {
+    return appData.ships.find(s => s.id === id);
+}
+
+// Get ship spec from database
+function getShipSpec(shipName) {
+    return SC_DATA.ships.find(s => s.name === shipName);
+}
+
+// Get display name for a ship (without manufacturer prefix)
+function getShipDisplayName(shipName) {
+    const spec = getShipSpec(shipName);
+    if (!spec) return shipName;
+
+    const manufacturer = spec.manufacturer;
+
+    // Special case for Consolidated Outland (uses C.O. prefix)
+    if (manufacturer === "Consolidated Outland") {
+        return shipName.replace(/^C\.O\.\s+/, '');
+    }
+
+    // Standard case: strip manufacturer prefix
+    const prefix = manufacturer + ' ';
+    if (shipName.startsWith(prefix)) {
+        return shipName.substring(prefix.length);
+    }
+
+    return shipName;
+}
+
+// ============ Storage CRUD ============
+
+function addStorageItem(item) {
+    const existing = appData.storage.find(
+        s => s.type === item.type && s.name.toLowerCase() === item.name.toLowerCase() && s.size === item.size
+    );
+    if (existing) {
+        existing.quantity += item.quantity;
+    } else {
+        appData.storage.push(item);
+    }
+    saveData(appData);
+    renderStorage();
+}
+
+function updateStorageItem(index, updatedItem) {
+    if (index >= 0 && index < appData.storage.length) {
+        appData.storage[index] = updatedItem;
+        saveData(appData);
+        renderStorage();
+    }
+}
+
+function deleteStorageItem(index) {
+    appData.storage.splice(index, 1);
+    saveData(appData);
+    renderStorage();
+}
+
+// ============ Search ============
+
+function searchComponents(query) {
+    if (!query.trim()) return null;
+
+    const searchTerm = query.toLowerCase();
+    const results = {
+        installed: [],
+        storage: []
+    };
+
+    appData.ships.forEach(ship => {
+        const components = ship.components || {};
+
+        (components.weapons || []).forEach(weapon => {
+            if (weapon.name && weapon.name.toLowerCase().includes(searchTerm)) {
+                results.installed.push({
+                    shipName: ship.name,
+                    shipNickname: ship.nickname,
+                    component: weapon.name,
+                    type: 'weapon'
+                });
+            }
+        });
+
+        (components.shields || []).forEach(shield => {
+            if (shield.name && shield.name.toLowerCase().includes(searchTerm)) {
+                results.installed.push({
+                    shipName: ship.name,
+                    shipNickname: ship.nickname,
+                    component: shield.name,
+                    type: 'shield'
+                });
+            }
+        });
+
+        (components.coolers || []).forEach(cooler => {
+            if (cooler.name && cooler.name.toLowerCase().includes(searchTerm)) {
+                results.installed.push({
+                    shipName: ship.name,
+                    shipNickname: ship.nickname,
+                    component: cooler.name,
+                    type: 'cooler'
+                });
+            }
+        });
+
+        (components.powerPlants || []).forEach(pp => {
+            if (pp.name && pp.name.toLowerCase().includes(searchTerm)) {
+                results.installed.push({
+                    shipName: ship.name,
+                    shipNickname: ship.nickname,
+                    component: pp.name,
+                    type: 'power plant'
+                });
+            }
+        });
+
+        (components.quantumDrives || []).forEach(qd => {
+            if (qd.name && qd.name.toLowerCase().includes(searchTerm)) {
+                results.installed.push({
+                    shipName: ship.name,
+                    shipNickname: ship.nickname,
+                    component: qd.name,
+                    type: 'quantum drive'
+                });
+            }
+        });
+    });
+
+    appData.storage.forEach(item => {
+        if (item.name.toLowerCase().includes(searchTerm)) {
+            results.storage.push(item);
+        }
+    });
+
+    return results;
+}
+
+// ============ Dropdown Population ============
+
+function populateShipDropdown() {
+    const select = document.getElementById('shipName');
+    select.innerHTML = '<option value="">Select a ship...</option>';
+
+    // Group ships by manufacturer
+    const byManufacturer = {};
+    SC_DATA.ships.forEach(ship => {
+        if (!byManufacturer[ship.manufacturer]) {
+            byManufacturer[ship.manufacturer] = [];
+        }
+        byManufacturer[ship.manufacturer].push(ship);
+    });
+
+    Object.keys(byManufacturer).sort().forEach(manufacturer => {
+        const optgroup = document.createElement('optgroup');
+        optgroup.label = manufacturer;
+        byManufacturer[manufacturer].forEach(ship => {
+            const option = document.createElement('option');
+            option.value = ship.name;
+            option.textContent = getShipDisplayName(ship.name);
+            optgroup.appendChild(option);
+        });
+        select.appendChild(optgroup);
+    });
+}
+
+// Create a component dropdown filtered by size
+function createComponentDropdown(type, size, selectedValue = '') {
+    const select = document.createElement('select');
+    select.innerHTML = '<option value="">Empty</option>';
+
+    let components;
+    switch (type) {
+        case 'shield':
+            components = SC_DATA.shields.filter(c => c.size === size);
+            break;
+        case 'powerPlant':
+            components = SC_DATA.powerPlants.filter(c => c.size === size);
+            break;
+        case 'cooler':
+            components = SC_DATA.coolers.filter(c => c.size === size);
+            break;
+        case 'quantumDrive':
+            components = SC_DATA.quantumDrives.filter(c => c.size === size);
+            break;
+        case 'weapon':
+            components = SC_DATA.weapons[size] || [];
+            break;
+        default:
+            components = [];
+    }
+
+    // Sort by name
+    components.sort((a, b) => a.name.localeCompare(b.name));
+
+    components.forEach(comp => {
+        const option = document.createElement('option');
+        option.value = comp.name;
+        if (type === 'weapon') {
+            option.textContent = `${comp.name} (${comp.type})`;
+        } else {
+            option.textContent = `${comp.name} (${comp.manufacturer})`;
+        }
+        if (comp.name === selectedValue) {
+            option.selected = true;
+        }
+        select.appendChild(option);
+    });
+
+    return select;
+}
+
+// ============ Slot Management ============
+
+function clearAllSlots() {
+    ['weaponSlots', 'shieldSlots', 'powerPlantSlots', 'coolerSlots', 'quantumDriveSlots'].forEach(id => {
+        document.getElementById(id).innerHTML = '';
+    });
+}
+
+function addSlot(containerId, type, size, value = '') {
+    const container = document.getElementById(containerId);
+    const slot = document.createElement('div');
+    slot.className = 'component-slot';
+    slot.dataset.size = size;
+
+    // Size label
+    const sizeLabel = document.createElement('span');
+    sizeLabel.className = 'slot-size';
+    sizeLabel.textContent = type === 'weapon' ? `S${size}` : SC_DATA.getComponentSizeLabel(size);
+    slot.appendChild(sizeLabel);
+
+    // Dropdown
+    const select = createComponentDropdown(type, size, value);
+    slot.appendChild(select);
+
+    container.appendChild(slot);
+}
+
+// Populate slots based on ship spec
+function populateSlotsForShip(shipSpec, existingComponents = null) {
+    clearAllSlots();
+
+    if (!shipSpec) {
+        // Reset hints
+        document.getElementById('weaponsHint').textContent = 'Select a ship to see available hardpoints';
+        document.getElementById('shieldsHint').textContent = 'Select a ship to see available slots';
+        document.getElementById('powerPlantsHint').textContent = 'Select a ship to see available slots';
+        document.getElementById('coolersHint').textContent = 'Select a ship to see available slots';
+        document.getElementById('quantumDriveHint').textContent = 'Select a ship to see available slot';
+        document.getElementById('shipSlotsInfo').classList.add('hidden');
+        return;
+    }
+
+    // Show slots summary
+    const slotsInfo = document.getElementById('shipSlotsInfo');
+    const weaponSizes = (shipSpec.weapons || []).map(w => `S${w.size}`).join(', ') || 'None';
+    const shieldInfo = shipSpec.shields ? `${shipSpec.shields.count}x Size ${shipSpec.shields.size}` : 'None';
+    const ppInfo = shipSpec.powerPlants ? `${shipSpec.powerPlants.count}x Size ${shipSpec.powerPlants.size}` : 'None';
+    const coolerInfo = shipSpec.coolers ? `${shipSpec.coolers.count}x Size ${shipSpec.coolers.size}` : 'None';
+    const qdInfo = shipSpec.quantumDrive ? `Size ${shipSpec.quantumDrive.size}` : 'None';
+
+    slotsInfo.innerHTML = `
+        <div class="slot-summary">
+            <span class="slot-item"><strong>Weapons:</strong> ${weaponSizes}</span>
+            <span class="slot-item"><strong>Shields:</strong> ${shieldInfo}</span>
+            <span class="slot-item"><strong>Power:</strong> ${ppInfo}</span>
+            <span class="slot-item"><strong>Coolers:</strong> ${coolerInfo}</span>
+            <span class="slot-item"><strong>QD:</strong> ${qdInfo}</span>
+        </div>
+    `;
+    slotsInfo.classList.remove('hidden');
+
+    // Weapons
+    const weapons = shipSpec.weapons || [];
+    if (weapons.length > 0) {
+        document.getElementById('weaponsHint').textContent = `${weapons.length} hardpoints`;
+        weapons.forEach((w, i) => {
+            const value = existingComponents?.weapons?.[i]?.name || '';
+            addSlot('weaponSlots', 'weapon', w.size, value);
+        });
+    } else {
+        document.getElementById('weaponsHint').textContent = 'No weapon hardpoints';
+    }
+
+    // Shields
+    if (shipSpec.shields) {
+        document.getElementById('shieldsHint').textContent = `${shipSpec.shields.count}x Size ${shipSpec.shields.size}`;
+        for (let i = 0; i < shipSpec.shields.count; i++) {
+            const value = existingComponents?.shields?.[i]?.name || '';
+            addSlot('shieldSlots', 'shield', shipSpec.shields.size, value);
+        }
+    } else {
+        document.getElementById('shieldsHint').textContent = 'No shield slots';
+    }
+
+    // Power Plants
+    if (shipSpec.powerPlants) {
+        document.getElementById('powerPlantsHint').textContent = `${shipSpec.powerPlants.count}x Size ${shipSpec.powerPlants.size}`;
+        for (let i = 0; i < shipSpec.powerPlants.count; i++) {
+            const value = existingComponents?.powerPlants?.[i]?.name || '';
+            addSlot('powerPlantSlots', 'powerPlant', shipSpec.powerPlants.size, value);
+        }
+    } else {
+        document.getElementById('powerPlantsHint').textContent = 'No power plant slots';
+    }
+
+    // Coolers
+    if (shipSpec.coolers) {
+        document.getElementById('coolersHint').textContent = `${shipSpec.coolers.count}x Size ${shipSpec.coolers.size}`;
+        for (let i = 0; i < shipSpec.coolers.count; i++) {
+            const value = existingComponents?.coolers?.[i]?.name || '';
+            addSlot('coolerSlots', 'cooler', shipSpec.coolers.size, value);
+        }
+    } else {
+        document.getElementById('coolersHint').textContent = 'No cooler slots';
+    }
+
+    // Quantum Drive
+    if (shipSpec.quantumDrive) {
+        document.getElementById('quantumDriveHint').textContent = `Size ${shipSpec.quantumDrive.size}`;
+        const value = existingComponents?.quantumDrives?.[0]?.name || '';
+        addSlot('quantumDriveSlots', 'quantumDrive', shipSpec.quantumDrive.size, value);
+    } else {
+        document.getElementById('quantumDriveHint').textContent = 'No quantum drive slot';
+    }
+}
+
+function getSlotValues(containerId) {
+    const container = document.getElementById(containerId);
+    const slots = container.querySelectorAll('.component-slot');
+    const values = [];
+    slots.forEach(slot => {
+        const select = slot.querySelector('select');
+        const size = parseInt(slot.dataset.size, 10);
+        if (select.value) {
+            values.push({ name: select.value, size: size });
+        }
+    });
+    return values;
+}
+
+// ============ UI Rendering ============
+
+const TYPE_LABELS = {
+    weapons: 'Weapons',
+    shields: 'Shield Generators',
+    powerPlants: 'Power Plants',
+    coolers: 'Coolers',
+    quantumDrives: 'Quantum Drives'
+};
+
+function renderShips() {
+    const container = document.getElementById('shipsList');
+
+    if (appData.ships.length === 0) {
+        container.innerHTML = `
+            <div class="empty-state">
+                <p>No ships added yet.</p>
+                <button class="btn btn-primary" onclick="openShipModal()">Add Your First Ship</button>
+            </div>
+        `;
+        return;
+    }
+
+    // Sort ships alphabetically by display name
+    const sortedShips = [...appData.ships].sort((a, b) =>
+        getShipDisplayName(a.name).localeCompare(getShipDisplayName(b.name))
+    );
+
+    container.innerHTML = sortedShips.map(ship => {
+        const components = ship.components || {};
+        const nickname = ship.nickname ? ` <span class="ship-nickname">"${ship.nickname}"</span>` : '';
+
+        return `
+            <div class="ship-card" data-id="${ship.id}">
+                <div class="ship-card-header">
+                    <div class="ship-name">${getShipDisplayName(ship.name)}${nickname}</div>
+                    <div class="ship-actions">
+                        <button class="btn btn-secondary btn-small" onclick="openShipModal('${ship.id}')">Edit</button>
+                        <button class="btn btn-danger btn-small" onclick="confirmDeleteShip('${ship.id}')">Delete</button>
+                    </div>
+                </div>
+                <div class="ship-components">
+                    ${renderComponentList('Weapons', components.weapons)}
+                    ${renderComponentList('Shields', components.shields)}
+                    ${renderComponentList('Power', components.powerPlants)}
+                    ${renderComponentList('Coolers', components.coolers)}
+                    ${renderComponentList('QT Drive', components.quantumDrives)}
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+function renderComponentList(label, components) {
+    if (!components || components.length === 0) {
+        return `<div class="component-row"><span class="component-label">${label}:</span> <span class="component-empty">None</span></div>`;
+    }
+    const names = components.map(c => c.name).filter(n => n);
+    if (names.length === 0) {
+        return `<div class="component-row"><span class="component-label">${label}:</span> <span class="component-empty">None</span></div>`;
+    }
+    return `<div class="component-row"><span class="component-label">${label}:</span> <span class="component-value">${names.join(', ')}</span></div>`;
+}
+
+function renderStorage() {
+    const container = document.getElementById('storageList');
+
+    if (appData.storage.length === 0) {
+        container.innerHTML = `
+            <div class="empty-state">
+                <p>No components in storage.</p>
+                <button class="btn btn-primary" onclick="openStorageModal()">Add Component</button>
+            </div>
+        `;
+        return;
+    }
+
+    // Group by type
+    const grouped = {};
+    const typeOrder = ['weapons', 'shields', 'powerPlants', 'coolers', 'quantumDrives'];
+
+    appData.storage.forEach((item, index) => {
+        if (!grouped[item.type]) {
+            grouped[item.type] = [];
+        }
+        grouped[item.type].push({ ...item, originalIndex: index });
+    });
+
+    let html = '';
+    typeOrder.forEach(type => {
+        if (grouped[type] && grouped[type].length > 0) {
+            // Sort by size then name
+            grouped[type].sort((a, b) => {
+                if (a.size !== b.size) return (a.size || 0) - (b.size || 0);
+                return a.name.localeCompare(b.name);
+            });
+
+            html += `
+                <div class="storage-group">
+                    <div class="storage-group-header">${TYPE_LABELS[type] || type}</div>
+                    <div class="storage-group-items">
+                        ${grouped[type].map(item => {
+                            const sizeLabel = item.size ? (type === 'weapons' ? `S${item.size}` : `Size ${item.size}`) : '';
+                            return `
+                                <div class="storage-item" data-index="${item.originalIndex}">
+                                    <div class="storage-info">
+                                        <span class="storage-name">${item.name}</span>
+                                        ${sizeLabel ? `<span class="storage-type">(${sizeLabel})</span>` : ''}
+                                        <span class="storage-quantity">x${item.quantity}</span>
+                                    </div>
+                                    <div class="storage-actions">
+                                        <button class="btn btn-secondary btn-small" onclick="openStorageModal(${item.originalIndex})">Edit</button>
+                                        <button class="btn btn-danger btn-small" onclick="confirmDeleteStorage(${item.originalIndex})">Delete</button>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            `;
+        }
+    });
+
+    container.innerHTML = html;
+}
+
+function renderSearchResults(results) {
+    const container = document.getElementById('searchResults');
+
+    if (!results) {
+        container.classList.add('hidden');
+        return;
+    }
+
+    const totalInstalled = results.installed.length;
+    const totalStorage = results.storage.reduce((sum, item) => sum + item.quantity, 0);
+    const total = totalInstalled + totalStorage;
+
+    if (total === 0) {
+        container.innerHTML = '<p>No components found.</p>';
+        container.classList.remove('hidden');
+        return;
+    }
+
+    let html = `<div class="search-result-count">Found ${total} total</div>`;
+
+    if (totalInstalled > 0) {
+        const byShip = {};
+        results.installed.forEach(r => {
+            const key = getShipDisplayName(r.shipName) + (r.shipNickname ? ` "${r.shipNickname}"` : '');
+            if (!byShip[key]) byShip[key] = [];
+            byShip[key].push(r.component);
+        });
+
+        Object.entries(byShip).forEach(([ship, components]) => {
+            html += `<div class="search-result-item">${ship}: ${components.length} installed</div>`;
+        });
+    }
+
+    if (totalStorage > 0) {
+        html += `<div class="search-result-item">Storage: ${totalStorage} available</div>`;
+    }
+
+    container.innerHTML = html;
+    container.classList.remove('hidden');
+}
+
+// ============ Modal Handling ============
+
+function openModal(modalId) {
+    document.getElementById(modalId).classList.remove('hidden');
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).classList.add('hidden');
+}
+
+function openShipModal(shipId = null) {
+    const title = document.getElementById('shipModalTitle');
+    const form = document.getElementById('shipForm');
+
+    form.reset();
+    document.getElementById('shipId').value = '';
+    currentShipSpec = null;
+    clearAllSlots();
+
+    if (shipId) {
+        const ship = getShipById(shipId);
+        if (ship) {
+            title.textContent = 'Edit Ship';
+            document.getElementById('shipId').value = ship.id;
+            document.getElementById('shipName').value = ship.name || '';
+            document.getElementById('shipNickname').value = ship.nickname || '';
+
+            // Get the ship spec and populate slots with existing values
+            currentShipSpec = getShipSpec(ship.name);
+            if (currentShipSpec) {
+                populateSlotsForShip(currentShipSpec, ship.components);
+            }
+        }
+    } else {
+        title.textContent = 'Add Ship';
+        populateSlotsForShip(null);
+    }
+
+    openModal('shipModal');
+}
+
+// Handle ship selection change
+function onShipSelectionChange(e) {
+    const shipName = e.target.value;
+    currentShipSpec = getShipSpec(shipName);
+
+    // Get default components to pre-populate the slots
+    const defaults = SC_DATA.getDefaultComponents(currentShipSpec);
+    populateSlotsForShip(currentShipSpec, defaults);
+}
+
+function openStorageModal(index = null) {
+    const title = document.getElementById('storageModalTitle');
+    const form = document.getElementById('storageForm');
+
+    form.reset();
+    document.getElementById('storageIndex').value = '';
+    document.getElementById('storageQuantity').value = '1';
+    document.getElementById('storageComponent').innerHTML = '<option value="">Select a component...</option>';
+    document.getElementById('storageSizeGroup').classList.add('hidden');
+    document.getElementById('storageComponentGroup').classList.remove('hidden');
+
+    if (index !== null && appData.storage[index]) {
+        const item = appData.storage[index];
+        title.textContent = 'Edit Component';
+        document.getElementById('storageIndex').value = index;
+        document.getElementById('storageType').value = item.type;
+        document.getElementById('storageQuantity').value = item.quantity;
+
+        // Trigger type change to populate size/component
+        populateStorageSizeDropdown(item.type);
+        if (item.size) {
+            document.getElementById('storageSize').value = item.size;
+            populateStorageComponentDropdown(item.type, item.size);
+            document.getElementById('storageComponent').value = item.name;
+        }
+    } else {
+        title.textContent = 'Add Component to Storage';
+    }
+
+    openModal('storageModal');
+}
+
+function populateStorageSizeDropdown(type) {
+    const sizeGroup = document.getElementById('storageSizeGroup');
+    const sizeSelect = document.getElementById('storageSize');
+    const componentGroup = document.getElementById('storageComponentGroup');
+
+    sizeSelect.innerHTML = '<option value="">Select size...</option>';
+    document.getElementById('storageComponent').innerHTML = '<option value="">Select a component...</option>';
+
+    if (type === 'weapons') {
+        // Weapons have sizes 1-7
+        for (let i = 1; i <= 7; i++) {
+            if (SC_DATA.weapons[i] && SC_DATA.weapons[i].length > 0) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = `Size ${i}`;
+                sizeSelect.appendChild(option);
+            }
+        }
+        sizeGroup.classList.remove('hidden');
+        componentGroup.classList.remove('hidden');
+    } else if (['shields', 'powerPlants', 'coolers', 'quantumDrives'].includes(type)) {
+        // Components have sizes 1-3
+        for (let i = 1; i <= 3; i++) {
+            const option = document.createElement('option');
+            option.value = i;
+            const labels = { 1: 'Small', 2: 'Medium', 3: 'Large' };
+            option.textContent = `${labels[i]} (Size ${i})`;
+            sizeSelect.appendChild(option);
+        }
+        sizeGroup.classList.remove('hidden');
+        componentGroup.classList.remove('hidden');
+    } else {
+        sizeGroup.classList.add('hidden');
+    }
+}
+
+function populateStorageComponentDropdown(type, size) {
+    const select = document.getElementById('storageComponent');
+    select.innerHTML = '<option value="">Select a component...</option>';
+
+    if (!type || !size) return;
+
+    let components;
+    const sizeNum = parseInt(size, 10);
+
+    switch (type) {
+        case 'weapons':
+            components = SC_DATA.weapons[sizeNum] || [];
+            break;
+        case 'shields':
+            components = SC_DATA.shields.filter(c => c.size === sizeNum);
+            break;
+        case 'powerPlants':
+            components = SC_DATA.powerPlants.filter(c => c.size === sizeNum);
+            break;
+        case 'coolers':
+            components = SC_DATA.coolers.filter(c => c.size === sizeNum);
+            break;
+        case 'quantumDrives':
+            components = SC_DATA.quantumDrives.filter(c => c.size === sizeNum);
+            break;
+        default:
+            return;
+    }
+
+    components.sort((a, b) => a.name.localeCompare(b.name));
+
+    components.forEach(comp => {
+        const option = document.createElement('option');
+        option.value = comp.name;
+        if (type === 'weapons') {
+            option.textContent = `${comp.name} (${comp.type})`;
+        } else {
+            option.textContent = `${comp.name} (${comp.manufacturer})`;
+        }
+        select.appendChild(option);
+    });
+}
+
+// Delete confirmation
+let pendingDelete = null;
+
+function confirmDeleteShip(shipId) {
+    const ship = getShipById(shipId);
+    if (ship) {
+        document.getElementById('deleteMessage').textContent =
+            `Are you sure you want to delete "${getShipDisplayName(ship.name)}"${ship.nickname ? ` (${ship.nickname})` : ''}?`;
+        pendingDelete = { type: 'ship', id: shipId };
+        openModal('deleteModal');
+    }
+}
+
+function confirmDeleteStorage(index) {
+    const item = appData.storage[index];
+    if (item) {
+        document.getElementById('deleteMessage').textContent =
+            `Are you sure you want to delete "${item.name}" (x${item.quantity}) from storage?`;
+        pendingDelete = { type: 'storage', index };
+        openModal('deleteModal');
+    }
+}
+
+function executeDelete() {
+    if (!pendingDelete) return;
+
+    if (pendingDelete.type === 'ship') {
+        deleteShip(pendingDelete.id);
+    } else if (pendingDelete.type === 'storage') {
+        deleteStorageItem(pendingDelete.index);
+    }
+
+    pendingDelete = null;
+    closeModal('deleteModal');
+}
+
+// ============ Form Handling ============
+
+function handleShipSubmit(e) {
+    e.preventDefault();
+
+    const shipId = document.getElementById('shipId').value;
+    const shipName = document.getElementById('shipName').value;
+
+    if (!shipName) {
+        alert('Please select a ship.');
+        return;
+    }
+
+    const ship = {
+        name: shipName,
+        nickname: document.getElementById('shipNickname').value.trim(),
+        components: {
+            weapons: getSlotValues('weaponSlots'),
+            shields: getSlotValues('shieldSlots'),
+            powerPlants: getSlotValues('powerPlantSlots'),
+            coolers: getSlotValues('coolerSlots'),
+            quantumDrives: getSlotValues('quantumDriveSlots')
+        }
+    };
+
+    if (shipId) {
+        updateShip(shipId, ship);
+    } else {
+        addShip(ship);
+    }
+
+    closeModal('shipModal');
+}
+
+function handleStorageSubmit(e) {
+    e.preventDefault();
+
+    const indexStr = document.getElementById('storageIndex').value;
+    const type = document.getElementById('storageType').value;
+    const size = document.getElementById('storageSize').value;
+    const name = document.getElementById('storageComponent').value;
+
+    if (!name) {
+        alert('Please select a component.');
+        return;
+    }
+
+    const item = {
+        type: type,
+        name: name,
+        size: size ? parseInt(size, 10) : null,
+        quantity: parseInt(document.getElementById('storageQuantity').value, 10) || 1
+    };
+
+    if (indexStr !== '') {
+        updateStorageItem(parseInt(indexStr, 10), item);
+    } else {
+        addStorageItem(item);
+    }
+
+    closeModal('storageModal');
+}
+
+// ============ Event Listeners ============
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Populate ship dropdown
+    populateShipDropdown();
+
+    // Initial render
+    renderShips();
+    renderStorage();
+
+    // Ship selection change
+    document.getElementById('shipName').addEventListener('change', onShipSelectionChange);
+
+    // Add ship button
+    document.getElementById('addShipBtn').addEventListener('click', () => openShipModal());
+
+    // Add storage button
+    document.getElementById('addStorageBtn').addEventListener('click', () => openStorageModal());
+
+    // Ship form submit
+    document.getElementById('shipForm').addEventListener('submit', handleShipSubmit);
+
+    // Storage form submit
+    document.getElementById('storageForm').addEventListener('submit', handleStorageSubmit);
+
+    // Storage type change
+    document.getElementById('storageType').addEventListener('change', (e) => {
+        populateStorageSizeDropdown(e.target.value);
+    });
+
+    // Storage size change
+    document.getElementById('storageSize').addEventListener('change', (e) => {
+        const type = document.getElementById('storageType').value;
+        populateStorageComponentDropdown(type, e.target.value);
+    });
+
+    // Confirm delete button
+    document.getElementById('confirmDeleteBtn').addEventListener('click', executeDelete);
+
+    // Modal close buttons
+    document.querySelectorAll('.modal-close, [data-modal]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const modalId = e.target.dataset.modal;
+            if (modalId) {
+                closeModal(modalId);
+            }
+        });
+    });
+
+    // Close modal on backdrop click
+    document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal(modal.id);
+            }
+        });
+    });
+
+    // Search input
+    const searchInput = document.getElementById('searchInput');
+    let searchTimeout;
+
+    searchInput.addEventListener('input', (e) => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            const query = e.target.value;
+            const results = searchComponents(query);
+            renderSearchResults(results);
+        }, 200);
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.search-container')) {
+            document.getElementById('searchResults').classList.add('hidden');
+        }
+    });
+
+    searchInput.addEventListener('focus', () => {
+        const query = searchInput.value;
+        if (query.trim()) {
+            const results = searchComponents(query);
+            renderSearchResults(results);
+        }
+    });
+});
+
+// Make functions available globally for onclick handlers
+window.openShipModal = openShipModal;
+window.openStorageModal = openStorageModal;
+window.confirmDeleteShip = confirmDeleteShip;
+window.confirmDeleteStorage = confirmDeleteStorage;

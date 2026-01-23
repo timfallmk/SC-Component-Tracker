@@ -1412,6 +1412,46 @@ quantumDrives: [
             quantumDrive: { size: 2 }
         },
         {
+            name: "RSI Meteor",
+            manufacturer: "RSI",
+            size: "Medium",
+            weapons: [{ size: 5 }, { size: 5 }, { size: 3 }, { size: 3 }],
+            shields: { count: 2, size: 1 },
+            powerPlants: { count: 1, size: 1 },
+            coolers: { count: 2, size: 1 },
+            quantumDrive: { size: 1 }
+        },
+        {
+            name: "RSI Meteor PYAM Exec",
+            manufacturer: "RSI",
+            size: "Medium",
+            weapons: [{ size: 5 }, { size: 5 }, { size: 3 }, { size: 3 }],
+            shields: { count: 2, size: 1 },
+            powerPlants: { count: 1, size: 1 },
+            coolers: { count: 2, size: 1 },
+            quantumDrive: { size: 1 }
+        },
+        {
+            name: "RSI Meteor Wikelo Sneak Special",
+            manufacturer: "RSI",
+            size: "Medium",
+            weapons: [{ size: 5 }, { size: 5 }, { size: 3 }, { size: 3 }],
+            shields: { count: 2, size: 1 },
+            powerPlants: { count: 1, size: 1 },
+            coolers: { count: 2, size: 1 },
+            quantumDrive: { size: 1 }
+        },
+        {
+            name: "RSI Perseus",
+            manufacturer: "RSI",
+            size: "Large",
+            weapons: [{ size: 7 }, { size: 7 }, { size: 3 }, { size: 3 }, { size: 3 }, { size: 3 }, { size: 1 }, { size: 1 }],
+            shields: { count: 1, size: 3 },
+            powerPlants: { count: 1, size: 3 },
+            coolers: { count: 1, size: 3 },
+            quantumDrive: { size: 3 }
+        },
+        {
             name: "RSI Scorpius",
             manufacturer: "RSI",
             size: "Medium",

@@ -863,7 +863,7 @@ quantumDrives: [
             name: "Crusader Mercury Star Runner",
             manufacturer: "Crusader",
             size: "Large",
-            weapons: [{ size: 3 }, { size: 3 }, { size: 2 }, { size: 2 }],
+            weapons: [{ size: 3 }, { size: 3 }, { size: 3 }, { size: 3 }, { size: 3 }, { size: 3 }],
             shields: { count: 1, size: 3 },
             powerPlants: { count: 2, size: 2 },
             coolers: { count: 2, size: 2 },

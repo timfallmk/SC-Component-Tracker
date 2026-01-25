@@ -2432,7 +2432,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["Maelstrom"],
         coolers: ["Polar"],
         shields: ["Sheut"],
-        pilotWeapons: ["Tarantula GT-870 Mark 2 Cannon","Tarantula GT-870 Mark 3 Cannon","CF-337 Panther Repeater","CF-227 Badger Repeater"],
+        pilotWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater","Tarantula GT-870 Mark 3 Cannon","Tarantula GT-870 Mark 3 Cannon","CF-227 Badger Repeater","CF-227 Badger Repeater","Tarantula GT-870 Mark 2 Cannon","Tarantula GT-870 Mark 2 Cannon"],
         turretWeapons: []
     },
     "Anvil F8C Lightning Executive Edition": {

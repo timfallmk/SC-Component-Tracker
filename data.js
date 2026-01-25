@@ -2881,7 +2881,7 @@ SC_DATA.stockLoadouts = {
         coolers: ["CoolCore"],
         shields: ["Stronghold"],
         pilotWeapons: ["CF-337 Panther Repeater"],
-        turretWeapons: []
+        turretWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater"]
     },
     "Cutlass Black PYAM Exec": {
         quantumDrives: ["Odyssey"],

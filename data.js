@@ -784,7 +784,7 @@ quantumDrives: [
                 { type: "manned", guns: 2, size: 3 }
             ],
             shields: { count: 2, size: 1 },
-            powerPlants: { count: 2, size: 1 },
+            powerPlants: { count: 1, size: 2 },
             coolers: { count: 2, size: 1 },
             quantumDrive: { size: 1 }
         },
@@ -2317,7 +2317,7 @@ SC_DATA.stockLoadouts = {
     },
     "Anvil F7A Hornet Mk II": {
         quantumDrives: ["Eos"],
-        powerPlants: ["Regulus","Regulus"],
+        powerPlants: ["Maelstrom"],
         coolers: ["Bracer"],
         shields: ["AllStop"],
         pilotWeapons: ["Revenant Gatling","Revenant Gatling","Omnisky IX Cannon","Omnisky IX Cannon"],

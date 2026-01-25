@@ -66,7 +66,9 @@ weapons: {
         { name: "Sledge II Mass Driver Cannon", manufacturer: "Klaus & Werner", type: "Gun" },
         { name: "Strife Mass Driver Cannon", manufacturer: "Apocalypse Arms", type: "Gun" },
         { name: "Suckerpunch-L Cannon", manufacturer: "Joker Engineering", type: "Gun" },
-        { name: "SureGrip TH2 Tractor Beam", manufacturer: "Greycat Industrial", type: "Gun" },        { name: "Tarantula GT-870 Mark 2 Cannon", manufacturer: "Gallenson Tactical Systems", type: "Gun" },
+        { name: "SureGrip TH2 Tractor Beam", manufacturer: "Greycat Industrial", type: "Gun" },
+        { name: "SW16BR2 “Sawbuck” Repeater", manufacturer: "Behring", type: "Gun" },
+        { name: "Tarantula GT-870 Mark 2 Cannon", manufacturer: "Gallenson Tactical Systems", type: "Gun" },
         { name: "Thlilye Laser Gatling", manufacturer: "Aopoa", type: "Gun" },
         { name: "Tigerstrike T-19P", manufacturer: "Kruger Intergalatic", type: "NoseMounted" },
         { name: "Yebira II", manufacturer: "Aegis Dynamics", type: "Rocket" },
@@ -2184,7 +2186,7 @@ SC_DATA.stockLoadouts = {
         coolers: ["Arctic"],
         shields: ["FullStop"],
         pilotWeapons: ["Deadbolt V Cannon","BRVS Repeater","BRVS Repeater","BRVS Repeater","BRVS Repeater"],
-        turretWeapons: ["NDB-28 Repeater"]
+        turretWeapons: ["SW16BR2 Sawbuck Repeater"]
     },
     "Aegis Vanguard Sentinel": {
         quantumDrives: ["Nova"],
@@ -2200,7 +2202,7 @@ SC_DATA.stockLoadouts = {
         coolers: ["Arctic"],
         shields: ["FullStop"],
         pilotWeapons: ["Deadbolt V Cannon","MVSA Cannon","MVSA Cannon","MVSA Cannon","MVSA Cannon"],
-        turretWeapons: ["NDB-28 Repeater"]
+        turretWeapons: ["SW16BR2 Sawbuck Repeater"]
     },
     "Anvil Arrow": {
         quantumDrives: ["Beacon"],
@@ -2263,7 +2265,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["Regulus"],
         coolers: ["Bracer"],
         shields: ["Shimmer"],
-        pilotWeapons: ["CF-117 Bulldog Repeater"],
+        pilotWeapons: ["CF-117 Bulldog Repeater", "CF-117 Bulldog Repeater"],
         turretWeapons: []
     },
     "Anvil C8X Pisces Expedition": {

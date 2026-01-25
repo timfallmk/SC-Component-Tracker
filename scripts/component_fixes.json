@@ -1,0 +1,366 @@
+{
+  "Aegis Reclaimer": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": null,
+    "turretWeapons": [
+      "CF-557 Galdereen Repeater",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "Aegis Redeemer": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": [
+      "Main Powerplant",
+      "Main Powerplant"
+    ],
+    "quantumDrives": null,
+    "turretWeapons": null
+  },
+  "Anvil F8A Lightning": {
+    "shields": null,
+    "coolers": [
+      "Arctic"
+    ],
+    "powerPlants": null,
+    "quantumDrives": [
+      "Odyssey"
+    ],
+    "turretWeapons": null
+  },
+  "Anvil Terrapin": {
+    "shields": null,
+    "coolers": [
+      "Arctic"
+    ],
+    "powerPlants": null,
+    "quantumDrives": [
+      "Aither"
+    ],
+    "turretWeapons": null
+  },
+  "Anvil Valkyrie": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": null,
+    "turretWeapons": [
+      "CF-447 Rhino Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      ""
+    ]
+  },
+  "ARGO MOLE": {
+    "shields": [
+      "5MA 'Chimalli'",
+      ""
+    ],
+    "coolers": [
+      "CoolCore",
+      ""
+    ],
+    "powerPlants": [
+      "Diligence",
+      ""
+    ],
+    "quantumDrives": null,
+    "turretWeapons": null
+  },
+  "ARGO RAFT": {
+    "shields": [
+      "Bulwark"
+    ],
+    "coolers": [
+      "Eco-Flow"
+    ],
+    "powerPlants": [
+      "Breton"
+    ],
+    "quantumDrives": [
+      "Colossus"
+    ],
+    "turretWeapons": null
+  },
+  "Banu Defender": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": [
+      "Crossfield"
+    ],
+    "turretWeapons": null
+  },
+  "Crusader A2 Hercules Starlifter": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": null,
+    "turretWeapons": [
+      "Omnisky XV Cannon",
+      "CF-447 Rhino Repeater"
+    ]
+  },
+  "Crusader C2 Hercules Starlifter": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": null,
+    "turretWeapons": [
+      "CF-447 Rhino Repeater"
+    ]
+  },
+  "Drake Caterpillar": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": null,
+    "turretWeapons": [
+      "CF-227 Badger Repeater",
+      "CF-227 Badger Repeater"
+    ]
+  },
+  "Esperia Blade": {
+    "shields": [
+      "CoverAll"
+    ],
+    "coolers": [
+      "AbsoluteZero"
+    ],
+    "powerPlants": [
+      "Bolide"
+    ],
+    "quantumDrives": [
+      "Cascade"
+    ],
+    "turretWeapons": null
+  },
+  "Esperia Glaive": {
+    "shields": [
+      "CoverAll"
+    ],
+    "coolers": [
+      "Arctic"
+    ],
+    "powerPlants": [
+      "Bolide"
+    ],
+    "quantumDrives": [
+      "Crossfield"
+    ],
+    "turretWeapons": null
+  },
+  "Esperia Prowler": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": null,
+    "turretWeapons": [
+      "CF-557 Galdereen Repeater",
+      "CF-337 Panther Repeater"
+    ]
+  },
+  "Kruger P-52 Merlin": {
+    "shields": [
+      "Castra"
+    ],
+    "coolers": [
+      "Cryo-Star SL"
+    ],
+    "powerPlants": [
+      "Defiant"
+    ],
+    "quantumDrives": null,
+    "turretWeapons": null
+  },
+  "Kruger P-72 Archimedes": {
+    "shields": [
+      "Castra"
+    ],
+    "coolers": [
+      "Cryo-Star SL"
+    ],
+    "powerPlants": [
+      "Defiant"
+    ],
+    "quantumDrives": null,
+    "turretWeapons": null
+  },
+  "MISC Hull A": {
+    "shields": [
+      "Bulwark"
+    ],
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": null,
+    "turretWeapons": null
+  },
+  "MISC Hull C": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": null,
+    "turretWeapons": [
+      "CF-447 Rhino Repeater",
+      "",
+      ""
+    ]
+  },
+  "MISC Starfarer": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": null,
+    "turretWeapons": [
+      "M6A Cannon",
+      "CF-337 Panther Repeater"
+    ]
+  },
+  "MISC Starfarer Gemini": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": null,
+    "turretWeapons": [
+      "CF-557 Galdereen Repeater",
+      "CF-337 Panther Repeater"
+    ]
+  },
+  "Mirai Fury": {
+    "shields": [
+      "Castra"
+    ],
+    "coolers": [
+      "Cryo-Star SL"
+    ],
+    "powerPlants": [
+      "Defiant"
+    ],
+    "quantumDrives": null,
+    "turretWeapons": null
+  },
+  "Mirai Guardian": {
+    "shields": [
+      "AllStop"
+    ],
+    "coolers": [
+      "Bracer"
+    ],
+    "powerPlants": null,
+    "quantumDrives": [
+      "Beacon"
+    ],
+    "turretWeapons": null
+  },
+  "Origin 400i": {
+    "shields": [
+      "BLOC"
+    ],
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": null,
+    "turretWeapons": null
+  },
+  "Origin 600i": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": [
+      "Drifter"
+    ],
+    "turretWeapons": null
+  },
+  "Origin 600i Explorer": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": [
+      "Drifter"
+    ],
+    "turretWeapons": [
+      "M7A Cannon",
+      "CF-447 Rhino Repeater"
+    ]
+  },
+  "Origin 600i Touring": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": [
+      "Drifter"
+    ],
+    "turretWeapons": [
+      "M7A Cannon",
+      "CF-447 Rhino Repeater"
+    ]
+  },
+  "Origin 890 Jump": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": null,
+    "turretWeapons": [
+      "CF-557 Galdereen Repeater",
+      "CF-447 Rhino Repeater",
+      "CF-447 Rhino Repeater"
+    ]
+  },
+  "RSI Mantis": {
+    "shields": [
+      "CoverAll"
+    ],
+    "coolers": [
+      "Arctic"
+    ],
+    "powerPlants": [
+      "Bolide"
+    ],
+    "quantumDrives": [
+      "Crossfield"
+    ],
+    "turretWeapons": null
+  },
+  "RSI Perseus": {
+    "shields": null,
+    "coolers": null,
+    "powerPlants": null,
+    "quantumDrives": null,
+    "turretWeapons": [
+      "RSI Medusa Cannon",
+      "RSI Medusa Cannon",
+      "Mantis GT-220 Gatling",
+      "Mantis GT-220 Gatling",
+      "CF-117 Bulldog Repeater"
+    ]
+  },
+  "RSI Scorpius": {
+    "shields": null,
+    "coolers": [
+      "Arctic"
+    ],
+    "powerPlants": [
+      "Bolide"
+    ],
+    "quantumDrives": [
+      "Aither"
+    ],
+    "turretWeapons": null
+  }
+}

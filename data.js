@@ -2018,12 +2018,13 @@ SC_DATA.stockLoadouts = {
         pilotWeapons: ["Omnisky IX Cannon", "CF-337 Panther Repeater", "CF-337 Panther Repeater"],
         turretWeapons: []
     },
-    "Aegis Hammerhead": {
+        "Aegis Hammerhead": {
         quantumDrives: ["Kama"],
-        powerPlants: ["SuperDrive"],
-        coolers: ["Mercury"],
-        shields: ["Stronghold"],
-        turretWeapons: ["CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater"]
+        powerPlants: ["SuperDrive","SuperDrive"],
+        coolers: ["Mercury","Mercury"],
+        shields: ["Stronghold","Stronghold"],
+        pilotWeapons: [],
+        turretWeapons: ["CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater"]
     },
     "Aegis Hammerhead 2949 Best In Show Edition": {
         quantumDrives: ["Kama"],
@@ -2064,13 +2065,13 @@ SC_DATA.stockLoadouts = {
         pilotWeapons: ["M9A Cannon"],
         turretWeapons: []
     },
-    "Aegis Reclaimer": {
+        "Aegis Reclaimer": {
         quantumDrives: ["Kama"],
         powerPlants: ["Main Powerplant"],
         coolers: ["Algid"],
         shields: ["RS-Barrier"],
         pilotWeapons: [],
-        turretWeapons: ["M2C \"Swarm\""]
+        turretWeapons: ["M2C \"Swarm\"",,"CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater"]
     },
     "Aegis Reclaimer 2949 Best In Show Edition": {
         quantumDrives: ["Kama"],
@@ -2088,13 +2089,13 @@ SC_DATA.stockLoadouts = {
         pilotWeapons: [],
         turretWeapons: []
     },
-    "Aegis Redeemer": {
+        "Aegis Redeemer": {
         quantumDrives: ["Crossfield"],
-        powerPlants: ["Durango","Durango"],
+        powerPlants: ["Centurion","Centurion"],
         coolers: ["Blizzard"],
-        shields: ["FullStop"],
+        shields: ["FullStop","FullStop","FullStop","FullStop","FullStop","FullStop"],
         pilotWeapons: ["C-788 Cannon","C-788 Cannon"],
-        turretWeapons: ["AD4B Ballistic Gatling","AD4B Ballistic Gatling","M5A Cannon"]
+        turretWeapons: ["AD4B Ballistic Gatling","AD4B Ballistic Gatling","M5A Cannon","M5A Cannon","M5A Cannon","M5A Cannon","M5A Cannon","M5A Cannon","M6A Cannon","M6A Cannon"]
     },
     "Aegis Retaliator": {
         quantumDrives: ["Crossfield"],
@@ -2104,25 +2105,20 @@ SC_DATA.stockLoadouts = {
         pilotWeapons: ["CF-337 Panther Repeater"],
         turretWeapons: []
     },
-    "Aegis Retaliator Bomber": {
+        "Aegis Retaliator Bomber": {
         quantumDrives: ["Crossfield"],
-        powerPlants: ["Maelstrom"],
-        coolers: ["Arctic"],
-        shields: ["FullStop"],
-        turretWeapons: [
-            "CF-337 Panther Repeater",
-            "CF-337 Panther Repeater",
-            "CF-337 Panther Repeater",
-            "CF-337 Panther Repeater",
-            "CF-337 Panther Repeater"
-        ]
+        powerPlants: ["Maelstrom","Maelstrom"],
+        coolers: ["Arctic","Arctic"],
+        shields: ["FullStop","FullStop","FullStop","FullStop","FullStop","FullStop"],
+        pilotWeapons: [],
+        turretWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater"]
     },
-    "Aegis Sabre": {
+        "Aegis Sabre": {
         quantumDrives: ["Drift"],
-        powerPlants: ["SonicLite"],
-        coolers: ["Bracer"],
-        shields: ["Shimmer"],
-        pilotWeapons: ["CF-337 Panther Repeater"],
+        powerPlants: ["SonicLite","SonicLite"],
+        coolers: ["Bracer","Bracer"],
+        shields: ["Shimmer","Shimmer"],
+        pilotWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater"],
         turretWeapons: []
     },
     "Aegis Sabre Comet": {
@@ -2277,12 +2273,13 @@ SC_DATA.stockLoadouts = {
         pilotWeapons: ["CF-117 Bulldog Repeater","FL-11 Cannon"],
         turretWeapons: []
     },
-    "Anvil Carrack": {
+        "Anvil Carrack": {
         quantumDrives: ["Kama"],
-        powerPlants: ["Reliance"],
-        coolers: ["Ice-Flush"],
-        shields: ["Barbican"],
-        turretWeapons: ["CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater"]
+        powerPlants: ["Reliance","Reliance"],
+        coolers: ["Ice-Flush","Ice-Flush"],
+        shields: ["Barbican","Barbican"],
+        pilotWeapons: [],
+        turretWeapons: ["CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater"]
     },
     "Anvil Carrack Expedition": {
         quantumDrives: ["Kama"],
@@ -2324,20 +2321,20 @@ SC_DATA.stockLoadouts = {
         pilotWeapons: ["Revenant Gatling","Revenant Gatling","Omnisky IX Cannon","Omnisky IX Cannon"],
         turretWeapons: ["Omnisky IX Cannon"]
     },
-    "Anvil F7C Hornet Mk I": {
+        "Anvil F7C Hornet Mk I": {
         quantumDrives: ["Eos"],
         powerPlants: ["PowerBolt"],
-        coolers: ["ArcticStorm"],
-        shields: ["WEB"],
-        pilotWeapons: ["CF-337 Panther Repeater"],
+        coolers: ["ArcticStorm","ArcticStorm"],
+        shields: ["WEB","WEB"],
+        pilotWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater"],
         turretWeapons: []
     },
-    "Anvil F7C Hornet Mk II": {
+        "Anvil F7C Hornet Mk II": {
         quantumDrives: ["Eos"],
-        powerPlants: ["Regulus"],
-        coolers: ["Bracer"],
-        shields: ["AllStop"],
-        pilotWeapons: ["Revenant Gatling"],
+        powerPlants: ["Regulus","Regulus"],
+        coolers: ["Bracer","Bracer"],
+        shields: ["AllStop","AllStop"],
+        pilotWeapons: ["Revenant Gatling","Revenant Gatling"],
         turretWeapons: []
     },
     "Anvil F7C Hornet Wildfire Mk I": {
@@ -2420,12 +2417,12 @@ SC_DATA.stockLoadouts = {
         pilotWeapons: ["Revenant Gatling"],
         turretWeapons: []
     },
-    "Anvil F8A Lightning": {
+        "Anvil F8A Lightning": {
         quantumDrives: ["Expedition"],
         powerPlants: ["Maelstrom"],
-        coolers: ["Polar"],
-        shields: ["Sheut"],
-        pilotWeapons: ["M5A Cannon","M6A Cannon","CF-337 Panther Repeater"],
+        coolers: ["Polar","Polar"],
+        shields: ["Sheut","Sheut"],
+        pilotWeapons: ["M6A Cannon","M6A Cannon","M5A Cannon","M5A Cannon"],
         turretWeapons: []
     },
     "Anvil F8C Lightning": {
@@ -2468,21 +2465,21 @@ SC_DATA.stockLoadouts = {
         pilotWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater"],
         turretWeapons: ["CF-337 Panther Repeater"]
     },
-    "Anvil Hawk": {
+        "Anvil Hawk": {
         quantumDrives: ["Rush"],
         powerPlants: ["Regulus"],
-        coolers: ["Bracer"],
-        shields: ["AllStop"],
-        pilotWeapons: ["CF-227 Badger Repeater","Suckerpunch Cannon"],
+        coolers: ["Bracer","Bracer"],
+        shields: ["AllStop","AllStop"],
+        pilotWeapons: ["CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","Suckerpunch Cannon","Suckerpunch Cannon"],
         turretWeapons: []
     },
-    "Anvil Hurricane": {
+        "Anvil Hurricane": {
         quantumDrives: ["Expedition"],
-        powerPlants: ["Regulus"],
-        coolers: ["Bracer"],
+        powerPlants: ["Regulus","Regulus"],
+        coolers: ["Bracer","Bracer"],
         shields: ["FullStop"],
         pilotWeapons: ["CF-447 Rhino Repeater","CF-447 Rhino Repeater"],
-        turretWeapons: ["CF-337 Panther Repeater"]
+        turretWeapons: ["CF-337 Panther Repeater",,"CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater"]
     },
     "Anvil Paladin": {
         quantumDrives: ["SparkFire"],
@@ -2652,12 +2649,12 @@ SC_DATA.stockLoadouts = {
         pilotWeapons: [],
         turretWeapons: []
     },
-    "Banu Defender": {
+        "Banu Defender": {
         quantumDrives: ["Beacon"],
-        powerPlants: ["IonBurst"],
-        coolers: ["Polar"],
+        powerPlants: ["IonBurst","IonBurst"],
+        coolers: ["Polar","Polar"],
         shields: ["Sukoran"],
-        pilotWeapons: ["Singe Cannon (S3)"],
+        pilotWeapons: ["Singe Cannon (S3)","Singe Cannon (S3)","Singe Cannon (S3)","Singe Cannon (S3)"],
         turretWeapons: []
     },
     "C.O. Mustang Alpha": {
@@ -2876,13 +2873,13 @@ SC_DATA.stockLoadouts = {
         pilotWeapons: [],
         turretWeapons: ["M7A Cannon","M6A Cannon","CF-447 Rhino Repeater"]
     },
-    "Crusader Mercury Star Runner": {
+        "Crusader Mercury Star Runner": {
         quantumDrives: ["Bolon"],
-        powerPlants: ["Diligence"],
-        coolers: ["CoolCore"],
+        powerPlants: ["Diligence","Diligence"],
+        coolers: ["CoolCore","CoolCore"],
         shields: ["Stronghold"],
-        pilotWeapons: ["CF-337 Panther Repeater"],
-        turretWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater"]
+        pilotWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater"],
+        turretWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater"]
     },
     "Cutlass Black PYAM Exec": {
         quantumDrives: ["Odyssey"],
@@ -3396,13 +3393,13 @@ SC_DATA.stockLoadouts = {
         pilotWeapons: ["CF-117 Bulldog Repeater"],
         turretWeapons: []
     },
-    "MISC Hull C": {
+        "MISC Hull C": {
         quantumDrives: ["Kama"],
-        powerPlants: ["Centurion"],
-        coolers: ["Blizzard"],
-        shields: ["Stronghold"],
+        powerPlants: ["Centurion","Centurion"],
+        coolers: ["Blizzard","Blizzard"],
+        shields: ["Stronghold","Stronghold","Stronghold","Stronghold"],
         pilotWeapons: [],
-        turretWeapons: ["CF-337 Panther Repeater"]
+        turretWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater"]
     },
     "MISC Prospector": {
         quantumDrives: ["Goliath"],

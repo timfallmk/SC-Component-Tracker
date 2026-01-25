@@ -94,6 +94,15 @@ for (const [shipName, fixes] of Object.entries(solutions.solutions)) {
     
     // Apply fixes from solutions
     if (fixes.pilotWeapon) {
+        // Find max index to determine array size
+        const maxIndex = Math.max(...Object.keys(fixes.pilotWeapon).map(k => parseInt(k)));
+        const targetSize = Math.max(newArrays.pilotWeapons.length, maxIndex + 1);
+        
+        // Ensure array is the right size
+        while (newArrays.pilotWeapons.length < targetSize) {
+            newArrays.pilotWeapons.push("");
+        }
+        
         for (const [index, weapon] of Object.entries(fixes.pilotWeapon)) {
             newArrays.pilotWeapons[parseInt(index)] = weapon;
             shipSlotsFilled++;
@@ -101,6 +110,15 @@ for (const [shipName, fixes] of Object.entries(solutions.solutions)) {
     }
     
     if (fixes.turretWeapon) {
+        // Find max index to determine array size
+        const maxIndex = Math.max(...Object.keys(fixes.turretWeapon).map(k => parseInt(k)));
+        const targetSize = Math.max(newArrays.turretWeapons.length, maxIndex + 1);
+        
+        // Ensure array is the right size
+        while (newArrays.turretWeapons.length < targetSize) {
+            newArrays.turretWeapons.push("");
+        }
+        
         for (const [index, weapon] of Object.entries(fixes.turretWeapon)) {
             newArrays.turretWeapons[parseInt(index)] = weapon;
             shipSlotsFilled++;
@@ -109,6 +127,14 @@ for (const [shipName, fixes] of Object.entries(solutions.solutions)) {
     
     for (const componentType of ['shields', 'coolers', 'powerPlants', 'quantumDrives']) {
         if (fixes[componentType]) {
+            const maxIndex = Math.max(...Object.keys(fixes[componentType]).map(k => parseInt(k)));
+            const targetSize = Math.max(newArrays[componentType].length, maxIndex + 1);
+            
+            // Ensure array is the right size
+            while (newArrays[componentType].length < targetSize) {
+                newArrays[componentType].push("");
+            }
+            
             for (const [index, component] of Object.entries(fixes[componentType])) {
                 newArrays[componentType][parseInt(index)] = component;
                 shipSlotsFilled++;
@@ -123,7 +149,7 @@ for (const [shipName, fixes] of Object.entries(solutions.solutions)) {
     lines.push(`    "${shipName}": {`);
     
     for (const [key, arr] of Object.entries(newArrays)) {
-        const formattedArray = arr.map(item => `"${item}"`).join(',');
+        const formattedArray = arr.map(item => item === "" ? '""' : `"${item}"`).join(",");
         lines.push(`        ${key}: [${formattedArray}],`);
     }
     

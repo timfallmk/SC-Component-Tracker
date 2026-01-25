@@ -320,31 +320,6 @@
       "current": ""
     }
   ],
-  "MISC Reliant Kore": [
-    {
-      "type": "WEAPON",
-      "slot": "pilotWeapon[1]",
-      "size": 2,
-      "issue": "MISSING",
-      "current": ""
-    }
-  ],
-  "MISC Reliant Tana": [
-    {
-      "type": "WEAPON",
-      "slot": "turretWeapon[0] (Turret[0])",
-      "size": 2,
-      "issue": "MISSING",
-      "current": ""
-    },
-    {
-      "type": "WEAPON",
-      "slot": "turretWeapon[1] (Turret[0])",
-      "size": 2,
-      "issue": "MISSING",
-      "current": ""
-    }
-  ],
   "MISC Reliant Mako": [
     {
       "type": "WEAPON",

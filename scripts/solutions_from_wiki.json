@@ -295,6 +295,12 @@
       },
       "quantumDrives": {
         "0": "Beacon"
+      },
+      "turretWeapon": {
+        "0": "Singe Cannon",
+        "1": "Singe Cannon",
+        "2": "Singe Cannon",
+        "3": "Singe Cannon"
       }
     },
     "C.O. Mustang Alpha": {
@@ -343,8 +349,12 @@
     },
     "C.O. Nomad": {
       "pilotWeapon": {
+        "0": "CF-337 Panther Repeater",
         "1": "CF-337 Panther Repeater",
         "2": "CF-337 Panther Repeater"
+      },
+      "turretWeapon": {
+        "0": "SureGrip S1 Tractor"
       }
     },
     "Crusader Mercury Star Runner": {
@@ -611,10 +621,28 @@
         "3": "CF-447 Rhino Repeater"
       }
     },
-    "MISC Reliant Kore": {},
+    "MISC Reliant Kore": {
+      "pilotWeapon": {
+        "0": "CF-227 Badger Repeater",
+        "1": "CF-227 Badger Repeater"
+      },
+      "turretWeapon": {
+        "0": "CF-227 Badger Repeater",
+        "1": "CF-227 Badger Repeater"
+      }
+    },
     "MISC Reliant Mako": {},
     "MISC Reliant Sen": {},
-    "MISC Reliant Tana": {},
+    "MISC Reliant Tana": {
+      "pilotWeapon": {
+        "0": "CF-227 Badger Repeater",
+        "1": "CF-227 Badger Repeater"
+      },
+      "turretWeapon": {
+        "0": "CF-337 Panther Repeater",
+        "1": "CF-337 Panther Repeater"
+      }
+    },
     "Mirai Razor": {},
     "Mirai Razor EX": {},
     "Mirai Razor LX": {},
@@ -741,12 +769,6 @@
         "1": "CF-227 Badger Repeater"
       }
     },
-    "Mustang Omega": {
-      "pilotWeapon": {
-        "0": "CF-117 Bulldog Repeater",
-        "1": "CF-117 Bulldog Repeater"
-      }
-    },
     "Anvil F7A Hornet Mk II": {
       "turretWeapon": {
         "0": "Omnisky IX Cannon",
@@ -773,31 +795,6 @@
       "pilotWeapon": {
         "0": "Revenant Gatling",
         "1": "Revenant Gatling"
-      }
-    },
-    "Drake Freelancer": {
-      "turretWeapon": {
-        "0": "CF-337 Panther Repeater",
-        "1": "CF-337 Panther Repeater"
-      },
-      "shield": {
-        "0": "5MA Chimalli",
-        "1": "5MA Chimalli",
-        "2": "5MA Chimalli"
-      },
-      "cooler": {
-        "0": "Frost-Star EX",
-        "1": "Frost-Star EX"
-      },
-      "powerPlant": {
-        "0": "D",
-        "1": "a",
-        "2": "y",
-        "3": "B",
-        "4": "r",
-        "5": "e",
-        "6": "a",
-        "7": "k"
       }
     },
     "Crusader A1 Spirit": {
@@ -882,6 +879,8 @@
         "0": "CF-117 Bulldog Repeater",
         "1": "CF-117 Bulldog Repeater"
       }
-    }
+    },
+    "Esperia Blade": {},
+    "Esperia Glaive": {}
   }
 }

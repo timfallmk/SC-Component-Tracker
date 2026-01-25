@@ -1,0 +1,370 @@
+{
+  "source": "starcitizen.tools wiki pages",
+  "date": "2025-01-25",
+  "solutions": {
+    "Aegis Avenger Stalker": {
+      "pilotWeapon": {
+        "2": "Omnisky IX Cannon"
+      }
+    },
+    "Aegis Avenger Titan": {
+      "pilotWeapon": {
+        "2": "Omnisky IX Cannon"
+      }
+    },
+    "Aegis Avenger Warlock": {
+      "pilotWeapon": {
+        "2": "Omnisky IX Cannon"
+      }
+    },
+    "Aegis Eclipse": {
+      "pilotWeapon": {
+        "1": "CF-227 Badger Repeater"
+      }
+    },
+    "Aegis Hammerhead": {
+      "turretWeapon": {
+        "6": "CF-447 Rhino Repeater",
+        "7": "CF-447 Rhino Repeater",
+        "8": "CF-447 Rhino Repeater",
+        "9": "CF-447 Rhino Repeater",
+        "10": "CF-447 Rhino Repeater",
+        "11": "CF-447 Rhino Repeater",
+        "12": "CF-447 Rhino Repeater",
+        "13": "CF-447 Rhino Repeater",
+        "14": "CF-447 Rhino Repeater",
+        "15": "CF-447 Rhino Repeater",
+        "16": "CF-447 Rhino Repeater",
+        "17": "CF-447 Rhino Repeater",
+        "18": "CF-447 Rhino Repeater",
+        "19": "CF-447 Rhino Repeater",
+        "20": "CF-447 Rhino Repeater",
+        "21": "CF-447 Rhino Repeater",
+        "22": "CF-447 Rhino Repeater",
+        "23": "CF-447 Rhino Repeater"
+      },
+      "shields": {
+        "0": "Stronghold",
+        "1": "Stronghold"
+      },
+      "coolers": {
+        "0": "Mercury",
+        "1": "Mercury"
+      },
+      "powerPlants": {
+        "0": "SuperDrive",
+        "1": "SuperDrive"
+      },
+      "quantumDrives": {
+        "0": "Kama"
+      }
+    },
+    "Aegis Reclaimer": {
+      "turretWeapon": {
+        "2": "CF-337 Panther Repeater",
+        "3": "CF-337 Panther Repeater",
+        "4": "CF-337 Panther Repeater",
+        "5": "CF-337 Panther Repeater",
+        "6": "CF-337 Panther Repeater",
+        "7": "CF-337 Panther Repeater",
+        "8": "CF-337 Panther Repeater",
+        "9": "CF-337 Panther Repeater",
+        "10": "CF-337 Panther Repeater",
+        "11": "CF-337 Panther Repeater",
+        "12": "CF-337 Panther Repeater",
+        "13": "CF-337 Panther Repeater",
+        "14": "CF-227 Badger Repeater",
+        "15": "CF-227 Badger Repeater",
+        "16": "CF-227 Badger Repeater"
+      },
+      "shields": {
+        "0": "RS-Barrier"
+      },
+      "coolers": {
+        "0": "Algid"
+      },
+      "powerPlants": {
+        "0": "Main Powerplant"
+      },
+      "quantumDrives": {
+        "0": "Kama"
+      }
+    },
+    "Aegis Redeemer": {
+      "pilotWeapon": {
+        "2": "C-788 Cannon",
+        "3": "C-788 Cannon"
+      },
+      "turretWeapon": {
+        "3": "AD4B Ballistic Gatling",
+        "4": "AD4B Ballistic Gatling",
+        "5": "M5A Cannon",
+        "6": "M5A Cannon",
+        "7": "AD4B Ballistic Gatling",
+        "8": "AD4B Ballistic Gatling"
+      },
+      "shields": {
+        "0": "FullStop",
+        "1": "FullStop"
+      },
+      "coolers": {
+        "0": "Blizzard",
+        "1": "Blizzard"
+      },
+      "powerPlants": {
+        "0": "Durango",
+        "1": "Durango"
+      },
+      "quantumDrives": {
+        "0": "Crossfield"
+      }
+    },
+    "Aegis Retaliator Bomber": {
+      "turretWeapon": {
+        "5": "CF-337 Panther Repeater",
+        "6": "CF-337 Panther Repeater",
+        "7": "CF-337 Panther Repeater",
+        "8": "CF-337 Panther Repeater",
+        "9": "CF-337 Panther Repeater",
+        "10": "CF-337 Panther Repeater",
+        "11": "CF-337 Panther Repeater",
+        "12": "CF-337 Panther Repeater",
+        "13": "CF-337 Panther Repeater",
+        "14": "CF-337 Panther Repeater"
+      },
+      "shields": {
+        "0": "FullStop",
+        "1": "FullStop"
+      },
+      "coolers": {
+        "0": "Arctic",
+        "1": "Arctic"
+      },
+      "powerPlants": {
+        "0": "Maelstrom",
+        "1": "Maelstrom"
+      },
+      "quantumDrives": {
+        "0": "Crossfield"
+      }
+    },
+    "Aegis Sabre": {
+      "pilotWeapon": {
+        "1": "CF-337 Panther Repeater",
+        "2": "CF-337 Panther Repeater",
+        "3": "CF-337 Panther Repeater"
+      },
+      "shields": {
+        "0": "Shimmer",
+        "1": "Shimmer"
+      },
+      "coolers": {
+        "0": "Bracer",
+        "1": "Bracer"
+      },
+      "powerPlants": {
+        "0": "SonicLite"
+      },
+      "quantumDrives": {
+        "0": "Drift"
+      }
+    },
+    "Anvil C8X Pisces Expedition": {
+      "pilotWeapon": {
+        "2": "CF-117 Bulldog Repeater",
+        "3": "FL-11 Cannon"
+      }
+    },
+    "Anvil Carrack": {
+      "turretWeapon": {
+        "4": "CF-447 Rhino Repeater",
+        "5": "CF-447 Rhino Repeater",
+        "6": "CF-447 Rhino Repeater",
+        "7": "CF-447 Rhino Repeater"
+      },
+      "shields": {
+        "0": "Barbican",
+        "1": "Barbican"
+      },
+      "coolers": {
+        "0": "Ice-Flush",
+        "1": "Ice-Flush"
+      },
+      "powerPlants": {
+        "0": "Reliance",
+        "1": "Reliance"
+      },
+      "quantumDrives": {
+        "0": "Kama"
+      }
+    },
+    "Anvil F7C Hornet Mk I": {
+      "pilotWeapon": {
+        "2": "CF-337 Panther Repeater"
+      }
+    },
+    "Anvil F7C Hornet Mk II": {
+      "pilotWeapon": {
+        "2": "CF-337 Panther Repeater",
+        "3": "CF-337 Panther Repeater",
+        "4": "CF-337 Panther Repeater"
+      }
+    },
+    "Anvil F8A Lightning": {
+      "pilotWeapon": {
+        "4": "M5A Cannon",
+        "5": "M5A Cannon"
+      }
+    },
+    "Anvil Hawk": {
+      "pilotWeapon": {
+        "2": "CF-227 Badger Repeater",
+        "3": "CF-227 Badger Repeater",
+        "4": "Suckerpunch Cannon",
+        "5": "Suckerpunch Cannon"
+      },
+      "shields": {
+        "0": "AllStop",
+        "1": "AllStop"
+      },
+      "coolers": {
+        "0": "Bracer",
+        "1": "Bracer"
+      },
+      "powerPlants": {
+        "0": "Regulus"
+      },
+      "quantumDrives": {
+        "0": "Rush"
+      }
+    },
+    "Anvil Hurricane": {
+      "turretWeapon": {
+        "1": "CF-337 Panther Repeater",
+        "2": "CF-337 Panther Repeater",
+        "3": "CF-337 Panther Repeater",
+        "4": "CF-337 Panther Repeater"
+      },
+      "shields": {
+        "0": "FullStop",
+        "1": "FullStop"
+      },
+      "coolers": {
+        "0": "Bracer",
+        "1": "Bracer"
+      },
+      "powerPlants": {
+        "0": "Regulus"
+      },
+      "quantumDrives": {
+        "0": "Expedition"
+      }
+    },
+    "Anvil Valkyrie": {
+      "turretWeapon": {
+        "4": "CF-337 Panther Repeater",
+        "5": "CF-337 Panther Repeater"
+      }
+    },
+    "Banu Defender": {
+      "pilotWeapon": {
+        "1": "Singe Cannon (S3)",
+        "2": "Singe Cannon (S3)",
+        "3": "Singe Cannon (S3)"
+      },
+      "shields": {
+        "0": "Sukoran",
+        "1": "Sukoran"
+      },
+      "coolers": {
+        "0": "Polar",
+        "1": "Polar"
+      },
+      "powerPlants": {
+        "0": "IonBurst"
+      },
+      "quantumDrives": {
+        "0": "Beacon"
+      }
+    },
+    "C.O. Mustang Alpha": {
+      "pilotWeapon": {
+        "1": "CF-227 Badger Repeater"
+      }
+    },
+    "C.O. Mustang Beta": {
+      "pilotWeapon": {
+        "1": "CF-227 Badger Repeater"
+      }
+    },
+    "C.O. Mustang Delta": {
+      "pilotWeapon": {
+        "2": "CF-227 Badger Repeater"
+      }
+    },
+    "C.O. Mustang Gamma": {
+      "pilotWeapon": {
+        "1": "CF-117 Bulldog Repeater"
+      }
+    },
+    "C.O. Mustang Omega": {
+      "pilotWeapon": {
+        "1": "CF-117 Bulldog Repeater"
+      }
+    },
+    "C.O. Nomad": {
+      "pilotWeapon": {
+        "1": "CF-337 Panther Repeater",
+        "2": "CF-337 Panther Repeater"
+      }
+    },
+    "Crusader Mercury Star Runner": {
+      "pilotWeapon": {
+        "1": "CF-337 Panther Repeater"
+      },
+      "turretWeapon": {
+        "2": "CF-337 Panther Repeater",
+        "3": "CF-337 Panther Repeater",
+        "4": "CF-337 Panther Repeater",
+        "5": "CF-337 Panther Repeater"
+      },
+      "shields": {
+        "0": "Stronghold"
+      },
+      "coolers": {
+        "0": "CoolCore",
+        "1": "CoolCore"
+      },
+      "powerPlants": {
+        "0": "Diligence",
+        "1": "Diligence"
+      },
+      "quantumDrives": {
+        "0": "Bolon"
+      }
+    },
+    "MISC Hull C": {
+      "turretWeapon": {
+        "2": "CF-337 Panther Repeater",
+        "3": "CF-337 Panther Repeater",
+        "4": "CF-337 Panther Repeater",
+        "5": "CF-337 Panther Repeater"
+      },
+      "shields": {
+        "0": "Stronghold",
+        "1": "Stronghold"
+      },
+      "coolers": {
+        "0": "Mercury",
+        "1": "Mercury"
+      },
+      "powerPlants": {
+        "0": "SuperDrive",
+        "1": "SuperDrive"
+      },
+      "quantumDrives": {
+        "0": "Kama"
+      }
+    }
+  }
+}

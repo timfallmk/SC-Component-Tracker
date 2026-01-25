@@ -808,7 +808,7 @@ quantumDrives: [
             shields: { count: 2, size: 2 },
             powerPlants: { count: 1, size: 2 },
             coolers: { count: 2, size: 1 },
-            quantumDrive: { size: 2 }
+            quantumDrive: { size: 1 }
         },
         {
             name: "Anvil Gladiator",
@@ -2428,7 +2428,7 @@ SC_DATA.stockLoadouts = {
         turretWeapons: []
     },
     "Anvil F8C Lightning": {
-        quantumDrives: ["Crossfield"],
+        quantumDrives: ["Expedition"],
         powerPlants: ["Maelstrom"],
         coolers: ["Polar","Polar"],
         shields: ["Sheut"],

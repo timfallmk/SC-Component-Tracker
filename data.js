@@ -2257,7 +2257,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["Regulus"],
         coolers: ["Bracer"],
         shields: ["Shimmer"],
-        pilotWeapons: ["CF-117 Bulldog Repeater"],
+        pilotWeapons: ["CF-117 Bulldog Repeater", "CF-117 Bulldog Repeater"],
         turretWeapons: []
     },
     "Anvil C8R Pisces Rescue": {

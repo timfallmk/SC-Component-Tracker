@@ -686,7 +686,7 @@ quantumDrives: [
             name: "Anvil Arrow",
             manufacturer: "Anvil",
             size: "Small",
-            pilotWeapons: [{ size: 3 }, { size: 3 }, { size: 2 }, { size: 2 }],
+            pilotWeapons: [{ size: 3 }, { size: 3 }, { size: 1 }],
             turrets: [],
             shields: { count: 1, size: 1 },
             powerPlants: { count: 1, size: 1 },

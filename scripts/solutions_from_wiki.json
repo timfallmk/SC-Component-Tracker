@@ -365,6 +365,54 @@
       "quantumDrives": {
         "0": "Kama"
       }
-    }
+    },
+    "Drake Cutlass Black": {
+      "shields": {
+        "1": "STOP"
+      },
+      "coolers": {
+        "1": "ColdSnap"
+      }
+    },
+    "Drake Cutlass Blue": {
+      "pilotWeapon": {
+        "2": "CF-337 Panther Repeater"
+      }
+    },
+    "Drake Corsair": {},
+    "MISC Freelancer": {
+      "pilotWeapon": {
+        "1": "CF-337 Panther Repeater"
+      }
+    },
+    "MISC Freelancer DUR": {
+      "pilotWeapon": {
+        "1": "Attrition-3 Repeater"
+      }
+    },
+    "MISC Freelancer MAX": {
+      "pilotWeapon": {
+        "1": "CF-337 Panther Repeater"
+      }
+    },
+    "Esperia Prowler": {
+      "turretWeapon": {
+        "1": "Deadbolt V Cannon"
+      }
+    },
+    "Crusader M2 Hercules Starlifter": {
+      "turretWeapon": {
+        "3": "M6A Cannon"
+      }
+    },
+    "Crusader Spirit C1": {},
+    "Drake Buccaneer": {
+      "pilotWeapon": {
+        "2": "CF-337 Panther Repeater"
+      }
+    },
+    "Gatac Syulen": {},
+    "Mirai Guardian": {},
+    "MISC Starfarer": {}
   }
 }

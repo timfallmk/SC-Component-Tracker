@@ -2850,7 +2850,7 @@ SC_DATA.stockLoadouts = {
         coolers: ["ThermalCore"],
         shields: ["Stronghold"],
         pilotWeapons: ["M7A Cannon", "M7A Cannon"],
-        turretWeapons: ["M6A Cannon", "M6A Cannon", "CF-447 Rhino Repeater", "CF-447 Rhino Repeater"]
+        turretWeapons: ["CF-447 Rhino Repeater", "CF-447 Rhino Repeater", "CF-447 Rhino Repeater", "CF-447 Rhino Repeater"]
     },
     "Crusader Intrepid": {
         quantumDrives: ["FoxFire"],

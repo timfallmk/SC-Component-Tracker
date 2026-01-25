@@ -2428,7 +2428,7 @@ SC_DATA.stockLoadouts = {
         turretWeapons: []
     },
     "Anvil F8C Lightning": {
-        quantumDrives: ["Expedition"],
+        quantumDrives: ["Crossfield"],
         powerPlants: ["Maelstrom"],
         coolers: ["Polar","Polar"],
         shields: ["Sheut"],

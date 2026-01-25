@@ -2317,7 +2317,7 @@ SC_DATA.stockLoadouts = {
     },
     "Anvil F7A Hornet Mk II": {
         quantumDrives: ["Eos"],
-        powerPlants: ["Maelstrom"],
+        powerPlants: ["Maelstrom","Maelstrom"],
         coolers: ["Bracer"],
         shields: ["AllStop"],
         pilotWeapons: ["Revenant Gatling","Revenant Gatling","Omnisky IX Cannon","Omnisky IX Cannon"],

@@ -1,0 +1,222 @@
+FUTURE UPDATES PLAN
+===================
+
+This document describes the process for updating the SC-Component-Tracker 
+when new ships are released or existing ship specs change.
+
+OVERVIEW
+--------
+The infrastructure supports easy updates. Follow this 5-step process:
+
+1. Find the data
+2. Add to solutions file
+3. Apply the fix
+4. Verify
+5. Commit & push
+
+
+DETAILED STEPS
+==============
+
+STEP 1: Find the Data
+---------------------
+When a new ship is released or specs change, gather weapon/component data from:
+
+PRIMARY SOURCE (Most Reliable):
+  - starcitizen.tools wiki
+    - Visit: https://starcitizen.tools/[ShipName]
+    - Look for: Specifications section
+    - Extract: weapon names, sizes, quantities for:
+      * pilotWeapon (main weapons)
+      * turretWeapon (turret weapons)
+      * shield generators
+      * coolers
+      * power plants
+      * quantum drives
+
+ALTERNATIVE SOURCES (If wiki unavailable):
+  - Erkul.games DPS Calculator (may have API endpoints)
+  - Fleetyards database (fleetyards/fleetyards repo)
+  - scunpacked project (richardthombs/scunpacked)
+  - Community databases like Starmap or similar
+
+NOTE: Secondary weapon hardpoints (indices 3-7) are often undocumented.
+If unavailable, use "Unknown" as placeholder.
+
+
+STEP 2: Add to Solutions File
+------------------------------
+Location: scripts/solutions_from_wiki.json
+
+Format the data as JSON:
+{
+  "solutions": {
+    "Ship Name Exactly": {
+      "pilotWeapon": {
+        "0": "Weapon Name",
+        "1": "Weapon Name",
+        ...
+      },
+      "turretWeapon": {
+        "0": "Weapon Name",
+        "1": "Weapon Name",
+        ...
+      },
+      "shield": {
+        "0": "Shield Name"
+      },
+      "cooler": {
+        "0": "Cooler Name",
+        "1": "Cooler Name"
+      },
+      "powerPlant": "Power Plant Name",
+      "quantumDrive": "Quantum Drive Name"
+    }
+  }
+}
+
+IMPORTANT:
+- Ship names must match EXACTLY what appears in data.js
+- Use array indices starting from 0
+- For unknown values, use: "Unknown"
+- Multiple entries of same type use numeric indices
+
+
+STEP 3: Apply the Fix
+---------------------
+Run the application script:
+
+  cd /mnt/c/Users/tripp/projects/SC-Component-Tracker
+  node scripts/apply_wiki_solutions_v2.js
+
+This script will:
+- Read solutions_from_wiki.json
+- Match ships in data.js
+- Fill in the stockLoadouts with the provided weapons/components
+- Preserve all other data
+
+Output will show:
+  ✓ Ship Name: X slots filled
+  Ships updated: N
+  Total slots filled: N
+  ✅ Updated data.js successfully!
+
+
+STEP 4: Verify the Fix
+----------------------
+Check syntax:
+  node -c data.js
+
+If syntax OK, check for remaining problems:
+  node scripts/audit_problem_slots.js
+
+Output should show:
+  Total ships with problems: 0
+  Total problem slots: 0
+
+If there are still problems, either:
+1. Add more data to solutions_from_wiki.json
+2. Use "Unknown" placeholders for unavailable hardpoints
+3. Repeat steps 2-4
+
+
+STEP 5: Commit & Push
+---------------------
+Stage all changes:
+  git add -A
+
+Commit with descriptive message:
+  git commit -m "Add [Ship Name] specs: X slots filled" 
+  
+  or for bulk updates:
+  
+  git commit -m "Update ship specs: X ships, Y slots filled"
+
+Push to GitHub:
+  git push origin main
+
+
+TROUBLESHOOTING
+===============
+
+Ship Not Found Error
+  - Check that ship name in solutions_from_wiki.json matches data.js EXACTLY
+  - Use: grep -o '"[^"]*ShipName[^"]*":' data.js
+  - Copy the exact name from data.js into solutions file
+
+Data Not Applied
+  - Verify JSON syntax in solutions_from_wiki.json is valid
+  - Use: node -e "console.log(JSON.parse(require('fs').readFileSync('./scripts/solutions_from_wiki.json', 'utf8')))"
+  - Check for missing commas or quotes
+
+Audit Shows Problems After Apply
+  - The ship may have more hardpoints than data provides
+  - Add "Unknown" entries for missing hardpoints
+  - Rerun apply and audit scripts
+
+Syntax Errors After Apply
+  - The apply script has a bug (rare)
+  - Check git diff to see what changed
+  - Can revert: git checkout data.js
+  - Report issue with example ship that failed
+
+
+KEY FILES
+=========
+- data.js                           Main game data (updated by scripts)
+- scripts/solutions_from_wiki.json  Source data for updates (edit this)
+- scripts/apply_wiki_solutions_v2.js Engine that applies fixes
+- scripts/audit_problem_slots.js    Verification tool
+
+
+TIPS FOR SUCCESS
+================
+
+1. Always verify syntax with: node -c data.js
+2. Always run audit after apply to confirm
+3. Test with one ship first, then batch process
+4. Commit frequently with clear messages
+5. Keep solutions_from_wiki.json organized (sort by ship name)
+6. For unknown secondary hardpoints, use "Unknown" - don't leave empty
+7. Check git diff before committing to catch mistakes
+
+
+EXAMPLE: Adding a New Ship
+==========================
+
+Say "Drake Corsair II" is released with these specs:
+- 4x pilotWeapons: M7A, M7A, M6A, M6A
+- 4x turretWeapons: CF-227, CF-227, CF-227, CF-227
+
+1. Add to solutions_from_wiki.json:
+   "Drake Corsair II": {
+     "pilotWeapon": {
+       "0": "M7A Cannon",
+       "1": "M7A Cannon", 
+       "2": "M6A Cannon",
+       "3": "M6A Cannon"
+     },
+     "turretWeapon": {
+       "0": "CF-227 Badger Repeater",
+       "1": "CF-227 Badger Repeater",
+       "2": "CF-227 Badger Repeater",
+       "3": "CF-227 Badger Repeater"
+     }
+   }
+
+2. Run: node scripts/apply_wiki_solutions_v2.js
+   Output: ✓ Drake Corsair II: 8 slots filled
+
+3. Verify: node scripts/audit_problem_slots.js
+   Output: Total problem slots: 0
+
+4. Commit:
+   git add -A
+   git commit -m "Add Drake Corsair II specs: 8 slots filled"
+   git push origin main
+
+Done!
+
+
+LAST UPDATED: 2026-01-25
+For questions or improvements, refer to the PROGRESS_SUMMARY.md

@@ -165,54 +165,6 @@
       "current": ""
     }
   ],
-  "Drake Caterpillar": [
-    {
-      "type": "WEAPON",
-      "slot": "turretWeapon[3] (Turret[1])",
-      "size": 2,
-      "issue": "MISSING",
-      "current": ""
-    }
-  ],
-  "Drake Corsair": [
-    {
-      "type": "WEAPON",
-      "slot": "turretWeapon[0] (Turret[0])",
-      "size": 4,
-      "issue": "MISSING",
-      "current": ""
-    },
-    {
-      "type": "WEAPON",
-      "slot": "turretWeapon[1] (Turret[0])",
-      "size": 4,
-      "issue": "MISSING",
-      "current": ""
-    },
-    {
-      "type": "WEAPON",
-      "slot": "turretWeapon[2] (Turret[1])",
-      "size": 3,
-      "issue": "MISSING",
-      "current": ""
-    },
-    {
-      "type": "WEAPON",
-      "slot": "turretWeapon[3] (Turret[1])",
-      "size": 3,
-      "issue": "MISSING",
-      "current": ""
-    }
-  ],
-  "Drake Cutter": [
-    {
-      "type": "WEAPON",
-      "slot": "pilotWeapon[1]",
-      "size": 1,
-      "issue": "MISSING",
-      "current": ""
-    }
-  ],
   "Drake Cutlass Black": [
     {
       "type": "WEAPON",
@@ -282,63 +234,6 @@
       "type": "WEAPON",
       "slot": "pilotWeapon[3]",
       "size": 3,
-      "issue": "MISSING",
-      "current": ""
-    }
-  ],
-  "Esperia Prowler": [
-    {
-      "type": "WEAPON",
-      "slot": "turretWeapon[2] (Turret[1])",
-      "size": 3,
-      "issue": "MISSING",
-      "current": ""
-    },
-    {
-      "type": "WEAPON",
-      "slot": "turretWeapon[3] (Turret[1])",
-      "size": 3,
-      "issue": "MISSING",
-      "current": ""
-    }
-  ],
-  "Esperia Talon": [
-    {
-      "type": "WEAPON",
-      "slot": "pilotWeapon[1]",
-      "size": 3,
-      "issue": "MISSING",
-      "current": ""
-    }
-  ],
-  "Gatac Railen": [
-    {
-      "type": "WEAPON",
-      "slot": "turretWeapon[1] (Turret[0])",
-      "size": 3,
-      "issue": "MISSING",
-      "current": ""
-    },
-    {
-      "type": "WEAPON",
-      "slot": "turretWeapon[2] (Turret[1])",
-      "size": 3,
-      "issue": "MISSING",
-      "current": ""
-    },
-    {
-      "type": "WEAPON",
-      "slot": "turretWeapon[3] (Turret[1])",
-      "size": 3,
-      "issue": "MISSING",
-      "current": ""
-    }
-  ],
-  "Gatac Syulen": [
-    {
-      "type": "WEAPON",
-      "slot": "pilotWeapon[1]",
-      "size": 2,
       "issue": "MISSING",
       "current": ""
     }
@@ -543,22 +438,6 @@
       "type": "WEAPON",
       "slot": "pilotWeapon[2]",
       "size": 1,
-      "issue": "MISSING",
-      "current": ""
-    }
-  ],
-  "Origin 600i": [
-    {
-      "type": "WEAPON",
-      "slot": "turretWeapon[0] (Turret[0])",
-      "size": 5,
-      "issue": "MISSING",
-      "current": ""
-    },
-    {
-      "type": "WEAPON",
-      "slot": "turretWeapon[1] (Turret[0])",
-      "size": 5,
       "issue": "MISSING",
       "current": ""
     }

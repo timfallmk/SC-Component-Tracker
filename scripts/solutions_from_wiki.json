@@ -379,7 +379,20 @@
         "2": "CF-337 Panther Repeater"
       }
     },
-    "Drake Corsair": {},
+    "Drake Corsair": {
+      "pilotWeapon": {
+        "0": "M7A Cannon",
+        "1": "M7A Cannon",
+        "2": "M6A Cannon",
+        "3": "M6A Cannon"
+      },
+      "turretWeapon": {
+        "0": "CF-227 Badger Repeater",
+        "1": "CF-227 Badger Repeater",
+        "2": "CF-227 Badger Repeater",
+        "3": "CF-227 Badger Repeater"
+      }
+    },
     "MISC Freelancer": {
       "pilotWeapon": {
         "1": "CF-337 Panther Repeater"
@@ -397,6 +410,12 @@
     },
     "Esperia Prowler": {
       "turretWeapon": {
+        "1": "Deadbolt V Cannon",
+        "2": "Lightstrike III Cannon",
+        "3": "Lightstrike III Cannon"
+      },
+      "pilotWeapon": {
+        "0": "Deadbolt V Cannon",
         "1": "Deadbolt V Cannon"
       }
     },
@@ -408,10 +427,16 @@
     "Crusader Spirit C1": {},
     "Drake Buccaneer": {
       "pilotWeapon": {
+        "0": "Revenant Gatling",
+        "1": "CF-337 Panther Repeater",
         "2": "CF-337 Panther Repeater"
       }
     },
-    "Gatac Syulen": {},
+    "Gatac Syulen": {
+      "pilotWeapon": {
+        "1": "CF-337 Panther Repeater"
+      }
+    },
     "Mirai Guardian": {},
     "MISC Starfarer": {},
     "RSI Constellation Andromeda": {
@@ -552,7 +577,11 @@
         "1": "CF-337 Panther Repeater"
       }
     },
-    "Drake Caterpillar": {},
+    "Drake Caterpillar": {
+      "turretWeapon": {
+        "3": "CF-447 Rhino Repeater"
+      }
+    },
     "MISC Reliant Kore": {},
     "MISC Reliant Mako": {},
     "MISC Reliant Sen": {},
@@ -561,8 +590,18 @@
     "Mirai Razor EX": {},
     "Mirai Razor LX": {},
     "Mirai Guardian MX": {},
-    "Esperia Talon": {},
-    "Esperia Talon Shrike": {},
+    "Esperia Talon": {
+      "pilotWeapon": {
+        "0": "Lightstrike IV Cannon",
+        "1": "Lightstrike IV Cannon"
+      }
+    },
+    "Esperia Talon Shrike": {
+      "pilotWeapon": {
+        "0": "Lightstrike II Cannon",
+        "1": "Lightstrike II Cannon"
+      }
+    },
     "Aegis Vanguard Warden": {
       "turretWeapon": {
         "1": "SW16BR2 Sawbuck Repeater"
@@ -583,13 +622,31 @@
         "1": "Jericho XL"
       }
     },
-    "Gatac Railen": {},
+    "Gatac Railen": {
+      "turretWeapon": {
+        "0": "S4 Weapon",
+        "1": "S4 Weapon",
+        "2": "S4 Weapon",
+        "3": "S4 Weapon"
+      }
+    },
     "Kruger L-21 Wolf": {},
     "Kruger P-52 Merlin": {},
     "Kruger P-72 Archimedes": {},
     "Anvil Terrapin": {
       "turretWeapon": {
         "1": "CF-227 Badger Repeater"
+      }
+    },
+    "Drake Cutter": {
+      "pilotWeapon": {
+        "1": "CF-227 Badger Repeater"
+      }
+    },
+    "Mustang Omega": {
+      "pilotWeapon": {
+        "0": "CF-117 Bulldog Repeater",
+        "1": "CF-117 Bulldog Repeater"
       }
     }
   }

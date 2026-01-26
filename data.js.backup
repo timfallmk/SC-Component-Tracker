@@ -1502,10 +1502,9 @@ quantumDrives: [
             name: "MISC Starfarer Gemini",
             manufacturer: "MISC",
             size: "Large",
-            pilotWeapons: [{ size: 4 }, { size: 4 }, { size: 4 }, { size: 4 }],
+            pilotWeapons: [],
             turrets: [
                 { type: "manned", guns: 2, size: 5 },
-                { type: "manned", guns: 2, size: 3 },
                 { type: "manned", guns: 2, size: 3 }
             ],
             shields: { count: 2, size: 3 },
@@ -1521,7 +1520,7 @@ quantumDrives: [
             size: "Small",
             pilotWeapons: [{ size: 1 }, { size: 1 }],
             turrets: [],
-            shields: { count: 1, size: 1 },
+            shields: { count: 1, size: 0 },
             powerPlants: { count: 1, size: 1 },
             coolers: { count: 1, size: 1 },
             quantumDrive: null
@@ -1758,7 +1757,7 @@ quantumDrives: [
             name: "RSI Aurora MR",
             manufacturer: "RSI",
             size: "Small",
-            pilotWeapons: [{ size: 1 }, { size: 1 }, { size: 1 }, { size: 1 }],
+            pilotWeapons: [{ size: 2 }, { size: 1 }, { size: 1 }],
             turrets: [],
             shields: { count: 1, size: 1 },
             powerPlants: { count: 1, size: 1 },
@@ -1769,10 +1768,9 @@ quantumDrives: [
             name: "RSI Constellation Andromeda",
             manufacturer: "RSI",
             size: "Large",
-            pilotWeapons: [{ size: 5 }, { size: 5 }, { size: 5 }, { size: 5 }],
+            pilotWeapons: [{ size: 4 }, { size: 4 }],
             turrets: [
-                { type: "manned", guns: 2, size: 3 },
-                { type: "manned", guns: 2, size: 3 }
+                { type: "manned", guns: 2, size: 5 }
             ],
             shields: { count: 1, size: 3 },
             powerPlants: { count: 2, size: 2 },
@@ -3231,8 +3229,8 @@ SC_DATA.stockLoadouts = {
         quantumDrives: [],
         powerPlants: ["Roughneck"],
         coolers: ["Hydrocel"],
-        shields: ["Bulwark"],
-        pilotWeapons: ["CF-117 Bulldog Repeater","CF-117 Bulldog Repeater"],
+        shields: ["Cloak"],
+        pilotWeapons: ["CF-227 Badger Repeater","Unknown"],
         turretWeapons: []
     },
     "Mirai Fury LX": {
@@ -3464,8 +3462,8 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["SuperDrive"],
         coolers: ["Mercury"],
         shields: ["Stronghold"],
-        pilotWeapons: ["M6A Cannon","M6A Cannon","M6A Cannon","M6A Cannon"],
-        turretWeapons: ["CF-557 Galdereen Repeater","CF-557 Galdereen Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater"]
+        pilotWeapons: [],
+        turretWeapons: ["M6A Cannon","CF-557 Galdereen Repeater","CF-337 Panther Repeater","Unknown"]
     },
     "MISC Starfarer Teach's Special": {
         quantumDrives: ["Kama"],
@@ -3696,7 +3694,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["Roughneck"],
         coolers: ["Hydrocel"],
         shields: ["Bulwark"],
-        pilotWeapons: ["CF-117 Bulldog Repeater","CF-117 Bulldog Repeater"],
+        pilotWeapons: ["CF-117 Bulldog Repeater","CF-117 Bulldog Repeater","CF-117 Bulldog Repeater"],
         turretWeapons: []
     },
                                             "RSI Constellation Andromeda": {
@@ -3704,8 +3702,8 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["DayBreak"],
         coolers: ["Frost-Star EX"],
         shields: ["5CA 'Akura'"],
-        pilotWeapons: ["CF-557 Galdereen Repeater","CF-557 Galdereen Repeater","CF-557 Galdereen Repeater","CF-557 Galdereen Repeater"],
-        turretWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater"]
+        pilotWeapons: ["CF-337 Panther Repeater","CF-557 Galdereen Repeater"],
+        turretWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater"]
     },
                                             "RSI Constellation Aquila": {
         quantumDrives: ["Bolon"],
@@ -4192,6 +4190,7 @@ SC_DATA.getDefaultComponents = function(shipSpec) {
             const weaponCandidates = shipSpec.Loadout
                 .filter(i => i.ItemTypes && i.ItemTypes.some(t => /Weapon|Gun|Rifle|Turret/i.test(t.Type)))
                 .map(i => i.Name)
+                .filter(n => n && n !== "<= PLACEHOLDER =>");
 
             // Group weapon candidates into turret slots by aggregating per-turret gun counts
             function findWeaponSizeByName(name) {
@@ -4356,11 +4355,13 @@ SC_DATA.getDefaultComponents = (function(orig) {
         const defaults = orig.call(this, shipSpec);
         if (!shipSpec) return defaults;
         // If a stockLoadout existed, orig already filled defaults; if not, try Loadout extraction
+        const hasMeaningful = arr => arr && arr.some(i => i && i.name && i.name !== "<= PLACEHOLDER =>");
         if (defaults && shipSpec.Loadout && shipSpec.Loadout.length > 0) {
             const loadout = shipSpec.Loadout;
             const weaponCandidates = loadout
                 .filter(i => i.ItemTypes && i.ItemTypes.some(t => /Weapon|Gun|Rifle|TractorBeam|WeaponGun|WeaponMining/i.test(t.Type)))
                 .map(i => i.Name)
+                .filter(n => n && n !== "<= PLACEHOLDER =>");
 
             if (weaponCandidates.length > 0 && defaults.pilotWeapons && defaults.pilotWeapons.length > 0) {
                 defaults.pilotWeapons = defaults.pilotWeapons.map((w, i) => ({
@@ -4372,6 +4373,7 @@ SC_DATA.getDefaultComponents = (function(orig) {
             const findByType = (re) => loadout
                 .filter(i => i.ItemTypes && i.ItemTypes.some(t => re.test(t.Type)))
                 .map(i => i.Name)
+                .filter(n => n && n !== "<= PLACEHOLDER =>");
 
             if (shipSpec.shields) {
                 const sNames = findByType(/Shield/i);

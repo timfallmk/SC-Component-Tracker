@@ -273,11 +273,21 @@ function createComponentDropdown(type, size, selectedValue = '') {
     components.forEach(comp => {
         const option = document.createElement('option');
         option.value = comp.name;
+        const isUnknownName = (comp.name || '').toLowerCase() === 'unknown';
+        const isUnknownType = (comp.type || '').toLowerCase() === 'unknown';
+
         if (type === 'weapon') {
-            option.textContent = `${comp.name} (${comp.type})`;
+            // Render Unknown cleanly without parentheses
+            option.textContent = isUnknownName || isUnknownType
+                ? 'Unknown'
+                : `${comp.name} (${comp.type})`;
         } else {
-            option.textContent = `${comp.name} (${comp.manufacturer})`;
+            // Non-weapon components: render Unknown cleanly
+            option.textContent = isUnknownName
+                ? 'Unknown'
+                : `${comp.name} (${comp.manufacturer})`;
         }
+
         if (comp.name === selectedValue) {
             option.selected = true;
         }

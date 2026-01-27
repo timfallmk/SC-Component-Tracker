@@ -3402,7 +3402,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["IonBurst"],
         coolers: ["HeatSafe"],
         shields: ["Shimmer"],
-        pilotWeapons: ["CF-227 Badger Repeater","Unknown"],
+        pilotWeapons: ["CF-227 Badger Repeater","CF-227 Badger Repeater"],
         turretWeapons: []
     },
                 "MISC Reliant Sen": {

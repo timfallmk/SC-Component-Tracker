@@ -1559,7 +1559,7 @@ quantumDrives: [
             name: "Origin 125a",
             manufacturer: "Origin",
             size: "Small",
-            pilotWeapons: [{ size: 3 }, { size: 1 }, { size: 1 }],
+            pilotWeapons: [{ size: 3 }, { size: 3 }],
             turrets: [],
             shields: { count: 1, size: 1 },
             powerPlants: { count: 1, size: 1 },
@@ -3490,7 +3490,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["Regulus"],
         coolers: ["Bracer"],
         shields: ["AllStop"],
-        pilotWeapons: ["CF-337 Panther Repeater","Unknown","Unknown"],
+        pilotWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater"],
         turretWeapons: []
     },
     "Origin 135c": {

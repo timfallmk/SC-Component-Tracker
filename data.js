@@ -2885,7 +2885,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["JS-300"],
         coolers: ["Polar"],
         shields: ["WEB"],
-        pilotWeapons: ["Revenant Gatling","CF-337 Panther Repeater","CF-337 Panther Repeater","Unknown","Unknown"],
+        pilotWeapons: ["Revenant Gatling","CF-337 Panther Repeater","CF-337 Panther Repeater","YellowJacket GT-210 Gatling","YellowJacket GT-210 Gatling"],
         turretWeapons: []
     },
                                     "Drake Caterpillar": {

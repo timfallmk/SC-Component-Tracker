@@ -1468,9 +1468,10 @@ quantumDrives: [
             name: "MISC Starfarer",
             manufacturer: "MISC",
             size: "Large",
-            pilotWeapons: [],
+            pilotWeapons: [{ size: 4 }, { size: 4 }, { size: 4 }, { size: 4 }],
             turrets: [
                 { type: "manned", guns: 2, size: 4 },
+                { type: "manned", guns: 2, size: 3 },
                 { type: "manned", guns: 2, size: 3 }
             ],
             shields: { count: 2, size: 3 },
@@ -3404,8 +3405,8 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["Ginzel","SuperDrive"],
         coolers: ["ThermalCore"],
         shields: ["Stronghold"],
-        pilotWeapons: [],
-        turretWeapons: ["M6A Cannon","CF-447 Rhino Repeater","CF-337 Panther Repeater","Unknown"]
+        pilotWeapons: ["M6A Cannon","M6A Cannon","M6A Cannon","M6A Cannon"],
+        turretWeapons: ["CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater"]
     },
                 "MISC Starfarer Gemini": {
         quantumDrives: ["Pontes"],

@@ -1334,7 +1334,7 @@ quantumDrives: [
             name: "Kruger P-72 Archimedes",
             manufacturer: "Kruger",
             size: "Small",
-            pilotWeapons: [{ size: 1 }, { size: 1 }],
+            pilotWeapons: [{ size: 1 }, { size: 1 }, { size: 1 }, { size: 1 }],
             turrets: [],
             shields: { count: 1, size: 0 },
             powerPlants: { count: 1, size: 1 },
@@ -3205,7 +3205,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["Charger"],
         coolers: ["Bracer"],
         shields: ["Targa"],
-        pilotWeapons: ["CF-117 Bulldog Repeater","Unknown"],
+        pilotWeapons: ["CF-117 Bulldog Repeater","CF-117 Bulldog Repeater","CF-117 Bulldog Repeater","CF-117 Bulldog Repeater"],
         turretWeapons: []
     },
     "Kruger P-72 Archimedes Emerald": {

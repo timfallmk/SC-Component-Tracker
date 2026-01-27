@@ -1143,10 +1143,10 @@ quantumDrives: [
             name: "Drake Corsair",
             manufacturer: "Drake",
             size: "Large",
-            pilotWeapons: [{ size: 5 }, { size: 5 }],
+            pilotWeapons: [{ size: 4 }, { size: 4 }, { size: 4 }, { size: 4 }, { size: 5 }, { size: 5 }],
             turrets: [
-                { type: "manned", guns: 2, size: 4 },
-                { type: "manned", guns: 2, size: 3 }
+                { type: "manned", guns: 2, size: 2 },
+                { type: "manned", guns: 2, size: 2 }
             ],
             shields: { count: 1, size: 3 },
             powerPlants: { count: 2, size: 2 },
@@ -2928,7 +2928,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["DayBreak"],
         coolers: ["Frost-Star EX"],
         shields: ["5CA 'Akura'"],
-        pilotWeapons: ["M7A Cannon","M7A Cannon","M6A Cannon","M6A Cannon"],
+        pilotWeapons: ["M6A Cannon","M6A Cannon","M6A Cannon","M6A Cannon","M7A Cannon","M7A Cannon"],
         turretWeapons: ["CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater"]
     },
                                                 "Drake Cutlass Black": {

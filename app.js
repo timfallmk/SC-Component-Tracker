@@ -366,8 +366,28 @@ function addTurretSlot(turretSpec, index, weapon = '') {
         return mountSize;
     }
 
-    const weaponSize = getWeaponSizeByName(weapon) || inferWeaponSizeFromMount(turretSpec.size, turretSpec.guns) || turretSpec.size;
-    const select = createComponentDropdown('weapon', weaponSize, weapon);
+    let weaponSize = getWeaponSizeByName(weapon) || inferWeaponSizeFromMount(turretSpec.size, turretSpec.guns) || turretSpec.size;
+    // If the named weapon is larger than the mount, clamp to mount size and choose a matching weapon name
+    let weaponName = weapon || '';
+    if (weaponSize > turretSpec.size) {
+        weaponSize = turretSpec.size;
+        const candidates = (SC_DATA.weapons[weaponSize] || []).map(w => w.name);
+        if (candidates && candidates.length > 0) {
+            // Prefer keeping same manufacturer if possible
+            const manufacturer = (weaponName.split(' ')[0] || '').toLowerCase();
+            let chosen = candidates.find(n => n.toLowerCase().includes(manufacturer)) || null;
+            // Special-case: CF-557 clamped to S3 should prefer CF-337 Panther Repeater
+            if (!chosen && weaponSize === 3) {
+                chosen = candidates.find(n => /cf-337\s+panther\s+repeater/i.test(n))
+                      || candidates.find(n => /panther/i.test(n))
+                      || chosen;
+            }
+            weaponName = chosen || candidates[0];
+        } else {
+            weaponName = '';
+        }
+    }
+    const select = createComponentDropdown('weapon', weaponSize, weaponName);
     slot.appendChild(select);
 
     console.debug('SC Debug: turret', index, { mountSize: turretSpec.size, guns: turretSpec.guns, weapon, weaponSize });
@@ -790,6 +810,19 @@ function openShipModal(shipId = null) {
                     if (!defaults) return existing || {};
                     existing = existing || {};
 
+                    // Helper to determine weapon size by name (local copy)
+                    function getWeaponSizeByName(name) {
+                        if (!name) return null;
+                        for (const sizeKey of Object.keys(SC_DATA.weapons)) {
+                            const size = parseInt(sizeKey, 10);
+                            const list = SC_DATA.weapons[size] || [];
+                            if (list.find(w => w.name && w.name.toLowerCase() === name.toLowerCase())) {
+                                return size;
+                            }
+                        }
+                        return null;
+                    }
+
                     const mergeArray = (key) => {
                         const dst = existing[key] || [];
                         const src = defaults[key] || [];
@@ -803,6 +836,17 @@ function openShipModal(shipId = null) {
                             if (!out[i].name && s && s.name) out[i].name = s.name;
                             if (!out[i].weapon && s && s.weapon) out[i].weapon = s.weapon;
                             if (!out[i].size && s && s.size) out[i].size = s.size;
+
+                            // Validate turret weapon sizes: if saved weapon doesn't fit the mount, prefer default
+                            if (key === 'turrets') {
+                                const mountSize = out[i].size || s.size || d.size || null;
+                                const savedWeapon = out[i].weapon || '';
+                                const savedSize = getWeaponSizeByName(savedWeapon);
+                                if (savedSize && mountSize && savedSize > mountSize) {
+                                    // Replace with default weapon if available, else clear so UI infers for mount
+                                    out[i].weapon = s.weapon || '';
+                                }
+                            }
                         }
                         existing[key] = out;
                     };

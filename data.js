@@ -2075,7 +2075,7 @@ SC_DATA.stockLoadouts = {
         coolers: ["Algid"],
         shields: ["RS-Barrier"],
         pilotWeapons: [],
-        turretWeapons: ["M2C \"Swarm\"","CF-337 Panther Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater"]
+        turretWeapons: ["M2C \"Swarm\"","CF-337 Panther Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater","M3A Cannon","M3A Cannon","M3A Cannon","M3A Cannon","M3A Cannon","M3A Cannon","M3A Cannon"]
     },
     "Aegis Reclaimer 2949 Best In Show Edition": {
         quantumDrives: ["Kama"],

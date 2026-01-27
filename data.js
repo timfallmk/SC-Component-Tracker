@@ -1158,7 +1158,7 @@ quantumDrives: [
             name: "Drake Cutlass Black",
             manufacturer: "Drake",
             size: "Medium",
-            pilotWeapons: [{ size: 3 }, { size: 3 }],
+            pilotWeapons: [{ size: 3 }, { size: 3 }, { size: 3 }, { size: 3 }],
             turrets: [
                 { type: "manned", guns: 2, size: 3 }
             ],
@@ -2891,7 +2891,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["DayBreak"],
         coolers: ["ColdSnap","ColdSnap"],
         shields: ["STOP","STOP"],
-        pilotWeapons: ["CF-337 Panther Repeater","Mantis GT-220 Gatling"],
+        pilotWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater","Mantis GT-220 Gatling","Mantis GT-220 Gatling"],
         turretWeapons: ["Unknown","Unknown"]
     },
                                                 "Drake Cutlass Blue": {

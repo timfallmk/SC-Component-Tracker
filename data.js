@@ -3325,7 +3325,7 @@ SC_DATA.stockLoadouts = {
         coolers: ["Frost-Star EX"],
         shields: ["5MA 'Chimalli'"],
         pilotWeapons: ["Omnisky IX Cannon","Omnisky IX Cannon","Omnisky IX Cannon","Omnisky IX Cannon"],
-        turretWeapons: ["Unknown","Unknown"]
+        turretWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater"]
     },
                 "MISC Freelancer MIS": {
         quantumDrives: ["Crossfield"],

@@ -1333,7 +1333,7 @@ quantumDrives: [
             name: "MISC Freelancer",
             manufacturer: "MISC",
             size: "Medium",
-            pilotWeapons: [{ size: 3 }, { size: 3 }],
+            pilotWeapons: [{ size: 3 }, { size: 3 }, { size: 3 }, { size: 3 }],
             turrets: [
                 { type: "manned", guns: 2, size: 3 }
             ],
@@ -3308,8 +3308,8 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["DayBreak"],
         coolers: ["Frost-Star EX"],
         shields: ["5MA 'Chimalli'"],
-        pilotWeapons: ["M5A Cannon","CF-337 Panther Repeater"],
-        turretWeapons: ["Unknown","Unknown"]
+        pilotWeapons: ["M5A Cannon","M5A Cannon","M5A Cannon","M5A Cannon"],
+        turretWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater"]
     },
                                                 "MISC Freelancer DUR": {
         quantumDrives: ["Odyssey"],

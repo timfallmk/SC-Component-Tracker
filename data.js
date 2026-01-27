@@ -744,7 +744,7 @@ quantumDrives: [
             size: "Medium",
             pilotWeapons: [{ size: 3 }, { size: 3 }, { size: 3 }, { size: 3 }],
             turrets: [
-                { type: "remote", guns: 2, size: 1 }
+                { type: "remote", guns: 2, size: 2 }
             ],
             shields: { count: 2, size: 1 },
             powerPlants: { count: 1, size: 1 },
@@ -766,9 +766,10 @@ quantumDrives: [
             name: "Anvil F7C-M Super Hornet",
             manufacturer: "Anvil",
             size: "Medium",
-            pilotWeapons: [{ size: 3 }, { size: 3 }, { size: 3 }, { size: 2 }],
+            pilotWeapons: [{ size: 3 }, { size: 3 }],
             turrets: [
-                { type: "manned", guns: 1, size: 4 }
+                { type: "manned", guns: 2, size: 1 },
+                { type: "remote", guns: 2, size: 2 }
             ],
             shields: { count: 2, size: 1 },
             powerPlants: { count: 1, size: 1 },
@@ -2330,7 +2331,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["PowerBolt"],
         coolers: ["ArcticStorm","ArcticStorm"],
         shields: ["WEB","WEB"],
-        pilotWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater","CF-337 Panther Repeater","Unknown"],
+        pilotWeapons: ["Empty","CF-337 Panther Repeater","CF-337 Panther Repeater","Empty"],
         turretWeapons: ["Empty","Empty"]
     },
                                                         "Anvil F7C Hornet Mk II": {
@@ -2370,8 +2371,8 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["Regulus"],
         coolers: ["Bracer"],
         shields: ["AllStop"],
-        pilotWeapons: ["Mantis GT-220 Gatling","Mantis GT-220 Gatling","CF-227 Badger Repeater"],
-        turretWeapons: ["CF-117 Bulldog Repeater","CF-117 Bulldog Repeater"]
+        pilotWeapons: ["Mantis GT-220 Gatling","Mantis GT-220 Gatling"],
+        turretWeapons: ["CF-117 Bulldog Repeater","CF-117 Bulldog Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater"]
     },
     "Anvil F7C-M Super Hornet Mk II": {
         quantumDrives: ["Eos"],
@@ -2386,8 +2387,8 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["Regulus"],
         coolers: ["Bracer"],
         shields: ["AllStop"],
-        pilotWeapons: ["CF-117 Bulldog Repeater","Mantis GT-220 Gatling","Mantis GT-220 Gatling","Unknown"],
-        turretWeapons: ["CF-227 Badger Repeater"]
+        pilotWeapons: ["Mantis GT-220 Gatling","Mantis GT-220 Gatling"],
+        turretWeapons: ["CF-117 Bulldog Repeater","CF-117 Bulldog Repeater","CF-227 Badger Repeater","CF-227 Badger Repeater"]
     },
     "Anvil F7C-R Hornet Tracker Mk I": {
         quantumDrives: ["Eos"],

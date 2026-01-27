@@ -3317,7 +3317,7 @@ SC_DATA.stockLoadouts = {
         coolers: ["Frost-Star EX"],
         shields: ["5MA 'Chimalli'"],
         pilotWeapons: ["Attrition-3 Repeater","Attrition-3 Repeater","Attrition-3 Repeater","Attrition-3 Repeater"],
-        turretWeapons: ["Unknown","Unknown"]
+        turretWeapons: ["CF-337 Panther Repeater","CF-337 Panther Repeater"]
     },
                                                 "MISC Freelancer MAX": {
         quantumDrives: ["Odyssey"],

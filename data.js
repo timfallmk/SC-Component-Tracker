@@ -1346,7 +1346,7 @@ quantumDrives: [
             name: "MISC Freelancer DUR",
             manufacturer: "MISC",
             size: "Medium",
-            pilotWeapons: [{ size: 3 }, { size: 3 }],
+            pilotWeapons: [{ size: 3 }, { size: 3 }, { size: 3 }, { size: 3 }],
             turrets: [
                 { type: "manned", guns: 2, size: 3 }
             ],
@@ -3316,7 +3316,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["DayBreak"],
         coolers: ["Frost-Star EX"],
         shields: ["5MA 'Chimalli'"],
-        pilotWeapons: ["CF-337 Panther Repeater","Attrition-3 Repeater"],
+        pilotWeapons: ["Attrition-3 Repeater","Attrition-3 Repeater","Attrition-3 Repeater","Attrition-3 Repeater"],
         turretWeapons: ["Unknown","Unknown"]
     },
                                                 "MISC Freelancer MAX": {

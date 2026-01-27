@@ -10,7 +10,10 @@
 <body>
     <div class="app">
         <header class="header">
-            <h1>SC Component Tracker</h1>
+            <div class="header-title">
+                <h1>SC Component Tracker</h1>
+                <span id="appVersion" class="app-version" data-tooltip="Click to copy version" aria-label="Application version"></span>
+            </div>
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Search components..." autocomplete="off">
                 <div id="searchResults" class="search-results hidden"></div>
@@ -41,6 +44,8 @@
             </section>
         </main>
     </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
     <!-- Ship Modal -->
     <div id="shipModal" class="modal hidden">

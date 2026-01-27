@@ -2983,7 +2983,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["Fortitude"],
         coolers: ["Thermax"],
         shields: ["Bulwark"],
-        pilotWeapons: ["CF-117 Bulldog Repeater","Empty","Empty","Empty"],
+        pilotWeapons: ["CF-117 Bulldog Repeater","CF-117 Bulldog Repeater"],
         turretWeapons: []
     },
     "Drake Vulture Teach's Special": {

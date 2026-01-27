@@ -2,6 +2,7 @@
 
 // ============ Data Layer ============
 
+const APP_VERSION = '0.40';
 const STORAGE_KEY = 'sc-component-tracker-data';
 
 const defaultData = {
@@ -1106,6 +1107,69 @@ function handleStorageSubmit(e) {
     closeModal('storageModal');
 }
 
+// ============ UI Enhancements ============
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    if (!toast) return;
+
+    toast.textContent = message;
+    toast.classList.add('toast-visible');
+
+    if (toast._hideTimeout) {
+        clearTimeout(toast._hideTimeout);
+    }
+    toast._hideTimeout = setTimeout(() => {
+        toast.classList.remove('toast-visible');
+    }, 1400);
+}
+
+function setAppVersionBadge() {
+    const versionEl = document.getElementById('appVersion');
+    if (!versionEl) return;
+
+    const defaultTooltip = 'Click to copy version';
+    const badgeText = `v${APP_VERSION}`;
+
+    versionEl.textContent = badgeText;
+    versionEl.dataset.tooltip = defaultTooltip;
+
+    const showTooltip = (message) => {
+        versionEl.dataset.tooltip = message;
+        versionEl.classList.add('tooltip-visible');
+        if (versionEl._tooltipTimeout) {
+            clearTimeout(versionEl._tooltipTimeout);
+        }
+        versionEl._tooltipTimeout = setTimeout(() => {
+            versionEl.dataset.tooltip = defaultTooltip;
+            versionEl.classList.remove('tooltip-visible');
+        }, 1200);
+    };
+
+    const copyVersion = async () => {
+        try {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                await navigator.clipboard.writeText(APP_VERSION);
+            } else {
+                const tempInput = document.createElement('textarea');
+                tempInput.value = APP_VERSION;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+            }
+            showTooltip('Copied!');
+            showToast(`Copied version v${APP_VERSION}`);
+        } catch (err) {
+            console.error('Failed to copy version:', err);
+            showTooltip('Copy failed');
+            showToast('Copy failed');
+        }
+    };
+
+    versionEl.addEventListener('click', copyVersion);
+}
+
 // ============ Event Listeners ============
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -1167,6 +1231,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Search input
     const searchInput = document.getElementById('searchInput');
     let searchTimeout;
+
+    // Version badge
+    setAppVersionBadge();
 
     searchInput.addEventListener('input', (e) => {
         clearTimeout(searchTimeout);

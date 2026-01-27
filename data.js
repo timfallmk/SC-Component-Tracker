@@ -1095,10 +1095,8 @@ quantumDrives: [
             name: "Crusader Spirit C1",
             manufacturer: "Crusader",
             size: "Medium",
-            pilotWeapons: [],
-            turrets: [
-                { type: "remote", guns: 2, size: 3 }
-            ],
+            pilotWeapons: [{ size: 3 }, { size: 3 }, { size: 3 }, { size: 3 }],
+            turrets: [],
             shields: { count: 1, size: 2 },
             powerPlants: { count: 1, size: 2 },
             coolers: { count: 1, size: 2 },
@@ -2810,8 +2808,8 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["UltraFlux"],
         coolers: ["Boreal"],
         shields: ["FullStop"],
-        pilotWeapons: [],
-        turretWeapons: ["M5A Cannon","Unknown"]
+        pilotWeapons: ["M5A Cannon","M5A Cannon","M5A Cannon","M5A Cannon"],
+        turretWeapons: []
     },
                 "Crusader Spirit E1": {
         quantumDrives: ["Yeager"],

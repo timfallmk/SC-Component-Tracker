@@ -914,7 +914,7 @@ function openStorageModal(index = null) {
         populateStorageSizeDropdown(item.type);
         if (item.size) {
             document.getElementById('storageSize').value = item.size;
-            populateStorageComponentDropdown(item.type, item.size);
+            populateStorageComponentDropdown(item.type, item.size, item.name);
             document.getElementById('storageComponent').value = item.name;
         }
     } else {
@@ -960,7 +960,7 @@ function populateStorageSizeDropdown(type) {
     }
 }
 
-function populateStorageComponentDropdown(type, size) {
+function populateStorageComponentDropdown(type, size, selectedValue = null) {
     const select = document.getElementById('storageComponent');
     select.innerHTML = '<option value="">Select a component...</option>';
 

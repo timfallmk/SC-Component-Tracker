@@ -1399,7 +1399,7 @@ quantumDrives: [
             name: "MISC Hull A",
             manufacturer: "MISC",
             size: "Small",
-            pilotWeapons: [{ size: 2 }, { size: 2 }],
+            pilotWeapons: [{ size: 1 }, { size: 1 }],
             turrets: [],
             shields: { count: 1, size: 1 },
             powerPlants: { count: 1, size: 1 },
@@ -3362,7 +3362,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["IonBurst"],
         coolers: ["ArcticStorm"],
         shields: ["Armada"],
-        pilotWeapons: ["CF-117 Bulldog Repeater","Unknown"],
+        pilotWeapons: ["CF-117 Bulldog Repeater","CF-117 Bulldog Repeater"],
         turretWeapons: []
     },
                                                         "MISC Hull C": {

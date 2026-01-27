@@ -1247,7 +1247,7 @@ quantumDrives: [
             name: "Esperia Blade",
             manufacturer: "Esperia",
             size: "Medium",
-            pilotWeapons: [{ size: 4 }, { size: 3 }, { size: 3 }],
+            pilotWeapons: [{ size: 3 }, { size: 3 }, { size: 2 }, { size: 2 }],
             turrets: [],
             shields: { count: 1, size: 2 },
             powerPlants: { count: 1, size: 1 },
@@ -3045,7 +3045,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["Charger"],
         coolers: ["IcePlunge"],
         shields: ["AllStop"],
-        pilotWeapons: ["'WARLORD' Cannon","'WHIP' Cannon","Unknown"],
+        pilotWeapons: ["'WARLORD' Cannon","'WARLORD' Cannon","'WHIP' Cannon","'WHIP' Cannon"],
         turretWeapons: []
     },
                 "Esperia Glaive": {

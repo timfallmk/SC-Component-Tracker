@@ -793,7 +793,7 @@ quantumDrives: [
             name: "Anvil F8A Lightning",
             manufacturer: "Anvil",
             size: "Medium",
-            pilotWeapons: [{ size: 4 }, { size: 4 }, { size: 3 }, { size: 3 }, { size: 3 }, { size: 3 }, { size: 2 }, { size: 2 }],
+            pilotWeapons: [{ size: 4 }, { size: 4 }, { size: 3 }, { size: 3 }, { size: 3 }, { size: 3 }, { size: 3 }, { size: 3 }],
             turrets: [],
             shields: { count: 2, size: 2 },
             powerPlants: { count: 1, size: 2 },
@@ -2427,7 +2427,7 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["Maelstrom"],
         coolers: ["Polar","Polar"],
         shields: ["Sheut","Sheut"],
-        pilotWeapons: ["M6A Cannon","M6A Cannon","M5A Cannon","M5A Cannon","M5A Cannon","M5A Cannon","Unknown","Unknown"],
+        pilotWeapons: ["M6A Cannon","M6A Cannon","M5A Cannon","M5A Cannon","M5A Cannon","M5A Cannon","CF-337 Panther Repeater","CF-337 Panther Repeater"],
         turretWeapons: []
     },
     "Anvil F8C Lightning": {

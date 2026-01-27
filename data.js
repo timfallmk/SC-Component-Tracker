@@ -1433,17 +1433,6 @@ quantumDrives: [
             quantumDrive: { size: 1 }
         },
         {
-            name: "MISC Razor",
-            manufacturer: "MISC",
-            size: "Small",
-            pilotWeapons: [{ size: 2 }, { size: 2 }],
-            turrets: [],
-            shields: { count: 1, size: 1 },
-            powerPlants: { count: 1, size: 1 },
-            coolers: { count: 1, size: 1 },
-            quantumDrive: { size: 1 }
-        },
-        {
             name: "MISC Reliant Kore",
             manufacturer: "MISC",
             size: "Small",
@@ -3310,14 +3299,6 @@ SC_DATA.stockLoadouts = {
         coolers: ["IcePlunge"],
         shields: ["Targa"],
         pilotWeapons: ["CF-227 Badger Repeater"],
-        turretWeapons: []
-    },
-                "MISC Razor": {
-        quantumDrives: ["LightFire"],
-        powerPlants: ["StarHeart"],
-        coolers: ["IcePlunge"],
-        shields: ["Targa"],
-        pilotWeapons: ["CF-227 Badger Repeater","Unknown"],
         turretWeapons: []
     },
     "MISC Fortune": {

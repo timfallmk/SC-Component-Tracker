@@ -380,10 +380,18 @@ h1, h2, h3, h4, .btn, .section-header {
 
 .ship-components {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 4px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 4px 8px;
     font-size: 1rem;
 }
+
+.comp-pilot-weapons { grid-column: 1; grid-row: 1 / 3; }
+.comp-turrets { grid-column: 2; grid-row: 1 / 3; }
+.comp-coolers { grid-column: 3; grid-row: 1; }
+.comp-power { grid-column: 4; grid-row: 1; }
+.comp-qt { grid-column: 3; grid-row: 2; }
+.comp-shields { grid-column: 4; grid-row: 2; }
 
 .component-row {
     color: #ffffff;

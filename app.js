@@ -637,12 +637,12 @@ function renderShips() {
                     </div>
                 </div>
                 <div class="ship-components">
-                    ${renderComponentList('Pilot Weapons', components.pilotWeapons)}
-                    ${renderTurretList(components.turrets)}
-                    ${renderComponentList('Coolers', components.coolers)}
-                    ${renderComponentList('Power', components.powerPlants)}
-                    ${renderComponentList('QT Drive', components.quantumDrives)}
-                    ${renderComponentList('Shields', components.shields)}
+                    <div class="comp-pilot-weapons">${renderComponentList('Pilot Weapons', components.pilotWeapons)}</div>
+                    <div class="comp-turrets">${renderTurretList(components.turrets)}</div>
+                    <div class="comp-coolers">${renderComponentList('Coolers', components.coolers)}</div>
+                    <div class="comp-power">${renderComponentList('Power', components.powerPlants)}</div>
+                    <div class="comp-qt">${renderComponentList('QT Drive', components.quantumDrives)}</div>
+                    <div class="comp-shields">${renderComponentList('Shields', components.shields)}</div>
                 </div>
             </div>
         `;

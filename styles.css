@@ -311,7 +311,7 @@ h1, h2, h3, h4, .btn, .section-header {
 #openStorageListBtn {
     background-color: transparent;
     border: 1px solid var(--accent);
-    width: 275px;
+    width: 278px;
     text-align: center;
     font-size: 0.8rem;
     padding: 9px 16px;

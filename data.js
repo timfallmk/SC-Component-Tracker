@@ -2489,7 +2489,7 @@ SC_DATA.stockLoadouts = {
         coolers: ["Arctic"],
         shields: ["Stronghold"],
         pilotWeapons: [],
-        turretWeapons: ["CF-557 Galdereen Repeater","CF-557 Galdereen Repeater","CF-557 Galdereen Repeater","CF-557 Galdereen Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater"]
+        turretWeapons: ["CF-557 Galdereen Repeater","CF-447 Rhino Repeater","CF-447 Rhino Repeater"]
     },
     "Anvil Spartan": {
         quantumDrives: [],

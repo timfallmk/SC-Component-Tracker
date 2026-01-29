@@ -2,7 +2,7 @@
 
 // ============ Data Layer ============
 
-const APP_VERSION = '0.50';
+const APP_VERSION = '0.52';
 const STORAGE_KEY = 'sc-component-tracker-data';
 
 const defaultData = {
@@ -605,7 +605,7 @@ function renderShips() {
 
     if (heading) {
         const count = appData.ships.length;
-        heading.textContent = `My Ships: ${count} in hangar`;
+        heading.innerHTML = `MY SHIPS: <span class="hangar-count">${count} in hangar</span>`;
     }
 
     if (appData.ships.length === 0) {
@@ -1219,6 +1219,199 @@ function setAppVersionBadge() {
     versionEl.addEventListener('click', copyVersion);
 }
 
+// ============ Export/Import ============
+
+function exportData() {
+    const exportPayload = {
+        formatVersion: "1.0",
+        appVersion: APP_VERSION,
+        exportDate: new Date().toISOString(),
+        data: {
+            ships: appData.ships,
+            storage: appData.storage
+        }
+    };
+
+    const jsonString = JSON.stringify(exportPayload, null, 2);
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+
+    // Generate filename with date
+    const dateStr = new Date().toISOString().split('T')[0];
+    const filename = `sc-tracker-backup-${dateStr}.json`;
+
+    // Create temporary download link
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    showToast(`Exported ${appData.ships.length} ships and ${appData.storage.length} storage items`);
+}
+
+function triggerFileInput() {
+    document.getElementById('importFileInput').click();
+}
+
+function importData(file) {
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        try {
+            const imported = JSON.parse(e.target.result);
+            const validationResult = validateImportData(imported);
+
+            if (!validationResult.valid) {
+                showToast('Import failed: ' + validationResult.error);
+                return;
+            }
+
+            showImportConfirmModal(imported, validationResult.summary);
+        } catch (err) {
+            console.error('Import parse error:', err);
+            showToast('Import failed: Invalid JSON file');
+        }
+    };
+
+    reader.onerror = function() {
+        showToast('Import failed: Could not read file');
+    };
+
+    reader.readAsText(file);
+}
+
+function validateImportData(imported) {
+    if (!imported || typeof imported !== 'object') {
+        return { valid: false, error: 'Invalid file format' };
+    }
+
+    // Handle both new format (with metadata) and legacy format (direct data)
+    let data = imported.data || imported;
+
+    if (!data.ships || !Array.isArray(data.ships)) {
+        return { valid: false, error: 'Missing or invalid ships data' };
+    }
+
+    if (!data.storage || !Array.isArray(data.storage)) {
+        return { valid: false, error: 'Missing or invalid storage data' };
+    }
+
+    // Validate each ship has required fields
+    for (let i = 0; i < data.ships.length; i++) {
+        const ship = data.ships[i];
+        if (!ship.name || typeof ship.name !== 'string') {
+            return { valid: false, error: `Ship at index ${i} missing valid name` };
+        }
+        if (ship.components && typeof ship.components !== 'object') {
+            return { valid: false, error: `Ship "${ship.name}" has invalid components` };
+        }
+    }
+
+    // Validate each storage item
+    for (let i = 0; i < data.storage.length; i++) {
+        const item = data.storage[i];
+        if (!item.name || !item.type) {
+            return { valid: false, error: `Storage item at index ${i} missing name or type` };
+        }
+        if (typeof item.quantity !== 'number' || item.quantity < 1) {
+            return { valid: false, error: `Storage item "${item.name}" has invalid quantity` };
+        }
+    }
+
+    return {
+        valid: true,
+        summary: {
+            formatVersion: imported.formatVersion || 'legacy',
+            appVersion: imported.appVersion || 'unknown',
+            exportDate: imported.exportDate || null,
+            shipCount: data.ships.length,
+            storageCount: data.storage.length,
+            data: data
+        }
+    };
+}
+
+function showImportConfirmModal(imported, summary) {
+    const message = document.getElementById('importMessage');
+
+    let html = `<div class="import-summary">`;
+    html += `<p><strong>File Info:</strong></p>`;
+    html += `<ul>`;
+    html += `<li>Format: ${summary.formatVersion}</li>`;
+    html += `<li>App Version: ${summary.appVersion}</li>`;
+    if (summary.exportDate) {
+        html += `<li>Export Date: ${new Date(summary.exportDate).toLocaleString()}</li>`;
+    }
+    html += `</ul>`;
+    html += `<p><strong>File contains:</strong></p>`;
+    html += `<ul>`;
+    html += `<li>${summary.shipCount} ship(s)</li>`;
+    html += `<li>${summary.storageCount} storage item(s)</li>`;
+    html += `</ul>`;
+    html += `<p><strong>Your current data:</strong></p>`;
+    html += `<ul>`;
+    html += `<li>${appData.ships.length} ship(s)</li>`;
+    html += `<li>${appData.storage.length} storage item(s)</li>`;
+    html += `</ul>`;
+    html += `</div>`;
+
+    message.innerHTML = html;
+
+    // Store the data for when user clicks a button
+    window._pendingImport = summary.data;
+
+    openModal('importConfirmModal');
+}
+
+function executeImport(importedData, mode) {
+    if (mode === 'replace') {
+        appData.ships = importedData.ships.map(ship => ({
+            ...ship,
+            id: ship.id || generateId()
+        }));
+        appData.storage = importedData.storage;
+    } else if (mode === 'merge') {
+        // Add ships that don't exist (by name + nickname combo)
+        importedData.ships.forEach(importedShip => {
+            const exists = appData.ships.some(s =>
+                s.name === importedShip.name &&
+                (s.nickname || '') === (importedShip.nickname || '')
+            );
+            if (!exists) {
+                appData.ships.push({
+                    ...importedShip,
+                    id: generateId()
+                });
+            }
+        });
+
+        // Merge storage: add quantities for matching items, add new items
+        importedData.storage.forEach(importedItem => {
+            const existing = appData.storage.find(s =>
+                s.type === importedItem.type &&
+                s.name.toLowerCase() === importedItem.name.toLowerCase() &&
+                s.size === importedItem.size
+            );
+            if (existing) {
+                existing.quantity += importedItem.quantity;
+            } else {
+                appData.storage.push({ ...importedItem });
+            }
+        });
+    }
+
+    saveData(appData);
+    renderShips();
+    renderStorage();
+    closeModal('importConfirmModal');
+
+    const action = mode === 'replace' ? 'Replaced with' : 'Merged';
+    showToast(`${action} ${importedData.ships.length} ships, ${importedData.storage.length} storage items`);
+}
+
 // ============ Event Listeners ============
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -1244,8 +1437,43 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add storage button (inside storage list modal)
     document.getElementById('addStorageBtn').addEventListener('click', () => openStorageModal());
 
+    // Export button
+    document.getElementById('exportBtn').addEventListener('click', exportData);
+
+    // Import button - triggers file input
+    document.getElementById('importBtn').addEventListener('click', triggerFileInput);
+
+    // File input change - handles selected file
+    document.getElementById('importFileInput').addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            importData(file);
+            e.target.value = ''; // Reset so same file can be selected again
+        }
+    });
+
+    // Import modal buttons
+    document.getElementById('importReplaceBtn').addEventListener('click', () => {
+        if (window._pendingImport) {
+            executeImport(window._pendingImport, 'replace');
+            window._pendingImport = null;
+        }
+    });
+
+    document.getElementById('importMergeBtn').addEventListener('click', () => {
+        if (window._pendingImport) {
+            executeImport(window._pendingImport, 'merge');
+            window._pendingImport = null;
+        }
+    });
+
     // Ship form submit
     document.getElementById('shipForm').addEventListener('submit', handleShipSubmit);
+
+    // Save Ship button in header (triggers form submit)
+    document.getElementById('saveShipTopBtn').addEventListener('click', () => {
+        document.getElementById('shipForm').requestSubmit();
+    });
 
     // Storage form submit
     document.getElementById('storageForm').addEventListener('submit', handleStorageSubmit);
@@ -1313,3 +1541,5 @@ window.openShipModal = openShipModal;
 window.openStorageModal = openStorageModal;
 window.confirmDeleteShip = confirmDeleteShip;
 window.confirmDeleteStorage = confirmDeleteStorage;
+window.exportData = exportData;
+window.importData = importData;

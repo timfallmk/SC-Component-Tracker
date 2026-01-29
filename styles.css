@@ -25,6 +25,8 @@
 
 body {
     font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: url('background_v1a_1920.jpg') no-repeat center center fixed;
+    background-size: cover;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
@@ -46,15 +48,22 @@ h1, h2, h3, h4, .btn, .section-header {
     margin-bottom: 30px;
 }
 
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
 .header-title {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 15px;
 }
 
 .header h1 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin: 0;
     color: var(--accent);
     text-shadow: 0 0 10px var(--accent-glow);
@@ -116,6 +125,7 @@ h1, h2, h3, h4, .btn, .section-header {
 
 .search-container {
     position: relative;
+    width: 66%;
 }
 
 #searchInput {
@@ -176,6 +186,10 @@ h1, h2, h3, h4, .btn, .section-header {
     margin-bottom: 30px;
 }
 
+.ships-section {
+    margin-top: 80px;
+}
+
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -184,8 +198,13 @@ h1, h2, h3, h4, .btn, .section-header {
 }
 
 .section-header h2 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     color: var(--text-primary);
+    text-transform: uppercase;
+}
+
+.hangar-count {
+    text-transform: none;
 }
 
 /* Buttons */
@@ -210,14 +229,14 @@ h1, h2, h3, h4, .btn, .section-header {
 }
 
 .btn-primary {
-    background-color: var(--accent);
-    color: #000;
+    background-color: rgba(255, 149, 0, 0.5);
+    color: var(--text-primary);
     border-color: var(--accent);
     box-shadow: 0 0 10px var(--accent-glow);
 }
 
 .btn-primary:hover {
-    background-color: var(--accent-hover);
+    background-color: rgba(255, 179, 71, 0.7);
     box-shadow: 0 0 20px var(--accent-glow), 0 0 30px var(--accent-glow);
 }
 
@@ -271,26 +290,12 @@ h1, h2, h3, h4, .btn, .section-header {
     animation: none;
 }
 
-/* Storage Button Section */
-.storage-button-section {
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: flex-end;
-}
-
+/* Storage Button in Header */
 #openStorageListBtn {
     background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
     border: 1px solid var(--accent);
     position: relative;
     overflow: hidden;
-    width: auto;
-    min-width: 220px;
-}
-
-#addShipBtn {
-    min-width: 220px;
-    font-size: 1.1rem;
-    padding: 12px 24px;
 }
 
 #openStorageListBtn::before {
@@ -308,6 +313,62 @@ h1, h2, h3, h4, .btn, .section-header {
     left: 100%;
 }
 
+#addShipBtn {
+    min-width: 180px;
+    font-size: 1.1rem;
+    padding: 12px 24px;
+}
+
+/* Data Actions (Export/Import) */
+.data-actions {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+    padding-left: 16px;
+}
+
+.data-actions .btn {
+    min-width: 80px;
+    padding: 8px 16px;
+}
+
+/* Import Modal Styles */
+.import-message {
+    padding: 16px 20px;
+}
+
+.import-summary {
+    font-size: 0.95rem;
+}
+
+.import-summary p {
+    margin: 0 0 8px 0;
+}
+
+.import-summary ul {
+    margin: 0 0 16px 20px;
+    padding: 0;
+    color: var(--text-secondary);
+}
+
+.import-summary li {
+    margin-bottom: 4px;
+}
+
+.import-summary strong {
+    color: var(--accent);
+}
+
+.import-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.import-actions .btn:first-child {
+    margin-right: auto;
+}
+
 /* Ships List */
 .ships-list {
     display: flex;
@@ -316,7 +377,7 @@ h1, h2, h3, h4, .btn, .section-header {
 }
 
 .ship-card {
-    background-color: #4a2800;
+    background-color: rgba(25, 55, 95, 0.5);
     border: 1px solid var(--accent);
     border-radius: 0;
     padding: 12px 16px;
@@ -762,7 +823,7 @@ form {
     }
 
     .header h1 {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
 
     .section-header {

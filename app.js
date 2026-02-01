@@ -2,7 +2,7 @@
 
 // ============ Data Layer ============
 
-const APP_VERSION = '0.63';
+const APP_VERSION = '0.64';
 const STORAGE_KEY = 'sc-component-tracker-data';
 const DATA_VERSION_KEY = 'sc-component-tracker-data-version';
 
@@ -1482,16 +1482,11 @@ function setStoredDataVersion(version) {
 
 // Check for ship data updates
 async function checkForUpdate() {
-    console.log('checkForUpdate called');
     const btn = document.getElementById('checkUpdateBtn');
-    if (!btn) {
-        console.error('checkUpdateBtn not found');
-        return;
-    }
+    if (!btn) return;
 
     btn.classList.add('checking');
     btn.textContent = 'Checking...';
-    console.log('Starting fetch...');
 
     try {
         // Fetch with cache-busting to get latest version info
@@ -1523,8 +1518,6 @@ async function checkForUpdate() {
         btn.classList.remove('checking');
         btn.textContent = 'Check for Update';
         showToast('Update check failed: ' + error.message);
-        // Debug: also show alert
-        alert('Update check failed: ' + error.message + '\n\nNote: processed-data.json must be pushed to GitHub first.');
     }
 }
 

@@ -1,473 +1,8 @@
 // Auto-generated stock loadouts from ships.json
-// Generated: 2026-02-01T04:22:01.991Z
-// Ships with loadout data: 282
+// Generated: 2026-02-01T04:32:56.787Z
+// Ships with loadout data: 240
 
 const EXTRACTED_LOADOUTS = {
-  "Argo ATLS GEO IKTI": {
-    "quantumDrives": [],
-    "powerPlants": [],
-    "coolers": [],
-    "shields": [],
-    "pilotWeapons": [
-      "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater"
-    ],
-    "turretWeapons": []
-  },
-  "Argo ATLS IKTI": {
-    "quantumDrives": [],
-    "powerPlants": [],
-    "coolers": [],
-    "shields": [],
-    "pilotWeapons": [
-      "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater"
-    ],
-    "turretWeapons": []
-  },
-  "Argo ATLS IKTI Rad": {
-    "quantumDrives": [],
-    "powerPlants": [],
-    "coolers": [],
-    "shields": [],
-    "pilotWeapons": [
-      "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater"
-    ],
-    "turretWeapons": []
-  },
-  "Anvil Ballista": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN",
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "Scorpion GT-215 Gatling",
-      "Scorpion GT-215 Gatling"
-    ]
-  },
-  "Anvil Centurion": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "OverDrive",
-      "Defiant"
-    ],
-    "coolers": [
-      "Cryo-Star SL",
-      "Frost-Star",
-      "Frost-Star"
-    ],
-    "shields": [
-      "Castra",
-      "Castra"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "Attrition-3 Repeater",
-      "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater"
-    ]
-  },
-  "RSI Lynx": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "M3A Cannon",
-      "M3A Cannon"
-    ]
-  },
-  "Greycat MDC": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Defiant"
-    ],
-    "coolers": [
-      "Cryo-Star SL"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "MRX \"Torrent\""
-    ]
-  },
-  "Tumbril Cyclone RN": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": []
-  },
-  "Anvil Ballista Snowblind": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN",
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "Scorpion GT-215 Gatling",
-      "Scorpion GT-215 Gatling"
-    ]
-  },
-  "Greycat ROC": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Steadfast",
-      "Steadfast"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [],
-    "pilotWeapons": [],
-    "turretWeapons": []
-  },
-  "Tumbril Cyclone": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": []
-  },
-  "RSI Ursa": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater"
-    ]
-  },
-  "RSI Ursa Fortuna": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater"
-    ]
-  },
-  "Tumbril Cyclone AA": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": []
-  },
-  "RSI Ursa Medivac": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater"
-    ]
-  },
-  "Greycat MTC": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Defiant"
-    ],
-    "coolers": [
-      "Cryo-Star SL"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "CF-227 Badger Repeater",
-      "CF-227 Badger Repeater"
-    ]
-  },
-  "Tumbril Cyclone MT": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "9-Series Longsword Cannon"
-    ]
-  },
-  "Tumbril Nova": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix",
-      "Radix",
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL",
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN",
-      "PIN",
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "Slayer Cannon",
-      "CF-227 Badger Repeater",
-      "CF-227 Badger Repeater"
-    ]
-  },
-  "Anvil Spartan": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Defiant"
-    ],
-    "coolers": [
-      "Cryo-Star SL"
-    ],
-    "shields": [
-      "Castra",
-      "Castra"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "Scorpion GT-215 Gatling",
-      "Scorpion GT-215 Gatling"
-    ]
-  },
-  "Tumbril Storm": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "Reign-3 Repeater"
-    ]
-  },
-  "Tumbril Cyclone TR": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "YellowJacket GT-210 Gatling"
-    ]
-  },
-  "Tumbril Storm AA": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": []
-  },
-  "Greycat PTV": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [],
-    "pilotWeapons": [],
-    "turretWeapons": []
-  },
-  "Argo CSV-SM\\n": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": []
-  },
-  "Tumbril Cyclone RC": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": []
-  },
-  "Anvil Ballista Dunestalker": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [
-      "PIN",
-      "PIN"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "Scorpion GT-215 Gatling",
-      "Scorpion GT-215 Gatling"
-    ]
-  },
-  "Greycat ROC-DS": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Steadfast",
-      "Steadfast"
-    ],
-    "coolers": [
-      "Frost-Star SL"
-    ],
-    "shields": [],
-    "pilotWeapons": [],
-    "turretWeapons": []
-  },
-  "RSI Ursa Medivac Wikelo Special": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "MagnaBloom"
-    ],
-    "coolers": [
-      "Kelvid"
-    ],
-    "shields": [
-      "Castra"
-    ],
-    "pilotWeapons": [],
-    "turretWeapons": [
-      "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater"
-    ]
-  },
-  "Drake Mule": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Steadfast",
-      "Steadfast"
-    ],
-    "coolers": [
-      "Winter-Star SL"
-    ],
-    "shields": [],
-    "pilotWeapons": [],
-    "turretWeapons": []
-  },
-  "Greycat STV": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Cryo-Star SL"
-    ],
-    "shields": [],
-    "pilotWeapons": [],
-    "turretWeapons": []
-  },
   "RSI Aurora LX": {
     "quantumDrives": [
       "Eos"
@@ -1703,21 +1238,6 @@ const EXTRACTED_LOADOUTS = {
       "M2C \"Swarm\""
     ]
   },
-  "Aopoa Nox": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Fridan"
-    ],
-    "shields": [],
-    "pilotWeapons": [
-      "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater"
-    ],
-    "turretWeapons": []
-  },
   "MISC Reliant Tana": {
     "quantumDrives": [
       "Beacon"
@@ -2450,18 +1970,6 @@ const EXTRACTED_LOADOUTS = {
     "pilotWeapons": [],
     "turretWeapons": []
   },
-  "Aopoa Nox Kue": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Fridan"
-    ],
-    "shields": [],
-    "pilotWeapons": [],
-    "turretWeapons": []
-  },
   "Crusader Ares Star Fighter Ion Wikelo Sneak Special": {
     "quantumDrives": [
       "Bolt"
@@ -2560,20 +2068,6 @@ const EXTRACTED_LOADOUTS = {
     "pilotWeapons": [
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
-    ],
-    "turretWeapons": []
-  },
-  "Origin X1": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Fridan"
-    ],
-    "shields": [],
-    "pilotWeapons": [
-      "M3A Cannon"
     ],
     "turretWeapons": []
   },
@@ -3234,18 +2728,6 @@ const EXTRACTED_LOADOUTS = {
       "CF-337 Panther Repeater"
     ]
   },
-  "C.O. HoverQuad": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Fridan"
-    ],
-    "shields": [],
-    "pilotWeapons": [],
-    "turretWeapons": []
-  },
   "Aegis Sabre Peregrine": {
     "quantumDrives": [
       "Drift"
@@ -3808,18 +3290,6 @@ const EXTRACTED_LOADOUTS = {
       "SW16BR2 “Sawbuck” Repeater"
     ]
   },
-  "Origin X1 Velocity": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Fridan"
-    ],
-    "shields": [],
-    "pilotWeapons": [],
-    "turretWeapons": []
-  },
   "Aegis Gladius": {
     "quantumDrives": [
       "Beacon"
@@ -4166,21 +3636,6 @@ const EXTRACTED_LOADOUTS = {
       "CF-227 Badger Repeater"
     ]
   },
-  "Drake Dragonfly Star Kitten": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Fridan"
-    ],
-    "shields": [],
-    "pilotWeapons": [
-      "Havoc Scattergun",
-      "Havoc Scattergun"
-    ],
-    "turretWeapons": []
-  },
   "Crusader A1 Spirit": {
     "quantumDrives": [
       "Yeager"
@@ -4401,21 +3856,6 @@ const EXTRACTED_LOADOUTS = {
     "pilotWeapons": [
       "CF-117 Bulldog Repeater",
       "CF-117 Bulldog Repeater"
-    ],
-    "turretWeapons": []
-  },
-  "Drake Dragonfly": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Fridan"
-    ],
-    "shields": [],
-    "pilotWeapons": [
-      "Havoc Scattergun",
-      "Havoc Scattergun"
     ],
     "turretWeapons": []
   },
@@ -5076,35 +4516,6 @@ const EXTRACTED_LOADOUTS = {
     ],
     "turretWeapons": []
   },
-  "Mirai Pulse": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Fridan"
-    ],
-    "shields": [],
-    "pilotWeapons": [
-      "Thlilye Laser Gatling"
-    ],
-    "turretWeapons": []
-  },
-  "Aopoa Nox Wikelo Special": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "IonWave"
-    ],
-    "coolers": [
-      "Tepilo"
-    ],
-    "shields": [],
-    "pilotWeapons": [
-      "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater"
-    ],
-    "turretWeapons": []
-  },
   "Esperia Talon": {
     "quantumDrives": [
       "Drift"
@@ -5311,22 +4722,6 @@ const EXTRACTED_LOADOUTS = {
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater"
     ]
-  },
-  "Origin X1 Force": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Fridan"
-    ],
-    "shields": [
-      "PIN"
-    ],
-    "pilotWeapons": [
-      "CF-117 Bulldog Repeater"
-    ],
-    "turretWeapons": []
   },
   "Drake Caterpillar Pirate": {
     "quantumDrives": [
@@ -5715,18 +5110,6 @@ const EXTRACTED_LOADOUTS = {
     ],
     "turretWeapons": []
   },
-  "Mirai Pulse LX": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Fridan"
-    ],
-    "shields": [],
-    "pilotWeapons": [],
-    "turretWeapons": []
-  },
   "Mirai Razor": {
     "quantumDrives": [
       "LightFire"
@@ -6019,21 +5402,6 @@ const EXTRACTED_LOADOUTS = {
       "Yeng’tu Repeater",
       "Yeng’tu Repeater",
       "Yeng’tu Repeater"
-    ],
-    "turretWeapons": []
-  },
-  "Drake Dragonfly Yellowjacket": {
-    "quantumDrives": [],
-    "powerPlants": [
-      "Radix"
-    ],
-    "coolers": [
-      "Fridan"
-    ],
-    "shields": [],
-    "pilotWeapons": [
-      "Havoc Scattergun",
-      "Havoc Scattergun"
     ],
     "turretWeapons": []
   },

@@ -223,8 +223,8 @@ function main() {
     let skippedCount = 0;
 
     for (const ship of shipsData) {
-        // Skip non-ships (ground vehicles, etc.) - optional filter
-        // if (!ship.IsSpaceship && !ship.IsVehicle) continue;
+        // Skip ground vehicles and non-spaceships
+        if (!ship.IsSpaceship) continue;
 
         const shipName = getShipDisplayName(ship);
         const loadout = extractShipLoadout(ship);

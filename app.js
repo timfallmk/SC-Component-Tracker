@@ -2,8 +2,12 @@
 
 // ============ Data Layer ============
 
-const APP_VERSION = '0.61';
+const APP_VERSION = '0.63';
 const STORAGE_KEY = 'sc-component-tracker-data';
+const DATA_VERSION_KEY = 'sc-component-tracker-data-version';
+
+// GitHub raw URL for processed ship data (updated by maintainer)
+const PROCESSED_DATA_URL = 'https://raw.githubusercontent.com/Lucky44/SC-Component-Tracker/main/processed-data.json';
 
 const defaultData = {
     ships: [],
@@ -1464,9 +1468,159 @@ function executeImport(importedData, mode) {
     showToast(`${action} ${importedData.ships.length} ships, ${importedData.storage.length} storage items`);
 }
 
+// ============ Ship Data Updates ============
+
+// Get currently stored data version
+function getStoredDataVersion() {
+    return localStorage.getItem(DATA_VERSION_KEY) || null;
+}
+
+// Save data version
+function setStoredDataVersion(version) {
+    localStorage.setItem(DATA_VERSION_KEY, version);
+}
+
+// Check for ship data updates
+async function checkForUpdate() {
+    console.log('checkForUpdate called');
+    const btn = document.getElementById('checkUpdateBtn');
+    if (!btn) {
+        console.error('checkUpdateBtn not found');
+        return;
+    }
+
+    btn.classList.add('checking');
+    btn.textContent = 'Checking...';
+    console.log('Starting fetch...');
+
+    try {
+        // Fetch with cache-busting to get latest version info
+        const response = await fetch(PROCESSED_DATA_URL + '?t=' + Date.now(), {
+            method: 'GET',
+            cache: 'no-store'
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+        const remoteVersion = data.version || data.lastUpdated;
+        const localVersion = getStoredDataVersion();
+
+        btn.classList.remove('checking');
+        btn.textContent = 'Check for Update';
+
+        if (!localVersion || remoteVersion > localVersion) {
+            // Update available
+            showUpdateModal(data, localVersion, remoteVersion);
+            btn.classList.add('has-update');
+        } else {
+            showToast('Ship data is up to date');
+        }
+    } catch (error) {
+        console.error('Update check failed:', error);
+        btn.classList.remove('checking');
+        btn.textContent = 'Check for Update';
+        showToast('Update check failed: ' + error.message);
+        // Debug: also show alert
+        alert('Update check failed: ' + error.message + '\n\nNote: processed-data.json must be pushed to GitHub first.');
+    }
+}
+
+// Show update confirmation modal
+function showUpdateModal(newData, localVersion, remoteVersion) {
+    const message = document.getElementById('updateMessage');
+    const actions = document.getElementById('updateActions');
+
+    const localDate = localVersion ? new Date(localVersion).toLocaleDateString() : 'None (using bundled data)';
+    const remoteDate = new Date(remoteVersion).toLocaleDateString();
+    const shipCount = newData.ships ? newData.ships.length : 0;
+    const loadoutCount = newData.stockLoadouts ? Object.keys(newData.stockLoadouts).length : 0;
+
+    message.innerHTML = `
+        <div class="update-info">
+            <p class="update-current"><strong>Your data:</strong> ${localDate}</p>
+            <p class="update-available"><strong>Available:</strong> ${remoteDate}</p>
+            <p><strong>New data includes:</strong></p>
+            <ul>
+                <li>${shipCount} ships with hardpoint specs</li>
+                <li>${loadoutCount} ships with stock loadouts</li>
+            </ul>
+        </div>
+    `;
+
+    // Store pending update data
+    window._pendingUpdate = newData;
+
+    openModal('updateModal');
+}
+
+// Apply the update
+function applyUpdate() {
+    const data = window._pendingUpdate;
+    if (!data) return;
+
+    try {
+        // Update SC_DATA with new ships and loadouts
+        if (data.ships && Array.isArray(data.ships)) {
+            SC_DATA.ships = data.ships;
+        }
+        if (data.stockLoadouts && typeof data.stockLoadouts === 'object') {
+            SC_DATA.stockLoadouts = data.stockLoadouts;
+        }
+
+        // Store the version
+        setStoredDataVersion(data.version || data.lastUpdated);
+
+        // Store the data in localStorage for persistence
+        localStorage.setItem('sc-ships-data', JSON.stringify(data));
+
+        // Refresh UI
+        populateShipDropdown();
+        renderShips();
+
+        // Clear pending update
+        window._pendingUpdate = null;
+
+        // Update button state
+        const btn = document.getElementById('checkUpdateBtn');
+        if (btn) {
+            btn.classList.remove('has-update');
+        }
+
+        closeModal('updateModal');
+        showToast('Ship data updated successfully');
+    } catch (error) {
+        console.error('Failed to apply update:', error);
+        showToast('Update failed: ' + error.message);
+    }
+}
+
+// Load cached ship data from localStorage on startup
+function loadCachedShipData() {
+    try {
+        const cached = localStorage.getItem('sc-ships-data');
+        if (cached) {
+            const data = JSON.parse(cached);
+            if (data.ships && Array.isArray(data.ships)) {
+                SC_DATA.ships = data.ships;
+            }
+            if (data.stockLoadouts && typeof data.stockLoadouts === 'object') {
+                SC_DATA.stockLoadouts = data.stockLoadouts;
+            }
+            console.log('Loaded cached ship data:', data.version || 'unknown version');
+        }
+    } catch (error) {
+        console.error('Failed to load cached ship data:', error);
+    }
+}
+
 // ============ Event Listeners ============
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Load any cached ship data updates
+    loadCachedShipData();
     // Populate ship dropdown
     populateShipDropdown();
 
@@ -1563,6 +1717,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Version badge
     setAppVersionBadge();
+
+    // Check for Update button
+    const checkUpdateBtn = document.getElementById('checkUpdateBtn');
+    if (checkUpdateBtn) {
+        checkUpdateBtn.addEventListener('click', checkForUpdate);
+    }
+
+    // Confirm update button
+    const confirmUpdateBtn = document.getElementById('confirmUpdateBtn');
+    if (confirmUpdateBtn) {
+        confirmUpdateBtn.addEventListener('click', applyUpdate);
+    }
 
     searchInput.addEventListener('input', (e) => {
         clearTimeout(searchTimeout);

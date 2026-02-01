@@ -15,6 +15,7 @@
                     <h1>SC Component Tracker</h1>
                     <span id="appVersion" class="app-version" data-tooltip="Click to copy version" aria-label="Application version"></span>
                     <a href="README.md" class="about-btn" target="_blank">About</a>
+                    <button type="button" id="checkUpdateBtn" class="about-btn update-btn">Check for Update</button>
                 </div>
                 <button id="openStorageListBtn" class="btn btn-secondary">My Stored Components</button>
             </div>
@@ -213,6 +214,23 @@
         </div>
     </div>
 
+    <!-- Update Modal -->
+    <div id="updateModal" class="modal hidden">
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h3>Ship Data Update</h3>
+                <button class="modal-close" data-modal="updateModal">&times;</button>
+            </div>
+            <div id="updateMessage" class="update-message">
+                <!-- Update info will be rendered here -->
+            </div>
+            <div class="form-actions" id="updateActions">
+                <button type="button" class="btn btn-secondary" data-modal="updateModal">Cancel</button>
+                <button type="button" id="confirmUpdateBtn" class="btn btn-primary">Update Now</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Import Confirmation Modal -->
     <div id="importConfirmModal" class="modal hidden">
         <div class="modal-content modal-small">
@@ -231,7 +249,7 @@
         </div>
     </div>
 
-<script src="data.js?v=17"></script>
-    <script src="app.js?v=17"></script>
+<script src="data.js?v=19"></script>
+    <script src="app.js?v=19"></script>
 </body>
 </html>

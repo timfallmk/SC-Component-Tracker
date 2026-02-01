@@ -19,6 +19,7 @@ const https = require('https');
 const SCUNPACKED_URL = 'https://raw.githubusercontent.com/StarCitizenWiki/scunpacked-data/master/ships.json';
 const SHIPS_JSON_PATH = path.join(__dirname, '..', 'ships.json');
 const BACKUP_PATH = path.join(__dirname, '..', 'ships.json.backup');
+const PROCESSED_DATA_PATH = path.join(__dirname, '..', 'processed-data.json');
 
 // ANSI colors for terminal output
 const colors = {
@@ -107,6 +108,42 @@ function runScript(scriptPath, description) {
 }
 
 /**
+ * Load extracted data from generated JS files
+ */
+function loadExtracted(filePath, varName) {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const match = content.match(new RegExp(`const ${varName} = ([\\s\\S]*?);\\s*\\/\\/ Export`));
+    if (!match) {
+        throw new Error(`Could not find ${varName} in ${filePath}`);
+    }
+    return JSON.parse(match[1]);
+}
+
+/**
+ * Generate processed-data.json for browser-based updates
+ */
+async function generateProcessedData() {
+    const shipsPath = path.join(__dirname, 'extracted-ships.js');
+    const loadoutsPath = path.join(__dirname, 'extracted-loadouts.js');
+
+    const ships = loadExtracted(shipsPath, 'EXTRACTED_SHIPS');
+    const stockLoadouts = loadExtracted(loadoutsPath, 'EXTRACTED_LOADOUTS');
+
+    const processedData = {
+        version: new Date().toISOString(),
+        lastUpdated: new Date().toISOString().split('T')[0],
+        ships: ships,
+        stockLoadouts: stockLoadouts
+    };
+
+    fs.writeFileSync(PROCESSED_DATA_PATH, JSON.stringify(processedData, null, 2));
+
+    const fileSizeKB = (fs.statSync(PROCESSED_DATA_PATH).size / 1024).toFixed(1);
+    log(`  Generated processed-data.json (${fileSizeKB} KB)`, 'green');
+    log(`  Ships: ${ships.length}, Loadouts: ${Object.keys(stockLoadouts).length}`, 'green');
+}
+
+/**
  * Main update function
  */
 async function main() {
@@ -148,18 +185,16 @@ async function main() {
             'Extracting stock loadouts'
         );
 
-        // Step 5: Update data.js
-        await runScript(
-            path.join(__dirname, 'update-data.js'),
-            'Updating data.js with extracted data'
-        );
-
-        // Step 6: Run validation
+        // Step 5: Run validation
         log('\n--- Validation Results ---\n', 'bright');
         await runScript(
             path.join(__dirname, 'validate-extraction.js'),
             'Validating extracted data'
         );
+
+        // Step 6: Generate processed-data.json for browser updates
+        logStep('GENERATE', 'Creating processed-data.json for browser updates');
+        await generateProcessedData();
 
         log('\n=== Update Complete ===\n', 'green');
         log('Next steps:', 'bright');

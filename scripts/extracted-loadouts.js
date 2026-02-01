@@ -1,5 +1,5 @@
 // Auto-generated stock loadouts from ships.json
-// Generated: 2026-02-01T03:52:38.178Z
+// Generated: 2026-02-01T04:22:01.991Z
 // Ships with loadout data: 282
 
 const EXTRACTED_LOADOUTS = {
@@ -468,6 +468,27 @@ const EXTRACTED_LOADOUTS = {
     "pilotWeapons": [],
     "turretWeapons": []
   },
+  "RSI Aurora LX": {
+    "quantumDrives": [
+      "Eos"
+    ],
+    "powerPlants": [
+      "LumaCore"
+    ],
+    "coolers": [
+      "QuikCool",
+      "QuikCool"
+    ],
+    "shields": [
+      "Targa",
+      "Targa"
+    ],
+    "pilotWeapons": [
+      "CF-117 Bulldog Repeater",
+      "CF-117 Bulldog Repeater"
+    ],
+    "turretWeapons": []
+  },
   "RSI Apollo Medivac": {
     "quantumDrives": [
       "Odyssey"
@@ -895,6 +916,29 @@ const EXTRACTED_LOADOUTS = {
     ],
     "turretWeapons": []
   },
+  "RSI Aurora LN": {
+    "quantumDrives": [
+      "Eos"
+    ],
+    "powerPlants": [
+      "Charger"
+    ],
+    "coolers": [
+      "Bracer",
+      "Bracer"
+    ],
+    "shields": [
+      "SecureHyde",
+      "SecureHyde"
+    ],
+    "pilotWeapons": [
+      "CF-117 Bulldog Repeater",
+      "CF-117 Bulldog Repeater",
+      "CF-117 Bulldog Repeater",
+      "CF-117 Bulldog Repeater"
+    ],
+    "turretWeapons": []
+  },
   "MISC Starlancer TAC Wikelo War Special": {
     "quantumDrives": [
       "Yeager"
@@ -914,8 +958,6 @@ const EXTRACTED_LOADOUTS = {
       "Attrition-4 Repeater",
       "Attrition-4 Repeater",
       "Attrition-4 Repeater",
-      "YellowJacket GT-210 Gatling",
-      "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling"
     ],
@@ -975,8 +1017,6 @@ const EXTRACTED_LOADOUTS = {
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
-      "YellowJacket GT-210 Gatling",
-      "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling"
     ],
@@ -1437,27 +1477,6 @@ const EXTRACTED_LOADOUTS = {
     ],
     "turretWeapons": []
   },
-  "RSI Aurora LX": {
-    "quantumDrives": [
-      "Eos"
-    ],
-    "powerPlants": [
-      "LumaCore"
-    ],
-    "coolers": [
-      "QuikCool",
-      "QuikCool"
-    ],
-    "shields": [
-      "Targa",
-      "Targa"
-    ],
-    "pilotWeapons": [
-      "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater"
-    ],
-    "turretWeapons": []
-  },
   "Anvil Terrapin Medic Wikelo Savior Special": {
     "quantumDrives": [
       "Hyperion"
@@ -1722,28 +1741,6 @@ const EXTRACTED_LOADOUTS = {
     ],
     "turretWeapons": []
   },
-  "Aegis Gladius": {
-    "quantumDrives": [
-      "Beacon"
-    ],
-    "powerPlants": [
-      "Regulus"
-    ],
-    "coolers": [
-      "Bracer",
-      "Bracer"
-    ],
-    "shields": [
-      "AllStop",
-      "AllStop"
-    ],
-    "pilotWeapons": [
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "Mantis GT-220 Gatling"
-    ],
-    "turretWeapons": []
-  },
   "Anvil C8R Pisces Rescue": {
     "quantumDrives": [
       "Expedition"
@@ -1781,29 +1778,6 @@ const EXTRACTED_LOADOUTS = {
       "CF-117 Bulldog Repeater",
       "FL-11 Cannon",
       "FL-11 Cannon"
-    ],
-    "turretWeapons": []
-  },
-  "RSI Aurora LN": {
-    "quantumDrives": [
-      "Eos"
-    ],
-    "powerPlants": [
-      "Charger"
-    ],
-    "coolers": [
-      "Bracer",
-      "Bracer"
-    ],
-    "shields": [
-      "SecureHyde",
-      "SecureHyde"
-    ],
-    "pilotWeapons": [
-      "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater"
     ],
     "turretWeapons": []
   },
@@ -1854,8 +1828,6 @@ const EXTRACTED_LOADOUTS = {
       "FullStop"
     ],
     "pilotWeapons": [
-      "YellowJacket GT-210 Gatling",
-      "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling"
     ],
@@ -2101,11 +2073,6 @@ const EXTRACTED_LOADOUTS = {
       "Mantis GT-220 Gatling",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
-      "YellowJacket GT-210 Gatling",
-      "YellowJacket GT-210 Gatling",
-      "YellowJacket GT-210 Gatling",
-      "YellowJacket GT-210 Gatling",
-      "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling",
@@ -2448,27 +2415,6 @@ const EXTRACTED_LOADOUTS = {
     ],
     "turretWeapons": []
   },
-  "RSI Aurora ES": {
-    "quantumDrives": [
-      "Eos"
-    ],
-    "powerPlants": [
-      "ZapJet"
-    ],
-    "coolers": [
-      "BlastChill",
-      "BlastChill"
-    ],
-    "shields": [
-      "INK",
-      "INK"
-    ],
-    "pilotWeapons": [
-      "9-Series Longsword Cannon",
-      "9-Series Longsword Cannon"
-    ],
-    "turretWeapons": []
-  },
   "Anvil Terrapin Medic": {
     "quantumDrives": [
       "Eos"
@@ -2588,8 +2534,6 @@ const EXTRACTED_LOADOUTS = {
       "Attrition-3 Repeater",
       "Attrition-3 Repeater",
       "Attrition-3 Repeater",
-      "YellowJacket GT-210 Gatling",
-      "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling"
     ],
@@ -2829,6 +2773,27 @@ const EXTRACTED_LOADOUTS = {
     "pilotWeapons": [
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
+    ],
+    "turretWeapons": []
+  },
+  "RSI Aurora ES": {
+    "quantumDrives": [
+      "Eos"
+    ],
+    "powerPlants": [
+      "ZapJet"
+    ],
+    "coolers": [
+      "BlastChill",
+      "BlastChill"
+    ],
+    "shields": [
+      "INK",
+      "INK"
+    ],
+    "pilotWeapons": [
+      "9-Series Longsword Cannon",
+      "9-Series Longsword Cannon"
     ],
     "turretWeapons": []
   },
@@ -3228,8 +3193,6 @@ const EXTRACTED_LOADOUTS = {
       "M6A Cannon",
       "M6A Cannon",
       "M6A Cannon",
-      "YellowJacket GT-210 Gatling",
-      "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling"
     ],
@@ -3855,6 +3818,28 @@ const EXTRACTED_LOADOUTS = {
     ],
     "shields": [],
     "pilotWeapons": [],
+    "turretWeapons": []
+  },
+  "Aegis Gladius": {
+    "quantumDrives": [
+      "Beacon"
+    ],
+    "powerPlants": [
+      "Regulus"
+    ],
+    "coolers": [
+      "Bracer",
+      "Bracer"
+    ],
+    "shields": [
+      "AllStop",
+      "AllStop"
+    ],
+    "pilotWeapons": [
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "Mantis GT-220 Gatling"
+    ],
     "turretWeapons": []
   },
   "Kruger P-52 Merlin": {
@@ -4804,27 +4789,6 @@ const EXTRACTED_LOADOUTS = {
     ],
     "turretWeapons": []
   },
-  "RSI Aurora CL": {
-    "quantumDrives": [
-      "Eos"
-    ],
-    "powerPlants": [
-      "Roughneck"
-    ],
-    "coolers": [
-      "Hydrocel",
-      "Hydrocel"
-    ],
-    "shields": [
-      "Bulwark",
-      "Bulwark"
-    ],
-    "pilotWeapons": [
-      "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater"
-    ],
-    "turretWeapons": []
-  },
   "Mirai Razor EX": {
     "quantumDrives": [
       "LightFire"
@@ -5348,27 +5312,6 @@ const EXTRACTED_LOADOUTS = {
       "CF-337 Panther Repeater"
     ]
   },
-  "RSI Aurora MR": {
-    "quantumDrives": [
-      "Eos"
-    ],
-    "powerPlants": [
-      "Roughneck"
-    ],
-    "coolers": [
-      "Hydrocel",
-      "Hydrocel"
-    ],
-    "shields": [
-      "Bulwark",
-      "Bulwark"
-    ],
-    "pilotWeapons": [
-      "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater"
-    ],
-    "turretWeapons": []
-  },
   "Origin X1 Force": {
     "quantumDrives": [],
     "powerPlants": [
@@ -5825,6 +5768,48 @@ const EXTRACTED_LOADOUTS = {
     ],
     "turretWeapons": []
   },
+  "RSI Aurora MR": {
+    "quantumDrives": [
+      "Eos"
+    ],
+    "powerPlants": [
+      "Roughneck"
+    ],
+    "coolers": [
+      "Hydrocel",
+      "Hydrocel"
+    ],
+    "shields": [
+      "Bulwark",
+      "Bulwark"
+    ],
+    "pilotWeapons": [
+      "CF-117 Bulldog Repeater",
+      "CF-117 Bulldog Repeater"
+    ],
+    "turretWeapons": []
+  },
+  "RSI Aurora CL": {
+    "quantumDrives": [
+      "Eos"
+    ],
+    "powerPlants": [
+      "Roughneck"
+    ],
+    "coolers": [
+      "Hydrocel",
+      "Hydrocel"
+    ],
+    "shields": [
+      "Bulwark",
+      "Bulwark"
+    ],
+    "pilotWeapons": [
+      "CF-117 Bulldog Repeater",
+      "CF-117 Bulldog Repeater"
+    ],
+    "turretWeapons": []
+  },
   "Aegis Sabre Raven": {
     "quantumDrives": [
       "Drift"
@@ -5889,6 +5874,33 @@ const EXTRACTED_LOADOUTS = {
       "PyroBurst Scattergun"
     ],
     "turretWeapons": []
+  },
+  "RSI Hermes": {
+    "quantumDrives": [
+      "Odyssey"
+    ],
+    "powerPlants": [
+      "FullForce",
+      "FullForce"
+    ],
+    "coolers": [
+      "ColdSnap",
+      "ColdSnap"
+    ],
+    "shields": [
+      "STOP",
+      "STOP",
+      "STOP",
+      "STOP"
+    ],
+    "pilotWeapons": [
+      "CF-447 Rhino Repeater",
+      "CF-447 Rhino Repeater"
+    ],
+    "turretWeapons": [
+      "CF-447 Rhino Repeater",
+      "CF-447 Rhino Repeater"
+    ]
   },
   "C.O. Mustang Alpha": {
     "quantumDrives": [

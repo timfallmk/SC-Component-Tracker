@@ -1,4 +1,4 @@
-Changelog - 2026-01-31 (v0.61)
+Changelog - 2026-01-31 (v0.62)
 ===============================
 
 Branch: main
@@ -123,3 +123,65 @@ Previous Session Context:
 -------------------------
 - API integration work is on feature/api-integration branch (not working well)
 - Background image updated to v1d
+
+Continued Session - 2026-02-01 (v0.62):
+---------------------------------------
+13. Added in-app "Check for Update" button:
+    - Button added next to ABOUT link in header
+    - Fetches processed-data.json from GitHub raw URL
+    - Compares version timestamps to detect newer data
+    - Shows modal with update info and confirmation button
+    - Stores updated data in localStorage for persistence
+    - Data persists across page refreshes
+
+14. Implemented browser-side data update system:
+    - loadCachedShipData() loads data from localStorage on startup
+    - checkForUpdate() fetches and compares versions
+    - applyUpdate() merges new data into SC_DATA and saves to localStorage
+    - Version stored in localStorage as 'sc-component-tracker-data-version'
+
+15. Modified update-from-scunpacked.js:
+    - Now generates processed-data.json (221 KB) for browser updates
+    - Contains ships array (167) and stockLoadouts (261)
+    - Removed automatic data.js modification (was causing corruption)
+    - data.js remains as bundled fallback data
+
+16. Restored data.js from commit 4b4e6df:
+    - Previous session corrupted data.js by incorrectly replacing structure
+    - Restored proper structure: weapons, shields, powerPlants, coolers, quantumDrives, ships, stockLoadouts
+
+17. Added CSS styles for update button:
+    - .update-btn, .checking, .has-update states
+    - Pulse animation for when update is available
+    - Update modal styling
+
+18. Updated version to 0.62
+
+Files Modified:
+---------------
+- app.js - Added update check functionality, version to 0.62
+- index.html - Added Check for Update button and update modal
+- styles.css - Added update button and modal styles
+- scripts/update-from-scunpacked.js - Generates processed-data.json, removed data.js update
+- data.js - Restored from commit 4b4e6df (proper structure)
+
+Files Created:
+--------------
+- processed-data.json - Pre-processed ship data for browser updates (221 KB)
+
+Update Flow:
+------------
+1. User clicks "Check for Update" button
+2. App fetches processed-data.json from GitHub
+3. If newer version exists, shows modal with details
+4. User clicks "Update Now" to apply
+5. New data stored in localStorage and SC_DATA updated
+6. UI refreshes with new ship data
+
+Technical Notes:
+----------------
+- GitHub URL: https://raw.githubusercontent.com/Lucky44/SC-Component-Tracker/main/processed-data.json
+- localStorage keys:
+  - 'sc-ships-data' - Full ship data cache
+  - 'sc-component-tracker-data-version' - Version timestamp
+- processed-data.json structure: { version, lastUpdated, ships, stockLoadouts }

@@ -1,6 +1,6 @@
 // Auto-generated ship specs from ships.json
-// Generated: 2026-02-01T03:44:05.643Z
-// Ships with hardpoint data: 176
+// Generated: 2026-02-01T04:22:01.612Z
+// Ships with hardpoint data: 167
 
 const EXTRACTED_SHIPS = [
     {
@@ -138,38 +138,6 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 2
-            }
-        ],
-        "turrets": [],
-        "shields": {
-            "count": 2,
-            "size": 1
-        },
-        "powerPlants": {
-            "count": 1,
-            "size": 1
-        },
-        "coolers": {
-            "count": 2,
-            "size": 1
-        },
-        "quantumDrive": {
-            "size": 1
-        }
-    },
-    {
-        "name": "Aegis Gladius",
-        "manufacturer": "Aegis",
-        "size": "Small",
-        "pilotWeapons": [
-            {
-                "size": 3
-            },
-            {
-                "size": 3
-            },
-            {
-                "size": 3
             }
         ],
         "turrets": [],
@@ -965,28 +933,6 @@ const EXTRACTED_SHIPS = [
         }
     },
     {
-        "name": "Anvil Ballista",
-        "manufacturer": "Anvil",
-        "size": "Medium",
-        "pilotWeapons": [],
-        "turrets": [],
-        "shields": {
-            "count": 2,
-            "size": 0
-        },
-        "powerPlants": {
-            "count": 1,
-            "size": 0
-        },
-        "coolers": {
-            "count": 1,
-            "size": 0
-        },
-        "quantumDrive": {
-            "size": 0
-        }
-    },
-    {
         "name": "Anvil C8 Pisces",
         "manufacturer": "Anvil",
         "size": "Small",
@@ -1163,34 +1109,6 @@ const EXTRACTED_SHIPS = [
         },
         "quantumDrive": {
             "size": 3
-        }
-    },
-    {
-        "name": "Anvil Centurion",
-        "manufacturer": "Anvil",
-        "size": "Medium",
-        "pilotWeapons": [],
-        "turrets": [
-            {
-                "type": "remote",
-                "guns": 8,
-                "size": 4
-            }
-        ],
-        "shields": {
-            "count": 2,
-            "size": 0
-        },
-        "powerPlants": {
-            "count": 2,
-            "size": 1
-        },
-        "coolers": {
-            "count": 3,
-            "size": 1
-        },
-        "quantumDrive": {
-            "size": 0
         }
     },
     {
@@ -2005,28 +1923,6 @@ const EXTRACTED_SHIPS = [
         }
     },
     {
-        "name": "Anvil Spartan",
-        "manufacturer": "Anvil",
-        "size": "Medium",
-        "pilotWeapons": [],
-        "turrets": [],
-        "shields": {
-            "count": 2,
-            "size": 0
-        },
-        "powerPlants": {
-            "count": 1,
-            "size": 0
-        },
-        "coolers": {
-            "count": 1,
-            "size": 0
-        },
-        "quantumDrive": {
-            "size": 0
-        }
-    },
-    {
         "name": "Anvil Terrapin",
         "manufacturer": "Anvil",
         "size": "Small",
@@ -2337,28 +2233,6 @@ const EXTRACTED_SHIPS = [
         },
         "quantumDrive": {
             "size": 1
-        }
-    },
-    {
-        "name": "Argo CSV-SM\\n",
-        "manufacturer": "Argo",
-        "size": "Small",
-        "pilotWeapons": [],
-        "turrets": [],
-        "shields": {
-            "count": 1,
-            "size": 0
-        },
-        "powerPlants": {
-            "count": 1,
-            "size": 0
-        },
-        "coolers": {
-            "count": 1,
-            "size": 0
-        },
-        "quantumDrive": {
-            "size": 0
         }
     },
     {
@@ -5473,7 +5347,7 @@ const EXTRACTED_SHIPS = [
         },
         "powerPlants": {
             "count": 1,
-            "size": 1
+            "size": 0
         },
         "coolers": {
             "count": 2,
@@ -5508,7 +5382,7 @@ const EXTRACTED_SHIPS = [
         },
         "powerPlants": {
             "count": 1,
-            "size": 1
+            "size": 0
         },
         "coolers": {
             "count": 2,
@@ -5543,7 +5417,7 @@ const EXTRACTED_SHIPS = [
         },
         "powerPlants": {
             "count": 1,
-            "size": 1
+            "size": 0
         },
         "coolers": {
             "count": 2,
@@ -5578,7 +5452,7 @@ const EXTRACTED_SHIPS = [
         },
         "powerPlants": {
             "count": 1,
-            "size": 1
+            "size": 0
         },
         "coolers": {
             "count": 2,
@@ -5613,7 +5487,7 @@ const EXTRACTED_SHIPS = [
         },
         "powerPlants": {
             "count": 1,
-            "size": 1
+            "size": 0
         },
         "coolers": {
             "count": 2,
@@ -5803,36 +5677,32 @@ const EXTRACTED_SHIPS = [
         }
     },
     {
-        "name": "RSI Lynx",
+        "name": "RSI Hermes",
         "manufacturer": "RSI",
-        "size": "Medium",
-        "pilotWeapons": [],
-        "turrets": [
+        "size": "Large",
+        "pilotWeapons": [
             {
-                "type": "manned",
-                "guns": 1,
-                "size": 1
+                "size": 4
             },
             {
-                "type": "manned",
-                "guns": 1,
-                "size": 1
+                "size": 4
             }
         ],
+        "turrets": [],
         "shields": {
-            "count": 1,
+            "count": 4,
             "size": 0
         },
         "powerPlants": {
-            "count": 1,
+            "count": 2,
             "size": 0
         },
         "coolers": {
-            "count": 1,
+            "count": 2,
             "size": 0
         },
         "quantumDrive": {
-            "size": 0
+            "size": 2
         }
     },
     {
@@ -6145,39 +6015,6 @@ const EXTRACTED_SHIPS = [
         }
     },
     {
-        "name": "RSI Ursa",
-        "manufacturer": "RSI",
-        "size": "Medium",
-        "pilotWeapons": [],
-        "turrets": [
-            {
-                "type": "manned",
-                "guns": 1,
-                "size": 1
-            },
-            {
-                "type": "manned",
-                "guns": 1,
-                "size": 1
-            }
-        ],
-        "shields": {
-            "count": 1,
-            "size": 0
-        },
-        "powerPlants": {
-            "count": 1,
-            "size": 0
-        },
-        "coolers": {
-            "count": 1,
-            "size": 0
-        },
-        "quantumDrive": {
-            "size": 0
-        }
-    },
-    {
         "name": "RSI Zeus Mk II CL",
         "manufacturer": "RSI",
         "size": "Medium",
@@ -6262,82 +6099,6 @@ const EXTRACTED_SHIPS = [
         },
         "quantumDrive": {
             "size": 2
-        }
-    },
-    {
-        "name": "Tumbril Cyclone",
-        "manufacturer": "Tumbril",
-        "size": "Small",
-        "pilotWeapons": [],
-        "turrets": [],
-        "shields": {
-            "count": 1,
-            "size": 0
-        },
-        "powerPlants": {
-            "count": 1,
-            "size": 0
-        },
-        "coolers": {
-            "count": 1,
-            "size": 0
-        },
-        "quantumDrive": {
-            "size": 0
-        }
-    },
-    {
-        "name": "Tumbril Nova",
-        "manufacturer": "Tumbril",
-        "size": "Medium",
-        "pilotWeapons": [
-            {
-                "size": 1
-            }
-        ],
-        "turrets": [
-            {
-                "type": "manned",
-                "guns": 1,
-                "size": 5
-            }
-        ],
-        "shields": {
-            "count": 3,
-            "size": 0
-        },
-        "powerPlants": {
-            "count": 3,
-            "size": 0
-        },
-        "coolers": {
-            "count": 2,
-            "size": 0
-        },
-        "quantumDrive": {
-            "size": 0
-        }
-    },
-    {
-        "name": "Tumbril Storm",
-        "manufacturer": "Tumbril",
-        "size": "Medium",
-        "pilotWeapons": [],
-        "turrets": [],
-        "shields": {
-            "count": 1,
-            "size": 0
-        },
-        "powerPlants": {
-            "count": 1,
-            "size": 0
-        },
-        "coolers": {
-            "count": 1,
-            "size": 0
-        },
-        "quantumDrive": {
-            "size": 0
         }
     },
     {

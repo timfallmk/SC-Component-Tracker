@@ -1,5 +1,5 @@
 // Auto-generated stock loadouts from ships.json
-// Generated: 2026-02-01T04:35:55.886Z
+// Generated: 2026-02-01T11:30:17.439Z
 // Ships with loadout data: 240
 
 const EXTRACTED_LOADOUTS = {

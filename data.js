@@ -597,7 +597,7 @@ quantumDrives: [
             quantumDrive: { size: 2 }
         },
         {
-            name: "Aegis Retaliator Bomber",
+            name: "Aegis Retaliator",
             manufacturer: "Aegis",
             size: "Large",
             pilotWeapons: [],
@@ -763,7 +763,7 @@ quantumDrives: [
             quantumDrive: { size: 1 }
         },
         {
-            name: "Anvil F7C-M Super Hornet",
+            name: "Anvil F7C-M Super Hornet Mk I",
             manufacturer: "Anvil",
             size: "Medium",
             pilotWeapons: [{ size: 3 }, { size: 3 }],
@@ -909,8 +909,8 @@ quantumDrives: [
 
         // ===== ARGO =====
         {
-            name: "ARGO MOLE",
-            manufacturer: "ARGO",
+            name: "Argo MOLE",
+            manufacturer: "Argo",
             size: "Large",
             pilotWeapons: [{ size: 2 }, { size: 2 }],
             turrets: [],
@@ -920,8 +920,8 @@ quantumDrives: [
             quantumDrive: { size: 2 }
         },
         {
-            name: "ARGO RAFT",
-            manufacturer: "ARGO",
+            name: "Argo RAFT",
+            manufacturer: "Argo",
             size: "Medium",
             pilotWeapons: [{ size: 3 }, { size: 1 }],
             turrets: [],
@@ -1637,7 +1637,7 @@ quantumDrives: [
             quantumDrive: { size: 2 }
         },
         {
-            name: "Origin 600i Explorer",
+            name: "Origin 600i",
             manufacturer: "Origin",
             size: "Large",
             pilotWeapons: [],
@@ -1919,7 +1919,7 @@ quantumDrives: [
             quantumDrive: { size: 2 }
         },
         {
-            name: "RSI Zeus Mk II MR",
+            name: "RSI Zeus Mk II CL",
             manufacturer: "RSI",
             size: "Medium",
             pilotWeapons: [{ size: 4 }, { size: 4 }],

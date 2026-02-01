@@ -1,5 +1,5 @@
 {
-  "version": "2026-02-01T04:35:55.994Z",
+  "version": "2026-02-01T11:30:17.557Z",
   "lastUpdated": "2026-02-01",
   "ships": [
     {
@@ -79,35 +79,6 @@
         },
         {
           "size": 3
-        }
-      ],
-      "turrets": [],
-      "shields": {
-        "count": 2,
-        "size": 1
-      },
-      "powerPlants": {
-        "count": 1,
-        "size": 1
-      },
-      "coolers": {
-        "count": 2,
-        "size": 1
-      },
-      "quantumDrive": {
-        "size": 1
-      }
-    },
-    {
-      "name": "Aegis Eclipse",
-      "manufacturer": "Aegis",
-      "size": "Small",
-      "pilotWeapons": [
-        {
-          "size": 2
-        },
-        {
-          "size": 2
         }
       ],
       "turrets": [],
@@ -239,308 +210,6 @@
       },
       "quantumDrive": {
         "size": 3
-      }
-    },
-    {
-      "name": "Aegis Idris-M",
-      "manufacturer": "Aegis",
-      "size": "Large",
-      "pilotWeapons": [],
-      "turrets": [
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 7
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        }
-      ],
-      "shields": {
-        "count": 2,
-        "size": 4
-      },
-      "powerPlants": {
-        "count": 2,
-        "size": 4
-      },
-      "coolers": {
-        "count": 2,
-        "size": 4
-      },
-      "quantumDrive": {
-        "size": 4
-      }
-    },
-    {
-      "name": "Aegis Idris-P",
-      "manufacturer": "Aegis",
-      "size": "Large",
-      "pilotWeapons": [],
-      "turrets": [
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        }
-      ],
-      "shields": {
-        "count": 2,
-        "size": 4
-      },
-      "powerPlants": {
-        "count": 2,
-        "size": 4
-      },
-      "coolers": {
-        "count": 2,
-        "size": 4
-      },
-      "quantumDrive": {
-        "size": 4
-      }
-    },
-    {
-      "name": "Aegis Idris-P",
-      "manufacturer": "Aegis",
-      "size": "Large",
-      "pilotWeapons": [],
-      "turrets": [
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 5
-        }
-      ],
-      "shields": {
-        "count": 2,
-        "size": 4
-      },
-      "powerPlants": {
-        "count": 2,
-        "size": 4
-      },
-      "coolers": {
-        "count": 2,
-        "size": 5
-      },
-      "quantumDrive": {
-        "size": 4
-      }
-    },
-    {
-      "name": "Aegis Javelin",
-      "manufacturer": "Aegis",
-      "size": "Large",
-      "pilotWeapons": [],
-      "turrets": [
-        {
-          "type": "manned",
-          "guns": 2,
-          "size": 7
-        },
-        {
-          "type": "manned",
-          "guns": 2,
-          "size": 7
-        },
-        {
-          "type": "manned",
-          "guns": 2,
-          "size": 7
-        },
-        {
-          "type": "manned",
-          "guns": 2,
-          "size": 7
-        },
-        {
-          "type": "manned",
-          "guns": 2,
-          "size": 7
-        },
-        {
-          "type": "manned",
-          "guns": 2,
-          "size": 7
-        },
-        {
-          "type": "manned",
-          "guns": 2,
-          "size": 7
-        }
-      ],
-      "shields": {
-        "count": 4,
-        "size": 4
-      },
-      "powerPlants": {
-        "count": 4,
-        "size": 4
-      },
-      "coolers": {
-        "count": 4,
-        "size": 4
-      },
-      "quantumDrive": {
-        "size": 4
       }
     },
     {
@@ -886,52 +555,6 @@
       }
     },
     {
-      "name": "Anvil Asgard",
-      "manufacturer": "Anvil",
-      "size": "Medium",
-      "pilotWeapons": [
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        }
-      ],
-      "turrets": [
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 3
-        }
-      ],
-      "shields": {
-        "count": 4,
-        "size": 2
-      },
-      "powerPlants": {
-        "count": 2,
-        "size": 2
-      },
-      "coolers": {
-        "count": 3,
-        "size": 2
-      },
-      "quantumDrive": {
-        "size": 2
-      }
-    },
-    {
       "name": "Anvil C8 Pisces",
       "manufacturer": "Anvil",
       "size": "Small",
@@ -1022,49 +645,6 @@
       },
       "quantumDrive": {
         "size": 1
-      }
-    },
-    {
-      "name": "Anvil Carrack",
-      "manufacturer": "Anvil",
-      "size": "Large",
-      "pilotWeapons": [],
-      "turrets": [
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "remote",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 4
-        }
-      ],
-      "shields": {
-        "count": 2,
-        "size": 3
-      },
-      "powerPlants": {
-        "count": 2,
-        "size": 3
-      },
-      "coolers": {
-        "count": 2,
-        "size": 3
-      },
-      "quantumDrive": {
-        "size": 3
       }
     },
     {
@@ -1707,47 +1287,6 @@
       }
     },
     {
-      "name": "Anvil F8C Lightning",
-      "manufacturer": "Anvil",
-      "size": "Small",
-      "pilotWeapons": [
-        {
-          "size": 2
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 2
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        }
-      ],
-      "turrets": [],
-      "shields": {
-        "count": 2,
-        "size": 2
-      },
-      "powerPlants": {
-        "count": 1,
-        "size": 2
-      },
-      "coolers": {
-        "count": 2,
-        "size": 1
-      },
-      "quantumDrive": {
-        "size": 1
-      }
-    },
-    {
       "name": "Anvil Gladiator",
       "manufacturer": "Anvil",
       "size": "Small",
@@ -1994,56 +1533,6 @@
       }
     },
     {
-      "name": "Anvil Valkyrie",
-      "manufacturer": "Anvil",
-      "size": "Medium",
-      "pilotWeapons": [
-        {
-          "size": 6
-        },
-        {
-          "size": 6
-        }
-      ],
-      "turrets": [
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 3
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 3
-        },
-        {
-          "type": "manned",
-          "guns": 1,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 1,
-          "size": 4
-        }
-      ],
-      "shields": {
-        "count": 4,
-        "size": 2
-      },
-      "powerPlants": {
-        "count": 2,
-        "size": 2
-      },
-      "coolers": {
-        "count": 2,
-        "size": 2
-      },
-      "quantumDrive": {
-        "size": 2
-      }
-    },
-    {
       "name": "F8C Lightning PYAM Exec",
       "manufacturer": "Anvil",
       "size": "Small",
@@ -2071,76 +1560,6 @@
       "shields": {
         "count": 2,
         "size": 2
-      },
-      "powerPlants": {
-        "count": 1,
-        "size": 2
-      },
-      "coolers": {
-        "count": 2,
-        "size": 1
-      },
-      "quantumDrive": {
-        "size": 1
-      }
-    },
-    {
-      "name": "F8C Lightning PYAM Exec",
-      "manufacturer": "Anvil",
-      "size": "Small",
-      "pilotWeapons": [
-        {
-          "size": 2
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 2
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        }
-      ],
-      "turrets": [],
-      "shields": {
-        "count": 2,
-        "size": 2
-      },
-      "powerPlants": {
-        "count": 1,
-        "size": 2
-      },
-      "coolers": {
-        "count": 2,
-        "size": 1
-      },
-      "quantumDrive": {
-        "size": 1
-      }
-    },
-    {
-      "name": "Hornet F7A Mk II PYAM Exec",
-      "manufacturer": "Anvil",
-      "size": "Small",
-      "pilotWeapons": [
-        {
-          "size": 4
-        },
-        {
-          "size": 4
-        }
-      ],
-      "turrets": [],
-      "shields": {
-        "count": 2,
-        "size": 1
       },
       "powerPlants": {
         "count": 1,
@@ -2646,47 +2065,6 @@
       }
     },
     {
-      "name": "Crusader A1 Spirit",
-      "manufacturer": "Crusader",
-      "size": "Medium",
-      "pilotWeapons": [
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        }
-      ],
-      "turrets": [
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 2
-        }
-      ],
-      "shields": {
-        "count": 1,
-        "size": 2
-      },
-      "powerPlants": {
-        "count": 1,
-        "size": 2
-      },
-      "coolers": {
-        "count": 1,
-        "size": 2
-      },
-      "quantumDrive": {
-        "size": 2
-      }
-    },
-    {
       "name": "Crusader A2 Hercules Starlifter",
       "manufacturer": "Crusader",
       "size": "Large",
@@ -2757,7 +2135,7 @@
       }
     },
     {
-      "name": "Crusader Ares Star Fighter Inferno",
+      "name": "Crusader Ares Inferno",
       "manufacturer": "Crusader",
       "size": "Medium",
       "pilotWeapons": [
@@ -2783,7 +2161,7 @@
       }
     },
     {
-      "name": "Crusader Ares Star Fighter Ion",
+      "name": "Crusader Ares Ion",
       "manufacturer": "Crusader",
       "size": "Medium",
       "pilotWeapons": [
@@ -2802,41 +2180,6 @@
       },
       "coolers": {
         "count": 3,
-        "size": 2
-      },
-      "quantumDrive": {
-        "size": 2
-      }
-    },
-    {
-      "name": "Crusader C1 Spirit",
-      "manufacturer": "Crusader",
-      "size": "Medium",
-      "pilotWeapons": [
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        }
-      ],
-      "turrets": [],
-      "shields": {
-        "count": 1,
-        "size": 2
-      },
-      "powerPlants": {
-        "count": 1,
-        "size": 2
-      },
-      "coolers": {
-        "count": 1,
         "size": 2
       },
       "quantumDrive": {
@@ -2988,35 +2331,24 @@
       }
     },
     {
-      "name": "Corsair PYAM Exec",
-      "manufacturer": "Drake",
+      "name": "Crusader Spirit A1",
+      "manufacturer": "Crusader",
       "size": "Medium",
       "pilotWeapons": [
         {
-          "size": 4
+          "size": 3
         },
         {
-          "size": 4
+          "size": 3
         },
         {
-          "size": 4
+          "size": 3
         },
         {
-          "size": 4
-        },
-        {
-          "size": 5
-        },
-        {
-          "size": 5
+          "size": 3
         }
       ],
       "turrets": [
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 2
-        },
         {
           "type": "manned",
           "guns": 4,
@@ -3025,15 +2357,50 @@
       ],
       "shields": {
         "count": 1,
-        "size": 0
+        "size": 2
       },
       "powerPlants": {
-        "count": 2,
-        "size": 0
+        "count": 1,
+        "size": 2
       },
       "coolers": {
-        "count": 2,
-        "size": 0
+        "count": 1,
+        "size": 2
+      },
+      "quantumDrive": {
+        "size": 2
+      }
+    },
+    {
+      "name": "Crusader Spirit C1",
+      "manufacturer": "Crusader",
+      "size": "Medium",
+      "pilotWeapons": [
+        {
+          "size": 3
+        },
+        {
+          "size": 3
+        },
+        {
+          "size": 3
+        },
+        {
+          "size": 3
+        }
+      ],
+      "turrets": [],
+      "shields": {
+        "count": 1,
+        "size": 2
+      },
+      "powerPlants": {
+        "count": 1,
+        "size": 2
+      },
+      "coolers": {
+        "count": 1,
+        "size": 2
       },
       "quantumDrive": {
         "size": 2
@@ -3086,52 +2453,6 @@
       "coolers": {
         "count": 2,
         "size": 0
-      },
-      "quantumDrive": {
-        "size": 2
-      }
-    },
-    {
-      "name": "Cutlass Black PYAM Exec",
-      "manufacturer": "Drake",
-      "size": "Medium",
-      "pilotWeapons": [
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        }
-      ],
-      "turrets": [
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 3
-        },
-        {
-          "type": "manned",
-          "guns": 1,
-          "size": 1
-        }
-      ],
-      "shields": {
-        "count": 1,
-        "size": 2
-      },
-      "powerPlants": {
-        "count": 1,
-        "size": 2
-      },
-      "coolers": {
-        "count": 2,
-        "size": 2
       },
       "quantumDrive": {
         "size": 2
@@ -3404,52 +2725,6 @@
       }
     },
     {
-      "name": "Drake Cutlass Black",
-      "manufacturer": "Drake",
-      "size": "Medium",
-      "pilotWeapons": [
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        }
-      ],
-      "turrets": [
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 3
-        },
-        {
-          "type": "manned",
-          "guns": 1,
-          "size": 1
-        }
-      ],
-      "shields": {
-        "count": 1,
-        "size": 2
-      },
-      "powerPlants": {
-        "count": 1,
-        "size": 2
-      },
-      "coolers": {
-        "count": 2,
-        "size": 2
-      },
-      "quantumDrive": {
-        "size": 2
-      }
-    },
-    {
       "name": "Drake Cutlass Blue",
       "manufacturer": "Drake",
       "size": "Medium",
@@ -3474,82 +2749,6 @@
           "size": 3
         }
       ],
-      "shields": {
-        "count": 1,
-        "size": 2
-      },
-      "powerPlants": {
-        "count": 1,
-        "size": 2
-      },
-      "coolers": {
-        "count": 2,
-        "size": 2
-      },
-      "quantumDrive": {
-        "size": 2
-      }
-    },
-    {
-      "name": "Drake Cutlass Blue",
-      "manufacturer": "Drake",
-      "size": "Medium",
-      "pilotWeapons": [
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        }
-      ],
-      "turrets": [
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 3
-        }
-      ],
-      "shields": {
-        "count": 1,
-        "size": 2
-      },
-      "powerPlants": {
-        "count": 1,
-        "size": 2
-      },
-      "coolers": {
-        "count": 2,
-        "size": 2
-      },
-      "quantumDrive": {
-        "size": 2
-      }
-    },
-    {
-      "name": "Drake Cutlass Red",
-      "manufacturer": "Drake",
-      "size": "Medium",
-      "pilotWeapons": [
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        }
-      ],
-      "turrets": [],
       "shields": {
         "count": 1,
         "size": 2
@@ -3942,38 +3141,6 @@
     },
     {
       "name": "Gatac Syulen",
-      "manufacturer": "Gatac",
-      "size": "Medium",
-      "pilotWeapons": [
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        },
-        {
-          "size": 3
-        }
-      ],
-      "turrets": [],
-      "shields": {
-        "count": 2,
-        "size": 0
-      },
-      "powerPlants": {
-        "count": 1,
-        "size": 0
-      },
-      "coolers": {
-        "count": 1,
-        "size": 0
-      },
-      "quantumDrive": {
-        "size": 1
-      }
-    },
-    {
-      "name": "Syulen PYAM Exec",
       "manufacturer": "Gatac",
       "size": "Medium",
       "pilotWeapons": [
@@ -5061,7 +4228,7 @@
       }
     },
     {
-      "name": "Origin M50 Interceptor",
+      "name": "Origin M50",
       "manufacturer": "Origin",
       "size": "Small",
       "pilotWeapons": [
@@ -5091,180 +4258,6 @@
     },
     {
       "name": "RSI Apollo Medivac",
-      "manufacturer": "RSI",
-      "size": "Large",
-      "pilotWeapons": [
-        {
-          "size": 4
-        },
-        {
-          "size": 4
-        }
-      ],
-      "turrets": [],
-      "shields": {
-        "count": 4,
-        "size": 0
-      },
-      "powerPlants": {
-        "count": 2,
-        "size": 0
-      },
-      "coolers": {
-        "count": 2,
-        "size": 0
-      },
-      "quantumDrive": {
-        "size": 2
-      }
-    },
-    {
-      "name": "RSI Apollo Medivac",
-      "manufacturer": "RSI",
-      "size": "Large",
-      "pilotWeapons": [
-        {
-          "size": 4
-        },
-        {
-          "size": 4
-        }
-      ],
-      "turrets": [],
-      "shields": {
-        "count": 4,
-        "size": 0
-      },
-      "powerPlants": {
-        "count": 2,
-        "size": 0
-      },
-      "coolers": {
-        "count": 2,
-        "size": 0
-      },
-      "quantumDrive": {
-        "size": 2
-      }
-    },
-    {
-      "name": "RSI Apollo Medivac",
-      "manufacturer": "RSI",
-      "size": "Large",
-      "pilotWeapons": [
-        {
-          "size": 4
-        },
-        {
-          "size": 4
-        }
-      ],
-      "turrets": [],
-      "shields": {
-        "count": 4,
-        "size": 0
-      },
-      "powerPlants": {
-        "count": 2,
-        "size": 0
-      },
-      "coolers": {
-        "count": 2,
-        "size": 0
-      },
-      "quantumDrive": {
-        "size": 2
-      }
-    },
-    {
-      "name": "RSI Apollo Medivac",
-      "manufacturer": "RSI",
-      "size": "Large",
-      "pilotWeapons": [
-        {
-          "size": 4
-        },
-        {
-          "size": 4
-        }
-      ],
-      "turrets": [],
-      "shields": {
-        "count": 4,
-        "size": 0
-      },
-      "powerPlants": {
-        "count": 2,
-        "size": 0
-      },
-      "coolers": {
-        "count": 2,
-        "size": 0
-      },
-      "quantumDrive": {
-        "size": 2
-      }
-    },
-    {
-      "name": "RSI Apollo Triage",
-      "manufacturer": "RSI",
-      "size": "Large",
-      "pilotWeapons": [
-        {
-          "size": 4
-        },
-        {
-          "size": 4
-        }
-      ],
-      "turrets": [],
-      "shields": {
-        "count": 4,
-        "size": 0
-      },
-      "powerPlants": {
-        "count": 2,
-        "size": 0
-      },
-      "coolers": {
-        "count": 2,
-        "size": 0
-      },
-      "quantumDrive": {
-        "size": 2
-      }
-    },
-    {
-      "name": "RSI Apollo Triage",
-      "manufacturer": "RSI",
-      "size": "Large",
-      "pilotWeapons": [
-        {
-          "size": 4
-        },
-        {
-          "size": 4
-        }
-      ],
-      "turrets": [],
-      "shields": {
-        "count": 4,
-        "size": 0
-      },
-      "powerPlants": {
-        "count": 2,
-        "size": 0
-      },
-      "coolers": {
-        "count": 2,
-        "size": 0
-      },
-      "quantumDrive": {
-        "size": 2
-      }
-    },
-    {
-      "name": "RSI Apollo Triage",
       "manufacturer": "RSI",
       "size": "Large",
       "pilotWeapons": [
@@ -5876,74 +4869,6 @@
       }
     },
     {
-      "name": "RSI Polaris",
-      "manufacturer": "RSI",
-      "size": "Large",
-      "pilotWeapons": [],
-      "turrets": [
-        {
-          "type": "manned",
-          "guns": 8,
-          "size": 3
-        },
-        {
-          "type": "manned",
-          "guns": 8,
-          "size": 3
-        },
-        {
-          "type": "manned",
-          "guns": 8,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 8,
-          "size": 4
-        },
-        {
-          "type": "manned",
-          "guns": 4,
-          "size": 6
-        },
-        {
-          "type": "manned",
-          "guns": 1,
-          "size": 3
-        },
-        {
-          "type": "manned",
-          "guns": 1,
-          "size": 3
-        },
-        {
-          "type": "manned",
-          "guns": 1,
-          "size": 3
-        },
-        {
-          "type": "manned",
-          "guns": 1,
-          "size": 3
-        }
-      ],
-      "shields": {
-        "count": 1,
-        "size": 0
-      },
-      "powerPlants": {
-        "count": 1,
-        "size": 0
-      },
-      "coolers": {
-        "count": 1,
-        "size": 0
-      },
-      "quantumDrive": {
-        "size": 3
-      }
-    },
-    {
       "name": "RSI Salvation",
       "manufacturer": "RSI",
       "size": "Small",
@@ -6011,35 +4936,6 @@
       },
       "quantumDrive": {
         "size": 1
-      }
-    },
-    {
-      "name": "RSI Zeus Mk II CL",
-      "manufacturer": "RSI",
-      "size": "Medium",
-      "pilotWeapons": [
-        {
-          "size": 4
-        },
-        {
-          "size": 4
-        }
-      ],
-      "turrets": [],
-      "shields": {
-        "count": 3,
-        "size": 0
-      },
-      "powerPlants": {
-        "count": 2,
-        "size": 0
-      },
-      "coolers": {
-        "count": 2,
-        "size": 0
-      },
-      "quantumDrive": {
-        "size": 2
       }
     },
     {
@@ -6539,42 +5435,6 @@
       ],
       "turretWeapons": []
     },
-    "Aegis Javelin": {
-      "quantumDrives": [],
-      "powerPlants": [
-        "Main Powerplant",
-        "Main Powerplant",
-        "Main Powerplant",
-        "Main Powerplant"
-      ],
-      "coolers": [],
-      "shields": [],
-      "pilotWeapons": [],
-      "turretWeapons": [
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon",
-        "M9A Cannon"
-      ]
-    },
     "Aegis Gladius Valiant": {
       "quantumDrives": [
         "Beacon"
@@ -6673,40 +5533,6 @@
         "M5A Cannon"
       ],
       "turretWeapons": []
-    },
-    "Anvil Asgard": {
-      "quantumDrives": [
-        "Odyssey"
-      ],
-      "powerPlants": [
-        "Maelstrom",
-        "Maelstrom"
-      ],
-      "coolers": [
-        "Arctic",
-        "Arctic",
-        "Arctic"
-      ],
-      "shields": [
-        "FullStop",
-        "FullStop",
-        "FullStop",
-        "FullStop"
-      ],
-      "pilotWeapons": [
-        "CF-337 Panther Repeater",
-        "CF-337 Panther Repeater",
-        "CF-337 Panther Repeater",
-        "CF-337 Panther Repeater",
-        "YellowJacket GT-210 Gatling",
-        "YellowJacket GT-210 Gatling"
-      ],
-      "turretWeapons": [
-        "CF-447 Rhino Repeater",
-        "CF-447 Rhino Repeater",
-        "CF-337 Panther Repeater",
-        "CF-337 Panther Repeater"
-      ]
     },
     "RSI Polaris": {
       "quantumDrives": [
@@ -7074,7 +5900,7 @@
       ],
       "turretWeapons": []
     },
-    "Crusader Ares Star Fighter Ion": {
+    "Crusader Ares Ion": {
       "quantumDrives": [
         "Crossfield"
       ],
@@ -7327,61 +6153,6 @@
         "CF-337 Panther Repeater",
         "CF-337 Panther Repeater",
         "CF-337 Panther Repeater"
-      ]
-    },
-    "Aegis Idris-P": {
-      "quantumDrives": [
-        "Frontline"
-      ],
-      "powerPlants": [
-        "Main Powerplant",
-        "Main Powerplant"
-      ],
-      "coolers": [
-        "Exotherm",
-        "Exotherm"
-      ],
-      "shields": [
-        "Holdstrong",
-        "Holdstrong"
-      ],
-      "pilotWeapons": [],
-      "turretWeapons": [
-        "Revenant Gatling",
-        "Revenant Gatling",
-        "Revenant Gatling",
-        "Revenant Gatling",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "M7A Cannon",
-        "M7A Cannon",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "Revenant Gatling",
-        "Revenant Gatling",
-        "Revenant Gatling",
-        "Revenant Gatling",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\""
       ]
     },
     "MISC Reliant Tana": {
@@ -8217,7 +6988,7 @@
       ],
       "turretWeapons": []
     },
-    "Crusader C1 Spirit": {
+    "Crusader Spirit C1": {
       "quantumDrives": [
         "Yeager"
       ],
@@ -8396,7 +7167,7 @@
       ],
       "turretWeapons": []
     },
-    "Origin M50 Interceptor": {
+    "Origin M50": {
       "quantumDrives": [
         "LightFire"
       ],
@@ -9782,7 +8553,7 @@
         "CF-227 Badger Repeater"
       ]
     },
-    "Crusader A1 Spirit": {
+    "Crusader Spirit A1": {
       "quantumDrives": [
         "Yeager"
       ],
@@ -9890,7 +8661,7 @@
       ],
       "turretWeapons": []
     },
-    "Crusader Ares Star Fighter Inferno": {
+    "Crusader Ares Inferno": {
       "quantumDrives": [
         "Crossfield"
       ],
@@ -11053,61 +9824,6 @@
         "CF-337 Panther Repeater",
         "CF-337 Panther Repeater",
         "CF-337 Panther Repeater",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\""
-      ]
-    },
-    "Aegis Idris-M": {
-      "quantumDrives": [
-        "Frontline"
-      ],
-      "powerPlants": [
-        "Main Powerplant",
-        "Main Powerplant"
-      ],
-      "coolers": [
-        "Exotherm",
-        "Exotherm"
-      ],
-      "shields": [
-        "Holdstrong",
-        "Holdstrong"
-      ],
-      "pilotWeapons": [
-        "Destroyer Mass Driver Cannon"
-      ],
-      "turretWeapons": [
-        "Revenant Gatling",
-        "Revenant Gatling",
-        "Revenant Gatling",
-        "Revenant Gatling",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "M9A Cannon",
-        "M9A Cannon",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "Revenant Gatling",
-        "Revenant Gatling",
-        "Revenant Gatling",
-        "Revenant Gatling",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "CF-557 Galdereen Repeater",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
-        "M2C \"Swarm\"",
         "M2C \"Swarm\"",
         "M2C \"Swarm\"",
         "M2C \"Swarm\"",

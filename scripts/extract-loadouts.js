@@ -158,14 +158,21 @@ function extractShipLoadout(ship) {
     const turretWeapons = [];
 
     // Recursively process loadout to categorize weapons
-    function categorizeWeapons(items, inMannedTurret = false) {
+    function categorizeWeapons(items, inTurret = false) {
         for (const item of items) {
             const hpName = (item.HardpointName || '').toLowerCase();
-            const isMannedTurret = item.Type && item.Type.includes('MannedTurret');
-            const isRemoteTurret = item.Type && item.Type.includes('RemoteTurret');
+            const type = item.Type || '';
 
-            if (item.Type && item.Type.startsWith('WeaponGun') && isValidComponentName(item.Name)) {
-                if (inMannedTurret || isRemoteTurret) {
+            // Detect turrets by type OR by hardpoint name
+            const isMannedTurret = type.includes('MannedTurret');
+            const isRemoteTurret = type.includes('RemoteTurret');
+            const isPDCTurret = type.includes('PDCTurret');
+            const isTurretMount = hpName.includes('turret') && type.includes('Turret');
+
+            const isInTurret = inTurret || isMannedTurret || isRemoteTurret || isPDCTurret || isTurretMount;
+
+            if (type.startsWith('WeaponGun') && isValidComponentName(item.Name)) {
+                if (isInTurret) {
                     turretWeapons.push(item.Name);
                 } else {
                     pilotWeapons.push(item.Name);
@@ -173,7 +180,7 @@ function extractShipLoadout(ship) {
             }
 
             if (item.Loadout && Array.isArray(item.Loadout)) {
-                categorizeWeapons(item.Loadout, inMannedTurret || isMannedTurret || isRemoteTurret);
+                categorizeWeapons(item.Loadout, isInTurret);
             }
         }
     }

@@ -1,5 +1,5 @@
 // Auto-generated stock loadouts from ships.json
-// Generated: 2026-01-31T22:55:19.969Z
+// Generated: 2026-02-01T03:52:38.178Z
 // Ships with loadout data: 282
 
 const EXTRACTED_LOADOUTS = {
@@ -48,11 +48,11 @@ const EXTRACTED_LOADOUTS = {
       "PIN",
       "PIN"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "Scorpion GT-215 Gatling",
       "Scorpion GT-215 Gatling"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Anvil Centurion": {
     "quantumDrives": [],
@@ -69,14 +69,14 @@ const EXTRACTED_LOADOUTS = {
       "Castra",
       "Castra"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "Attrition-3 Repeater",
       "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "RSI Lynx": {
     "quantumDrives": [],
@@ -89,11 +89,11 @@ const EXTRACTED_LOADOUTS = {
     "shields": [
       "PIN"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "M3A Cannon",
       "M3A Cannon"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Greycat MDC": {
     "quantumDrives": [],
@@ -106,10 +106,10 @@ const EXTRACTED_LOADOUTS = {
     "shields": [
       "PIN"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "MRX \"Torrent\""
-    ],
-    "turretWeapons": []
+    ]
   },
   "Tumbril Cyclone RN": {
     "quantumDrives": [],
@@ -137,11 +137,11 @@ const EXTRACTED_LOADOUTS = {
       "PIN",
       "PIN"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "Scorpion GT-215 Gatling",
       "Scorpion GT-215 Gatling"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Greycat ROC": {
     "quantumDrives": [],
@@ -181,11 +181,11 @@ const EXTRACTED_LOADOUTS = {
     "shields": [
       "PIN"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "CF-117 Bulldog Repeater",
       "CF-117 Bulldog Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "RSI Ursa Fortuna": {
     "quantumDrives": [],
@@ -198,11 +198,11 @@ const EXTRACTED_LOADOUTS = {
     "shields": [
       "PIN"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "CF-117 Bulldog Repeater",
       "CF-117 Bulldog Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Tumbril Cyclone AA": {
     "quantumDrives": [],
@@ -229,11 +229,11 @@ const EXTRACTED_LOADOUTS = {
     "shields": [
       "PIN"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "CF-117 Bulldog Repeater",
       "CF-117 Bulldog Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Greycat MTC": {
     "quantumDrives": [],
@@ -246,11 +246,11 @@ const EXTRACTED_LOADOUTS = {
     "shields": [
       "PIN"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Tumbril Cyclone MT": {
     "quantumDrives": [],
@@ -284,12 +284,12 @@ const EXTRACTED_LOADOUTS = {
       "PIN",
       "PIN"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "Slayer Cannon",
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Anvil Spartan": {
     "quantumDrives": [],
@@ -303,11 +303,11 @@ const EXTRACTED_LOADOUTS = {
       "Castra",
       "Castra"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "Scorpion GT-215 Gatling",
       "Scorpion GT-215 Gatling"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Tumbril Storm": {
     "quantumDrives": [],
@@ -320,10 +320,10 @@ const EXTRACTED_LOADOUTS = {
     "shields": [
       "PIN"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "Reign-3 Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Tumbril Cyclone TR": {
     "quantumDrives": [],
@@ -407,11 +407,11 @@ const EXTRACTED_LOADOUTS = {
       "PIN",
       "PIN"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "Scorpion GT-215 Gatling",
       "Scorpion GT-215 Gatling"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Greycat ROC-DS": {
     "quantumDrives": [],
@@ -437,11 +437,11 @@ const EXTRACTED_LOADOUTS = {
     "shields": [
       "Castra"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "CF-117 Bulldog Repeater",
       "CF-117 Bulldog Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Drake Mule": {
     "quantumDrives": [],
@@ -487,12 +487,13 @@ const EXTRACTED_LOADOUTS = {
       "STOP"
     ],
     "pilotWeapons": [
-      "Mantis GT-220 Gatling",
-      "Mantis GT-220 Gatling",
       "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "Mantis GT-220 Gatling",
+      "Mantis GT-220 Gatling"
+    ]
   },
   "Anvil F7C-M Hornet Heartseeker Mk I": {
     "quantumDrives": [
@@ -586,11 +587,12 @@ const EXTRACTED_LOADOUTS = {
     ],
     "pilotWeapons": [
       "Omnisky XII Cannon",
-      "Omnisky XII Cannon",
+      "Omnisky XII Cannon"
+    ],
+    "turretWeapons": [
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Aopoa Khartu-al": {
     "quantumDrives": [
@@ -740,22 +742,23 @@ const EXTRACTED_LOADOUTS = {
       "FullBlock"
     ],
     "pilotWeapons": [
+      "M7A Cannon",
+      "M7A Cannon"
+    ],
+    "turretWeapons": [
       "Omnisky XV Cannon",
       "Omnisky XV Cannon",
       "M7A Cannon",
       "M7A Cannon",
       "CF-557 Galdereen Repeater",
       "CF-557 Galdereen Repeater",
-      "M7A Cannon",
-      "M7A Cannon",
       "M6A Cannon",
       "M6A Cannon",
       "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater",
       "M6A Cannon",
       "M6A Cannon"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Drake Cutter": {
     "quantumDrives": [
@@ -789,7 +792,10 @@ const EXTRACTED_LOADOUTS = {
     "shields": [
       "RS-Barrier"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
@@ -809,10 +815,6 @@ const EXTRACTED_LOADOUTS = {
       "M2C \"Swarm\"",
       "M2C \"Swarm\"",
       "M2C \"Swarm\""
-    ],
-    "turretWeapons": [
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater"
     ]
   },
   "Kruger P-72 Archimedes": {
@@ -845,17 +847,16 @@ const EXTRACTED_LOADOUTS = {
     ],
     "coolers": [],
     "shields": [],
-    "pilotWeapons": [
-      "M9A Cannon",
-      "M9A Cannon",
-      "M9A Cannon",
-      "M9A Cannon",
-      "M9A Cannon",
-      "M9A Cannon",
-      "M9A Cannon",
-      "M9A Cannon"
-    ],
+    "pilotWeapons": [],
     "turretWeapons": [
+      "M9A Cannon",
+      "M9A Cannon",
+      "M9A Cannon",
+      "M9A Cannon",
+      "M9A Cannon",
+      "M9A Cannon",
+      "M9A Cannon",
+      "M9A Cannon",
       "M9A Cannon",
       "M9A Cannon",
       "M9A Cannon",
@@ -909,10 +910,6 @@ const EXTRACTED_LOADOUTS = {
       "FullBlock"
     ],
     "pilotWeapons": [
-      "Omnisky XII Cannon",
-      "Omnisky XII Cannon",
-      "Omnisky XII Cannon",
-      "Omnisky XII Cannon",
       "Attrition-4 Repeater",
       "Attrition-4 Repeater",
       "Attrition-4 Repeater",
@@ -923,6 +920,10 @@ const EXTRACTED_LOADOUTS = {
       "YellowJacket GT-210 Gatling"
     ],
     "turretWeapons": [
+      "Omnisky XII Cannon",
+      "Omnisky XII Cannon",
+      "Omnisky XII Cannon",
+      "Omnisky XII Cannon",
       "M7A Cannon",
       "M7A Cannon",
       "M7A Cannon",
@@ -974,8 +975,6 @@ const EXTRACTED_LOADOUTS = {
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
       "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling",
@@ -983,7 +982,9 @@ const EXTRACTED_LOADOUTS = {
     ],
     "turretWeapons": [
       "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater"
+      "CF-447 Rhino Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
     ]
   },
   "RSI Polaris": {
@@ -999,19 +1000,7 @@ const EXTRACTED_LOADOUTS = {
     "shields": [
       "Glacis"
     ],
-    "pilotWeapons": [
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "M2C \"Swarm\"",
-      "M2C \"Swarm\"",
-      "M2C \"Swarm\"",
-      "M2C \"Swarm\"",
-      "M2C \"Swarm\"",
-      "M2C \"Swarm\"",
-      "M2C \"Swarm\""
-    ],
+    "pilotWeapons": [],
     "turretWeapons": [
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
@@ -1030,7 +1019,18 @@ const EXTRACTED_LOADOUTS = {
       "Omnisky XII Cannon",
       "Omnisky XII Cannon",
       "Maris Cannon",
-      "Maris Cannon"
+      "Maris Cannon",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "M2C \"Swarm\"",
+      "M2C \"Swarm\"",
+      "M2C \"Swarm\"",
+      "M2C \"Swarm\"",
+      "M2C \"Swarm\"",
+      "M2C \"Swarm\"",
+      "M2C \"Swarm\""
     ]
   },
   "Mirai Fury MX": {
@@ -1091,11 +1091,12 @@ const EXTRACTED_LOADOUTS = {
       "NDB-28 Repeater",
       "NDB-30 Repeater",
       "NDB-30 Repeater",
-      "NDB-30 Repeater",
+      "NDB-30 Repeater"
+    ],
+    "turretWeapons": [
       "NDB-28 Repeater",
       "NDB-28 Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Anvil Hurricane": {
     "quantumDrives": [
@@ -1141,15 +1142,16 @@ const EXTRACTED_LOADOUTS = {
     ],
     "pilotWeapons": [
       "M7A Cannon",
-      "M7A Cannon",
+      "M7A Cannon"
+    ],
+    "turretWeapons": [
       "M6A Cannon",
       "M6A Cannon",
       "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater",
       "M6A Cannon",
       "M6A Cannon"
-    ],
-    "turretWeapons": []
+    ]
   },
   "MISC Starfarer": {
     "quantumDrives": [
@@ -1322,11 +1324,11 @@ const EXTRACTED_LOADOUTS = {
       "Aspis",
       "Aspis"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "M5A Cannon",
       "M5A Cannon"
-    ],
-    "turretWeapons": []
+    ]
   },
   "C.O. Nomad": {
     "quantumDrives": [
@@ -1493,11 +1495,10 @@ const EXTRACTED_LOADOUTS = {
       "Barbican",
       "Barbican"
     ],
-    "pilotWeapons": [
-      "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater"
-    ],
+    "pilotWeapons": [],
     "turretWeapons": [
+      "CF-447 Rhino Repeater",
+      "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater",
@@ -1545,13 +1546,14 @@ const EXTRACTED_LOADOUTS = {
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
+    ],
+    "turretWeapons": [
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Aegis Gladius Dunlevy": {
     "quantumDrives": [
@@ -1618,13 +1620,14 @@ const EXTRACTED_LOADOUTS = {
     "pilotWeapons": [
       "M7A Cannon",
       "M7A Cannon",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
       "M7A Cannon"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
+    ]
   },
   "Aegis Idris-P": {
     "quantumDrives": [
@@ -1642,15 +1645,32 @@ const EXTRACTED_LOADOUTS = {
       "Holdstrong",
       "Holdstrong"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "Revenant Gatling",
       "Revenant Gatling",
       "Revenant Gatling",
       "Revenant Gatling",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "M7A Cannon",
+      "M7A Cannon",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
       "Revenant Gatling",
       "Revenant Gatling",
       "Revenant Gatling",
       "Revenant Gatling",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
       "M2C \"Swarm\"",
       "M2C \"Swarm\"",
       "M2C \"Swarm\"",
@@ -1662,24 +1682,6 @@ const EXTRACTED_LOADOUTS = {
       "M2C \"Swarm\"",
       "M2C \"Swarm\"",
       "M2C \"Swarm\""
-    ],
-    "turretWeapons": [
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "M7A Cannon",
-      "M7A Cannon",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater"
     ]
   },
   "Aopoa Nox": {
@@ -1852,10 +1854,6 @@ const EXTRACTED_LOADOUTS = {
       "FullStop"
     ],
     "pilotWeapons": [
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater",
       "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling",
@@ -1865,7 +1863,11 @@ const EXTRACTED_LOADOUTS = {
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater"
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "CF-447 Rhino Repeater",
+      "CF-447 Rhino Repeater"
     ]
   },
   "C.O. Mustang Gamma": {
@@ -1959,11 +1961,11 @@ const EXTRACTED_LOADOUTS = {
     "shields": [
       "Armada"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "CF-117 Bulldog Repeater",
       "CF-117 Bulldog Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "RSI Apollo Triage": {
     "quantumDrives": [
@@ -1984,12 +1986,13 @@ const EXTRACTED_LOADOUTS = {
       "STOP"
     ],
     "pilotWeapons": [
-      "M5A Cannon",
-      "M5A Cannon",
       "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "M5A Cannon",
+      "M5A Cannon"
+    ]
   },
   "C.O. Nomad Teach's Special": {
     "quantumDrives": [
@@ -2098,8 +2101,6 @@ const EXTRACTED_LOADOUTS = {
       "Mantis GT-220 Gatling",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
-      "CF-227 Badger Repeater",
-      "CF-227 Badger Repeater",
       "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling",
       "YellowJacket GT-210 Gatling",
@@ -2113,7 +2114,9 @@ const EXTRACTED_LOADOUTS = {
     ],
     "turretWeapons": [
       "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater"
+      "CF-337 Panther Repeater",
+      "CF-227 Badger Repeater",
+      "CF-227 Badger Repeater"
     ]
   },
   "C.O. Mustang CitizenCon 2948 Edition": {
@@ -2158,11 +2161,12 @@ const EXTRACTED_LOADOUTS = {
       "Tarantula GT-870 Mark 2 Cannon",
       "Tarantula GT-870 Mark 3 Cannon",
       "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
+    ],
+    "turretWeapons": [
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Origin 600i Executive Edition": {
     "quantumDrives": [
@@ -2182,13 +2186,14 @@ const EXTRACTED_LOADOUTS = {
     "pilotWeapons": [
       "M7A Cannon",
       "M7A Cannon",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
       "M7A Cannon"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
+    ]
   },
   "Anvil F8C Lightning Executive Edition": {
     "quantumDrives": [
@@ -2211,11 +2216,12 @@ const EXTRACTED_LOADOUTS = {
       "Tarantula GT-870 Mark 2 Cannon",
       "Tarantula GT-870 Mark 3 Cannon",
       "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
+    ],
+    "turretWeapons": [
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "MISC Fortune Teach's Special": {
     "quantumDrives": [
@@ -2280,11 +2286,12 @@ const EXTRACTED_LOADOUTS = {
       "Tarantula GT-870 Mark 2 Cannon",
       "Tarantula GT-870 Mark 3 Cannon",
       "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
+    ],
+    "turretWeapons": [
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Vanduul Scythe": {
     "quantumDrives": [
@@ -2385,15 +2392,15 @@ const EXTRACTED_LOADOUTS = {
       "Stronghold",
       "Stronghold"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Cutlass Black PYAM Exec": {
     "quantumDrives": [
@@ -2577,8 +2584,6 @@ const EXTRACTED_LOADOUTS = {
       "CoverAll"
     ],
     "pilotWeapons": [
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
       "Attrition-3 Repeater",
       "Attrition-3 Repeater",
       "Attrition-3 Repeater",
@@ -2590,7 +2595,9 @@ const EXTRACTED_LOADOUTS = {
     ],
     "turretWeapons": [
       "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater"
+      "CF-447 Rhino Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
     ]
   },
   "Argo MOLE": {
@@ -2664,11 +2671,11 @@ const EXTRACTED_LOADOUTS = {
       "Citadel",
       "Citadel"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "Attrition-3 Repeater",
       "Attrition-3 Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Anvil Gladiator": {
     "quantumDrives": [
@@ -2841,16 +2848,17 @@ const EXTRACTED_LOADOUTS = {
       "Stronghold"
     ],
     "pilotWeapons": [
-      "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater",
       "M6A Cannon",
       "M6A Cannon",
       "M6A Cannon",
       "M6A Cannon"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "CF-447 Rhino Repeater",
+      "CF-447 Rhino Repeater",
+      "CF-447 Rhino Repeater",
+      "CF-447 Rhino Repeater"
+    ]
   },
   "Mirai Razor LX": {
     "quantumDrives": [
@@ -2888,11 +2896,12 @@ const EXTRACTED_LOADOUTS = {
     ],
     "pilotWeapons": [
       "CF-117 Bulldog Repeater",
-      "CF-117 Bulldog Repeater",
+      "CF-117 Bulldog Repeater"
+    ],
+    "turretWeapons": [
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Mirai Fury": {
     "quantumDrives": [],
@@ -3011,11 +3020,10 @@ const EXTRACTED_LOADOUTS = {
       "Barbican",
       "Barbican"
     ],
-    "pilotWeapons": [
-      "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater"
-    ],
+    "pilotWeapons": [],
     "turretWeapons": [
+      "CF-447 Rhino Repeater",
+      "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater",
@@ -3064,18 +3072,18 @@ const EXTRACTED_LOADOUTS = {
       "FullStop"
     ],
     "pilotWeapons": [
-      "M5A Cannon",
-      "M5A Cannon",
       "C-788 Cannon",
-      "C-788 Cannon",
-      "M5A Cannon",
-      "M5A Cannon"
+      "C-788 Cannon"
     ],
     "turretWeapons": [
       "AD4B Ballistic Gatling",
       "AD4B Ballistic Gatling",
       "AD4B Ballistic Gatling",
-      "AD4B Ballistic Gatling"
+      "AD4B Ballistic Gatling",
+      "M5A Cannon",
+      "M5A Cannon",
+      "M5A Cannon",
+      "M5A Cannon"
     ]
   },
   "RSI Constellation Andromeda": {
@@ -3147,8 +3155,6 @@ const EXTRACTED_LOADOUTS = {
       "M6A Cannon",
       "M6A Cannon",
       "M6A Cannon",
-      "NDB-28 Repeater",
-      "CF-227 Badger Repeater",
       "M7A Cannon",
       "M7A Cannon"
     ],
@@ -3156,6 +3162,8 @@ const EXTRACTED_LOADOUTS = {
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater",
+      "CF-227 Badger Repeater",
+      "NDB-28 Repeater",
       "CF-227 Badger Repeater"
     ]
   },
@@ -3216,10 +3224,6 @@ const EXTRACTED_LOADOUTS = {
       "Stronghold"
     ],
     "pilotWeapons": [
-      "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater",
       "M6A Cannon",
       "M6A Cannon",
       "M6A Cannon",
@@ -3230,6 +3234,10 @@ const EXTRACTED_LOADOUTS = {
       "YellowJacket GT-210 Gatling"
     ],
     "turretWeapons": [
+      "CF-447 Rhino Repeater",
+      "CF-447 Rhino Repeater",
+      "CF-447 Rhino Repeater",
+      "CF-447 Rhino Repeater",
       "CF-557 Galdereen Repeater",
       "CF-557 Galdereen Repeater",
       "CF-557 Galdereen Repeater",
@@ -3254,13 +3262,14 @@ const EXTRACTED_LOADOUTS = {
     "pilotWeapons": [
       "M7A Cannon",
       "M7A Cannon",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
       "M7A Cannon"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
+    ]
   },
   "C.O. HoverQuad": {
     "quantumDrives": [],
@@ -3420,15 +3429,32 @@ const EXTRACTED_LOADOUTS = {
       "Holdstrong",
       "Holdstrong"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "Revenant Gatling",
       "Revenant Gatling",
       "Revenant Gatling",
       "Revenant Gatling",
+      "Attrition-5 Repeater",
+      "Attrition-5 Repeater",
+      "Attrition-5 Repeater",
+      "Attrition-5 Repeater",
+      "Attrition-5 Repeater",
+      "Attrition-5 Repeater",
+      "Attrition-5 Repeater",
+      "Attrition-5 Repeater",
+      "Attrition-5 Repeater",
+      "Attrition-5 Repeater",
       "Revenant Gatling",
       "Revenant Gatling",
       "Revenant Gatling",
       "Revenant Gatling",
+      "Attrition-5 Repeater",
+      "Attrition-5 Repeater",
+      "Attrition-5 Repeater",
+      "Attrition-5 Repeater",
+      "Attrition-5 Repeater",
+      "Attrition-5 Repeater",
       "M2C \"Swarm\"",
       "M2C \"Swarm\"",
       "M2C \"Swarm\"",
@@ -3440,24 +3466,6 @@ const EXTRACTED_LOADOUTS = {
       "M2C \"Swarm\"",
       "M2C \"Swarm\"",
       "M2C \"Swarm\""
-    ],
-    "turretWeapons": [
-      "Attrition-5 Repeater",
-      "Attrition-5 Repeater",
-      "Attrition-5 Repeater",
-      "Attrition-5 Repeater",
-      "Attrition-5 Repeater",
-      "Attrition-5 Repeater",
-      "Attrition-5 Repeater",
-      "Attrition-5 Repeater",
-      "Attrition-5 Repeater",
-      "Attrition-5 Repeater",
-      "Attrition-5 Repeater",
-      "Attrition-5 Repeater",
-      "Attrition-5 Repeater",
-      "Attrition-5 Repeater",
-      "Attrition-5 Repeater",
-      "Attrition-5 Repeater"
     ]
   },
   "Esperia Prowler Utility Wikelo Work Special": {
@@ -3550,11 +3558,12 @@ const EXTRACTED_LOADOUTS = {
       "M5A Cannon",
       "M6A Cannon",
       "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
+    ],
+    "turretWeapons": [
       "M5A Cannon",
       "M5A Cannon"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Argo SRV": {
     "quantumDrives": [
@@ -3752,12 +3761,12 @@ const EXTRACTED_LOADOUTS = {
       "M6A Cannon",
       "M6A Cannon",
       "M6A Cannon",
-      "CF-227 Badger Repeater",
-      "CF-227 Badger Repeater",
       "M7A Cannon",
       "M7A Cannon"
     ],
     "turretWeapons": [
+      "CF-227 Badger Repeater",
+      "CF-227 Badger Repeater",
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater",
@@ -3953,7 +3962,12 @@ const EXTRACTED_LOADOUTS = {
       "Glacis",
       "Glacis"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
+      "M6A Cannon",
+      "M6A Cannon",
+      "M6A Cannon",
+      "M6A Cannon",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
@@ -3965,12 +3979,6 @@ const EXTRACTED_LOADOUTS = {
       "M2C \"Swarm\"",
       "M2C \"Swarm\"",
       "M2C \"Swarm\""
-    ],
-    "turretWeapons": [
-      "M6A Cannon",
-      "M6A Cannon",
-      "M6A Cannon",
-      "M6A Cannon"
     ]
   },
   "RSI Zeus Mk II ES": {
@@ -3993,11 +4001,12 @@ const EXTRACTED_LOADOUTS = {
     ],
     "pilotWeapons": [
       "Omnisky XII Cannon",
-      "Omnisky XII Cannon",
+      "Omnisky XII Cannon"
+    ],
+    "turretWeapons": [
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "RSI Constellation Taurus": {
     "quantumDrives": [
@@ -4102,7 +4111,16 @@ const EXTRACTED_LOADOUTS = {
       "SureStop",
       "SureStop"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
+      "RSI Medusa Cannon",
+      "RSI Medusa Cannon",
+      "Mantis GT-220 Gatling",
+      "Mantis GT-220 Gatling",
+      "Mantis GT-220 Gatling",
+      "Mantis GT-220 Gatling",
+      "RSI Medusa Cannon",
+      "RSI Medusa Cannon",
       "Mantis GT-220 Gatling",
       "Mantis GT-220 Gatling",
       "Mantis GT-220 Gatling",
@@ -4113,16 +4131,6 @@ const EXTRACTED_LOADOUTS = {
       "M2C \"Swarm\"",
       "M2C \"Swarm\"",
       "M2C \"Swarm\""
-    ],
-    "turretWeapons": [
-      "RSI Medusa Cannon",
-      "RSI Medusa Cannon",
-      "Mantis GT-220 Gatling",
-      "Mantis GT-220 Gatling",
-      "RSI Medusa Cannon",
-      "RSI Medusa Cannon",
-      "Mantis GT-220 Gatling",
-      "Mantis GT-220 Gatling"
     ]
   },
   "Mirai Guardian QI": {
@@ -4166,11 +4174,12 @@ const EXTRACTED_LOADOUTS = {
       "Tarantula GT-870 Mark 2 Cannon",
       "Tarantula GT-870 Mark 3 Cannon",
       "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
+    ],
+    "turretWeapons": [
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Drake Dragonfly Star Kitten": {
     "quantumDrives": [],
@@ -4203,12 +4212,13 @@ const EXTRACTED_LOADOUTS = {
     "pilotWeapons": [
       "M5A Cannon",
       "M5A Cannon",
-      "CF-227 Badger Repeater",
-      "CF-227 Badger Repeater",
       "M5A Cannon",
       "M5A Cannon"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "CF-227 Badger Repeater",
+      "CF-227 Badger Repeater"
+    ]
   },
   "RSI Constellation Phoenix Emerald": {
     "quantumDrives": [
@@ -4229,14 +4239,14 @@ const EXTRACTED_LOADOUTS = {
       "Omnisky XV Cannon",
       "Omnisky XV Cannon",
       "Omnisky XV Cannon",
-      "Omnisky XV Cannon",
-      "M2C \"Swarm\""
+      "Omnisky XV Cannon"
     ],
     "turretWeapons": [
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater"
+      "CF-337 Panther Repeater",
+      "M2C \"Swarm\""
     ]
   },
   "Crusader A2 Hercules Starlifter Wikelo War Special": {
@@ -4257,22 +4267,23 @@ const EXTRACTED_LOADOUTS = {
       "FR-86"
     ],
     "pilotWeapons": [
-      "M7A Cannon",
-      "M7A Cannon",
-      "M7A Cannon",
-      "M7A Cannon",
-      "M7A Cannon",
-      "M7A Cannon",
       "Attrition-5 Repeater",
-      "Attrition-5 Repeater",
+      "Attrition-5 Repeater"
+    ],
+    "turretWeapons": [
+      "M7A Cannon",
+      "M7A Cannon",
+      "M7A Cannon",
+      "M7A Cannon",
+      "M7A Cannon",
+      "M7A Cannon",
       "Attrition-4 Repeater",
       "Attrition-4 Repeater",
       "Attrition-4 Repeater",
       "Attrition-4 Repeater",
       "Attrition-4 Repeater",
       "Attrition-4 Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Argo MOLE Teach's Special": {
     "quantumDrives": [
@@ -4458,16 +4469,17 @@ const EXTRACTED_LOADOUTS = {
       "Parapet"
     ],
     "pilotWeapons": [
-      "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater",
-      "CF-447 Rhino Repeater",
       "M6A Cannon",
       "M6A Cannon",
       "M6A Cannon",
       "M6A Cannon"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "CF-447 Rhino Repeater",
+      "CF-447 Rhino Repeater",
+      "CF-447 Rhino Repeater",
+      "CF-447 Rhino Repeater"
+    ]
   },
   "RSI Constellation Phoenix": {
     "quantumDrives": [
@@ -4488,14 +4500,14 @@ const EXTRACTED_LOADOUTS = {
       "Omnisky XV Cannon",
       "Omnisky XV Cannon",
       "Omnisky XV Cannon",
-      "Omnisky XV Cannon",
-      "M2C \"Swarm\""
+      "Omnisky XV Cannon"
     ],
     "turretWeapons": [
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater"
+      "CF-337 Panther Repeater",
+      "M2C \"Swarm\""
     ]
   },
   "MISC Starfarer Teach's Special": {
@@ -4565,7 +4577,8 @@ const EXTRACTED_LOADOUTS = {
     "shields": [
       "Stronghold"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater",
       "CF-557 Galdereen Repeater",
@@ -4574,8 +4587,7 @@ const EXTRACTED_LOADOUTS = {
       "CF-557 Galdereen Repeater",
       "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Origin 400i": {
     "quantumDrives": [
@@ -4593,14 +4605,15 @@ const EXTRACTED_LOADOUTS = {
       "GUARD"
     ],
     "pilotWeapons": [
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
       "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
+    ]
   },
   "MISC Freelancer MIS": {
     "quantumDrives": [
@@ -4734,11 +4747,10 @@ const EXTRACTED_LOADOUTS = {
     "shields": [
       "Stronghold"
     ],
-    "pilotWeapons": [
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater"
-    ],
+    "pilotWeapons": [],
     "turretWeapons": [
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
@@ -4851,13 +4863,14 @@ const EXTRACTED_LOADOUTS = {
     "pilotWeapons": [
       "M7A Cannon",
       "M7A Cannon",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
       "M7A Cannon"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
+    ]
   },
   "RSI Scorpius Wikelo Sneak Special": {
     "quantumDrives": [
@@ -4878,13 +4891,14 @@ const EXTRACTED_LOADOUTS = {
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
+    ],
+    "turretWeapons": [
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Aegis Retaliator": {
     "quantumDrives": [
@@ -4984,13 +4998,14 @@ const EXTRACTED_LOADOUTS = {
     ],
     "pilotWeapons": [
       "M7A Cannon",
-      "M7A Cannon",
+      "M7A Cannon"
+    ],
+    "turretWeapons": [
       "M6A Cannon",
       "M6A Cannon",
       "CF-447 Rhino Repeater",
       "CF-447 Rhino Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Aegis Reclaimer": {
     "quantumDrives": [
@@ -5005,7 +5020,10 @@ const EXTRACTED_LOADOUTS = {
     "shields": [
       "RS-Barrier"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
@@ -5025,10 +5043,6 @@ const EXTRACTED_LOADOUTS = {
       "M2C \"Swarm\"",
       "M2C \"Swarm\"",
       "M2C \"Swarm\""
-    ],
-    "turretWeapons": [
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater"
     ]
   },
   "Drake Cutlass Black": {
@@ -5212,11 +5226,12 @@ const EXTRACTED_LOADOUTS = {
     ],
     "pilotWeapons": [
       "Omnisky XII Cannon",
-      "Omnisky XII Cannon",
+      "Omnisky XII Cannon"
+    ],
+    "turretWeapons": [
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Drake Clipper": {
     "quantumDrives": [
@@ -5257,13 +5272,14 @@ const EXTRACTED_LOADOUTS = {
     ],
     "pilotWeapons": [
       "Breakneck S4 Gatling",
-      "Breakneck S4 Gatling",
+      "Breakneck S4 Gatling"
+    ],
+    "turretWeapons": [
       "Tormenter S3 Repeater",
       "Tormenter S3 Repeater",
       "Tormenter S3 Repeater",
       "Tormenter S3 Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "RSI Salvation": {
     "quantumDrives": [
@@ -5537,7 +5553,10 @@ const EXTRACTED_LOADOUTS = {
     "shields": [
       "RS-Barrier"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
@@ -5557,10 +5576,6 @@ const EXTRACTED_LOADOUTS = {
       "M2C \"Swarm\"",
       "M2C \"Swarm\"",
       "M2C \"Swarm\""
-    ],
-    "turretWeapons": [
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater"
     ]
   },
   "Aegis Idris-M": {
@@ -5580,15 +5595,31 @@ const EXTRACTED_LOADOUTS = {
       "Holdstrong"
     ],
     "pilotWeapons": [
+      "Destroyer Mass Driver Cannon"
+    ],
+    "turretWeapons": [
       "Revenant Gatling",
       "Revenant Gatling",
       "Revenant Gatling",
       "Revenant Gatling",
-      "Destroyer Mass Driver Cannon",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "M9A Cannon",
+      "M9A Cannon",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
       "Revenant Gatling",
       "Revenant Gatling",
       "Revenant Gatling",
       "Revenant Gatling",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
+      "CF-557 Galdereen Repeater",
       "M2C \"Swarm\"",
       "M2C \"Swarm\"",
       "M2C \"Swarm\"",
@@ -5600,22 +5631,6 @@ const EXTRACTED_LOADOUTS = {
       "M2C \"Swarm\"",
       "M2C \"Swarm\"",
       "M2C \"Swarm\""
-    ],
-    "turretWeapons": [
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "M9A Cannon",
-      "M9A Cannon",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater",
-      "CF-557 Galdereen Repeater"
     ]
   },
   "Drake Herald": {

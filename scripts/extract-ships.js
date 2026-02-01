@@ -89,20 +89,23 @@ function findInLoadout(loadout, predicate, results = []) {
  * Extract pilot weapon hardpoints (not in manned/remote turrets)
  * Only counts actual gun hardpoints (hardpoint_gun_*, hardpoint_class_*, etc.)
  * Gimbals (Turret.GunTurret) at the top level are pilot weapons
+ * Excludes turret mounts (hardpoint names containing "turret")
  */
 function extractPilotWeapons(loadout) {
     const weapons = [];
 
     function processItems(items, inMannedOrRemoteTurret = false) {
         for (const item of items) {
-            const isMannedTurret = item.Type && item.Type.includes('TurretBase.MannedTurret');
-            const isRemoteTurret = item.Type && item.Type.includes('TurretBase.RemoteTurret');
-
-            // Skip manned/remote turrets (processed separately)
-            if (isMannedTurret || isRemoteTurret) continue;
-
             const hpName = (item.HardpointName || '').toLowerCase();
             const type = item.Type || '';
+
+            const isMannedTurret = type.includes('TurretBase.MannedTurret');
+            const isRemoteTurret = type.includes('TurretBase.RemoteTurret');
+            // Also detect turret mounts by hardpoint name (e.g., hardpoint_remote_turret_*)
+            const isTurretMount = hpName.includes('turret');
+
+            // Skip turrets (processed separately)
+            if (isMannedTurret || isRemoteTurret || isTurretMount) continue;
 
             // Check if this is a gun hardpoint (gimbal mount or direct weapon)
             // Must have "hardpoint_gun" in name, or be a Turret.GunTurret at top level
@@ -130,6 +133,8 @@ function extractPilotWeapons(loadout) {
 
 /**
  * Extract turret information (manned and remote turrets)
+ * Detects turrets by Type (TurretBase.MannedTurret, TurretBase.RemoteTurret)
+ * or by hardpoint name (hardpoint_*turret* with Turret.GunTurret type)
  */
 function extractTurrets(loadout) {
     const turrets = [];
@@ -140,7 +145,7 @@ function extractTurrets(loadout) {
         for (const item of items) {
             const hpName = (item.HardpointName || '').toLowerCase();
             // Count gimbal mounts or weapon hardpoints inside the turret
-            if ((hpName.includes('weapon') || hpName.includes('gun') ||
+            if ((hpName.includes('weapon') || hpName.includes('gun') || hpName.includes('class') ||
                  item.Type === 'Turret.GunTurret') && item.MaxSize > 0) {
                 count++;
                 maxSize = Math.max(maxSize, item.MaxSize);
@@ -157,17 +162,25 @@ function extractTurrets(loadout) {
 
     function processItems(items) {
         for (const item of items) {
-            const isMannedTurret = item.Type && item.Type.includes('TurretBase.MannedTurret');
-            const isRemoteTurret = item.Type && item.Type.includes('TurretBase.RemoteTurret');
+            const hpName = (item.HardpointName || '').toLowerCase();
+            const type = item.Type || '';
 
-            if (isMannedTurret || isRemoteTurret) {
+            const isMannedTurret = type.includes('TurretBase.MannedTurret');
+            const isRemoteTurret = type.includes('TurretBase.RemoteTurret');
+            // Also detect turret mounts by hardpoint name with GunTurret type
+            // e.g., hardpoint_remote_turret_* with Turret.GunTurret
+            const isNamedRemoteTurret = hpName.includes('remote_turret') && type === 'Turret.GunTurret';
+            const isNamedMannedTurret = hpName.includes('turret') && !hpName.includes('remote') &&
+                                        type === 'Turret.GunTurret';
+
+            if (isMannedTurret || isRemoteTurret || isNamedRemoteTurret || isNamedMannedTurret) {
                 // Count weapon hardpoints in this turret
                 const { count, maxSize } = item.Loadout ?
                     countWeaponHardpoints(item.Loadout) : { count: 0, maxSize: 0 };
 
                 if (count > 0 && maxSize > 0) {
                     turrets.push({
-                        type: isMannedTurret ? 'manned' : 'remote',
+                        type: (isMannedTurret || isNamedMannedTurret) ? 'manned' : 'remote',
                         guns: count,
                         size: maxSize
                     });

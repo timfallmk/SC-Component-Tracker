@@ -1,5 +1,5 @@
 // Auto-generated ship specs from ships.json
-// Generated: 2026-02-01T03:26:14.649Z
+// Generated: 2026-02-01T03:44:05.643Z
 // Ships with hardpoint data: 176
 
 const EXTRACTED_SHIPS = [
@@ -229,32 +229,32 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 4,
+                "guns": 8,
                 "size": 4
             },
             {
                 "type": "manned",
-                "guns": 4,
+                "guns": 8,
                 "size": 4
             },
             {
                 "type": "manned",
-                "guns": 4,
+                "guns": 8,
                 "size": 4
             },
             {
                 "type": "manned",
-                "guns": 4,
+                "guns": 8,
                 "size": 4
             },
             {
                 "type": "manned",
-                "guns": 4,
+                "guns": 8,
                 "size": 4
             },
             {
                 "type": "manned",
-                "guns": 4,
+                "guns": 8,
                 "size": 4
             }
         ],
@@ -278,60 +278,61 @@ const EXTRACTED_SHIPS = [
         "name": "Aegis Idris-M",
         "manufacturer": "Aegis",
         "size": "Large",
-        "pilotWeapons": [
-            {
-                "size": 5
-            },
-            {
-                "size": 5
-            },
-            {
-                "size": 5
-            },
-            {
-                "size": 5
-            },
-            {
-                "size": 4
-            },
-            {
-                "size": 4
-            }
-        ],
+        "pilotWeapons": [],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 7
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             }
         ],
@@ -355,65 +356,66 @@ const EXTRACTED_SHIPS = [
         "name": "Aegis Idris-P",
         "manufacturer": "Aegis",
         "size": "Large",
-        "pilotWeapons": [
-            {
-                "size": 5
-            },
-            {
-                "size": 5
-            },
-            {
-                "size": 5
-            },
-            {
-                "size": 5
-            },
-            {
-                "size": 4
-            },
-            {
-                "size": 4
-            }
-        ],
+        "pilotWeapons": [],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             }
         ],
@@ -437,65 +439,66 @@ const EXTRACTED_SHIPS = [
         "name": "Aegis Idris-P",
         "manufacturer": "Aegis",
         "size": "Large",
-        "pilotWeapons": [
-            {
-                "size": 5
-            },
-            {
-                "size": 5
-            },
-            {
-                "size": 5
-            },
-            {
-                "size": 5
-            },
-            {
-                "size": 4
-            },
-            {
-                "size": 4
-            }
-        ],
+        "pilotWeapons": [],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             }
         ],
@@ -519,14 +522,7 @@ const EXTRACTED_SHIPS = [
         "name": "Aegis Javelin",
         "manufacturer": "Aegis",
         "size": "Large",
-        "pilotWeapons": [
-            {
-                "size": 8
-            },
-            {
-                "size": 8
-            }
-        ],
+        "pilotWeapons": [],
         "turrets": [
             {
                 "type": "manned",
@@ -584,31 +580,42 @@ const EXTRACTED_SHIPS = [
         "name": "Aegis Reclaimer",
         "manufacturer": "Aegis",
         "size": "Large",
-        "pilotWeapons": [
-            {
-                "size": 6
-            },
-            {
-                "size": 6
-            },
-            {
-                "size": 6
-            },
-            {
-                "size": 6
-            },
-            {
-                "size": 6
-            },
-            {
-                "size": 6
-            }
-        ],
+        "pilotWeapons": [],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
+            },
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 3
+            },
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 3
+            },
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 3
+            },
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 3
+            },
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 3
+            },
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 3
             }
         ],
         "shields": {
@@ -633,28 +640,32 @@ const EXTRACTED_SHIPS = [
         "size": "Medium",
         "pilotWeapons": [
             {
-                "size": 3
-            },
-            {
                 "size": 4
             },
             {
                 "size": 4
-            },
-            {
-                "size": 3
             }
         ],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 4
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 3
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 3
             }
         ],
         "shields": {
@@ -681,27 +692,27 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             }
         ],
@@ -794,7 +805,7 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 2
             }
         ],
@@ -826,7 +837,7 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 2
             }
         ],
@@ -858,7 +869,7 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 2
             }
         ],
@@ -913,9 +924,6 @@ const EXTRACTED_SHIPS = [
         "size": "Medium",
         "pilotWeapons": [
             {
-                "size": 4
-            },
-            {
                 "size": 3
             },
             {
@@ -931,8 +939,13 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 4,
+                "size": 3
             }
         ],
         "shields": {
@@ -955,14 +968,7 @@ const EXTRACTED_SHIPS = [
         "name": "Anvil Ballista",
         "manufacturer": "Anvil",
         "size": "Medium",
-        "pilotWeapons": [
-            {
-                "size": 2
-            },
-            {
-                "size": 2
-            }
-        ],
+        "pilotWeapons": [],
         "turrets": [],
         "shields": {
             "count": 2,
@@ -1077,25 +1083,26 @@ const EXTRACTED_SHIPS = [
         "name": "Anvil Carrack",
         "manufacturer": "Anvil",
         "size": "Large",
-        "pilotWeapons": [
-            {
-                "size": 5
-            }
-        ],
+        "pilotWeapons": [],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "remote",
+                "guns": 4,
                 "size": 4
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 4
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 4
             }
         ],
@@ -1119,25 +1126,26 @@ const EXTRACTED_SHIPS = [
         "name": "Anvil Carrack",
         "manufacturer": "Anvil",
         "size": "Large",
-        "pilotWeapons": [
-            {
-                "size": 5
-            }
-        ],
+        "pilotWeapons": [],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "remote",
+                "guns": 4,
                 "size": 4
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 4
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 4
             }
         ],
@@ -1161,15 +1169,14 @@ const EXTRACTED_SHIPS = [
         "name": "Anvil Centurion",
         "manufacturer": "Anvil",
         "size": "Medium",
-        "pilotWeapons": [
+        "pilotWeapons": [],
+        "turrets": [
             {
-                "size": 3
-            },
-            {
-                "size": 9
+                "type": "remote",
+                "guns": 8,
+                "size": 4
             }
         ],
-        "turrets": [],
         "shields": {
             "count": 2,
             "size": 0
@@ -1838,7 +1845,7 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             }
         ],
@@ -1914,7 +1921,7 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 4,
+                "guns": 8,
                 "size": 3
             }
         ],
@@ -1938,18 +1945,49 @@ const EXTRACTED_SHIPS = [
         "name": "Anvil Paladin",
         "manufacturer": "Anvil",
         "size": "Medium",
-        "pilotWeapons": [
+        "pilotWeapons": [],
+        "turrets": [
             {
+                "type": "manned",
+                "guns": 1,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 1,
                 "size": 5
             },
             {
-                "size": 6
+                "type": "manned",
+                "guns": 1,
+                "size": 5
             },
             {
+                "type": "manned",
+                "guns": 1,
                 "size": 5
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 5
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 4
             }
         ],
-        "turrets": [],
         "shields": {
             "count": 1,
             "size": 3
@@ -1970,14 +2008,7 @@ const EXTRACTED_SHIPS = [
         "name": "Anvil Spartan",
         "manufacturer": "Anvil",
         "size": "Medium",
-        "pilotWeapons": [
-            {
-                "size": 2
-            },
-            {
-                "size": 2
-            }
-        ],
+        "pilotWeapons": [],
         "turrets": [],
         "shields": {
             "count": 2,
@@ -2023,9 +2054,6 @@ const EXTRACTED_SHIPS = [
         "size": "Medium",
         "pilotWeapons": [
             {
-                "size": 4
-            },
-            {
                 "size": 6
             },
             {
@@ -2035,13 +2063,23 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 4
             }
         ],
         "shields": {
@@ -2066,9 +2104,6 @@ const EXTRACTED_SHIPS = [
         "size": "Medium",
         "pilotWeapons": [
             {
-                "size": 4
-            },
-            {
                 "size": 6
             },
             {
@@ -2078,13 +2113,23 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 4
             }
         ],
         "shields": {
@@ -2393,12 +2438,14 @@ const EXTRACTED_SHIPS = [
         "name": "Argo MPUV Tractor",
         "manufacturer": "Argo",
         "size": "Small",
-        "pilotWeapons": [
+        "pilotWeapons": [],
+        "turrets": [
             {
-                "size": 4
+                "type": "manned",
+                "guns": 1,
+                "size": 1
             }
         ],
-        "turrets": [],
         "shields": {
             "count": 1,
             "size": 1
@@ -2421,19 +2468,19 @@ const EXTRACTED_SHIPS = [
         "size": "Medium",
         "pilotWeapons": [
             {
-                "size": 4
-            },
-            {
-                "size": 4
-            },
-            {
                 "size": 1
             },
             {
                 "size": 1
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 3
+            }
+        ],
         "shields": {
             "count": 3,
             "size": 2
@@ -2700,12 +2747,15 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 3
-            },
-            {
-                "size": 4
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 1
+            }
+        ],
         "shields": {
             "count": 3,
             "size": 1
@@ -2734,16 +2784,19 @@ const EXTRACTED_SHIPS = [
                 "size": 3
             },
             {
-                "size": 1
-            },
-            {
                 "size": 3
             },
             {
                 "size": 3
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "manned",
+                "guns": 4,
+                "size": 2
+            }
+        ],
         "shields": {
             "count": 1,
             "size": 2
@@ -2770,33 +2823,50 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 5
-            },
+            }
+        ],
+        "turrets": [
             {
-                "size": 6
-            },
-            {
-                "size": 6
-            },
-            {
+                "type": "remote",
+                "guns": 2,
                 "size": 5
             },
             {
+                "type": "remote",
+                "guns": 2,
                 "size": 5
             },
             {
+                "type": "remote",
+                "guns": 4,
                 "size": 5
             },
             {
+                "type": "remote",
+                "guns": 4,
                 "size": 5
             },
             {
-                "size": 5
+                "type": "remote",
+                "guns": 4,
+                "size": 4
             },
             {
+                "type": "remote",
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 1,
                 "size": 5
             }
         ],
-        "turrets": [],
         "shields": {
             "count": 3,
             "size": 3
@@ -2877,9 +2947,6 @@ const EXTRACTED_SHIPS = [
                 "size": 3
             },
             {
-                "size": 1
-            },
-            {
                 "size": 3
             },
             {
@@ -2913,15 +2980,20 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 5
-            },
-            {
-                "size": 5
-            },
-            {
-                "size": 5
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 4
+            }
+        ],
         "shields": {
             "count": 2,
             "size": 3
@@ -2974,18 +3046,25 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 5
-            },
-            {
-                "size": 5
-            },
-            {
-                "size": 5
-            },
-            {
-                "size": 5
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 4
+            }
+        ],
         "shields": {
             "count": 2,
             "size": 3
@@ -3010,12 +3089,12 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             }
         ],
@@ -3053,12 +3132,6 @@ const EXTRACTED_SHIPS = [
                 "size": 4
             },
             {
-                "size": 2
-            },
-            {
-                "size": 2
-            },
-            {
                 "size": 5
             },
             {
@@ -3068,12 +3141,12 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 2
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 2
             }
         ],
@@ -3111,12 +3184,6 @@ const EXTRACTED_SHIPS = [
                 "size": 4
             },
             {
-                "size": 2
-            },
-            {
-                "size": 2
-            },
-            {
                 "size": 5
             },
             {
@@ -3126,12 +3193,12 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 2
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 2
             }
         ],
@@ -3167,16 +3234,18 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 3
-            },
-            {
-                "size": 4
             }
         ],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 1
             }
         ],
         "shields": {
@@ -3211,16 +3280,18 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 3
-            },
-            {
-                "size": 4
             }
         ],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 1
             }
         ],
         "shields": {
@@ -3301,12 +3372,12 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 4
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 4
             }
         ],
@@ -3379,12 +3450,6 @@ const EXTRACTED_SHIPS = [
                 "size": 4
             },
             {
-                "size": 2
-            },
-            {
-                "size": 2
-            },
-            {
                 "size": 5
             },
             {
@@ -3394,12 +3459,12 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 2
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 2
             }
         ],
@@ -3435,16 +3500,18 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 3
-            },
-            {
-                "size": 4
             }
         ],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 1
             }
         ],
         "shields": {
@@ -3479,15 +3546,58 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 3
-            },
-            {
-                "size": 4
             }
         ],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
+                "size": 3
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 1
+            }
+        ],
+        "shields": {
+            "count": 1,
+            "size": 2
+        },
+        "powerPlants": {
+            "count": 1,
+            "size": 2
+        },
+        "coolers": {
+            "count": 2,
+            "size": 2
+        },
+        "quantumDrive": {
+            "size": 2
+        }
+    },
+    {
+        "name": "Drake Cutlass Blue",
+        "manufacturer": "Drake",
+        "size": "Medium",
+        "pilotWeapons": [
+            {
+                "size": 3
+            },
+            {
+                "size": 3
+            },
+            {
+                "size": 3
+            },
+            {
+                "size": 3
+            }
+        ],
+        "turrets": [
+            {
+                "type": "manned",
+                "guns": 4,
                 "size": 3
             }
         ],
@@ -3528,48 +3638,7 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
-                "size": 3
-            }
-        ],
-        "shields": {
-            "count": 1,
-            "size": 2
-        },
-        "powerPlants": {
-            "count": 1,
-            "size": 2
-        },
-        "coolers": {
-            "count": 2,
-            "size": 2
-        },
-        "quantumDrive": {
-            "size": 2
-        }
-    },
-    {
-        "name": "Drake Cutlass Blue",
-        "manufacturer": "Drake",
-        "size": "Medium",
-        "pilotWeapons": [
-            {
-                "size": 3
-            },
-            {
-                "size": 3
-            },
-            {
-                "size": 3
-            },
-            {
-                "size": 3
-            }
-        ],
-        "turrets": [
-            {
-                "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             }
         ],
@@ -3675,19 +3744,23 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 3
-            },
-            {
-                "size": 2
-            },
-            {
-                "size": 2
             }
         ],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 2
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 2
             }
         ],
         "shields": {
@@ -4100,12 +4173,15 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 4
-            },
+            }
+        ],
+        "turrets": [
             {
+                "type": "manned",
+                "guns": 8,
                 "size": 3
             }
         ],
-        "turrets": [],
         "shields": {
             "count": 1,
             "size": 2
@@ -4374,7 +4450,7 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             }
         ],
@@ -4420,27 +4496,19 @@ const EXTRACTED_SHIPS = [
         "name": "MISC Hull C",
         "manufacturer": "MISC",
         "size": "Large",
-        "pilotWeapons": [
+        "pilotWeapons": [],
+        "turrets": [
             {
-                "size": 10
+                "type": "manned",
+                "guns": 4,
+                "size": 3
             },
             {
-                "size": 4
-            },
-            {
-                "size": 4
-            },
-            {
-                "size": 10
-            },
-            {
-                "size": 4
-            },
-            {
-                "size": 4
+                "type": "manned",
+                "guns": 4,
+                "size": 3
             }
         ],
-        "turrets": [],
         "shields": {
             "count": 4,
             "size": 3
@@ -4634,17 +4702,17 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 4
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             }
         ],
@@ -4668,15 +4736,19 @@ const EXTRACTED_SHIPS = [
         "name": "MISC Starlancer MAX",
         "manufacturer": "MISC",
         "size": "Large",
-        "pilotWeapons": [
+        "pilotWeapons": [],
+        "turrets": [
             {
-                "size": 10
+                "type": "manned",
+                "guns": 4,
+                "size": 4
             },
             {
-                "size": 10
+                "type": "manned",
+                "guns": 4,
+                "size": 4
             }
         ],
-        "turrets": [],
         "shields": {
             "count": 1,
             "size": 3
@@ -4697,32 +4769,26 @@ const EXTRACTED_SHIPS = [
         "name": "MISC Starlancer TAC",
         "manufacturer": "MISC",
         "size": "Large",
-        "pilotWeapons": [
-            {
-                "size": 10
-            },
-            {
-                "size": 4
-            },
-            {
-                "size": 4
-            },
-            {
-                "size": 4
-            },
-            {
-                "size": 4
-            }
-        ],
+        "pilotWeapons": [],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 4,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 4,
                 "size": 5
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 5
             }
         ],
@@ -4969,16 +5035,21 @@ const EXTRACTED_SHIPS = [
                 "size": 4
             },
             {
-                "size": 4
-            },
-            {
-                "size": 4
-            },
-            {
                 "size": 1
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 3
+            },
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 3
+            }
+        ],
         "shields": {
             "count": 1,
             "size": 3
@@ -5007,16 +5078,21 @@ const EXTRACTED_SHIPS = [
                 "size": 5
             },
             {
-                "size": 6
-            },
-            {
-                "size": 6
-            },
-            {
                 "size": 5
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 3
+            },
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 3
+            }
+        ],
         "shields": {
             "count": 2,
             "size": 3
@@ -5043,12 +5119,15 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 1
-            },
-            {
-                "size": 3
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "manned",
+                "guns": 4,
+                "size": 2
+            }
+        ],
         "shields": {
             "count": 1,
             "size": 1
@@ -5069,24 +5148,27 @@ const EXTRACTED_SHIPS = [
         "name": "Origin 890 Jump",
         "manufacturer": "Origin",
         "size": "Large",
-        "pilotWeapons": [
-            {
-                "size": 6
-            },
-            {
-                "size": 6
-            }
-        ],
+        "pilotWeapons": [],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 4
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 4
+            },
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 3
+            },
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 3
             }
         ],
         "shields": {
@@ -5140,11 +5222,34 @@ const EXTRACTED_SHIPS = [
         "size": "Large",
         "pilotWeapons": [
             {
-                "size": 3
+                "size": 4
             },
             {
-                "size": 3
-            },
+                "size": 4
+            }
+        ],
+        "turrets": [],
+        "shields": {
+            "count": 4,
+            "size": 0
+        },
+        "powerPlants": {
+            "count": 2,
+            "size": 0
+        },
+        "coolers": {
+            "count": 2,
+            "size": 0
+        },
+        "quantumDrive": {
+            "size": 2
+        }
+    },
+    {
+        "name": "RSI Apollo Medivac",
+        "manufacturer": "RSI",
+        "size": "Large",
+        "pilotWeapons": [
             {
                 "size": 4
             },
@@ -5175,12 +5280,6 @@ const EXTRACTED_SHIPS = [
         "size": "Large",
         "pilotWeapons": [
             {
-                "size": 3
-            },
-            {
-                "size": 3
-            },
-            {
                 "size": 4
             },
             {
@@ -5210,12 +5309,6 @@ const EXTRACTED_SHIPS = [
         "size": "Large",
         "pilotWeapons": [
             {
-                "size": 3
-            },
-            {
-                "size": 3
-            },
-            {
                 "size": 4
             },
             {
@@ -5240,16 +5333,10 @@ const EXTRACTED_SHIPS = [
         }
     },
     {
-        "name": "RSI Apollo Medivac",
+        "name": "RSI Apollo Triage",
         "manufacturer": "RSI",
         "size": "Large",
         "pilotWeapons": [
-            {
-                "size": 3
-            },
-            {
-                "size": 3
-            },
             {
                 "size": 4
             },
@@ -5280,12 +5367,6 @@ const EXTRACTED_SHIPS = [
         "size": "Large",
         "pilotWeapons": [
             {
-                "size": 3
-            },
-            {
-                "size": 3
-            },
-            {
                 "size": 4
             },
             {
@@ -5315,12 +5396,6 @@ const EXTRACTED_SHIPS = [
         "size": "Large",
         "pilotWeapons": [
             {
-                "size": 3
-            },
-            {
-                "size": 3
-            },
-            {
                 "size": 4
             },
             {
@@ -5349,47 +5424,6 @@ const EXTRACTED_SHIPS = [
         "manufacturer": "RSI",
         "size": "Large",
         "pilotWeapons": [
-            {
-                "size": 3
-            },
-            {
-                "size": 3
-            },
-            {
-                "size": 4
-            },
-            {
-                "size": 4
-            }
-        ],
-        "turrets": [],
-        "shields": {
-            "count": 4,
-            "size": 0
-        },
-        "powerPlants": {
-            "count": 2,
-            "size": 0
-        },
-        "coolers": {
-            "count": 2,
-            "size": 0
-        },
-        "quantumDrive": {
-            "size": 2
-        }
-    },
-    {
-        "name": "RSI Apollo Triage",
-        "manufacturer": "RSI",
-        "size": "Large",
-        "pilotWeapons": [
-            {
-                "size": 3
-            },
-            {
-                "size": 3
-            },
             {
                 "size": 4
             },
@@ -5610,12 +5644,12 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             }
         ],
@@ -5656,7 +5690,7 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             }
         ],
@@ -5697,12 +5731,12 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             },
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             }
         ],
@@ -5743,7 +5777,7 @@ const EXTRACTED_SHIPS = [
         "turrets": [
             {
                 "type": "manned",
-                "guns": 2,
+                "guns": 4,
                 "size": 3
             },
             {
@@ -5772,15 +5806,19 @@ const EXTRACTED_SHIPS = [
         "name": "RSI Lynx",
         "manufacturer": "RSI",
         "size": "Medium",
-        "pilotWeapons": [
+        "pilotWeapons": [],
+        "turrets": [
             {
+                "type": "manned",
+                "guns": 1,
                 "size": 1
             },
             {
+                "type": "manned",
+                "guns": 1,
                 "size": 1
             }
         ],
-        "turrets": [],
         "shields": {
             "count": 1,
             "size": 0
@@ -5871,32 +5909,16 @@ const EXTRACTED_SHIPS = [
         "name": "RSI Perseus",
         "manufacturer": "RSI",
         "size": "Large",
-        "pilotWeapons": [
-            {
-                "size": 3
-            },
-            {
-                "size": 3
-            },
-            {
-                "size": 4
-            },
-            {
-                "size": 3
-            },
-            {
-                "size": 3
-            }
-        ],
+        "pilotWeapons": [],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 4,
+                "guns": 8,
                 "size": 8
             },
             {
                 "type": "manned",
-                "guns": 4,
+                "guns": 8,
                 "size": 8
             }
         ],
@@ -5920,45 +5942,52 @@ const EXTRACTED_SHIPS = [
         "name": "RSI Polaris",
         "manufacturer": "RSI",
         "size": "Large",
-        "pilotWeapons": [
-            {
-                "size": 4
-            },
-            {
-                "size": 4
-            },
-            {
-                "size": 4
-            },
-            {
-                "size": 4
-            }
-        ],
+        "pilotWeapons": [],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 4,
+                "guns": 8,
                 "size": 3
             },
             {
                 "type": "manned",
-                "guns": 4,
+                "guns": 8,
                 "size": 3
             },
             {
                 "type": "manned",
-                "guns": 4,
+                "guns": 8,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 8,
                 "size": 4
             },
             {
                 "type": "manned",
                 "guns": 4,
-                "size": 4
-            },
-            {
-                "type": "manned",
-                "guns": 2,
                 "size": 6
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 3
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 3
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 3
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 3
             }
         ],
         "shields": {
@@ -5981,45 +6010,52 @@ const EXTRACTED_SHIPS = [
         "name": "RSI Polaris",
         "manufacturer": "RSI",
         "size": "Large",
-        "pilotWeapons": [
-            {
-                "size": 4
-            },
-            {
-                "size": 4
-            },
-            {
-                "size": 4
-            },
-            {
-                "size": 4
-            }
-        ],
+        "pilotWeapons": [],
         "turrets": [
             {
                 "type": "manned",
-                "guns": 4,
+                "guns": 8,
                 "size": 3
             },
             {
                 "type": "manned",
-                "guns": 4,
+                "guns": 8,
                 "size": 3
             },
             {
                 "type": "manned",
-                "guns": 4,
+                "guns": 8,
+                "size": 4
+            },
+            {
+                "type": "manned",
+                "guns": 8,
                 "size": 4
             },
             {
                 "type": "manned",
                 "guns": 4,
-                "size": 4
-            },
-            {
-                "type": "manned",
-                "guns": 2,
                 "size": 6
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 3
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 3
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 3
+            },
+            {
+                "type": "manned",
+                "guns": 1,
+                "size": 3
             }
         ],
         "shields": {
@@ -6083,12 +6119,15 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 3
-            },
+            }
+        ],
+        "turrets": [
             {
+                "type": "remote",
+                "guns": 8,
                 "size": 3
             }
         ],
-        "turrets": [],
         "shields": {
             "count": 1,
             "size": 2
@@ -6109,15 +6148,19 @@ const EXTRACTED_SHIPS = [
         "name": "RSI Ursa",
         "manufacturer": "RSI",
         "size": "Medium",
-        "pilotWeapons": [
+        "pilotWeapons": [],
+        "turrets": [
             {
+                "type": "manned",
+                "guns": 1,
                 "size": 1
             },
             {
+                "type": "manned",
+                "guns": 1,
                 "size": 1
             }
         ],
-        "turrets": [],
         "shields": {
             "count": 1,
             "size": 0
@@ -6144,12 +6187,6 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 4
-            },
-            {
-                "size": 3
-            },
-            {
-                "size": 3
             }
         ],
         "turrets": [],
@@ -6179,12 +6216,6 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 4
-            },
-            {
-                "size": 3
-            },
-            {
-                "size": 3
             }
         ],
         "turrets": [],
@@ -6214,12 +6245,6 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 4
-            },
-            {
-                "size": 3
-            },
-            {
-                "size": 3
             }
         ],
         "turrets": [],
@@ -6268,12 +6293,15 @@ const EXTRACTED_SHIPS = [
         "pilotWeapons": [
             {
                 "size": 1
-            },
+            }
+        ],
+        "turrets": [
             {
+                "type": "manned",
+                "guns": 1,
                 "size": 5
             }
         ],
-        "turrets": [],
         "shields": {
             "count": 3,
             "size": 0

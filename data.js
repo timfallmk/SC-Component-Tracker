@@ -703,32 +703,32 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 4,
+                        "guns": 8,
                         "size": 4
                     },
                     {
                         "type": "manned",
-                        "guns": 4,
+                        "guns": 8,
                         "size": 4
                     },
                     {
                         "type": "manned",
-                        "guns": 4,
+                        "guns": 8,
                         "size": 4
                     },
                     {
                         "type": "manned",
-                        "guns": 4,
+                        "guns": 8,
                         "size": 4
                     },
                     {
                         "type": "manned",
-                        "guns": 4,
+                        "guns": 8,
                         "size": 4
                     },
                     {
                         "type": "manned",
-                        "guns": 4,
+                        "guns": 8,
                         "size": 4
                     }
                 ],
@@ -752,60 +752,61 @@ quantumDrives: [
                 "name": "Aegis Idris-M",
                 "manufacturer": "Aegis",
                 "size": "Large",
-                "pilotWeapons": [
-                    {
-                        "size": 5
-                    },
-                    {
-                        "size": 5
-                    },
-                    {
-                        "size": 5
-                    },
-                    {
-                        "size": 5
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    }
-                ],
+                "pilotWeapons": [],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 7
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     }
                 ],
@@ -829,65 +830,66 @@ quantumDrives: [
                 "name": "Aegis Idris-P",
                 "manufacturer": "Aegis",
                 "size": "Large",
-                "pilotWeapons": [
-                    {
-                        "size": 5
-                    },
-                    {
-                        "size": 5
-                    },
-                    {
-                        "size": 5
-                    },
-                    {
-                        "size": 5
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    }
-                ],
+                "pilotWeapons": [],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     }
                 ],
@@ -911,65 +913,66 @@ quantumDrives: [
                 "name": "Aegis Idris-P",
                 "manufacturer": "Aegis",
                 "size": "Large",
-                "pilotWeapons": [
-                    {
-                        "size": 5
-                    },
-                    {
-                        "size": 5
-                    },
-                    {
-                        "size": 5
-                    },
-                    {
-                        "size": 5
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    }
-                ],
+                "pilotWeapons": [],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     }
                 ],
@@ -993,14 +996,7 @@ quantumDrives: [
                 "name": "Aegis Javelin",
                 "manufacturer": "Aegis",
                 "size": "Large",
-                "pilotWeapons": [
-                    {
-                        "size": 8
-                    },
-                    {
-                        "size": 8
-                    }
-                ],
+                "pilotWeapons": [],
                 "turrets": [
                     {
                         "type": "manned",
@@ -1058,31 +1054,42 @@ quantumDrives: [
                 "name": "Aegis Reclaimer",
                 "manufacturer": "Aegis",
                 "size": "Large",
-                "pilotWeapons": [
-                    {
-                        "size": 6
-                    },
-                    {
-                        "size": 6
-                    },
-                    {
-                        "size": 6
-                    },
-                    {
-                        "size": 6
-                    },
-                    {
-                        "size": 6
-                    },
-                    {
-                        "size": 6
-                    }
-                ],
+                "pilotWeapons": [],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 3
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 3
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 3
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 3
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 3
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 3
                     }
                 ],
                 "shields": {
@@ -1107,28 +1114,32 @@ quantumDrives: [
                 "size": "Medium",
                 "pilotWeapons": [
                     {
-                        "size": 3
-                    },
-                    {
                         "size": 4
                     },
                     {
                         "size": 4
-                    },
-                    {
-                        "size": 3
                     }
                 ],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 4
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 3
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 3
                     }
                 ],
                 "shields": {
@@ -1155,27 +1166,27 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     }
                 ],
@@ -1268,7 +1279,7 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 2
                     }
                 ],
@@ -1300,7 +1311,7 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 2
                     }
                 ],
@@ -1332,7 +1343,7 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 2
                     }
                 ],
@@ -1387,9 +1398,6 @@ quantumDrives: [
                 "size": "Medium",
                 "pilotWeapons": [
                     {
-                        "size": 4
-                    },
-                    {
                         "size": 3
                     },
                     {
@@ -1405,8 +1413,13 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 4,
+                        "size": 3
                     }
                 ],
                 "shields": {
@@ -1429,14 +1442,7 @@ quantumDrives: [
                 "name": "Anvil Ballista",
                 "manufacturer": "Anvil",
                 "size": "Medium",
-                "pilotWeapons": [
-                    {
-                        "size": 2
-                    },
-                    {
-                        "size": 2
-                    }
-                ],
+                "pilotWeapons": [],
                 "turrets": [],
                 "shields": {
                     "count": 2,
@@ -1551,25 +1557,26 @@ quantumDrives: [
                 "name": "Anvil Carrack",
                 "manufacturer": "Anvil",
                 "size": "Large",
-                "pilotWeapons": [
-                    {
-                        "size": 5
-                    }
-                ],
+                "pilotWeapons": [],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
                         "size": 4
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 4
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 4
                     }
                 ],
@@ -1593,25 +1600,26 @@ quantumDrives: [
                 "name": "Anvil Carrack",
                 "manufacturer": "Anvil",
                 "size": "Large",
-                "pilotWeapons": [
-                    {
-                        "size": 5
-                    }
-                ],
+                "pilotWeapons": [],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
                         "size": 4
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 4
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 4
                     }
                 ],
@@ -1635,15 +1643,14 @@ quantumDrives: [
                 "name": "Anvil Centurion",
                 "manufacturer": "Anvil",
                 "size": "Medium",
-                "pilotWeapons": [
+                "pilotWeapons": [],
+                "turrets": [
                     {
-                        "size": 3
-                    },
-                    {
-                        "size": 9
+                        "type": "remote",
+                        "guns": 8,
+                        "size": 4
                     }
                 ],
-                "turrets": [],
                 "shields": {
                     "count": 2,
                     "size": 0
@@ -2312,7 +2319,7 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     }
                 ],
@@ -2388,7 +2395,7 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 4,
+                        "guns": 8,
                         "size": 3
                     }
                 ],
@@ -2412,18 +2419,49 @@ quantumDrives: [
                 "name": "Anvil Paladin",
                 "manufacturer": "Anvil",
                 "size": "Medium",
-                "pilotWeapons": [
+                "pilotWeapons": [],
+                "turrets": [
                     {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
                         "size": 5
                     },
                     {
-                        "size": 6
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 5
                     },
                     {
+                        "type": "manned",
+                        "guns": 1,
                         "size": 5
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 5
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 4
                     }
                 ],
-                "turrets": [],
                 "shields": {
                     "count": 1,
                     "size": 3
@@ -2444,14 +2482,7 @@ quantumDrives: [
                 "name": "Anvil Spartan",
                 "manufacturer": "Anvil",
                 "size": "Medium",
-                "pilotWeapons": [
-                    {
-                        "size": 2
-                    },
-                    {
-                        "size": 2
-                    }
-                ],
+                "pilotWeapons": [],
                 "turrets": [],
                 "shields": {
                     "count": 2,
@@ -2497,9 +2528,6 @@ quantumDrives: [
                 "size": "Medium",
                 "pilotWeapons": [
                     {
-                        "size": 4
-                    },
-                    {
                         "size": 6
                     },
                     {
@@ -2509,13 +2537,23 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 4
                     }
                 ],
                 "shields": {
@@ -2540,9 +2578,6 @@ quantumDrives: [
                 "size": "Medium",
                 "pilotWeapons": [
                     {
-                        "size": 4
-                    },
-                    {
                         "size": 6
                     },
                     {
@@ -2552,13 +2587,23 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 4
                     }
                 ],
                 "shields": {
@@ -2867,12 +2912,14 @@ quantumDrives: [
                 "name": "Argo MPUV Tractor",
                 "manufacturer": "Argo",
                 "size": "Small",
-                "pilotWeapons": [
+                "pilotWeapons": [],
+                "turrets": [
                     {
-                        "size": 4
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 1
                     }
                 ],
-                "turrets": [],
                 "shields": {
                     "count": 1,
                     "size": 1
@@ -2895,19 +2942,19 @@ quantumDrives: [
                 "size": "Medium",
                 "pilotWeapons": [
                     {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
                         "size": 1
                     },
                     {
                         "size": 1
                     }
                 ],
-                "turrets": [],
+                "turrets": [
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 3
+                    }
+                ],
                 "shields": {
                     "count": 3,
                     "size": 2
@@ -3174,12 +3221,15 @@ quantumDrives: [
                     },
                     {
                         "size": 3
-                    },
-                    {
-                        "size": 4
                     }
                 ],
-                "turrets": [],
+                "turrets": [
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 1
+                    }
+                ],
                 "shields": {
                     "count": 3,
                     "size": 1
@@ -3208,16 +3258,19 @@ quantumDrives: [
                         "size": 3
                     },
                     {
-                        "size": 1
-                    },
-                    {
                         "size": 3
                     },
                     {
                         "size": 3
                     }
                 ],
-                "turrets": [],
+                "turrets": [
+                    {
+                        "type": "manned",
+                        "guns": 4,
+                        "size": 2
+                    }
+                ],
                 "shields": {
                     "count": 1,
                     "size": 2
@@ -3244,33 +3297,50 @@ quantumDrives: [
                     },
                     {
                         "size": 5
-                    },
+                    }
+                ],
+                "turrets": [
                     {
-                        "size": 6
-                    },
-                    {
-                        "size": 6
-                    },
-                    {
+                        "type": "remote",
+                        "guns": 2,
                         "size": 5
                     },
                     {
+                        "type": "remote",
+                        "guns": 2,
                         "size": 5
                     },
                     {
+                        "type": "remote",
+                        "guns": 4,
                         "size": 5
                     },
                     {
+                        "type": "remote",
+                        "guns": 4,
                         "size": 5
                     },
                     {
-                        "size": 5
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 4
                     },
                     {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
                         "size": 5
                     }
                 ],
-                "turrets": [],
                 "shields": {
                     "count": 3,
                     "size": 3
@@ -3351,9 +3421,6 @@ quantumDrives: [
                         "size": 3
                     },
                     {
-                        "size": 1
-                    },
-                    {
                         "size": 3
                     },
                     {
@@ -3387,15 +3454,20 @@ quantumDrives: [
                     },
                     {
                         "size": 5
-                    },
-                    {
-                        "size": 5
-                    },
-                    {
-                        "size": 5
                     }
                 ],
-                "turrets": [],
+                "turrets": [
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 4
+                    }
+                ],
                 "shields": {
                     "count": 2,
                     "size": 3
@@ -3448,18 +3520,25 @@ quantumDrives: [
                     },
                     {
                         "size": 5
-                    },
-                    {
-                        "size": 5
-                    },
-                    {
-                        "size": 5
-                    },
-                    {
-                        "size": 5
                     }
                 ],
-                "turrets": [],
+                "turrets": [
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 4
+                    }
+                ],
                 "shields": {
                     "count": 2,
                     "size": 3
@@ -3484,12 +3563,12 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     }
                 ],
@@ -3527,12 +3606,6 @@ quantumDrives: [
                         "size": 4
                     },
                     {
-                        "size": 2
-                    },
-                    {
-                        "size": 2
-                    },
-                    {
                         "size": 5
                     },
                     {
@@ -3542,12 +3615,12 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 2
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 2
                     }
                 ],
@@ -3585,12 +3658,6 @@ quantumDrives: [
                         "size": 4
                     },
                     {
-                        "size": 2
-                    },
-                    {
-                        "size": 2
-                    },
-                    {
                         "size": 5
                     },
                     {
@@ -3600,12 +3667,12 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 2
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 2
                     }
                 ],
@@ -3641,16 +3708,18 @@ quantumDrives: [
                     },
                     {
                         "size": 3
-                    },
-                    {
-                        "size": 4
                     }
                 ],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 1
                     }
                 ],
                 "shields": {
@@ -3685,16 +3754,18 @@ quantumDrives: [
                     },
                     {
                         "size": 3
-                    },
-                    {
-                        "size": 4
                     }
                 ],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 1
                     }
                 ],
                 "shields": {
@@ -3775,12 +3846,12 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 4
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 4
                     }
                 ],
@@ -3853,12 +3924,6 @@ quantumDrives: [
                         "size": 4
                     },
                     {
-                        "size": 2
-                    },
-                    {
-                        "size": 2
-                    },
-                    {
                         "size": 5
                     },
                     {
@@ -3868,12 +3933,12 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 2
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 2
                     }
                 ],
@@ -3909,16 +3974,18 @@ quantumDrives: [
                     },
                     {
                         "size": 3
-                    },
-                    {
-                        "size": 4
                     }
                 ],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 1
                     }
                 ],
                 "shields": {
@@ -3953,15 +4020,58 @@ quantumDrives: [
                     },
                     {
                         "size": 3
-                    },
-                    {
-                        "size": 4
                     }
                 ],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
+                        "size": 3
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 1
+                    }
+                ],
+                "shields": {
+                    "count": 1,
+                    "size": 2
+                },
+                "powerPlants": {
+                    "count": 1,
+                    "size": 2
+                },
+                "coolers": {
+                    "count": 2,
+                    "size": 2
+                },
+                "quantumDrive": {
+                    "size": 2
+                }
+            },
+            {
+                "name": "Drake Cutlass Blue",
+                "manufacturer": "Drake",
+                "size": "Medium",
+                "pilotWeapons": [
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 3
+                    },
+                    {
+                        "size": 3
+                    }
+                ],
+                "turrets": [
+                    {
+                        "type": "manned",
+                        "guns": 4,
                         "size": 3
                     }
                 ],
@@ -4002,48 +4112,7 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
-                        "size": 3
-                    }
-                ],
-                "shields": {
-                    "count": 1,
-                    "size": 2
-                },
-                "powerPlants": {
-                    "count": 1,
-                    "size": 2
-                },
-                "coolers": {
-                    "count": 2,
-                    "size": 2
-                },
-                "quantumDrive": {
-                    "size": 2
-                }
-            },
-            {
-                "name": "Drake Cutlass Blue",
-                "manufacturer": "Drake",
-                "size": "Medium",
-                "pilotWeapons": [
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 3
-                    }
-                ],
-                "turrets": [
-                    {
-                        "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     }
                 ],
@@ -4149,19 +4218,23 @@ quantumDrives: [
                     },
                     {
                         "size": 3
-                    },
-                    {
-                        "size": 2
-                    },
-                    {
-                        "size": 2
                     }
                 ],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 2
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 2
                     }
                 ],
                 "shields": {
@@ -4574,12 +4647,15 @@ quantumDrives: [
                     },
                     {
                         "size": 4
-                    },
+                    }
+                ],
+                "turrets": [
                     {
+                        "type": "manned",
+                        "guns": 8,
                         "size": 3
                     }
                 ],
-                "turrets": [],
                 "shields": {
                     "count": 1,
                     "size": 2
@@ -4848,7 +4924,7 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     }
                 ],
@@ -4894,27 +4970,19 @@ quantumDrives: [
                 "name": "MISC Hull C",
                 "manufacturer": "MISC",
                 "size": "Large",
-                "pilotWeapons": [
+                "pilotWeapons": [],
+                "turrets": [
                     {
-                        "size": 10
+                        "type": "manned",
+                        "guns": 4,
+                        "size": 3
                     },
                     {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 10
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
+                        "type": "manned",
+                        "guns": 4,
+                        "size": 3
                     }
                 ],
-                "turrets": [],
                 "shields": {
                     "count": 4,
                     "size": 3
@@ -5108,17 +5176,17 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 4
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     }
                 ],
@@ -5142,15 +5210,19 @@ quantumDrives: [
                 "name": "MISC Starlancer MAX",
                 "manufacturer": "MISC",
                 "size": "Large",
-                "pilotWeapons": [
+                "pilotWeapons": [],
+                "turrets": [
                     {
-                        "size": 10
+                        "type": "manned",
+                        "guns": 4,
+                        "size": 4
                     },
                     {
-                        "size": 10
+                        "type": "manned",
+                        "guns": 4,
+                        "size": 4
                     }
                 ],
-                "turrets": [],
                 "shields": {
                     "count": 1,
                     "size": 3
@@ -5171,32 +5243,26 @@ quantumDrives: [
                 "name": "MISC Starlancer TAC",
                 "manufacturer": "MISC",
                 "size": "Large",
-                "pilotWeapons": [
-                    {
-                        "size": 10
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    }
-                ],
+                "pilotWeapons": [],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 4,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 4,
                         "size": 5
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 5
                     }
                 ],
@@ -5443,16 +5509,21 @@ quantumDrives: [
                         "size": 4
                     },
                     {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
                         "size": 1
                     }
                 ],
-                "turrets": [],
+                "turrets": [
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 3
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 3
+                    }
+                ],
                 "shields": {
                     "count": 1,
                     "size": 3
@@ -5481,16 +5552,21 @@ quantumDrives: [
                         "size": 5
                     },
                     {
-                        "size": 6
-                    },
-                    {
-                        "size": 6
-                    },
-                    {
                         "size": 5
                     }
                 ],
-                "turrets": [],
+                "turrets": [
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 3
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 3
+                    }
+                ],
                 "shields": {
                     "count": 2,
                     "size": 3
@@ -5517,12 +5593,15 @@ quantumDrives: [
                     },
                     {
                         "size": 1
-                    },
-                    {
-                        "size": 3
                     }
                 ],
-                "turrets": [],
+                "turrets": [
+                    {
+                        "type": "manned",
+                        "guns": 4,
+                        "size": 2
+                    }
+                ],
                 "shields": {
                     "count": 1,
                     "size": 1
@@ -5543,24 +5622,27 @@ quantumDrives: [
                 "name": "Origin 890 Jump",
                 "manufacturer": "Origin",
                 "size": "Large",
-                "pilotWeapons": [
-                    {
-                        "size": 6
-                    },
-                    {
-                        "size": 6
-                    }
-                ],
+                "pilotWeapons": [],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 4
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 4
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 3
+                    },
+                    {
+                        "type": "remote",
+                        "guns": 4,
+                        "size": 3
                     }
                 ],
                 "shields": {
@@ -5614,11 +5696,34 @@ quantumDrives: [
                 "size": "Large",
                 "pilotWeapons": [
                     {
-                        "size": 3
+                        "size": 4
                     },
                     {
-                        "size": 3
-                    },
+                        "size": 4
+                    }
+                ],
+                "turrets": [],
+                "shields": {
+                    "count": 4,
+                    "size": 0
+                },
+                "powerPlants": {
+                    "count": 2,
+                    "size": 0
+                },
+                "coolers": {
+                    "count": 2,
+                    "size": 0
+                },
+                "quantumDrive": {
+                    "size": 2
+                }
+            },
+            {
+                "name": "RSI Apollo Medivac",
+                "manufacturer": "RSI",
+                "size": "Large",
+                "pilotWeapons": [
                     {
                         "size": 4
                     },
@@ -5649,12 +5754,6 @@ quantumDrives: [
                 "size": "Large",
                 "pilotWeapons": [
                     {
-                        "size": 3
-                    },
-                    {
-                        "size": 3
-                    },
-                    {
                         "size": 4
                     },
                     {
@@ -5684,12 +5783,6 @@ quantumDrives: [
                 "size": "Large",
                 "pilotWeapons": [
                     {
-                        "size": 3
-                    },
-                    {
-                        "size": 3
-                    },
-                    {
                         "size": 4
                     },
                     {
@@ -5714,16 +5807,10 @@ quantumDrives: [
                 }
             },
             {
-                "name": "RSI Apollo Medivac",
+                "name": "RSI Apollo Triage",
                 "manufacturer": "RSI",
                 "size": "Large",
                 "pilotWeapons": [
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 3
-                    },
                     {
                         "size": 4
                     },
@@ -5754,12 +5841,6 @@ quantumDrives: [
                 "size": "Large",
                 "pilotWeapons": [
                     {
-                        "size": 3
-                    },
-                    {
-                        "size": 3
-                    },
-                    {
                         "size": 4
                     },
                     {
@@ -5789,12 +5870,6 @@ quantumDrives: [
                 "size": "Large",
                 "pilotWeapons": [
                     {
-                        "size": 3
-                    },
-                    {
-                        "size": 3
-                    },
-                    {
                         "size": 4
                     },
                     {
@@ -5823,47 +5898,6 @@ quantumDrives: [
                 "manufacturer": "RSI",
                 "size": "Large",
                 "pilotWeapons": [
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    }
-                ],
-                "turrets": [],
-                "shields": {
-                    "count": 4,
-                    "size": 0
-                },
-                "powerPlants": {
-                    "count": 2,
-                    "size": 0
-                },
-                "coolers": {
-                    "count": 2,
-                    "size": 0
-                },
-                "quantumDrive": {
-                    "size": 2
-                }
-            },
-            {
-                "name": "RSI Apollo Triage",
-                "manufacturer": "RSI",
-                "size": "Large",
-                "pilotWeapons": [
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 3
-                    },
                     {
                         "size": 4
                     },
@@ -6084,12 +6118,12 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     }
                 ],
@@ -6130,7 +6164,7 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     }
                 ],
@@ -6171,12 +6205,12 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     },
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     }
                 ],
@@ -6217,7 +6251,7 @@ quantumDrives: [
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 2,
+                        "guns": 4,
                         "size": 3
                     },
                     {
@@ -6246,15 +6280,19 @@ quantumDrives: [
                 "name": "RSI Lynx",
                 "manufacturer": "RSI",
                 "size": "Medium",
-                "pilotWeapons": [
+                "pilotWeapons": [],
+                "turrets": [
                     {
+                        "type": "manned",
+                        "guns": 1,
                         "size": 1
                     },
                     {
+                        "type": "manned",
+                        "guns": 1,
                         "size": 1
                     }
                 ],
-                "turrets": [],
                 "shields": {
                     "count": 1,
                     "size": 0
@@ -6345,32 +6383,16 @@ quantumDrives: [
                 "name": "RSI Perseus",
                 "manufacturer": "RSI",
                 "size": "Large",
-                "pilotWeapons": [
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 3
-                    }
-                ],
+                "pilotWeapons": [],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 4,
+                        "guns": 8,
                         "size": 8
                     },
                     {
                         "type": "manned",
-                        "guns": 4,
+                        "guns": 8,
                         "size": 8
                     }
                 ],
@@ -6394,45 +6416,52 @@ quantumDrives: [
                 "name": "RSI Polaris",
                 "manufacturer": "RSI",
                 "size": "Large",
-                "pilotWeapons": [
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    }
-                ],
+                "pilotWeapons": [],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 4,
+                        "guns": 8,
                         "size": 3
                     },
                     {
                         "type": "manned",
-                        "guns": 4,
+                        "guns": 8,
                         "size": 3
                     },
                     {
                         "type": "manned",
-                        "guns": 4,
+                        "guns": 8,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 8,
                         "size": 4
                     },
                     {
                         "type": "manned",
                         "guns": 4,
-                        "size": 4
-                    },
-                    {
-                        "type": "manned",
-                        "guns": 2,
                         "size": 6
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 3
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 3
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 3
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 3
                     }
                 ],
                 "shields": {
@@ -6455,45 +6484,52 @@ quantumDrives: [
                 "name": "RSI Polaris",
                 "manufacturer": "RSI",
                 "size": "Large",
-                "pilotWeapons": [
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    },
-                    {
-                        "size": 4
-                    }
-                ],
+                "pilotWeapons": [],
                 "turrets": [
                     {
                         "type": "manned",
-                        "guns": 4,
+                        "guns": 8,
                         "size": 3
                     },
                     {
                         "type": "manned",
-                        "guns": 4,
+                        "guns": 8,
                         "size": 3
                     },
                     {
                         "type": "manned",
-                        "guns": 4,
+                        "guns": 8,
+                        "size": 4
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 8,
                         "size": 4
                     },
                     {
                         "type": "manned",
                         "guns": 4,
-                        "size": 4
-                    },
-                    {
-                        "type": "manned",
-                        "guns": 2,
                         "size": 6
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 3
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 3
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 3
+                    },
+                    {
+                        "type": "manned",
+                        "guns": 1,
+                        "size": 3
                     }
                 ],
                 "shields": {
@@ -6557,12 +6593,15 @@ quantumDrives: [
                     },
                     {
                         "size": 3
-                    },
+                    }
+                ],
+                "turrets": [
                     {
+                        "type": "remote",
+                        "guns": 8,
                         "size": 3
                     }
                 ],
-                "turrets": [],
                 "shields": {
                     "count": 1,
                     "size": 2
@@ -6583,15 +6622,19 @@ quantumDrives: [
                 "name": "RSI Ursa",
                 "manufacturer": "RSI",
                 "size": "Medium",
-                "pilotWeapons": [
+                "pilotWeapons": [],
+                "turrets": [
                     {
+                        "type": "manned",
+                        "guns": 1,
                         "size": 1
                     },
                     {
+                        "type": "manned",
+                        "guns": 1,
                         "size": 1
                     }
                 ],
-                "turrets": [],
                 "shields": {
                     "count": 1,
                     "size": 0
@@ -6618,12 +6661,6 @@ quantumDrives: [
                     },
                     {
                         "size": 4
-                    },
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 3
                     }
                 ],
                 "turrets": [],
@@ -6653,12 +6690,6 @@ quantumDrives: [
                     },
                     {
                         "size": 4
-                    },
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 3
                     }
                 ],
                 "turrets": [],
@@ -6688,12 +6719,6 @@ quantumDrives: [
                     },
                     {
                         "size": 4
-                    },
-                    {
-                        "size": 3
-                    },
-                    {
-                        "size": 3
                     }
                 ],
                 "turrets": [],
@@ -6742,12 +6767,15 @@ quantumDrives: [
                 "pilotWeapons": [
                     {
                         "size": 1
-                    },
+                    }
+                ],
+                "turrets": [
                     {
+                        "type": "manned",
+                        "guns": 1,
                         "size": 5
                     }
                 ],
-                "turrets": [],
                 "shields": {
                     "count": 3,
                     "size": 0

@@ -2,7 +2,7 @@
 
 // ============ Data Layer ============
 
-const APP_VERSION = '0.70';
+const APP_VERSION = '0.71';
 const STORAGE_KEY = 'sc-component-tracker-data';
 const DATA_VERSION_KEY = 'sc-component-tracker-data-version';
 
@@ -655,13 +655,36 @@ const TYPE_LABELS = {
     quantumDrives: 'Quantum Drives'
 };
 
+// Track view mode (compact vs detail)
+let isCompactView = false;
+
+function toggleViewMode() {
+    isCompactView = !isCompactView;
+    const shipsList = document.getElementById('shipsList');
+    const toggleBtn = document.getElementById('viewToggleBtn');
+
+    if (isCompactView) {
+        shipsList.classList.add('compact-view');
+        toggleBtn.textContent = 'Detail View';
+    } else {
+        shipsList.classList.remove('compact-view');
+        toggleBtn.textContent = 'Compact View';
+    }
+}
+
 function renderShips() {
     const container = document.getElementById('shipsList');
     const heading = document.getElementById('shipsHeading');
 
     if (heading) {
         const count = appData.ships.length;
-        heading.innerHTML = `MY SHIPS: <span class="hangar-count">${count} in hangar</span>`;
+        const viewBtnText = isCompactView ? 'Detail View' : 'Compact View';
+        heading.innerHTML = `MY SHIPS: <span class="hangar-count">${count} in hangar</span> <button id="viewToggleBtn" class="view-toggle-btn" onclick="toggleViewMode()">${viewBtnText}</button>`;
+    }
+
+    // Preserve compact view state
+    if (isCompactView) {
+        container.classList.add('compact-view');
     }
 
     if (appData.ships.length === 0) {

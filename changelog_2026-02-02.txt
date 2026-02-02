@@ -39,3 +39,31 @@ Files Modified:
 - index.html - Cache-busting v=67 -> v=70
 - data.js - Fixed F7A Hornet Mk II and PYAM Exec ship specs and loadouts
 - scripts/extract-ships.js - Handle CanardTurret and BallTurret types
+
+---
+
+Changelog - 2026-02-02 (v0.71)
+===============================
+
+Summary:
+--------
+Added Compact View toggle for hangar display.
+
+Changes:
+--------
+1. Added Compact View / Detail View toggle button:
+   - Button appears next to "# in hangar" text in the MY SHIPS header
+   - Clicking toggles between "Compact View" and "Detail View"
+   - Compact View shows only ship names with Edit/Delete buttons (one line per ship)
+   - Detail View shows full component details (default behavior)
+
+2. CSS additions:
+   - .view-toggle-btn styling to match header aesthetic
+   - .ships-list.compact-view hides .ship-components
+   - Reduced margins in compact mode for tighter display
+
+Files Modified:
+---------------
+- app.js - Version 0.70 -> 0.71, added toggleViewMode() and isCompactView state
+- index.html - Cache-busting v=70 -> v=71
+- styles.css - Added compact view styles

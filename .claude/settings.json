@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "agent",
+            "prompt": "Generate an end-of-session changelog. Read the transcript at the provided transcript_path to understand what was done this session.\n\nCreate a file named 'changelog_<YYYY-MM-DD_HH-MM-SS>.txt' in the project root directory ($CLAUDE_PROJECT_DIR) containing:\n\n1. Date and time\n2. Branch(es) worked on (check git if needed)\n3. Summary of changes made\n4. Files modified/created\n5. Any commits made\n6. Notes or follow-up items for next session\n\nKeep it concise but informative.\n\nHook input: $ARGUMENTS",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}

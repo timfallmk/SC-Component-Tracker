@@ -752,8 +752,10 @@ quantumDrives: [
             name: "Anvil F7A Hornet Mk II",
             manufacturer: "Anvil",
             size: "Small",
-            pilotWeapons: [{ size: 4 }, { size: 4 }],
-            turrets: [],
+            pilotWeapons: [{ size: 4 }, { size: 4 }, { size: 3 }, { size: 3 }],
+            turrets: [
+                { type: "remote", guns: 2, size: 3 }
+            ],
             shields: { count: 2, size: 1 },
             powerPlants: { count: 1, size: 2 },
             coolers: { count: 2, size: 1 },
@@ -1001,8 +1003,10 @@ quantumDrives: [
             name: "Hornet F7A Mk II PYAM Exec",
             manufacturer: "Anvil",
             size: "Small",
-            pilotWeapons: [{ size: 4 }, { size: 4 }],
-            turrets: [],
+            pilotWeapons: [{ size: 4 }, { size: 4 }, { size: 3 }, { size: 3 }],
+            turrets: [
+                { type: "remote", guns: 2, size: 3 }
+            ],
             shields: { count: 2, size: 1 },
             powerPlants: { count: 1, size: 2 },
             coolers: { count: 2, size: 1 },
@@ -3438,8 +3442,8 @@ SC_DATA.stockLoadouts = {
         powerPlants: ["LuxCore"],
         coolers: ["Glacier"],
         shields: ["FR-66"],
-        pilotWeapons: ["Revenant Gatling","NDB-30 Repeater"],
-        turretWeapons: []
+        pilotWeapons: ["Revenant Gatling","Revenant Gatling","NDB-30 Repeater","NDB-30 Repeater"],
+        turretWeapons: ["NDB-30 Repeater","NDB-30 Repeater"]
     },
     "Kruger L-21 Wolf": {
         quantumDrives: ["FoxFire"],

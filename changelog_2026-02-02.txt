@@ -1,0 +1,41 @@
+Changelog - 2026-02-02 (v0.70)
+===============================
+
+Branch: main
+
+Summary:
+--------
+Fixed F7A Hornet Mk II missing weapons (nose turret and ball turret).
+
+Changes:
+--------
+1. Fixed Anvil F7A Hornet Mk II ship spec:
+   - Added 2x S3 nose turret guns to pilotWeapons (now 4 total: 2x S4 wing + 2x S3 nose)
+   - Added ball turret as a remote turret with 2x S3 guns
+   - Ball turret (C5-173f) is pilot-controlled but swappable to TMSB-5
+
+2. Fixed Hornet F7A Mk II PYAM Exec ship spec:
+   - Same hardpoint changes as base variant
+
+3. Fixed Hornet F7A Mk II PYAM Exec stock loadout:
+   - Added missing pilot weapons (Revenant Gatling x2, NDB-30 Repeater x2)
+   - Added missing turret weapons (NDB-30 Repeater x2)
+
+4. Updated extract-ships.js to handle pilot-controlled turrets:
+   - extractPilotWeapons() now handles Turret.CanardTurret (nose turrets)
+     by counting their weapons as pilot weapons
+   - extractTurrets() now handles Turret.BallTurret as a "remote" turret
+   - This ensures future ships with similar setups are correctly extracted
+
+Technical Notes:
+----------------
+- CanardTurret (nose turret): Fixed pilot-controlled turret, guns count as pilot weapons
+- BallTurret: Pilot-controlled but swappable, tracked as "remote" turret
+- The sync script only adds new ships, so manual fixes won't be overwritten
+
+Files Modified:
+---------------
+- app.js - Version 0.67 -> 0.70
+- index.html - Cache-busting v=67 -> v=70
+- data.js - Fixed F7A Hornet Mk II and PYAM Exec ship specs and loadouts
+- scripts/extract-ships.js - Handle CanardTurret and BallTurret types

@@ -89,10 +89,29 @@ function findInLoadout(loadout, predicate, results = []) {
  * Extract pilot weapon hardpoints (not in manned/remote turrets)
  * Only counts actual gun hardpoints (hardpoint_gun_*, hardpoint_class_*, etc.)
  * Gimbals (Turret.GunTurret) at the top level are pilot weapons
- * Excludes turret mounts (hardpoint names containing "turret")
+ * CanardTurrets (nose turrets) are pilot-controlled, so their guns count as pilot weapons
+ * Excludes turret mounts (hardpoint names containing "turret") except for pilot-controlled turrets
  */
 function extractPilotWeapons(loadout) {
     const weapons = [];
+
+    // Helper to count weapon hardpoints inside a turret
+    function countWeaponsInTurret(items) {
+        const turretWeapons = [];
+        for (const item of items) {
+            const hpName = (item.HardpointName || '').toLowerCase();
+            // Count weapon hardpoints inside the turret
+            if ((hpName.includes('weapon') || hpName.includes('gun') || hpName.includes('class') ||
+                 item.Type === 'Turret.GunTurret') && item.MaxSize > 0) {
+                turretWeapons.push({ size: item.MaxSize });
+            }
+            // Recurse
+            if (item.Loadout) {
+                turretWeapons.push(...countWeaponsInTurret(item.Loadout));
+            }
+        }
+        return turretWeapons;
+    }
 
     function processItems(items, inMannedOrRemoteTurret = false) {
         for (const item of items) {
@@ -101,11 +120,25 @@ function extractPilotWeapons(loadout) {
 
             const isMannedTurret = type.includes('TurretBase.MannedTurret');
             const isRemoteTurret = type.includes('TurretBase.RemoteTurret');
+            // CanardTurret (nose turret) is pilot-controlled - its weapons should be pilot weapons
+            const isCanardTurret = type === 'Turret.CanardTurret';
+            // BallTurret is also pilot-controlled but swappable, handled separately in extractTurrets
+            const isBallTurret = type === 'Turret.BallTurret';
             // Also detect turret mounts by hardpoint name (e.g., hardpoint_remote_turret_*)
-            const isTurretMount = hpName.includes('turret');
+            const isTurretMount = hpName.includes('turret') && !isCanardTurret && !isBallTurret;
 
-            // Skip turrets (processed separately)
+            // Skip manned/remote turrets (processed separately)
             if (isMannedTurret || isRemoteTurret || isTurretMount) continue;
+
+            // Skip ball turrets (handled in extractTurrets as swappable turrets)
+            if (isBallTurret) continue;
+
+            // CanardTurret (nose turret) - count its weapons as pilot weapons
+            if (isCanardTurret && item.Loadout) {
+                const turretWeapons = countWeaponsInTurret(item.Loadout);
+                weapons.push(...turretWeapons);
+                continue;
+            }
 
             // Check if this is a gun hardpoint (gimbal mount or direct weapon)
             // Must have "hardpoint_gun" in name, or be a Turret.GunTurret at top level
@@ -132,9 +165,11 @@ function extractPilotWeapons(loadout) {
 }
 
 /**
- * Extract turret information (manned and remote turrets)
- * Detects turrets by Type (TurretBase.MannedTurret, TurretBase.RemoteTurret)
+ * Extract turret information (manned, remote, and ball turrets)
+ * Detects turrets by Type (TurretBase.MannedTurret, TurretBase.RemoteTurret, Turret.BallTurret)
  * or by hardpoint name (hardpoint_*turret* with Turret.GunTurret type)
+ * BallTurrets are pilot-controlled but swappable, so they're treated as "remote" turrets
+ * CanardTurrets (nose turrets) are handled in extractPilotWeapons since they're fixed
  */
 function extractTurrets(loadout) {
     const turrets = [];
@@ -167,13 +202,15 @@ function extractTurrets(loadout) {
 
             const isMannedTurret = type.includes('TurretBase.MannedTurret');
             const isRemoteTurret = type.includes('TurretBase.RemoteTurret');
+            // BallTurret is pilot-controlled but swappable - treat as "remote"
+            const isBallTurret = type === 'Turret.BallTurret';
             // Also detect turret mounts by hardpoint name with GunTurret type
             // e.g., hardpoint_remote_turret_* with Turret.GunTurret
             const isNamedRemoteTurret = hpName.includes('remote_turret') && type === 'Turret.GunTurret';
             const isNamedMannedTurret = hpName.includes('turret') && !hpName.includes('remote') &&
                                         type === 'Turret.GunTurret';
 
-            if (isMannedTurret || isRemoteTurret || isNamedRemoteTurret || isNamedMannedTurret) {
+            if (isMannedTurret || isRemoteTurret || isBallTurret || isNamedRemoteTurret || isNamedMannedTurret) {
                 // Count weapon hardpoints in this turret
                 const { count, maxSize } = item.Loadout ?
                     countWeaponHardpoints(item.Loadout) : { count: 0, maxSize: 0 };

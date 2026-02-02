@@ -1,5 +1,5 @@
 // Auto-generated ship specs from ships.json
-// Generated: 2026-02-01T11:30:17.100Z
+// Generated: 2026-02-02T17:18:41.118Z
 // Ships with hardpoint data: 167
 
 const EXTRACTED_SHIPS = [
@@ -869,7 +869,13 @@ const EXTRACTED_SHIPS = [
                 "size": 3
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 2,
+                "size": 1
+            }
+        ],
         "shields": {
             "count": 1,
             "size": 1
@@ -1120,10 +1126,22 @@ const EXTRACTED_SHIPS = [
                 "size": 4
             },
             {
+                "size": 3
+            },
+            {
+                "size": 3
+            },
+            {
                 "size": 4
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 2,
+                "size": 3
+            }
+        ],
         "shields": {
             "count": 3,
             "size": 1
@@ -1146,16 +1164,16 @@ const EXTRACTED_SHIPS = [
         "size": "Small",
         "pilotWeapons": [
             {
-                "size": 5
-            },
-            {
                 "size": 3
             },
             {
                 "size": 3
             },
             {
-                "size": 3
+                "size": 2
+            },
+            {
+                "size": 2
             },
             {
                 "size": 3
@@ -1196,10 +1214,22 @@ const EXTRACTED_SHIPS = [
                 "size": 4
             },
             {
+                "size": 3
+            },
+            {
+                "size": 3
+            },
+            {
                 "size": 4
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 2,
+                "size": 3
+            }
+        ],
         "shields": {
             "count": 2,
             "size": 1
@@ -1304,9 +1334,6 @@ const EXTRACTED_SHIPS = [
                 "size": 2
             },
             {
-                "size": 5
-            },
-            {
                 "size": 3
             },
             {
@@ -1348,13 +1375,13 @@ const EXTRACTED_SHIPS = [
                 "size": 3
             },
             {
-                "size": 3
+                "size": 1
+            },
+            {
+                "size": 1
             },
             {
                 "size": 3
-            },
-            {
-                "size": 5
             }
         ],
         "turrets": [],
@@ -1383,16 +1410,22 @@ const EXTRACTED_SHIPS = [
                 "size": 4
             },
             {
-                "size": 4
+                "size": 3
             },
             {
-                "size": 4
+                "size": 3
             },
             {
                 "size": 4
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 4
+            }
+        ],
         "shields": {
             "count": 3,
             "size": 1
@@ -1418,13 +1451,13 @@ const EXTRACTED_SHIPS = [
                 "size": 3
             },
             {
-                "size": 3
+                "size": 1
+            },
+            {
+                "size": 1
             },
             {
                 "size": 3
-            },
-            {
-                "size": 5
             }
         ],
         "turrets": [],
@@ -1453,10 +1486,22 @@ const EXTRACTED_SHIPS = [
                 "size": 4
             },
             {
+                "size": 3
+            },
+            {
+                "size": 3
+            },
+            {
                 "size": 4
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 2,
+                "size": 3
+            }
+        ],
         "shields": {
             "count": 3,
             "size": 1
@@ -1649,7 +1694,13 @@ const EXTRACTED_SHIPS = [
                 "size": 3
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 2,
+                "size": 3
+            }
+        ],
         "shields": {
             "count": 2,
             "size": 2
@@ -1690,7 +1741,13 @@ const EXTRACTED_SHIPS = [
                 "size": 3
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 2,
+                "size": 2
+            }
+        ],
         "shields": {
             "count": 2,
             "size": 2
@@ -1731,7 +1788,13 @@ const EXTRACTED_SHIPS = [
                 "size": 3
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 2,
+                "size": 2
+            }
+        ],
         "shields": {
             "count": 2,
             "size": 2
@@ -1927,7 +1990,13 @@ const EXTRACTED_SHIPS = [
         "manufacturer": "Anvil",
         "size": "Small",
         "pilotWeapons": [],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 2,
+                "size": 2
+            }
+        ],
         "shields": {
             "count": 2,
             "size": 0
@@ -2068,7 +2137,13 @@ const EXTRACTED_SHIPS = [
                 "size": 3
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 2,
+                "size": 2
+            }
+        ],
         "shields": {
             "count": 2,
             "size": 2
@@ -2109,7 +2184,13 @@ const EXTRACTED_SHIPS = [
                 "size": 3
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 2,
+                "size": 2
+            }
+        ],
         "shields": {
             "count": 2,
             "size": 2
@@ -2135,10 +2216,22 @@ const EXTRACTED_SHIPS = [
                 "size": 4
             },
             {
+                "size": 3
+            },
+            {
+                "size": 3
+            },
+            {
                 "size": 4
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 2,
+                "size": 3
+            }
+        ],
         "shields": {
             "count": 2,
             "size": 1
@@ -2164,10 +2257,22 @@ const EXTRACTED_SHIPS = [
                 "size": 4
             },
             {
+                "size": 3
+            },
+            {
+                "size": 3
+            },
+            {
                 "size": 4
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 2,
+                "size": 3
+            }
+        ],
         "shields": {
             "count": 2,
             "size": 1
@@ -2432,15 +2537,14 @@ const EXTRACTED_SHIPS = [
         "name": "C.O. Mustang Alpha",
         "manufacturer": "Consolidated Outland",
         "size": "Small",
-        "pilotWeapons": [
+        "pilotWeapons": [],
+        "turrets": [
             {
-                "size": 2
-            },
-            {
+                "type": "remote",
+                "guns": 2,
                 "size": 2
             }
         ],
-        "turrets": [],
         "shields": {
             "count": 2,
             "size": 1
@@ -2461,15 +2565,14 @@ const EXTRACTED_SHIPS = [
         "name": "C.O. Mustang Beta",
         "manufacturer": "Consolidated Outland",
         "size": "Small",
-        "pilotWeapons": [
+        "pilotWeapons": [],
+        "turrets": [
             {
-                "size": 2
-            },
-            {
+                "type": "remote",
+                "guns": 2,
                 "size": 2
             }
         ],
-        "turrets": [],
         "shields": {
             "count": 2,
             "size": 1
@@ -2490,15 +2593,14 @@ const EXTRACTED_SHIPS = [
         "name": "C.O. Mustang CitizenCon 2948 Edition",
         "manufacturer": "Consolidated Outland",
         "size": "Small",
-        "pilotWeapons": [
+        "pilotWeapons": [],
+        "turrets": [
             {
-                "size": 2
-            },
-            {
+                "type": "remote",
+                "guns": 2,
                 "size": 2
             }
         ],
-        "turrets": [],
         "shields": {
             "count": 2,
             "size": 1
@@ -2521,19 +2623,19 @@ const EXTRACTED_SHIPS = [
         "size": "Small",
         "pilotWeapons": [
             {
-                "size": 2
-            },
-            {
-                "size": 2
-            },
-            {
                 "size": 1
             },
             {
                 "size": 1
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 2,
+                "size": 2
+            }
+        ],
         "shields": {
             "count": 2,
             "size": 1
@@ -2656,15 +2758,14 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 3
-            },
-            {
-                "size": 3
-            },
-            {
-                "size": 3
             }
         ],
         "turrets": [
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 3
+            },
             {
                 "type": "manned",
                 "guns": 4,
@@ -2819,15 +2920,15 @@ const EXTRACTED_SHIPS = [
             },
             {
                 "size": 3
-            },
+            }
+        ],
+        "turrets": [
             {
-                "size": 3
-            },
-            {
+                "type": "remote",
+                "guns": 4,
                 "size": 3
             }
         ],
-        "turrets": [],
         "shields": {
             "count": 1,
             "size": 2
@@ -3848,19 +3949,19 @@ const EXTRACTED_SHIPS = [
         "size": "Medium",
         "pilotWeapons": [
             {
-                "size": 3
-            },
-            {
-                "size": 3
-            },
-            {
                 "size": 5
             },
             {
                 "size": 5
             }
         ],
-        "turrets": [],
+        "turrets": [
+            {
+                "type": "remote",
+                "guns": 4,
+                "size": 3
+            }
+        ],
         "shields": {
             "count": 4,
             "size": 2

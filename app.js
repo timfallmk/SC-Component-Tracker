@@ -2,7 +2,7 @@
 
 // ============ Data Layer ============
 
-const APP_VERSION = '0.74';
+const APP_VERSION = '0.75';
 const STORAGE_KEY = 'sc-component-tracker-data';
 const DATA_VERSION_KEY = 'sc-component-tracker-data-version';
 

@@ -84,6 +84,13 @@ The `scripts/` folder contains ~45 Node.js utilities for data processing:
 - **Component sizes**: scunpacked sometimes has `MaxSize: 0` even for valid components. The extraction scripts fall back to parsing size from `ClassName` (e.g., `_S01_` = size 1)
 - **Ship name prefixes**: "Kruger" prefix is stripped from ship names (L-21 Wolf, P-52 Merlin, etc.)
 - **Snub ships**: MPUV ships legitimately have size 0 powerPlants/coolers; snubs have size 0 quantumDrive
+- **Turret types**: Multiple turret types exist in scunpacked data:
+  - `TurretBase.MannedTurret` - crew-operated turrets
+  - `TurretBase.RemoteTurret` - remote/automated turrets
+  - `Turret.BallTurret` - pilot-controlled but swappable (treated as remote)
+  - `Turret.TopTurret` - pilot-controlled tail/top turrets (treated as remote)
+  - `Turret.CanardTurret` - fixed nose turrets (weapons count as pilot weapons)
+- **Weapon types**: `WeaponGun.Gun` and `WeaponGun.Rocket` are both valid weapon types. Rockets can be swapped for guns so both are included in weapon counts.
 
 ## Releasing a New Version
 

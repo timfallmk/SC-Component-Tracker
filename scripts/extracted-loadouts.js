@@ -1,5 +1,5 @@
 // Auto-generated stock loadouts from ships.json
-// Generated: 2026-02-01T11:30:17.439Z
+// Generated: 2026-02-03T00:10:33.453Z
 // Ships with loadout data: 240
 
 const EXTRACTED_LOADOUTS = {
@@ -70,10 +70,11 @@ const EXTRACTED_LOADOUTS = {
       "Mantis GT-220 Gatling",
       "CF-117 Bulldog Repeater",
       "CF-117 Bulldog Repeater",
-      "Mantis GT-220 Gatling",
-      "M6A Cannon"
+      "Mantis GT-220 Gatling"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "M6A Cannon"
+    ]
   },
   "Anvil F7 Hornet Mk Wikelo": {
     "quantumDrives": [
@@ -95,11 +96,12 @@ const EXTRACTED_LOADOUTS = {
       "Revenant Gatling",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
       "Revenant Gatling"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
+    ]
   },
   "Mirai Guardian MX": {
     "quantumDrives": [
@@ -522,11 +524,12 @@ const EXTRACTED_LOADOUTS = {
     ],
     "pilotWeapons": [
       "M5A Cannon",
-      "M5A Cannon",
-      "M5A Cannon",
       "M5A Cannon"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "M5A Cannon",
+      "M5A Cannon"
+    ]
   },
   "Anvil Asgard": {
     "quantumDrives": [
@@ -779,11 +782,12 @@ const EXTRACTED_LOADOUTS = {
       "Revenant Gatling",
       "NDB-30 Repeater",
       "NDB-30 Repeater",
-      "NDB-30 Repeater",
-      "NDB-30 Repeater",
       "Revenant Gatling"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "NDB-30 Repeater",
+      "NDB-30 Repeater"
+    ]
   },
   "Anvil Hawk": {
     "quantumDrives": [
@@ -1006,11 +1010,11 @@ const EXTRACTED_LOADOUTS = {
       "INK",
       "INK"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Anvil Terrapin Medic Wikelo Savior Special": {
     "quantumDrives": [
@@ -1027,11 +1031,11 @@ const EXTRACTED_LOADOUTS = {
       "BLOC",
       "BLOC"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Anvil Carrack": {
     "quantumDrives": [
@@ -1148,13 +1152,14 @@ const EXTRACTED_LOADOUTS = {
     ],
     "pilotWeapons": [
       "CF-227 Badger Repeater",
-      "CF-227 Badger Repeater",
-      "CF-227 Badger Repeater",
       "Jericho XL",
       "CF-227 Badger Repeater",
       "Jericho XL"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "CF-227 Badger Repeater",
+      "CF-227 Badger Repeater"
+    ]
   },
   "Origin 600i 2951 BIS": {
     "quantumDrives": [
@@ -1621,11 +1626,11 @@ const EXTRACTED_LOADOUTS = {
       "INK",
       "INK"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Anvil F8C Lightning": {
     "quantumDrives": [
@@ -1950,11 +1955,11 @@ const EXTRACTED_LOADOUTS = {
       "5MA 'Chimalli'",
       "5MA 'Chimalli'"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Argo MPUV Tractor": {
     "quantumDrives": [],
@@ -2086,11 +2091,12 @@ const EXTRACTED_LOADOUTS = {
     ],
     "pilotWeapons": [
       "M5A Cannon",
-      "M5A Cannon",
-      "M5A Cannon",
       "M5A Cannon"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "M5A Cannon",
+      "M5A Cannon"
+    ]
   },
   "Argo RAFT Wikelo Work Special": {
     "quantumDrives": [
@@ -2181,11 +2187,12 @@ const EXTRACTED_LOADOUTS = {
       "WEB"
     ],
     "pilotWeapons": [
-      "Revenant Gatling",
       "Tarantula GT-870 Mark 3 Cannon",
       "Tarantula GT-870 Mark 3 Cannon"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "Revenant Gatling"
+    ]
   },
   "Origin 315p": {
     "quantumDrives": [
@@ -2434,12 +2441,13 @@ const EXTRACTED_LOADOUTS = {
       "AllStop"
     ],
     "pilotWeapons": [
-      "YellowJacket GT-210 Gatling",
-      "YellowJacket GT-210 Gatling",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "YellowJacket GT-210 Gatling",
+      "YellowJacket GT-210 Gatling"
+    ]
   },
   "Aegis Avenger Warlock": {
     "quantumDrives": [
@@ -2931,12 +2939,13 @@ const EXTRACTED_LOADOUTS = {
       "Citadel"
     ],
     "pilotWeapons": [
-      "Deadbolt III Cannon",
-      "Deadbolt III Cannon",
       "Omnisky XII Cannon",
       "Omnisky XII Cannon"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "Deadbolt III Cannon",
+      "Deadbolt III Cannon"
+    ]
   },
   "Drake Vulture Teach's Special": {
     "quantumDrives": [
@@ -3112,11 +3121,12 @@ const EXTRACTED_LOADOUTS = {
       "Mantis GT-220 Gatling",
       "CF-117 Bulldog Repeater",
       "CF-117 Bulldog Repeater",
-      "Mantis GT-220 Gatling",
+      "Mantis GT-220 Gatling"
+    ],
+    "turretWeapons": [
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Aegis Hammerhead 2949 Best In Show Edition": {
     "quantumDrives": [
@@ -3504,11 +3514,11 @@ const EXTRACTED_LOADOUTS = {
       "5MA 'Chimalli'",
       "5MA 'Chimalli'"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "Syulen PYAM Exec": {
     "quantumDrives": [
@@ -3651,11 +3661,11 @@ const EXTRACTED_LOADOUTS = {
     ],
     "pilotWeapons": [
       "M5A Cannon",
-      "M5A Cannon",
-      "M5A Cannon",
       "M5A Cannon"
     ],
     "turretWeapons": [
+      "M5A Cannon",
+      "M5A Cannon",
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
     ]
@@ -3784,13 +3794,14 @@ const EXTRACTED_LOADOUTS = {
     ],
     "pilotWeapons": [
       "Revenant Gatling",
-      "TMSB-5 Gatling",
-      "TMSB-5 Gatling",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
       "Revenant Gatling"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "TMSB-5 Gatling",
+      "TMSB-5 Gatling"
+    ]
   },
   "MISC Reliant Kore": {
     "quantumDrives": [
@@ -4377,12 +4388,13 @@ const EXTRACTED_LOADOUTS = {
       "Obscura"
     ],
     "pilotWeapons": [
-      "Deadbolt III Cannon",
-      "Deadbolt III Cannon",
       "Lightstrike IV Cannon",
       "Lightstrike IV Cannon"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "Deadbolt III Cannon",
+      "Deadbolt III Cannon"
+    ]
   },
   "Crusader C2 Hercules Starlifter": {
     "quantumDrives": [
@@ -5011,12 +5023,13 @@ const EXTRACTED_LOADOUTS = {
       "Obscura"
     ],
     "pilotWeapons": [
-      "Lightstrike III Cannon",
-      "Lightstrike III Cannon",
       "Deadbolt V Cannon",
       "Deadbolt V Cannon"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "Lightstrike III Cannon",
+      "Lightstrike III Cannon"
+    ]
   },
   "Anvil F7A Hornet Mk I": {
     "quantumDrives": [
@@ -5034,14 +5047,15 @@ const EXTRACTED_LOADOUTS = {
       "WEB"
     ],
     "pilotWeapons": [
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater",
       "AD4B Ballistic Gatling",
       "AD4B Ballistic Gatling"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
+    ]
   },
   "Aegis Sabre": {
     "quantumDrives": [
@@ -5300,11 +5314,11 @@ const EXTRACTED_LOADOUTS = {
       "INK",
       "INK"
     ],
-    "pilotWeapons": [
+    "pilotWeapons": [],
+    "turretWeapons": [
       "CF-227 Badger Repeater",
       "CF-227 Badger Repeater"
-    ],
-    "turretWeapons": []
+    ]
   },
   "RSI Meteor": {
     "quantumDrives": [
@@ -5350,11 +5364,12 @@ const EXTRACTED_LOADOUTS = {
       "Revenant Gatling",
       "Omnisky IX Cannon",
       "Omnisky IX Cannon",
-      "Omnisky IX Cannon",
-      "Omnisky IX Cannon",
       "Revenant Gatling"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "Omnisky IX Cannon",
+      "Omnisky IX Cannon"
+    ]
   },
   "Anvil F7C-M Super Hornet Mk II": {
     "quantumDrives": [
@@ -5376,11 +5391,12 @@ const EXTRACTED_LOADOUTS = {
       "Revenant Gatling",
       "CF-337 Panther Repeater",
       "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
-      "CF-337 Panther Repeater",
       "Revenant Gatling"
     ],
-    "turretWeapons": []
+    "turretWeapons": [
+      "CF-337 Panther Repeater",
+      "CF-337 Panther Repeater"
+    ]
   },
   "Aopoa San'tok.yāi": {
     "quantumDrives": [

@@ -157,3 +157,77 @@ Technical Notes:
 - Snub ships have size 0 quantumDrive (no QD equipped)
 - sync-ships-to-datajs.js only ADDS new ships, doesn't update existing
 - Use fix-component-sizes.js to update existing ship component sizes
+
+---
+
+Changelog - 2026-02-02 (v0.74)
+===============================
+
+Summary:
+--------
+Changed Add Ship dropdown to alphabetical list with manufacturer in parentheses.
+
+Changes:
+--------
+1. Redesigned ship dropdown in Add Ship modal:
+   - Changed from manufacturer-grouped optgroups to flat alphabetical list
+   - Format: "Ship Name (Manufacturer)" - e.g., "Gladius (Aegis)"
+   - Ships sorted alphabetically by display name
+   - Easier to find ships when you know the name but not the manufacturer
+
+Files Modified:
+---------------
+- app.js - Version 0.73 -> 0.74, rewrote populateShipSelect()
+- index.html - Cache-busting v=73 -> v=74
+
+---
+
+Changelog - 2026-02-02 (v0.75)
+===============================
+
+Summary:
+--------
+Fixed turret vs pilot weapon categorization for 34 ships and fixed Corsair ship spec.
+
+Changes:
+--------
+1. Fixed weapon categorization in extract-loadouts.js:
+   - Added TopTurret, BallTurret, and PDC turret detection
+   - CanardTurret weapons correctly counted as pilot weapons (fixed nose turrets)
+   - Turret-mounted hardpoints now correctly categorized
+   - 34 ships had weapons moved from pilotWeapons to turretWeapons
+
+2. Fixed Corsair ship spec in data.js:
+   - Added missing remote tail turret (Turret.TopTurret with 2x S2)
+   - Now shows 3 turrets: 2 manned + 1 remote
+   - 6 pilot weapons + 6 turret weapons (correct)
+
+3. Fixed Mustang Delta pilot weapons:
+   - Added rocket support to extract-loadouts.js
+   - WeaponGun.Rocket now included (rockets swappable for guns)
+   - Mustang Delta: 4 pilot weapons (2x S2 guns + 2x S3 rockets)
+
+4. Added turret type documentation to CLAUDE.md:
+   - Documented all turret types (MannedTurret, RemoteTurret, BallTurret, TopTurret, CanardTurret)
+   - Documented WeaponGun.Gun and WeaponGun.Rocket weapon types
+
+5. Regenerated processed-data.json with correct weapon categorization
+
+Files Modified:
+---------------
+- app.js - Version 0.74 -> 0.75
+- index.html - Cache-busting v=74 -> v=75
+- data.js - Fixed Corsair spec, synced 219 stock loadouts with correct categorization
+- scripts/extract-loadouts.js - TopTurret, BallTurret, CanardTurret, rocket detection
+- scripts/extract-ships.js - TopTurret detection, rocket support
+- processed-data.json - Regenerated with correct data
+- CLAUDE.md - Added turret type and weapon type documentation
+
+Technical Notes:
+----------------
+- TopTurret (Turret.TopTurret): Pilot-controlled rear/tail turret, tracked as remote
+- BallTurret (Turret.BallTurret): Pilot-controlled swappable turret, tracked as remote
+- CanardTurret (Turret.CanardTurret): Fixed nose turret, weapons count as pilot weapons
+- WeaponGun.Rocket: Rockets on hardpoints are swappable with guns, included in weapon counts
+- Vanguard Harbinger Jericho rockets are in turret mount (turretWeapons)
+- Mustang Delta Jericho rockets are on wing hardpoints (pilotWeapons)

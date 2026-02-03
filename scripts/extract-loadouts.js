@@ -164,13 +164,21 @@ function extractShipLoadout(ship) {
             const type = item.Type || '';
 
             // Detect turrets by type OR by hardpoint name
+            // TurretBase types: MannedTurret, RemoteTurret
+            // Turret types: TopTurret, BallTurret, PDCTurret, CanardTurret (nose - pilot controlled, but fixed)
             const isMannedTurret = type.includes('MannedTurret');
             const isRemoteTurret = type.includes('RemoteTurret');
+            const isTopTurret = type === 'Turret.TopTurret';
+            const isBallTurret = type === 'Turret.BallTurret';
             const isPDCTurret = type.includes('PDCTurret');
-            const isTurretMount = hpName.includes('turret') && type.includes('Turret');
+            // CanardTurret is pilot-controlled and fixed, so its weapons are pilot weapons
+            const isCanardTurret = type === 'Turret.CanardTurret';
+            const isTurretMount = hpName.includes('turret') && type.includes('Turret') && !isCanardTurret;
 
-            const isInTurret = inTurret || isMannedTurret || isRemoteTurret || isPDCTurret || isTurretMount;
+            // All turret types except CanardTurret mark weapons as turret weapons
+            const isInTurret = inTurret || isMannedTurret || isRemoteTurret || isTopTurret || isBallTurret || isPDCTurret || isTurretMount;
 
+            // Include guns and rockets (rockets can be swapped for guns)
             if (type.startsWith('WeaponGun') && isValidComponentName(item.Name)) {
                 if (isInTurret) {
                     turretWeapons.push(item.Name);

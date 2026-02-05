@@ -1,254 +1,155 @@
+SC Component Tracker - Validation Report
+Generated: 2026-02-05T17:09:00.441Z
 
-=== Aegis Reclaimer ===
-- turret-length-mismatch: turretWeapons has 17, expected 16 (per-gun) or 16 (per-turret)
-- A-hardpoint-spec-missing: turrets: stock lists 17 > spec mounts (guns=16, turrets=16)
+Ships in data.js: 230
+Stock loadouts: 219
 
-=== Aegis Redeemer ===
-- turret-length-mismatch: turretWeapons has 10, expected 6 (per-gun) or 3 (per-turret)
-- A-hardpoint-spec-missing: turrets: stock lists 10 > spec mounts (guns=6, turrets=3)
+=== SUMMARY ===
+Orphaned loadouts: 0
+Orphaned specs: 0
+Count mismatches: 123
+Unknown items: 0
+Oversized items: 11
+Size mismatches: 0
+Source discrepancies: 0
+TOTAL: 134
 
-=== Aegis Retaliator Bomber ===
-- turret-length-mismatch: turretWeapons has 15, expected 10 (per-gun) or 5 (per-turret)
-- A-hardpoint-spec-missing: turrets: stock lists 15 > spec mounts (guns=10, turrets=5)
+=== DETAILED ISSUES ===
 
-=== Aegis Vanguard Hoplite ===
-- unknown-weapon: turretWeapons[0] 'SW16BR2 Sawbuck Repeater' not found
-- unknown-weapon: turretWeapons[1] 'SW16BR2 Sawbuck Repeater' not found
+--- COUNT MISMATCHES ---
+RSI Aurora LX: pilot-count-mismatch - stock has 2 pilot weapons, spec has 4
+RSI Aurora LX: missing-stock-pilot - pilot mount 2 has no stock weapon
+RSI Aurora LX: missing-stock-pilot - pilot mount 3 has no stock weapon
+RSI Zeus Mk II CL: turret-stock-missing - spec has 1 turrets (2 guns) but stock has none
+MISC Reliant Sen: pilot-count-mismatch - stock has 2 pilot weapons, spec has 4
+MISC Reliant Sen: missing-stock-pilot - pilot mount 2 has no stock weapon
+MISC Reliant Sen: missing-stock-pilot - pilot mount 3 has no stock weapon
+Crusader A2 Hercules Starlifter: pilot-count-mismatch - stock has 2 pilot weapons, spec has 3
+Crusader A2 Hercules Starlifter: missing-stock-pilot - pilot mount 2 has no stock weapon
+Aegis Reclaimer Teach's Special: turret-count-mismatch - turretWeapons has 21, expected 14 (per-gun) or 7 (per-turret)
+Aegis Javelin: pilot-count-mismatch - stock has 8 pilot weapons, spec has 2
+Aegis Javelin: component-count-mismatch - shields: stock has 0, spec expects 4
+Aegis Javelin: component-count-mismatch - coolers: stock has 0, spec expects 4
+Aegis Javelin: component-count-mismatch - quantumDrives: stock has 0, spec expects 1
+MISC Starlancer TAC Wikelo War Special: pilot-count-mismatch - stock has 8 pilot weapons, spec has 11
+MISC Starlancer TAC Wikelo War Special: missing-stock-pilot - pilot mount 8 has no stock weapon
+MISC Starlancer TAC Wikelo War Special: missing-stock-pilot - pilot mount 9 has no stock weapon
+MISC Starlancer TAC Wikelo War Special: missing-stock-pilot - pilot mount 10 has no stock weapon
+Crusader C1 Spirit Wikelo Special: pilot-count-mismatch - stock has 2 pilot weapons, spec has 3
+Crusader C1 Spirit Wikelo Special: missing-stock-pilot - pilot mount 2 has no stock weapon
+RSI Polaris: pilot-count-mismatch - stock has 0 pilot weapons, spec has 2
+RSI Polaris: missing-stock-pilot - pilot mount 0 has no stock weapon
+RSI Polaris: missing-stock-pilot - pilot mount 1 has no stock weapon
+RSI Polaris: turret-count-mismatch - turretWeapons has 29, expected 22 (per-gun) or 6 (per-turret)
+Argo RAFT: pilot-count-mismatch - stock has 0 pilot weapons, spec has 3
+Argo RAFT: missing-stock-pilot - pilot mount 0 has no stock weapon
+Argo RAFT: missing-stock-pilot - pilot mount 1 has no stock weapon
+Argo RAFT: missing-stock-pilot - pilot mount 2 has no stock weapon
+C.O. Nomad: pilot-count-mismatch - stock has 3 pilot weapons, spec has 4
+C.O. Nomad: missing-stock-pilot - pilot mount 3 has no stock weapon
+Crusader Ares Star Fighter Ion: pilot-count-mismatch - stock has 1 pilot weapons, spec has 2
+Crusader Ares Star Fighter Ion: missing-stock-pilot - pilot mount 1 has no stock weapon
+Aegis Idris-P: pilot-count-mismatch - stock has 8 pilot weapons, spec has 10
+Aegis Idris-P: missing-stock-pilot - pilot mount 8 has no stock weapon
+Aegis Idris-P: missing-stock-pilot - pilot mount 9 has no stock weapon
+Aegis Idris-P: turret-count-mismatch - turretWeapons has 27, expected 16 (per-gun) or 8 (per-turret)
+Anvil Valkyrie: pilot-count-mismatch - stock has 4 pilot weapons, spec has 3
+C.O. Nomad Teach's Special: pilot-count-mismatch - stock has 3 pilot weapons, spec has 4
+C.O. Nomad Teach's Special: missing-stock-pilot - pilot mount 3 has no stock weapon
+Drake Cutlass Steel: pilot-count-mismatch - stock has 4 pilot weapons, spec has 9
+Drake Cutlass Steel: missing-stock-pilot - pilot mount 4 has no stock weapon
+Drake Cutlass Steel: missing-stock-pilot - pilot mount 5 has no stock weapon
+Drake Cutlass Steel: missing-stock-pilot - pilot mount 6 has no stock weapon
+Drake Cutlass Steel: missing-stock-pilot - pilot mount 7 has no stock weapon
+Drake Cutlass Steel: missing-stock-pilot - pilot mount 8 has no stock weapon
+Esperia Stinger: pilot-count-mismatch - stock has 7 pilot weapons, spec has 8
+Esperia Stinger: missing-stock-pilot - pilot mount 7 has no stock weapon
+Drake Caterpillar: pilot-count-mismatch - stock has 4 pilot weapons, spec has 5
+Drake Caterpillar: missing-stock-pilot - pilot mount 4 has no stock weapon
+MISC Hull C: pilot-count-mismatch - stock has 4 pilot weapons, spec has 8
+MISC Hull C: missing-stock-pilot - pilot mount 4 has no stock weapon
+MISC Hull C: missing-stock-pilot - pilot mount 5 has no stock weapon
+MISC Hull C: missing-stock-pilot - pilot mount 6 has no stock weapon
+MISC Hull C: missing-stock-pilot - pilot mount 7 has no stock weapon
+MISC Hull C: turret-count-mismatch - turretWeapons has 2, expected 6 (per-gun) or 3 (per-turret)
+Cutlass Black PYAM Exec: pilot-count-mismatch - stock has 4 pilot weapons, spec has 5
+Cutlass Black PYAM Exec: missing-stock-pilot - pilot mount 4 has no stock weapon
+Argo MPUV Tractor: pilot-count-mismatch - stock has 0 pilot weapons, spec has 1
+Argo MPUV Tractor: missing-stock-pilot - pilot mount 0 has no stock weapon
+Crusader Ares Star Fighter Ion Wikelo Sneak Special: pilot-count-mismatch - stock has 1 pilot weapons, spec has 2
+Crusader Ares Star Fighter Ion Wikelo Sneak Special: missing-stock-pilot - pilot mount 1 has no stock weapon
+Argo RAFT Wikelo Work Special: pilot-count-mismatch - stock has 0 pilot weapons, spec has 3
+Argo RAFT Wikelo Work Special: missing-stock-pilot - pilot mount 0 has no stock weapon
+Argo RAFT Wikelo Work Special: missing-stock-pilot - pilot mount 1 has no stock weapon
+Argo RAFT Wikelo Work Special: missing-stock-pilot - pilot mount 2 has no stock weapon
+Origin 315p: pilot-count-mismatch - stock has 2 pilot weapons, spec has 3
+Origin 315p: missing-stock-pilot - pilot mount 2 has no stock weapon
+RSI Aurora ES: pilot-count-mismatch - stock has 2 pilot weapons, spec has 4
+RSI Aurora ES: missing-stock-pilot - pilot mount 2 has no stock weapon
+RSI Aurora ES: missing-stock-pilot - pilot mount 3 has no stock weapon
+MISC Starlancer MAX: turret-stock-missing - spec has 2 turrets (4 guns) but stock has none
+MISC Starlancer TAC: pilot-count-mismatch - stock has 8 pilot weapons, spec has 11
+MISC Starlancer TAC: missing-stock-pilot - pilot mount 8 has no stock weapon
+MISC Starlancer TAC: missing-stock-pilot - pilot mount 9 has no stock weapon
+MISC Starlancer TAC: missing-stock-pilot - pilot mount 10 has no stock weapon
+Aegis Idris-P Wikelo War Special: pilot-count-mismatch - stock has 8 pilot weapons, spec has 10
+Aegis Idris-P Wikelo War Special: missing-stock-pilot - pilot mount 8 has no stock weapon
+Aegis Idris-P Wikelo War Special: missing-stock-pilot - pilot mount 9 has no stock weapon
+Aegis Idris-P Wikelo War Special: turret-count-mismatch - turretWeapons has 27, expected 16 (per-gun) or 8 (per-turret)
+RSI Scorpius Antares: pilot-count-mismatch - stock has 4 pilot weapons, spec has 5
+RSI Scorpius Antares: missing-stock-pilot - pilot mount 4 has no stock weapon
+Origin 890 Jump: turret-count-mismatch - turretWeapons has 15, expected 8 (per-gun) or 4 (per-turret)
+RSI Zeus Mk II ES: turret-stock-missing - spec has 1 turrets (2 guns) but stock has none
+Drake Golem OX: pilot-count-mismatch - stock has 2 pilot weapons, spec has 3
+Drake Golem OX: missing-stock-pilot - pilot mount 2 has no stock weapon
+RSI Perseus: pilot-count-mismatch - stock has 0 pilot weapons, spec has 1
+RSI Perseus: missing-stock-pilot - pilot mount 0 has no stock weapon
+RSI Perseus: turret-count-mismatch - turretWeapons has 18, expected 12 (per-gun) or 4 (per-turret)
+Crusader A1 Spirit: pilot-count-mismatch - stock has 4 pilot weapons, spec has 2
+RSI Constellation Phoenix Emerald: turret-count-mismatch - turretWeapons has 5, expected 4 (per-gun) or 2 (per-turret)
+Crusader A2 Hercules Starlifter Wikelo War Special: pilot-count-mismatch - stock has 2 pilot weapons, spec has 3
+Crusader A2 Hercules Starlifter Wikelo War Special: missing-stock-pilot - pilot mount 2 has no stock weapon
+Crusader Ares Star Fighter Inferno: pilot-count-mismatch - stock has 1 pilot weapons, spec has 2
+Crusader Ares Star Fighter Inferno: missing-stock-pilot - pilot mount 1 has no stock weapon
+MISC Starlancer MAX Wikelo Work Special: turret-stock-missing - spec has 2 turrets (4 guns) but stock has none
+RSI Constellation Phoenix: turret-count-mismatch - turretWeapons has 5, expected 4 (per-gun) or 2 (per-turret)
+Anvil Paladin: turret-stock-missing - spec has 3 turrets (8 guns) but stock has none
+Origin 400i: pilot-count-mismatch - stock has 2 pilot weapons, spec has 3
+Origin 400i: missing-stock-pilot - pilot mount 2 has no stock weapon
+Aegis Reclaimer: turret-count-mismatch - turretWeapons has 21, expected 14 (per-gun) or 7 (per-turret)
+Drake Cutlass Black: pilot-count-mismatch - stock has 4 pilot weapons, spec has 5
+Drake Cutlass Black: missing-stock-pilot - pilot mount 4 has no stock weapon
+RSI Zeus Mk II ES Wikelo Work Special: turret-stock-missing - spec has 1 turrets (2 guns) but stock has none
+Grey's Shiv: pilot-count-mismatch - stock has 6 pilot weapons, spec has 2
+Grey's Shiv: turret-stock-missing - spec has 1 turrets (4 guns) but stock has none
+Drake Caterpillar Pirate: pilot-count-mismatch - stock has 4 pilot weapons, spec has 5
+Drake Caterpillar Pirate: missing-stock-pilot - pilot mount 4 has no stock weapon
+Crusader Ares Star Fighter Inferno Wikelo War Special: pilot-count-mismatch - stock has 1 pilot weapons, spec has 2
+Crusader Ares Star Fighter Inferno Wikelo War Special: missing-stock-pilot - pilot mount 1 has no stock weapon
+Aegis Reclaimer 2949 Best In Show Edition: turret-count-mismatch - turretWeapons has 21, expected 14 (per-gun) or 7 (per-turret)
+Aegis Idris-M: pilot-count-mismatch - stock has 9 pilot weapons, spec has 11
+Aegis Idris-M: missing-stock-pilot - pilot mount 9 has no stock weapon
+Aegis Idris-M: missing-stock-pilot - pilot mount 10 has no stock weapon
+Aegis Idris-M: turret-count-mismatch - turretWeapons has 25, expected 14 (per-gun) or 7 (per-turret)
+MISC Reliant Mako: pilot-count-mismatch - stock has 2 pilot weapons, spec has 4
+MISC Reliant Mako: missing-stock-pilot - pilot mount 2 has no stock weapon
+MISC Reliant Mako: missing-stock-pilot - pilot mount 3 has no stock weapon
+RSI Aurora MR: pilot-count-mismatch - stock has 2 pilot weapons, spec has 4
+RSI Aurora MR: missing-stock-pilot - pilot mount 2 has no stock weapon
+RSI Aurora MR: missing-stock-pilot - pilot mount 3 has no stock weapon
+RSI Aurora CL: pilot-count-mismatch - stock has 2 pilot weapons, spec has 4
+RSI Aurora CL: missing-stock-pilot - pilot mount 2 has no stock weapon
+RSI Aurora CL: missing-stock-pilot - pilot mount 3 has no stock weapon
 
-=== Aegis Vanguard Warden ===
-- unknown-weapon: turretWeapons[0] 'SW16BR2 Sawbuck Repeater' not found
-- unknown-weapon: turretWeapons[1] 'SW16BR2 Sawbuck Repeater' not found
-
-=== Anvil F7C Hornet Mk I ===
-- unknown-weapon: pilotWeapons[3] 'Unknown' not found
-- unknown-weapon: turretWeapons[0] 'Anvil Noise Launcher' not found
-- unknown-weapon: turretWeapons[1] 'Anvil Decoy Launcher' not found
-
-=== Anvil F7C-M Super Hornet ===
-- unknown-weapon: pilotWeapons[3] 'Unknown' not found
-- unknown-weapon: turretWeapons[0] 'CF-227 Badger' not found
-
-=== Anvil F8A Lightning ===
-- unknown-weapon: pilotWeapons[6] 'Unknown' not found
-- unknown-weapon: pilotWeapons[7] 'Unknown' not found
-
-=== Anvil Hurricane ===
-- turret-length-mismatch: turretWeapons has 5, expected 4 (per-gun) or 1 (per-turret)
-- A-hardpoint-spec-missing: turrets: stock lists 5 > spec mounts (guns=4, turrets=1)
-
-=== Anvil Valkyrie ===
-- oversized-weapon: pilotWeapons[0] 'CF-337 Panther Repeater' size 3 > mount S2
-- oversized-weapon: pilotWeapons[1] 'CF-337 Panther Repeater' size 3 > mount S2
-
-=== Argo MOLE ===
-- B-missing-stock-pilot: pilot mount 1 has no stock weapon
-
-=== Argo RAFT ===
-- oversized-weapon: pilotWeapons[0] 'M5A Cannon' size 3 > mount S1
-- B-missing-stock-pilot: pilot mount 1 has no stock weapon
-
-=== ARGO MOLE ===
-- B-missing-stock-pilot: pilot mount 0 has no stock weapon
-- B-missing-stock-pilot: pilot mount 1 has no stock weapon
-
-=== ARGO RAFT ===
-- B-missing-stock-pilot: pilot mount 0 has no stock weapon
-- B-missing-stock-pilot: pilot mount 1 has no stock weapon
-
-=== Banu Defender ===
-- unknown-weapon: turretWeapons[0] 'Singe Cannon' not found
-- unknown-weapon: turretWeapons[1] 'Singe Cannon' not found
-- unknown-weapon: turretWeapons[2] 'Singe Cannon' not found
-- unknown-weapon: turretWeapons[3] 'Singe Cannon' not found
-- A-hardpoint-spec-missing: turrets present in stock but spec has none
-
-=== C.O. Mustang Alpha ===
-- oversized-weapon: pilotWeapons[0] 'CF-227 Badger Repeater' size 2 > mount S1
-- oversized-weapon: pilotWeapons[1] 'CF-227 Badger Repeater' size 2 > mount S1
-- A-hardpoint-spec-missing: turrets present in stock but spec has none
-
-=== C.O. Mustang Beta ===
-- oversized-weapon: pilotWeapons[0] 'CF-227 Badger Repeater' size 2 > mount S1
-- oversized-weapon: pilotWeapons[1] 'CF-227 Badger Repeater' size 2 > mount S1
-- unknown-weapon: pilotWeapons[2] 'Unknown' not found
-- unknown-weapon: pilotWeapons[3] 'Unknown' not found
-- A-hardpoint-spec-missing: turrets present in stock but spec has none
-
-=== C.O. Mustang Delta ===
-- oversized-weapon: pilotWeapons[0] 'Jericho XL' size 3 > mount S2
-- oversized-weapon: pilotWeapons[1] 'Jericho XL' size 3 > mount S2
-- oversized-weapon: pilotWeapons[2] 'CF-227 Badger Repeater' size 2 > mount S1
-- oversized-weapon: pilotWeapons[3] 'CF-227 Badger Repeater' size 2 > mount S1
-- A-hardpoint-spec-missing: turrets present in stock but spec has none
-
-=== C.O. Mustang Gamma ===
-- unknown-weapon: pilotWeapons[2] 'Unknown' not found
-- unknown-weapon: pilotWeapons[3] 'Unknown' not found
-
-=== C.O. Mustang Omega ===
-- unknown-weapon: pilotWeapons[2] 'Unknown' not found
-- unknown-weapon: pilotWeapons[3] 'Unknown' not found
-
-=== C.O. Nomad ===
-- oversized-weapon: pilotWeapons[1] 'CF-337 Panther Repeater' size 3 > mount S2
-- oversized-weapon: pilotWeapons[2] 'CF-337 Panther Repeater' size 3 > mount S2
-- unknown-weapon: turretWeapons[0] 'SureGrip S1 Tractor' not found
-- A-hardpoint-spec-missing: turrets present in stock but spec has none
-
-=== Crusader A2 Hercules Starlifter ===
-- turret-length-mismatch: turretWeapons has 5, expected 4 (per-gun) or 2 (per-turret)
-- A-hardpoint-spec-missing: turrets: stock lists 5 > spec mounts (guns=4, turrets=2)
-
-=== Crusader Spirit A1 ===
-- unknown-weapon: turretWeapons[0] 'Unknown' not found
-- unknown-weapon: turretWeapons[1] 'Unknown' not found
-
-=== Crusader Spirit C1 ===
-- unknown-weapon: turretWeapons[1] 'Unknown' not found
-
-=== Crusader Spirit E1 ===
-- unknown-weapon: turretWeapons[1] 'Unknown' not found
-
-=== Crusader Mercury Star Runner ===
-- turret-length-mismatch: turretWeapons has 6, expected 4 (per-gun) or 2 (per-turret)
-- A-hardpoint-spec-missing: turrets: stock lists 6 > spec mounts (guns=4, turrets=2)
-
-=== Drake Buccaneer ===
-- unknown-weapon: pilotWeapons[3] 'Unknown' not found
-- unknown-weapon: pilotWeapons[4] 'Unknown' not found
-
-=== Drake Caterpillar ===
-- oversized-weapon: turret 0 gun 0 'CF-447 Rhino Repeater' size 4 > mount S2
-- oversized-weapon: turret 0 gun 1 'M5A Cannon' size 3 > mount S2
-- oversized-weapon: turret 1 gun 0 'CF-337 Panther Repeater' size 3 > mount S2
-- oversized-weapon: turret 1 gun 1 'CF-447 Rhino Repeater' size 4 > mount S2
-
-=== Drake Cutlass Black ===
-- unknown-weapon: turretWeapons[0] 'Unknown' not found
-- unknown-weapon: turretWeapons[1] 'Unknown' not found
-
-=== Drake Cutlass Blue ===
-- B-missing-stock-pilot: pilot mount 3 has no stock weapon
-- unknown-weapon: turretWeapons[0] 'Unknown' not found
-- unknown-weapon: turretWeapons[1] 'Unknown' not found
-
-=== Drake Cutlass Steel ===
-- unknown-weapon: turretWeapons[0] 'Unknown' not found
-- unknown-weapon: turretWeapons[1] 'Unknown' not found
-
-=== Drake Cutter ===
-- oversized-weapon: pilotWeapons[0] 'CF-227 Badger Repeater' size 2 > mount S1
-- oversized-weapon: pilotWeapons[1] 'CF-227 Badger Repeater' size 2 > mount S1
-
-=== Drake Vulture ===
-- B-missing-stock-pilot: pilot mount 1 has no stock weapon
-- B-missing-stock-pilot: pilot mount 2 has no stock weapon
-- B-missing-stock-pilot: pilot mount 3 has no stock weapon
-
-=== Esperia Blade ===
-- unknown-weapon: pilotWeapons[2] 'Unknown' not found
-
-=== Esperia Glaive ===
-- unknown-weapon: pilotWeapons[2] 'Unknown' not found
-- unknown-weapon: pilotWeapons[3] 'Unknown' not found
-
-=== Esperia Talon ===
-- oversized-weapon: pilotWeapons[0] 'Lightstrike IV Cannon' size 4 > mount S3
-- oversized-weapon: pilotWeapons[1] 'Lightstrike IV Cannon' size 4 > mount S3
-
-=== Gatac Syulen ===
-- oversized-weapon: pilotWeapons[0] 'CF-337 Panther Repeater' size 3 > mount S2
-- oversized-weapon: pilotWeapons[1] 'CF-337 Panther Repeater' size 3 > mount S2
-
-=== Gatac Railen ===
-- unknown-weapon: turretWeapons[0] 'S4 Weapon' not found
-- unknown-weapon: turretWeapons[1] 'S4 Weapon' not found
-- unknown-weapon: turretWeapons[2] 'S4 Weapon' not found
-- unknown-weapon: turretWeapons[3] 'S4 Weapon' not found
-
-=== Kruger P-52 Merlin ===
-- oversized-weapon: pilotWeapons[0] 'Tigerstrike T-19P' size 2 > mount S1
-- unknown-weapon: pilotWeapons[2] 'Unknown' not found
-
-=== Kruger P-72 Archimedes ===
-- unknown-weapon: pilotWeapons[1] 'Unknown' not found
-
-=== Mirai Guardian ===
-- oversized-weapon: pilotWeapons[0] 'M7A Cannon' size 5 > mount S1
-- unknown-weapon: pilotWeapons[1] 'Unknown' not found
-
-=== Mirai Razor ===
-- unknown-weapon: pilotWeapons[1] 'Unknown' not found
-
-=== MISC Razor ===
-- unknown-weapon: pilotWeapons[1] 'Unknown' not found
-
-=== MISC Freelancer ===
-- unknown-weapon: turretWeapons[0] 'Unknown' not found
-- unknown-weapon: turretWeapons[1] 'Unknown' not found
-
-=== MISC Freelancer DUR ===
-- unknown-weapon: turretWeapons[0] 'Unknown' not found
-- unknown-weapon: turretWeapons[1] 'Unknown' not found
-
-=== MISC Freelancer MAX ===
-- unknown-weapon: turretWeapons[0] 'Unknown' not found
-- unknown-weapon: turretWeapons[1] 'Unknown' not found
-
-=== MISC Freelancer MIS ===
-- unknown-weapon: turretWeapons[0] 'Unknown' not found
-- unknown-weapon: turretWeapons[1] 'Unknown' not found
-
-=== MISC Hull A ===
-- unknown-weapon: pilotWeapons[1] 'Unknown' not found
-
-=== MISC Reliant Kore ===
-- A-hardpoint-spec-missing: turrets present in stock but spec has none
-
-=== MISC Reliant Mako ===
-- unknown-weapon: pilotWeapons[1] 'Unknown' not found
-
-=== MISC Reliant Sen ===
-- unknown-weapon: pilotWeapons[1] 'Unknown' not found
-
-=== MISC Reliant Tana ===
-- oversized-weapon: turret 0 gun 0 'CF-337 Panther Repeater' size 3 > mount S2
-- oversized-weapon: turret 0 gun 1 'CF-337 Panther Repeater' size 3 > mount S2
-
-=== MISC Starfarer ===
-- unknown-weapon: turretWeapons[3] 'Unknown' not found
-
-=== Origin 100i ===
-- oversized-weapon: pilotWeapons[0] 'CF-337 Panther Repeater' size 3 > mount S2
-
-=== Origin 125a ===
-- oversized-weapon: pilotWeapons[0] 'CF-337 Panther Repeater' size 3 > mount S2
-- unknown-weapon: pilotWeapons[1] 'Unknown' not found
-- unknown-weapon: pilotWeapons[2] 'Unknown' not found
-
-=== Origin 135c ===
-- oversized-weapon: pilotWeapons[0] 'CF-337 Panther Repeater' size 3 > mount S2
-
-=== Origin 300i ===
-- oversized-weapon: pilotWeapons[1] 'M5A Cannon' size 3 > mount S2
-- unknown-weapon: pilotWeapons[2] 'SW16BR3 Shredder Repeater' not found
-
-=== Origin 315p ===
-- unknown-weapon: pilotWeapons[1] 'SW16BR3 Shredder Repeater' not found
-- unknown-weapon: pilotWeapons[2] 'SW16BR3 Shredder Repeater' not found
-
-=== Origin 325a ===
-- oversized-weapon: pilotWeapons[1] 'M6A Cannon' size 4 > mount S3
-- unknown-weapon: pilotWeapons[2] 'SW16BR3 Shredder Repeater' not found
-
-=== Origin 350r ===
-- oversized-weapon: pilotWeapons[1] 'CF-337 Panther Repeater' size 3 > mount S2
-- oversized-weapon: pilotWeapons[2] 'CF-337 Panther Repeater' size 3 > mount S2
-
-=== Origin 600i ===
-- B-missing-stock-pilot: pilot mount 2 has no stock weapon
-
-=== RSI Constellation Phoenix ===
-- B-missing-stock-pilot: pilot mount 3 has no stock weapon
-
-Total issues: 128
+--- OVERSIZED ITEMS (item size > slot size) ---
+MISC Starlancer TAC Wikelo War Special: oversized-weapon - turret 0 'M7A Cannon' S5 > mount S4
+MISC Starlancer TAC Wikelo War Special: oversized-weapon - turret 1 'M7A Cannon' S5 > mount S4
+Crusader C1 Spirit Wikelo Special: oversized-weapon - pilotWeapons[0] 'M5A Cannon' S3 > mount S1
+C.O. Mustang Delta: oversized-weapon - pilotWeapons[1] 'Jericho XL' S3 > mount S2
+Esperia Stinger: oversized-weapon - pilotWeapons[1] 'Lightstrike II Cannon' S2 > mount S1
+Esperia Stinger: oversized-weapon - pilotWeapons[2] 'Lightstrike IV Cannon' S4 > mount S2
+Esperia Stinger: oversized-weapon - pilotWeapons[6] 'Lightstrike IV Cannon' S4 > mount S2
+Esperia Stinger: oversized-component - quantumDrives[0] 'Bolon' S2 > slot S1
+MISC Starlancer TAC: oversized-weapon - turret 0 'CF-557 Galdereen Repeater' S5 > mount S4
+MISC Starlancer TAC: oversized-weapon - turret 1 'CF-557 Galdereen Repeater' S5 > mount S4
+Crusader A1 Spirit: oversized-weapon - turret 1 'M5A Cannon' S3 > mount S2

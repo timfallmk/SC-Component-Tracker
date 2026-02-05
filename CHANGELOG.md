@@ -2,6 +2,51 @@
 
 All notable changes to this project are documented here.
 
+## 2026-02-05 — v0.77
+
+- Robust data update pipeline:
+  - Created `sync-all-data.js` script to update ship specs and stock loadouts from extracted data
+  - Supports preview mode (dry run) and `--apply` flag for actual updates
+  - Automatically adds new ships and updates existing specs
+  - SKIP_SHIPS list for manually verified ships (F7A variants, Stinger, Mustang Delta, Cutlass Steel)
+- Ship extraction improvements:
+  - Fixed gimbal mount size parsing (uses class name like `Mount_Gimbal_S4` instead of MaxSize)
+  - Fixed remote turret detection for `turret_remote` naming pattern and class names
+  - Correctly classifies Redeemer as 2 pilot weapons + 4 turrets (2 manned, 2 remote)
+  - Correctly classifies Spirit ships with ball turrets and remote turrets
+- Capital ships added:
+  - Aegis Idris-M, Aegis Idris-P, Aegis Javelin
+- Test suite:
+  - `test-extraction.js`: 37 unit tests for extraction logic
+  - `test-update-pipeline.js`: 21 integration tests for full pipeline
+- Ship display names:
+  - Manufacturer prefix removed from dropdown display (shows "Gladius" not "Aegis Gladius")
+
+## 2026-02-04
+
+- Component undersizing support:
+  - Shields, power plants, coolers, and quantum drives now allow smaller components in larger slots (e.g., S1 Bracer cooler can be selected for S2 cooler slots).
+  - Changed filtering from exact size match to `<=` comparison in both ship modal and storage dropdowns.
+- Component size labels:
+  - Changed display from letters (S, M, L) to numeric format (S1, S2, S3) for consistency with weapon sizing.
+- Esperia Stinger fixes:
+  - Corrected pilotWeapons from 8 incorrect entries to 7 correct ones (1× S5, 4× S4, 2× S2).
+  - Fixed powerPlants size (3→1), coolers size (2→1), quantumDrive size (1→2).
+- F8C Lightning variants:
+  - Added missing ship specs for Executive Edition, Wikelo Sneak Special, and Wikelo War Special.
+- F7A Hornet Mk II ball turret:
+  - Updated turret gun size from S3 to S4 for both base and PYAM Exec variants.
+  - Allows S4 weapon selection when using TMSB-5 turret; S3 weapons still selectable via undersizing.
+- Ship data extraction improvements:
+  - Removed variant exclusion from extract-ships.js to include all ship variants.
+  - Removed Kruger prefix stripping to keep names consistent with ships.json.
+  - Removed NAME_NORMALIZATIONS that caused spec/loadout mismatches.
+  - Added 70+ new ship variants to data.js.
+- Data cleanup:
+  - Deleted 7 orphaned Kruger ship specs (old naming without prefix).
+  - Renamed 5 ships to match ships.json names (Crusader Spirit/Ares, Origin M50).
+  - Orphaned specs reduced from 12 to 0.
+
 ## 2026-01-26 — v-2026-01-26-corsair-validation
 
 - Drake Corsair corrections:

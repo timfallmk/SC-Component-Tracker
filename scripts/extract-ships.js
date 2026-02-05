@@ -4,7 +4,7 @@
  *
  * This script parses the scunpacked ships.json file and extracts
  * ship hardpoint configurations (weapon mounts, component slots).
- * Variants are excluded - they use base ship hardpoints.
+ * All ship variants are included to ensure stock loadouts have matching specs.
  *
  * Usage: node scripts/extract-ships.js
  * Output: Writes to scripts/extracted-ships.js
@@ -55,30 +55,12 @@ const MANUFACTURER_MAP = {
 };
 
 /**
- * Clean up ship name - strip manufacturer prefixes that shouldn't be in display name
+ * Clean up ship name
+ * Note: Previously stripped "Kruger " prefix, but this caused mismatches
+ * with stock loadouts. Now keeps all names as-is from ships.json.
  */
 function cleanShipName(name) {
-    const stripPrefixes = ['Kruger '];
-    for (const prefix of stripPrefixes) {
-        if (name.startsWith(prefix)) {
-            return name.slice(prefix.length);
-        }
-    }
     return name;
-}
-
-/**
- * Check if a ship is a variant (not a base ship)
- * Variants have suffixes like Pirate, Valiant, Special, Edition, etc.
- */
-function isVariant(shipName, allShipNames) {
-    // Check if any other ship name is a prefix of this one
-    for (const otherName of allShipNames) {
-        if (otherName !== shipName && shipName.startsWith(otherName + ' ')) {
-            return true;
-        }
-    }
-    return false;
 }
 
 /**
@@ -132,20 +114,30 @@ function extractPilotWeapons(loadout) {
             const hpName = (item.HardpointName || '').toLowerCase();
             const type = item.Type || '';
 
+            // Only skip actual turret types, not gimbal mounts named "turret"
             const isMannedTurret = type.includes('TurretBase.MannedTurret');
             const isRemoteTurret = type.includes('TurretBase.RemoteTurret');
             // CanardTurret (nose turret) is pilot-controlled - its weapons should be pilot weapons
             const isCanardTurret = type === 'Turret.CanardTurret';
-            // BallTurret is also pilot-controlled but swappable, handled separately in extractTurrets
+            // BallTurret and TopTurret are pilot-controlled but swappable, handled in extractTurrets
             const isBallTurret = type === 'Turret.BallTurret';
-            // Also detect turret mounts by hardpoint name (e.g., hardpoint_remote_turret_*)
-            const isTurretMount = hpName.includes('turret') && !isCanardTurret && !isBallTurret;
+            const isTopTurret = type === 'Turret.TopTurret';
+            // PDCTurret is point defense - automated, not pilot weapons
+            const isPDCTurret = type === 'Turret.PDCTurret';
+            // WeaponMount.WeaponControl are crew-operated door guns, not pilot weapons
+            const isWeaponMount = type.includes('WeaponMount');
+            // Remote turrets identified by hardpoint name (e.g., hardpoint_remote_turret_*, hardpoint_turret_remote_*)
+            // These are NOT pilot weapons even though they might have Turret.GunTurret type
+            const isNamedRemoteTurret = hpName.includes('remote_turret') || hpName.includes('turret_remote');
 
             // Skip manned/remote turrets (processed separately)
-            if (isMannedTurret || isRemoteTurret || isTurretMount) continue;
+            if (isMannedTurret || isRemoteTurret || isNamedRemoteTurret) continue;
 
-            // Skip ball turrets (handled in extractTurrets as swappable turrets)
-            if (isBallTurret) continue;
+            // Skip ball/top/pdc turrets (handled in extractTurrets as swappable/automated turrets)
+            if (isBallTurret || isTopTurret || isPDCTurret) continue;
+
+            // Skip crew-operated weapon mounts (door guns, etc.)
+            if (isWeaponMount) continue;
 
             // CanardTurret (nose turret) - count its weapons as pilot weapons
             if (isCanardTurret && item.Loadout) {
@@ -154,17 +146,35 @@ function extractPilotWeapons(loadout) {
                 continue;
             }
 
-            // Check if this is a gun hardpoint (gimbal mount, direct weapon, or rocket)
+            // Check if this is a gun hardpoint (gimbal mount, direct weapon, rocket, or nose mount)
             // Rockets can be swapped for guns so they count as weapon hardpoints
-            // Only count: Turret.GunTurret (gimbal), WeaponGun.Gun/Rocket (weapons), or hardpoint_gun_*
+            // Only count: Turret.GunTurret (gimbal), WeaponGun.* (weapons), or hardpoint_gun_*
             // Do NOT count hardpoint_class_* alone - that includes missile racks and module mounts
             const isGunHardpoint = hpName.startsWith('hardpoint_gun');
             const isGimbalMount = type === 'Turret.GunTurret';
             const isDirectGun = type === 'WeaponGun.Gun';
             const isRocket = type === 'WeaponGun.Rocket';
-            const size = item.MaxSize || getSizeFromClassName(item.ClassName) || 0;
+            const isNoseMounted = type === 'WeaponGun.NoseMounted';
+            // For gimbal mounts, get size from class name (Mount_Gimbal_S4 = size 4)
+            // MaxSize at gimbal level is often 1 less than actual weapon size
+            let size = item.MaxSize || 0;
+            if (isGimbalMount && item.ClassName) {
+                const gimbalSizeMatch = item.ClassName.match(/Mount_Gimbal_S(\d+)/i);
+                if (gimbalSizeMatch) {
+                    size = parseInt(gimbalSizeMatch[1], 10);
+                }
+            }
+            if (!size) {
+                size = getSizeFromClassName(item.ClassName) || 0;
+            }
 
-            if (!inMannedOrRemoteTurret && (isGunHardpoint || isGimbalMount || isDirectGun || isRocket) && size > 0) {
+            // Check if this gimbal contains nested gimbals (composite structure like Asgard nose)
+            // If so, recurse into it instead of counting it as a single weapon
+            const hasNestedGimbals = isGimbalMount && item.Loadout &&
+                item.Loadout.some(child => child.Type === 'Turret.GunTurret');
+
+            if (!inMannedOrRemoteTurret && !hasNestedGimbals &&
+                (isGunHardpoint || isGimbalMount || isDirectGun || isRocket || isNoseMounted) && size > 0) {
                 // This is a pilot weapon hardpoint
                 weapons.push({ size });
                 // Don't recurse into this - we've counted the mount
@@ -198,7 +208,18 @@ function extractTurrets(loadout) {
         for (const item of items) {
             const hpName = (item.HardpointName || '').toLowerCase();
             const type = item.Type || '';
-            const size = item.MaxSize || getSizeFromClassName(item.ClassName) || 0;
+            // For gimbal mounts, get size from class name (Mount_Gimbal_S4 = size 4)
+            // MaxSize at gimbal level is often 1 less than actual weapon size
+            let size = item.MaxSize || 0;
+            if (type === 'Turret.GunTurret' && item.ClassName) {
+                const gimbalSizeMatch = item.ClassName.match(/Mount_Gimbal_S(\d+)/i);
+                if (gimbalSizeMatch) {
+                    size = parseInt(gimbalSizeMatch[1], 10);
+                }
+            }
+            if (!size) {
+                size = getSizeFromClassName(item.ClassName) || 0;
+            }
 
             // Gimbal mounts (Turret.GunTurret) count as 1 weapon - don't recurse into them
             // This prevents double-counting the gimbal + the gun inside
@@ -237,26 +258,29 @@ function extractTurrets(loadout) {
         for (const item of items) {
             const hpName = (item.HardpointName || '').toLowerCase();
             const type = item.Type || '';
+            const cls = (item.ClassName || '').toLowerCase();
 
+            // Detect turrets by type or by hardpoint name or class name
+            // TurretBase types are crew-operated or remote turrets
             const isMannedTurret = type.includes('TurretBase.MannedTurret');
             const isRemoteTurret = type.includes('TurretBase.RemoteTurret');
             // BallTurret and TopTurret are pilot-controlled but swappable - treat as "remote"
             const isBallTurret = type === 'Turret.BallTurret';
             const isTopTurret = type === 'Turret.TopTurret';
-            // Also detect turret mounts by hardpoint name with GunTurret type
-            // e.g., hardpoint_remote_turret_* with Turret.GunTurret
-            const isNamedRemoteTurret = hpName.includes('remote_turret') && type === 'Turret.GunTurret';
-            const isNamedMannedTurret = hpName.includes('turret') && !hpName.includes('remote') &&
-                                        type === 'Turret.GunTurret';
+            // Remote turrets may have Turret.GunTurret type but are identified by name or class
+            // Patterns: hardpoint_remote_turret_*, hardpoint_turret_remote_*, *_Remote_Turret class
+            const isNamedRemoteTurret = ((hpName.includes('remote_turret') || hpName.includes('turret_remote')) ||
+                cls.includes('remote_turret')) &&
+                (type === 'Turret.GunTurret' || type.includes('Turret'));
 
-            if (isMannedTurret || isRemoteTurret || isBallTurret || isTopTurret || isNamedRemoteTurret || isNamedMannedTurret) {
+            if (isMannedTurret || isRemoteTurret || isBallTurret || isTopTurret || isNamedRemoteTurret) {
                 // Count weapon hardpoints in this turret
                 const { count, maxSize } = item.Loadout ?
                     countWeaponHardpoints(item.Loadout) : { count: 0, maxSize: 0 };
 
                 if (count > 0 && maxSize > 0) {
                     turrets.push({
-                        type: (isMannedTurret || isNamedMannedTurret) ? 'manned' : 'remote',
+                        type: isMannedTurret ? 'manned' : 'remote',
                         guns: count,
                         size: maxSize
                     });
@@ -372,24 +396,18 @@ function main() {
 
     console.log(`Found ${shipsData.length} entries in ships.json`);
 
-    // Get all ship names for variant detection
-    const allShipNames = shipsData
-        .filter(s => s.Name && s.IsSpaceship)
-        .map(s => s.Name);
-
-    // Filter to spaceships only, exclude variants and ground vehicles
-    const baseShips = shipsData.filter(ship => {
+    // Filter to spaceships only (include all variants)
+    const allSpaceships = shipsData.filter(ship => {
         if (!ship.Name) return false;
         if (!ship.IsSpaceship) return false;
-        if (isVariant(ship.Name, allShipNames)) return false;
         return true;
     });
 
-    console.log(`Base ships (excluding variants): ${baseShips.length}`);
+    console.log(`Spaceships (including variants): ${allSpaceships.length}`);
 
     const ships = [];
 
-    for (const ship of baseShips) {
+    for (const ship of allSpaceships) {
         const processed = processShip(ship);
 
         // Only include ships with some meaningful data

@@ -15,9 +15,29 @@ python3 -m http.server 8000
 # Update ship data from scunpacked source
 node scripts/update-from-scunpacked.js
 
-# Validate ship data for inconsistencies
-node scripts/validate.js
+# Validate ship data for inconsistencies (run after any data import!)
+node validate.js
 ```
+
+### Data Validation
+
+The `validate.js` script performs comprehensive data integrity checks:
+
+| Check | Description |
+|-------|-------------|
+| Orphaned loadouts | Stock loadout exists but no ship spec |
+| Orphaned specs | Ship spec exists but no stock loadout |
+| Count mismatches | Weapon/component counts differ between spec and loadout |
+| Unknown items | Weapons or components not in database |
+| Oversized items | Item size exceeds slot size |
+| Source discrepancies | Ships not found in ships.json |
+
+**Always run validation after importing new data:**
+```bash
+node validate.js
+```
+
+Output includes a summary and detailed report saved to `validation_report.txt`.
 
 **Important**: After editing `data.js` or `app.js`, hard refresh (`Ctrl+Shift+R`) is required due to browser caching. Cache-busting version tokens are used in production (e.g., `styles.css?v=67`).
 
@@ -60,29 +80,40 @@ The `scripts/` folder contains ~45 Node.js utilities for data processing:
 |--------|---------|
 | `extract-ships.js` | Extracts ship specs (hardpoints, components) from ships.json |
 | `extract-loadouts.js` | Extracts stock loadouts (weapons, components) from ships.json |
-| `update-from-scunpacked.js` | Main update script - combines extraction, cleaning, deduplication |
-| `sync-ships-to-datajs.js` | Adds new ships from processed-data.json to data.js (doesn't update existing) |
-| `sync-stockloadouts-to-datajs.js` | Replaces stockLoadouts section in data.js from new-stockloadouts.js |
-| `fix-component-sizes.js` | Updates component sizes in data.js from extracted-ships.js |
+| `sync-all-data.js` | **Main sync script** - updates specs and loadouts in data.js |
+| `test-extraction.js` | 37 unit tests for extraction logic |
+| `test-update-pipeline.js` | 21 integration tests for full pipeline |
+
+### Data Update Workflow
+
+```bash
+# 1. Download new ships.json from scunpacked (replace existing)
+
+# 2. Extract specs and loadouts
+node scripts/extract-ships.js
+node scripts/extract-loadouts.js
+
+# 3. Preview changes
+node scripts/sync-all-data.js
+
+# 4. Apply changes
+node scripts/sync-all-data.js --apply
+
+# 5. Validate
+node validate.js
+```
 
 ### Utility Scripts
 
-- `validate.js` - Data consistency checking
-- `audit_problem_slots.js` - Find incomplete hardpoints
-- `apply_wiki_solutions_v2.js` - Batch data fixes
-
-### Data Pipeline
-
-1. Download latest `ships.json` from scunpacked
-2. Run `extract-ships.js` → generates `extracted-ships.js`
-3. Run `extract-loadouts.js` → generates `extracted-loadouts.js`
-4. Run `update-from-scunpacked.js` → generates `processed-data.json`
-5. Run sync scripts to update `data.js`
+- `validate.js` - Data consistency checking (run after updates)
+- `debug-ship.js "Ship Name"` - Debug weapon hardpoints for a specific ship
+- `fix-ship-names.js` - Fix naming mismatches between spec/loadout
 
 ### Known Data Quirks
 
+- **Component undersizing**: The app allows smaller components to be installed in larger slots (e.g., S1 cooler in S2 slot). This matches in-game behavior. The filtering uses `<=` comparison, not exact match.
 - **Component sizes**: scunpacked sometimes has `MaxSize: 0` even for valid components. The extraction scripts fall back to parsing size from `ClassName` (e.g., `_S01_` = size 1)
-- **Ship name prefixes**: "Kruger" prefix is stripped from ship names (L-21 Wolf, P-52 Merlin, etc.)
+- **Ship naming**: Ship names are kept exactly as they appear in ships.json for consistency between specs and stock loadouts
 - **Snub ships**: MPUV ships legitimately have size 0 powerPlants/coolers; snubs have size 0 quantumDrive
 - **Turret types**: Multiple turret types exist in scunpacked data:
   - `TurretBase.MannedTurret` - crew-operated turrets
@@ -91,6 +122,28 @@ The `scripts/` folder contains ~45 Node.js utilities for data processing:
   - `Turret.TopTurret` - pilot-controlled tail/top turrets (treated as remote)
   - `Turret.CanardTurret` - fixed nose turrets (weapons count as pilot weapons)
 - **Weapon types**: `WeaponGun.Gun` and `WeaponGun.Rocket` are both valid weapon types. Rockets can be swapped for guns so both are included in weapon counts.
+
+## Data Update Pipeline (v0.77)
+
+The update pipeline is complete and working. Run when new ships.json is available from scunpacked.
+
+### SKIP_SHIPS (manually verified, excluded from auto-update)
+- Anvil F7A Hornet Mk II (both variants) - turret S4 for TMSB-5
+- Esperia Stinger - manually corrected weapons/components
+- C.O. Mustang Delta - MaxSize inconsistent in ships.json
+- Drake Cutlass Steel - turret config needs verification
+
+### Validation Issues (expected)
+- **Count mismatches (~120)**: Normal - spec shows all hardpoints, stock shows equipped weapons only
+- **Oversized items (~11)**: scunpacked data issues where stock loadout has weapons larger than hardpoint size
+- These don't affect the app - count mismatches show as empty slots, oversized items display normally
+
+### Extraction Logic
+- Gimbal mounts: Size parsed from class name (`Mount_Gimbal_S4` = S4) not MaxSize
+- Remote turrets: Detected by hardpoint name (`turret_remote`, `remote_turret`) or class name (`*_Remote_Turret`)
+- Ball/Top turrets: Treated as remote (swappable)
+- PDC turrets: Skipped (non-swappable)
+- Door guns (`WeaponMount.WeaponControl`): Skipped (crew-operated)
 
 ## Releasing a New Version
 

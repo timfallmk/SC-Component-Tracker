@@ -2,7 +2,7 @@
 
 // ============ Data Layer ============
 
-const APP_VERSION = '0.75';
+const APP_VERSION = '0.77';
 const STORAGE_KEY = 'sc-component-tracker-data';
 const DATA_VERSION_KEY = 'sc-component-tracker-data-version';
 
@@ -109,6 +109,11 @@ function getShipDisplayName(shipName) {
     // Special case for Consolidated Outland (uses C.O. prefix)
     if (manufacturer === "Consolidated Outland") {
         return shipName.replace(/^C\.O\.\s+/, '');
+    }
+
+    // Special case for Kruger (uses "Kruger " prefix, not full "Kruger Intergalatic ")
+    if (manufacturer === "Kruger Intergalatic" && shipName.startsWith("Kruger ")) {
+        return shipName.substring(7); // "Kruger ".length = 7
     }
 
     // Standard case: strip manufacturer prefix
@@ -296,16 +301,16 @@ function createComponentDropdown(type, size, selectedValue = '') {
     let components;
     switch (type) {
         case 'shield':
-            components = SC_DATA.shields.filter(c => c.size === size);
+            components = SC_DATA.shields.filter(c => c.size <= size);
             break;
         case 'powerPlant':
-            components = SC_DATA.powerPlants.filter(c => c.size === size);
+            components = SC_DATA.powerPlants.filter(c => c.size <= size);
             break;
         case 'cooler':
-            components = SC_DATA.coolers.filter(c => c.size === size);
+            components = SC_DATA.coolers.filter(c => c.size <= size);
             break;
         case 'quantumDrive':
-            components = SC_DATA.quantumDrives.filter(c => c.size === size);
+            components = SC_DATA.quantumDrives.filter(c => c.size <= size);
             break;
         case 'weapon':
             components = SC_DATA.weapons[size] || [];
@@ -1061,16 +1066,16 @@ function populateStorageComponentDropdown(type, size, selectedValue = null) {
             components = SC_DATA.weapons[sizeNum] || [];
             break;
         case 'shields':
-            components = SC_DATA.shields.filter(c => c.size === sizeNum);
+            components = SC_DATA.shields.filter(c => c.size <= sizeNum);
             break;
         case 'powerPlants':
-            components = SC_DATA.powerPlants.filter(c => c.size === sizeNum);
+            components = SC_DATA.powerPlants.filter(c => c.size <= sizeNum);
             break;
         case 'coolers':
-            components = SC_DATA.coolers.filter(c => c.size === sizeNum);
+            components = SC_DATA.coolers.filter(c => c.size <= sizeNum);
             break;
         case 'quantumDrives':
-            components = SC_DATA.quantumDrives.filter(c => c.size === sizeNum);
+            components = SC_DATA.quantumDrives.filter(c => c.size <= sizeNum);
             break;
         default:
             return;

@@ -7,6 +7,10 @@ All notable changes to this project are documented here.
 - Fix: Edit modal pilot weapons showing "Empty" when saved weapon order doesn't match spec hardpoint order
   - Added size-aware reordering in `mergeDefaultsInto` to align saved weapons with hardpoint sizes before populating dropdowns
   - Affected ships like Drake Buccaneer where stock loadout order differs from spec order
+- Add Ship: search/filter box to quickly find ships by typing part of the name
+  - Shows match count and auto-selects single matches
+  - Hidden in Edit mode (ship already selected)
+- Fix: Esperia Stinger manufacturer corrected from "Vanduul" to "Esperia" (consistent with other Esperia ships)
 - Removed voice commands feature (reverted to pre-voice codebase)
 - Version bump to 0.85
 

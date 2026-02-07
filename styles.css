@@ -734,6 +734,10 @@ form {
     cursor: pointer;
 }
 
+#shipSearch {
+    margin-bottom: 6px;
+}
+
 .form-actions {
     display: flex;
     justify-content: flex-end;

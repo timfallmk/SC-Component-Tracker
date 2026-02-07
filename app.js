@@ -293,6 +293,93 @@ function populateShipDropdown() {
     });
 }
 
+// Ship search/filter for the Add Ship dropdown
+let _shipSearchAllOptions = [];
+
+function cacheShipSearchOptions() {
+    const select = document.getElementById('shipName');
+    _shipSearchAllOptions = [];
+    for (const opt of select.options) {
+        _shipSearchAllOptions.push({ value: opt.value, text: opt.textContent });
+    }
+}
+
+function filterShipDropdown() {
+    const searchInput = document.getElementById('shipSearch');
+    const select = document.getElementById('shipName');
+    const query = searchInput.value.toLowerCase().trim();
+    const previousValue = select.value;
+
+    select.innerHTML = '';
+
+    if (!query) {
+        _shipSearchAllOptions.forEach(opt => {
+            const option = document.createElement('option');
+            option.value = opt.value;
+            option.textContent = opt.text;
+            select.appendChild(option);
+        });
+        select.value = '';
+        // Clear ship details if a ship was previously shown
+        if (previousValue) {
+            currentShipSpec = null;
+            clearAllSlots();
+            populateSlotsForShip(null);
+        }
+        return;
+    }
+
+    // Filter matching options
+    const matches = _shipSearchAllOptions.filter(opt =>
+        opt.value && opt.text.toLowerCase().includes(query)
+    );
+
+    // Add placeholder showing match count
+    const placeholder = document.createElement('option');
+    placeholder.value = '';
+    placeholder.textContent = matches.length === 0
+        ? 'No matches found'
+        : `${matches.length} match${matches.length === 1 ? '' : 'es'} — select below`;
+    select.appendChild(placeholder);
+
+    matches.forEach(opt => {
+        const option = document.createElement('option');
+        option.value = opt.value;
+        option.textContent = opt.text;
+        select.appendChild(option);
+    });
+
+    // Auto-select if exactly one match and show its details
+    if (matches.length === 1) {
+        select.value = matches[0].value;
+        select.dispatchEvent(new Event('change'));
+    } else if (previousValue) {
+        // Clear ship details when search changes away from a selection
+        currentShipSpec = null;
+        clearAllSlots();
+        populateSlotsForShip(null);
+    }
+}
+
+function initShipSearch() {
+    // Cache options after dropdown is populated
+    cacheShipSearchOptions();
+
+    // Use capture-phase event delegation on the form — inline handlers and
+    // addEventListener on the input element don't reliably fire in all browsers.
+    const form = document.getElementById('shipForm');
+    form.addEventListener('input', (e) => {
+        if (e.target && e.target.id === 'shipSearch') {
+            filterShipDropdown();
+        }
+    }, true);
+    form.addEventListener('keydown', (e) => {
+        if (e.target && e.target.id === 'shipSearch' && e.key === 'Enter') {
+            e.preventDefault();
+        }
+    }, true);
+}
+
 // Create a component dropdown filtered by size
 function createComponentDropdown(type, size, selectedValue = '') {
     const select = document.createElement('select');
@@ -870,6 +957,9 @@ function openShipModal(shipId = null) {
 
     form.reset();
     document.getElementById('shipId').value = '';
+    document.getElementById('shipSearch').value = '';
+    // Restore full dropdown (clear any search filter)
+    filterShipDropdown();
     currentShipSpec = null;
     clearAllSlots();
 
@@ -877,6 +967,8 @@ function openShipModal(shipId = null) {
         const ship = getShipById(shipId);
         if (ship) {
             title.textContent = 'Edit Ship';
+            document.getElementById('shipSearch').style.display = 'none';
+            document.getElementById('shipName').disabled = true;
             document.getElementById('shipId').value = ship.id;
             document.getElementById('shipName').value = ship.name || '';
             document.getElementById('shipNickname').value = ship.nickname || '';
@@ -972,6 +1064,8 @@ function openShipModal(shipId = null) {
         }
     } else {
         title.textContent = 'Add Ship';
+        document.getElementById('shipSearch').style.display = '';
+        document.getElementById('shipName').disabled = false;
         populateSlotsForShip(null);
     }
 
@@ -1692,8 +1786,9 @@ function loadCachedShipData() {
 document.addEventListener('DOMContentLoaded', () => {
     // Load any cached ship data updates
     loadCachedShipData();
-    // Populate ship dropdown
+    // Populate ship dropdown and search
     populateShipDropdown();
+    initShipSearch();
 
     // Initial render
     renderShips();

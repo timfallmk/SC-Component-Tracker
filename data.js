@@ -3277,7 +3277,7 @@ quantumDrives: [
         // ===== VANDUUL =====
         {
             name: "Esperia Stinger",
-            manufacturer: "Vanduul",
+            manufacturer: "Esperia",
             size: "Medium",
             pilotWeapons: [{ size: 5 }, { size: 1 }, { size: 2 }, { size: 4 }, { size: 4 }, { size: 4 }, { size: 2 }, { size: 4 }],
             turrets: [],

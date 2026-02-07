@@ -84,6 +84,10 @@ function getShipSpec(shipName) {
         }
     }
 
+    // Fallback: saved name may be missing manufacturer prefix (e.g., "P-22 Merlin" for "Kruger P-22 Merlin")
+    spec = SC_DATA.ships.find(s => s.name.endsWith(' ' + shipName));
+    if (spec) return { ...spec, name: shipName };
+
     return null;
 }
 

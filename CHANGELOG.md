@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here.
 
+## 2026-02-07 — v0.86
+
+- Version bump to 0.86
+- No functional changes from v0.85
+
 ## 2026-02-06 — v0.85
 
 - Fix: Edit modal pilot weapons showing "Empty" when saved weapon order doesn't match spec hardpoint order

@@ -4,7 +4,7 @@ A browser-based component management application for Star Citizen. Track your sh
 
 **[Use the App](https://lucky44.github.io/SC-Component-Tracker/)** — Runs in your browser.
 
-**Version:** 0.85
+**Version:** 0.86
 
 ## Features
 
@@ -29,7 +29,11 @@ A browser-based component management application for Star Citizen. Track your sh
 - Type-based organization
 - Add, edit, and delete stored components
 
-### Search
+### Ship Search
+- **Add Ship filter** - Type part of a ship name to instantly filter the ship dropdown
+- Shows match count and auto-selects single matches
+
+### Component Search
 - Real-time component search across all installed weapons and storage
 - Results show ship name, component type, and location
 

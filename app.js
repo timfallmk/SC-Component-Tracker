@@ -787,11 +787,13 @@ function renderShips() {
     container.innerHTML = sortedShips.map(ship => {
         const components = ship.components || {};
         const nickname = ship.nickname ? ` <span class="ship-nickname">"${ship.nickname}"</span>` : '';
+        const spec = getShipSpec(ship.name);
+        const mfr = spec?.manufacturer ? ` <span class="ship-manufacturer">(${spec.manufacturer})</span>` : '';
 
         return `
             <div class="ship-card" data-id="${ship.id}">
                 <div class="ship-card-header">
-                    <div class="ship-name">${getShipDisplayName(ship.name)}${nickname}</div>
+                    <div class="ship-name">${getShipDisplayName(ship.name)}${mfr}${nickname}</div>
                     <div class="ship-actions">
                         <button class="btn btn-secondary btn-small" onclick="openShipModal('${ship.id}')">Edit</button>
                         <button class="btn btn-danger btn-small" onclick="confirmDeleteShip('${ship.id}')">Delete</button>

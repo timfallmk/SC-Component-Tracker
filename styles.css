@@ -515,6 +515,12 @@ h1, h2, h3, h4, .btn, .section-header {
     color: #ffffff;
 }
 
+.ship-manufacturer {
+    color: #cc8800;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
 .ship-nickname {
     color: #ffffff;
     font-weight: normal;

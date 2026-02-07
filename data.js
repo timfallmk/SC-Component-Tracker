@@ -3279,12 +3279,12 @@ quantumDrives: [
             name: "Esperia Stinger",
             manufacturer: "Esperia",
             size: "Medium",
-            pilotWeapons: [{ size: 5 }, { size: 1 }, { size: 2 }, { size: 4 }, { size: 4 }, { size: 4 }, { size: 2 }, { size: 4 }],
+            pilotWeapons: [{ size: 5 }, { size: 4 }, { size: 4 }, { size: 4 }, { size: 4 }, { size: 2 }, { size: 2 }],
             turrets: [],
             shields: { count: 2, size: 2 },
-            powerPlants: { count: 2, size: 3 },
-            coolers: { count: 3, size: 2 },
-            quantumDrive: { size: 1 }
+            powerPlants: { count: 2, size: 1 },
+            coolers: { count: 3, size: 1 },
+            quantumDrive: { size: 2 }
         },
         {
             name: "Aegis Idris-M",

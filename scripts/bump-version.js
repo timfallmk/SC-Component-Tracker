@@ -17,8 +17,16 @@ if (!newVersion) {
     process.exit(1);
 }
 
-// Derive cache-bust number from version (0.87 -> 87)
-const cacheBust = newVersion.replace(/^0\./, '');
+// Validate version format (X.Y or X.Y.Z, numeric only)
+if (!/^\d+\.\d+(\.\d+)?$/.test(newVersion)) {
+    console.error(`ERROR: Invalid version format '${newVersion}'`);
+    console.error('Expected format: X.Y or X.Y.Z (e.g., 0.87, 1.0, 1.2.3)');
+    process.exit(1);
+}
+
+// Derive cache-bust number from version by stripping dots
+// e.g., 0.87 -> 087, 1.0 -> 10, 1.2.3 -> 123
+const cacheBust = newVersion.replace(/\./g, '');
 
 const root = path.join(__dirname, '..');
 const appJsPath = path.join(root, 'app.js');
@@ -41,22 +49,30 @@ console.log(`✓ app.js: APP_VERSION '${oldVersion}' → '${newVersion}'`);
 
 // 2. Update cache-bust params in index.html
 let indexHtml = fs.readFileSync(indexPath, 'utf8');
-const oldCacheBust = oldVersion.replace(/^0\./, '');
 
-// Replace all ?v=XX patterns
+// Replace all ?v=XX patterns (global flag to catch duplicates)
+const EXPECTED_REPLACEMENTS = 3;
 const replacements = [
-    { pattern: /styles\.css\?v=\d+/, replacement: `styles.css?v=${cacheBust}` },
-    { pattern: /data\.js\?v=\d+/, replacement: `data.js?v=${cacheBust}` },
-    { pattern: /app\.js\?v=\d+/, replacement: `app.js?v=${cacheBust}` },
+    { pattern: /styles\.css\?v=\d+/g, replacement: `styles.css?v=${cacheBust}` },
+    { pattern: /data\.js\?v=\d+/g, replacement: `data.js?v=${cacheBust}` },
+    { pattern: /app\.js\?v=\d+/g, replacement: `app.js?v=${cacheBust}` },
 ];
 
 let updateCount = 0;
 for (const { pattern, replacement } of replacements) {
+    pattern.lastIndex = 0;
     if (pattern.test(indexHtml)) {
+        pattern.lastIndex = 0;
         indexHtml = indexHtml.replace(pattern, replacement);
         updateCount++;
     }
 }
+
+if (updateCount !== EXPECTED_REPLACEMENTS) {
+    console.error(`ERROR: Expected ${EXPECTED_REPLACEMENTS} cache-bust replacements in index.html, but only found ${updateCount}`);
+    process.exit(1);
+}
+
 fs.writeFileSync(indexPath, indexHtml);
 console.log(`✓ index.html: Updated ${updateCount} cache-bust params to v=${cacheBust}`);
 

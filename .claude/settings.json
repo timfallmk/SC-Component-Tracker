@@ -5,9 +5,10 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo '=== Session Start ===' && echo '--- Validation Status ---' && node validate.js 2>/dev/null | tail -5 && echo '--- Current Branch ---' && git branch --show-current && echo '--- Working Tree ---' && git status --short | head -10 && echo '--- Data Files ---' && if [ -f ships.json ]; then echo 'ships.json: present'; else echo 'ships.json: not found'; fi && echo '--- Last Changelog ---' && ls -1t changelog_*.txt 2>/dev/null | head -1 || echo 'No changelogs found'"
+            "command": "echo '=== Session Start ==='; echo '--- Validation Status ---'; node validate.js 2>&1 | tail -5; echo '--- Current Branch ---'; git branch --show-current; echo '--- Working Tree ---'; git status --short | head -10; echo '--- Data Files ---'; if [ -f ships.json ]; then echo 'ships.json: present'; else echo 'ships.json: not found'; fi; echo '--- Last Changelog ---'; LATEST=$(ls -1t changelog_*.txt 2>/dev/null | head -1); if [ -n \"$LATEST\" ]; then echo \"$LATEST:\"; head -10 \"$LATEST\"; else echo 'No changelogs found'; fi"
           }
-        ]
+        ],
+        "timeout": 120
       }
     ],
     "SessionEnd": [

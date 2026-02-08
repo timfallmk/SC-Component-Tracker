@@ -6,7 +6,7 @@
  * Run with: node --test scripts/test-update-pipeline.js
  */
 
-const { describe, it } = require('node:test');
+const { describe, it, before } = require('node:test');
 const assert = require('node:assert/strict');
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -22,7 +22,11 @@ function run(cmd) {
 
 describe('Update Pipeline', () => {
     describe('extract-ships.js', () => {
-        const shipOutput = run('node scripts/extract-ships.js');
+        let shipOutput;
+
+        before(() => {
+            shipOutput = run('node scripts/extract-ships.js');
+        });
 
         it('script completes successfully', () => {
             assert.ok(shipOutput.includes('Processed') && shipOutput.includes('ships'),
@@ -48,7 +52,11 @@ describe('Update Pipeline', () => {
     });
 
     describe('extract-loadouts.js', () => {
-        const loadoutOutput = run('node scripts/extract-loadouts.js');
+        let loadoutOutput;
+
+        before(() => {
+            loadoutOutput = run('node scripts/extract-loadouts.js');
+        });
 
         it('script completes successfully', () => {
             assert.ok(loadoutOutput.includes('Processed') && loadoutOutput.includes('loadout'),
@@ -75,22 +83,27 @@ describe('Update Pipeline', () => {
     });
 
     describe('Spec-Loadout consistency', () => {
-        const ships = require('./extracted-ships.js');
-        delete require.cache[require.resolve('./extracted-loadouts.js')];
-        const loadouts = require('./extracted-loadouts.js');
+        let ships;
+        let loadouts;
+
+        before(() => {
+            ships = require('./extracted-ships.js');
+            delete require.cache[require.resolve('./extracted-loadouts.js')];
+            loadouts = require('./extracted-loadouts.js');
+        });
 
         function getShip(name) {
             return ships.find(s => s.name === name);
         }
 
         const testShips = [
-            { name: 'Aegis Gladius', expectPilot: 3, expectTurret: 0 },
-            { name: 'Anvil Asgard', expectPilot: 6, expectTurret: 2 },
-            { name: 'Kruger P-52 Merlin', expectPilot: 3, expectTurret: 0 },
-            { name: 'Drake Cutlass Black', expectPilot: 2, expectTurret: 2 },
+            { name: 'Aegis Gladius' },
+            { name: 'Anvil Asgard' },
+            { name: 'Kruger P-52 Merlin' },
+            { name: 'Drake Cutlass Black' },
         ];
 
-        for (const { name, expectPilot, expectTurret } of testShips) {
+        for (const { name } of testShips) {
             it(`${name} pilot weapons match between spec and stock`, () => {
                 const spec = getShip(name);
                 const loadout = loadouts[name];
@@ -119,7 +132,11 @@ describe('Update Pipeline', () => {
     });
 
     describe('Data integrity', () => {
-        const ships = require('./extracted-ships.js');
+        let ships;
+
+        before(() => {
+            ships = require('./extracted-ships.js');
+        });
 
         it('duplicate count within expected range', () => {
             const shipNames = ships.map(s => s.name);
@@ -132,7 +149,11 @@ describe('Update Pipeline', () => {
     });
 
     describe('Weapon size sanity checks', () => {
-        const ships = require('./extracted-ships.js');
+        let ships;
+
+        before(() => {
+            ships = require('./extracted-ships.js');
+        });
 
         it('all weapon sizes in valid range (0-10)', () => {
             const invalidSizes = ships.filter(s =>
@@ -145,7 +166,11 @@ describe('Update Pipeline', () => {
     });
 
     describe('Component count checks', () => {
-        const ships = require('./extracted-ships.js');
+        let ships;
+
+        before(() => {
+            ships = require('./extracted-ships.js');
+        });
 
         it('most ships have components', () => {
             const shipsWithComponents = ships.filter(s =>
@@ -157,7 +182,11 @@ describe('Update Pipeline', () => {
     });
 
     describe('Validation script', () => {
-        const validationOutput = run('node validate.js');
+        let validationOutput;
+
+        before(() => {
+            validationOutput = run('node validate.js');
+        });
 
         it('validation completes and parses issue count', () => {
             const issueMatch = validationOutput.match(/TOTAL ISSUES:\s+(\d+)/);

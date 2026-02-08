@@ -3,6 +3,30 @@
 // ============ Data Layer ============
 
 const APP_VERSION = '0.86';
+
+/**
+ * @typedef {Object} UserShip
+ * @property {string} id - Unique identifier
+ * @property {string} name - Ship name (matches ShipSpec.name)
+ * @property {string} [nickname] - User-defined nickname
+ * @property {string[]} pilotWeapons - Equipped pilot weapon names
+ * @property {string[]} turretWeapons - Equipped turret weapon names
+ * @property {string[]} shields - Equipped shield names
+ * @property {string[]} powerPlants - Equipped power plant names
+ * @property {string[]} coolers - Equipped cooler names
+ * @property {string} [quantumDrive] - Equipped quantum drive name
+ *
+ * @typedef {Object} StorageItem
+ * @property {string} id - Unique identifier
+ * @property {string} name - Component name
+ * @property {string} type - Component type ("weapon", "shield", "powerPlant", "cooler", "quantumDrive")
+ * @property {number} size - Component size
+ * @property {number} quantity - Quantity in storage
+ *
+ * @typedef {Object} AppData
+ * @property {UserShip[]} ships - User's ships
+ * @property {StorageItem[]} storage - User's stored components
+ */
 const STORAGE_KEY = 'sc-component-tracker-data';
 const DATA_VERSION_KEY = 'sc-component-tracker-data-version';
 

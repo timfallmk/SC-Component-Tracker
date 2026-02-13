@@ -132,7 +132,9 @@ Contributions are welcome! Please ensure any data changes are tested before subm
 
 ## License
 
-This fan-made project is for personal use and is not affiliated with Cloud Imperium Games Corporation.
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+
+This fan-made project is not affiliated with Cloud Imperium Games Corporation.
 
 ---
 
